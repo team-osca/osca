@@ -1,0 +1,512 @@
+@charset "UTF-8";
+@media (min-width: 992px) and (max-width: 1199px) {
+    .cafeDetail-cn {
+        background: #fff;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .cafeDetail-contentWrapper {
+        width: 90%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .cafeDetail-contentWrapper {
+        margin: 0 auto;
+        padding: 20px 0 80px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .cafeContent-className {
+        display: inline-block;
+        width: calc(100% - 360px);
+        vertical-align: top;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .JobHeader_mobileLocationContainer__DyxUQ {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .cafeDescription-cafeDescription {
+        margin-bottom: 60px;
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .cafe-owner {
+        width: 340px;
+        position: fixed;
+        right: calc((100% - 1060px)/2);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .mycafeDetail-footer {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cafeDetail-cn {
+        background: #fff;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cafeDetail-contentWrapper {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cafeDetail-contentWrapper {
+        margin: 0 auto;
+        padding: 20px 0 80px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cafeHeader-className {
+        margin: 0 0 5px;
+        padding: 20px;
+        background: #fff;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .JobHeader_pcLocationContainer__xRwIv {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .JobHeader_mobileLocationContainer__DyxUQ {
+        display: block;
+        font-size: 11px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cafeHeader-className {
+        margin: 0 0 5px;
+        padding: 20px;
+        background: #fff;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .Reward_container__cK6W4 {
+        margin-top: 8px;
+        margin-bottom: 14px;
+        padding: 14px 18px;
+        background: rgba(112,115,124,.05);
+        position: relative;
+        border-radius: 4px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .Reward_container__cK6W4>ul {
+        margin-top: 14px;
+        margin-bottom: 0;
+        position: relative;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .BeforeApplication_shareButton__xApHP {
+        margin-bottom: 0;
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .BeforeApplication_pcBookmarkBtn__FP_h_ {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .Reactions_Reactions__root__3cKAu {
+        padding: 0;
+        margin: 30px 0 0;
+    }
+}
+ 
+@media (min-width: 768px) and (max-width: 991px) {
+    .JobContent_appliedLink__lKHLy {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cafeDescription-cafeDescription {
+        margin: 0;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .CompanyInfo_className__VNf10 {
+        margin: 5px 0;
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .CompanyInfo_className__VNf10 .followButton {
+        height: 35px;
+        font-size: 14px;
+        padding: 9px 20px 8px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .StealingWarning_StealingWarning_content__Ik3sn {
+        margin: 10px 20px 0;
+    }    
+}
+ 
+@media (min-width: 768px) and (max-width: 991px) {
+    .AiInterviewBanner_AiInterviewBanner__AuZlG {
+        margin-top: 0;
+        border: none;
+        margin: 12px 20px 50px;
+    }
+}
+
+ /* footer  */ 
+@media (min-width: 768px) and (max-width: 991px) {
+    .JobProcess_footer__TK1Sj {
+        position: fixed;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        z-index: 3;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .JobProcess_hideRibbonBanner__TBPrP {
+        bottom: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .JobProcess_footer__TK1Sj>div {
+        background-color: #fff;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ApplyBtn_container__WHJ_D {
+        padding: 0 15px 15px;
+    }
+}
+
+/* max 767px */
+@media (max-width: 767px) {
+    .cafeHeader-className {
+        margin: 0 0 5px;
+        padding: 20px;
+        background: #fff;
+    }
+}
+
+@media (max-width: 767px) {
+    .cafeHeader-className>h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cafeHeader-className>div>h6 {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cafeHeader-className>div>span {
+        padding: 0;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .JobHeader_mobileLocationContainer__DyxUQ {
+        display: block;
+        font-size: 11px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cafeHeader-className>div>span {
+        padding: 0;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .Tags_tagsClass__mvehZ {
+        position: relative;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 3px;
+    }
+}
+
+@media (max-width: 767px) {
+    .Tags_tagsClass__mvehZ>ul {
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .Tags_tagsClass__mvehZ>ul>li>a {
+        margin-right: 5px;
+        margin-bottom: 0;
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .Tags_tagsClass__mvehZ>div.item-gradient {
+        position: absolute;
+        width: 40px;
+        height: 22px;
+        top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .Tags_tagsClass__mvehZ>div.item-gradient.end {
+        right: 0;
+        background-image: -webkit-gradient(linear,left top,right top,from(hsla(0,0%,100%,0)),to(#fff));
+        background-image: linear-gradient(90deg,hsla(0,0%,100%,0),#fff);
+    }
+}
+
+@media (max-width: 767px) {
+    .WantedAi_wantedAi__oq9ru {
+        padding: 15px;
+        border: none;
+        background: rgba(112,115,124,.05);
+    }
+}
+
+@media (max-width: 767px) {
+    .WantedAiTitle_wantedAiTitle__Z46Tp {
+        grid-gap: 12px;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .JobContent_appliedLink__lKHLy {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .JobContent_descriptionWrapper__SM4UD {
+        padding: 0 20px;
+        background: #fff;
+    }
+}
+
+@media (max-width: 767px) {
+    .cafeDescription-cafeDescription {
+        margin: 0;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .JobWorkPlace_className__ra6rp>div {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .JobWorkPlace_className__ra6rp .header {
+        width: 70px;
+    }
+}
+
+@media (max-width: 767px) {
+    .JobWorkPlace_className__ra6rp .body {
+        width: calc(100% - 70px);
+    }    
+}
+
+@media (max-width: 767px) {
+    .CompanyInfo_className__VNf10 {
+        margin: 5px 0;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .CompanyInfo_className__VNf10 .logo {
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+        -ms-flex-preferred-size: 48px;
+        flex-basis: 48px;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .CompanyInfo_className__VNf10 .followButton {
+        height: 35px;
+        font-size: 14px;
+        padding: 9px 20px 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    .StealingWarning_StealingWarning_content__Ik3sn {
+        margin: 0;
+        border-radius: 0;
+        background: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .AiInterviewBanner_AiInterviewBanner__AuZlG {
+        margin-top: 0;
+        border: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .JobProcess_mobileContainer__oZKm4 {
+        display: block;
+    }
+}
+@media (max-width: 767px) {
+    .JobProcess_footer__TK1Sj {
+        position: fixed;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        z-index: 3;
+    }
+}
+
+@media (max-width: 767px) {
+    .JobProcess_hideRibbonBanner__TBPrP {
+        bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .JobProcess_footer__TK1Sj:before {
+        content: "";
+        width: 100%;
+        height: 30px;
+        display: block;
+        background: #fff;
+        background: -webkit-gradient(linear,left top,left bottom,from(hsla(0,0%,100%,0)),to(#fff));
+        background: linear-gradient(180deg,hsla(0,0%,100%,0),#fff);
+    }
+}
+
+@media (max-width: 767px) {
+    .ApplyBtn_container__WHJ_D {
+        padding: 0 15px 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .Footer_footerClass__OWEZy {
+        padding: 30px 25px 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .Footer_rowClass__bFAtS {
+        width: 100%;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .NavLinks_NavLinks__xaNkJ {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+/* main header */
+
+@media (max-width: 767px) {
+    .mainbar, .mainbar.isLoggedIn {
+        height: 110px;
+    }
+
+    .mainbar-nav-top {
+        height: 60px;
+        width: 100%;
+        padding: 15px 20px;
+    }
+   
+    .menu {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+   
+    .menu li a {
+        padding: 11px 10px 19px;
+        outline-offset: 0!important;
+    }
+
+    .Padding_padding {
+        height: 110px;
+    }
+
+    .aside {
+        padding: 14px 0;
+    }
+
+    .aside>ul {
+        margin-top: -5px;
+    }
+    .aside>ul li .searchButton {
+        margin: 0;
+    }
+    
+    .aside>ul .profileBox {
+        margin-right: 0;
+    }
+ 
+    .cafeHeader-className {
+        margin: 0 0 5px;
+        padding: 20px;
+        background: #fff;
+    }
+
+}
+
+
