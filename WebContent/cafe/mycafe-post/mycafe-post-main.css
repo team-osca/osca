@@ -1,0 +1,618 @@
+@charset "UTF-8";
+
+.main {
+    background-color: #fff;
+}
+
+.post-wrapper {
+    padding: 0;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+
+.RedPenButton-GuideButton-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.Button-Button-root {
+    --button-color: #171717;
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: normal;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.Button-Button-text {
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.Button-Button-text, .Button-Button-textPrimary {
+    --button-color: #36f;
+    color: var(--button-color);
+}
+
+.Button-Button-textSizeMedium {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Button-Button-label {
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+    color: inherit;
+}
+
+.Button-Button-interaction {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    opacity: 0;
+    background-color: var(--button-color);
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    will-change: opacity;
+}
+
+.Divider-Divider-root {
+    height: 1px;
+    margin: 0;
+    border: none;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    background-color: #e1e2e4;
+}
+
+.Divider-Divider-vertical {
+    height: 100%;
+    width: 1px;
+    margin-left: calc(4px * 2);
+    margin-right: calc(4px * 2);
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    height: auto;
+}
+
+.RedPenButton-GuideButton-divider {
+    -ms-flex-item-align: center;
+    align-self: center;
+    height: 14px;
+}
+
+.RedPenButton-GuideButton-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.FormControlLabel-FormControlLabel-root {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    vertical-align: middle;
+    grid-gap: calc(4px * 2);
+    gap: calc(4px * 2);
+    margin-right: calc(4px * 4);
+}
+
+.FormControlLabel-FormControlLabel-labelPlacementStart {
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.Switch-Switch-root {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: middle;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.Switch-Switch-sizeMedium {
+    width: 52px;
+    height: 32px;
+}
+
+.Switch-Switch-base {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+    margin: 0;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: -webkit-transform .15s ease-out 0ms;
+    transition: -webkit-transform .15s ease-out 0ms;
+    transition: transform .15s ease-out 0ms;
+    transition: transform .15s ease-out 0ms,-webkit-transform .15s ease-out 0ms;
+}
+
+.Switch-Switch-base-sizeMedium {
+    top: 4px;
+    left: 4px;
+}
+
+.Switch-Switch-base>input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    left: -100%;
+    width: 300%;
+    cursor: inherit;
+}
+
+.Switch_Switch__base__thumb__Q92x8 {
+    background-color: currentColor;
+    border-radius: 50%;
+}
+
+.Switch-Switch-base-sizeMedium>span {
+    width: 24px;
+    height: 24px;
+}
+
+.Switch_Switch__track__lSp_b {
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    background-color: rgba(112,115,124,.16);
+    -webkit-transition: background-color .15s ease-out 0ms;
+    transition: background-color .15s ease-out 0ms;
+}
+
+.Typography_Typography__root__xYuMs {
+    margin: 0;
+}
+
+.Typography_Typography__body2__sizeLarge__5hIoP, .Typography_Typography__body2__sizeSmall__P7Gde {
+    font-size: 15px;
+    letter-spacing: .0096em;
+    line-height: 22px;
+}
+
+.Typography_Typography__weightMedium__O0Rdi {
+    font-weight: 500;
+}
+
+.FormControlLabel_FormControlLabel__label__bh4Cr {
+    color: #171717;
+}
+
+.RedPenButton_GuideButton__label__HICEV {
+    font-weight: 700;
+}
+
+.mycafeDetail-poastDetail-body {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.mycafeDetail-poastDetail-body-basic {
+    margin-bottom: 60px;
+}
+
+.banner-padding-top {
+    padding-top: 90px;
+}
+
+.mycafeDetail-poastDetail-body-title {
+    padding-top: 130px;
+}
+
+.mycafeDetail-poastDetail-body-title-banner {
+    padding-top: 30px;
+}
+
+.mycafeDetail-poastDetail-input {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 3px;
+    border-radius: 0;
+    height: auto;
+    width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+input, input:focus, input[type=text], textarea {
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+}
+
+input[type=text], textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    resize: none;
+    outline: none;
+}
+
+.mycafeDetail-poastDetail-input.title.basic {
+    color: #3b3d40;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 500;
+    margin: 0 0 50px;
+}
+
+.mycafeDetail-poastDetail-input.email, .mycafeDetail-poastDetail-input.mobile, .mycafeDetail-poastDetail-input.name {
+    font-size: 16px;
+}
+
+.mycafeDetail-poastDetail-input.name {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.mycafeDetail-poastDetail-input.email, .mycafeDetail-poastDetail-input.mobile {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.mycafePostDetail-mycafePostDetail-body-about {
+    margin-bottom: 60px;
+}
+
+.mycafePostDetail-mycafePostDetail-body-about-header {
+    padding: 20px 0 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3b3d40;
+    border-bottom: 1px solid #bababa;
+}
+
+.mycafePostDetail-mycafePostDetail-body-guode {
+    white-space: pre-wrap;
+    padding: 10px;
+    background-color: #f3f9fe;
+    font-size: 12px;
+    line-height: 1.42;
+    letter-spacing: normal;
+    color: #666;
+    margin-top: 10px;
+}
+
+.DynamicTextarea-Textarea {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.DynamicTextarea-Textarea>textarea {
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    caret-color: #000;
+    overflow: hidden;
+    line-height: 22px;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    resize: none;
+}
+
+.mycafeDetail-poastDetail-input.about {
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.DynamicTextarea-Textarea-clone {
+    top: 0;
+    left: 0;
+    height: 0;
+    position: absolute;
+    display: inline-block;
+    visibility: hidden;
+    z-index: -9999;
+}
+
+.DynamicTextarea-Textarea>textarea {
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    caret-color: #000;
+    overflow: hidden;
+    line-height: 22px;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    resize: none;
+}
+
+.mycafeFooter-mycafePostFooter-Footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1060px;
+    padding: 15px 0;
+    margin: 0 auto;
+}
+
+.mycafeFooter-mycafePostFooter-Footer-Progress {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.mycafeFooter-mycafePostFooter-Footer>div {
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.ProgressBar-ProgressBar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 3px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.ProgressBar-ProgressBar-graph {
+    position: relative;
+    -ms-flex: 0 1 150px;
+    flex: 0 1 150px;
+}
+
+.ProgressBar-ProgressBar-graph-top {
+    position: relative;
+    height: 17px;
+}
+
+.ProgressBar-ProgressBar-graph-top-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    -webkit-transition: -webkit-transform .4s linear;
+    transition: -webkit-transform .4s linear;
+    transition: transform .4s linear;
+    transition: transform .4s linear,-webkit-transform .4s linear;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.ProgressBar-ProgressBar-graph-bar {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 9px;
+    border-radius: 4.5px;
+    background-color: #e1e2e3;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.ProgressBar-ProgressBar-graph-bar-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    -webkit-transition: -webkit-transform .4s linear;
+    transition: -webkit-transform .4s linear;
+    transition: transform .4s linear;
+    transition: transform .4s linear,-webkit-transform .4s linear;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    border-radius: 4.5px 0 0 4.5px;
+}
+
+.ProgressBar-ProgressBar-graph-bar-pin {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-left: 1px dotted #36f;
+}
+
+.ProgressBar-ProgressBar-graph-bottom {
+    position: relative;
+    height: 14px;
+}
+
+.ProgressBar-ProgressBar-graph-bottom-zero {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    bottom: 0;
+    color: #999;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.ProgressBar-ProgressBar-emoji {
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 32px;
+    margin-top: 2px;
+    margin-left: 6px;
+    font-size: 16px;
+}
+
+.ProgressBar-ProgressBar-description {
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    font-size: 13px;
+    margin-top: 3px;
+    color: #333;
+    font-weight: 600;
+}
+
+.mycafeFooter-mycafePostFooter-Fixed {
+    position: fixed;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0 50px;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+}
+
+.ProgressBar-ProgressBar-graph-bottom-text {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.Button-Button-contained {
+    border-radius: 1000px;
+    border: none;
+}
+
+.mycafeFooter-mycafePostFooter-Footer-btn {
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.mycafeFooter-mycafePostFooter-Footer>div {
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.Button-Button-outlined {
+    border-radius: 1000px;
+    background-color: #fff;
+}
+
+.Button-Button-outlined, .Button-Button-outlinedPrimary {
+    --button-color: #36f;
+    color: var(--button-color);
+    -webkit-box-shadow: 0 0 0 1px var(--button-color) inset;
+    box-shadow: 0 0 0 1px var(--button-color) inset;
+}
+
+.Button-Button-containedSizeLarge, .Button-Button-outlinedSizeLarge {
+    padding: 0 28px;
+    min-width: 84px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mycafeFooter-mycafePostFooter-Footer-btns-btn {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    width: 173px;
+}
+
+.mycafeFooter-mycafePostFooter-Footer-btns-btn.mycafePostFooter-temp {
+    margin-right: 9px;
+}
+
+.Button-Button-label {
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+    color: inherit;
+}
+
+.Button-Button-contained, .Button-Button-containedPrimary {
+    color: #fff;
+    background-color: #36f;
+}
+
+.Button-Button-interaction:hover {
+    opacity: .05;
+}
+
+@media (min-width: 1200px) {
+    .post-wrapper {
+        width: 87.72%;
+    }    
+}
+
+
