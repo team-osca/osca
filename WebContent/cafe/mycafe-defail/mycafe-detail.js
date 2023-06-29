@@ -1,3 +1,4 @@
+/* 스코롤 도중 특정 부분에서 스타일 적용 */
 // $(window).scroll(function() {
 //     var targetElement = $('.cafeContent-divider');
 //     var targetOffset = targetElement.offset().top - 700; 
@@ -9,6 +10,7 @@
 //     }
 //   });
  
+ /* 버튼 클릭 시 이미지 슬라이드 */
 let count = 0;
 const $slideWrap = $('.cafeImage-cafeImage-slide');
 const maxcount =  $('.cafeImage-cafeImage-slide').length;

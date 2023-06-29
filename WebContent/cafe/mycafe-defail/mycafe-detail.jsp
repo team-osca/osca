@@ -100,6 +100,7 @@
         <div class="cafeDetail-contentWrapper">
           <div class="cafeDetail-relativeWrapper">
             <div class="cafeContent-className">
+            <!-------------------------------카페 이미지 슾라이드 시작------------------------>
               <section class="cafeImage-cafeImage">
                 <button
                   type="button"
@@ -150,6 +151,8 @@
                   </div>
                 </div>
               </section>
+              <!------------------------------- 카페 이미지 슾라이드 끝 ------------------------>
+              <!------------------------------- 카페 명 시작 -------------------------------------->
               <section class="cafeHeader-className">
                 <h2>Jr. Database Engineer</h2>
                 <div>
@@ -175,8 +178,10 @@
                   >
                 </div>
               </section>
+              <!------------------------------- 카페 명 끝 -------------------------------------->
               <div class="cafeContent-appliedLink"></div>
               <div class="cafeContent-descriptionWrapper">
+              <!--------------------------------- 카페 소개글 시작 -------------------------------->
                 <section class="cafeDescription-cafeDescription">
                   <p>
                     <span
@@ -264,6 +269,7 @@
                     <div class="locallItem-localItem">MSSQL</div>
                   </div>
                 </section>
+                <!--------------------------------- 카페 소개글 끝 -------------------------------->
                 <hr class="cafeContent-divider" />
                 <section class="cafePlace-className">
                   <div><span class="header">마감일</span><span class="body">상시</span></div>

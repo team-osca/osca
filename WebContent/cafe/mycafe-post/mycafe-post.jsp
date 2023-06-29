@@ -74,10 +74,12 @@
 						<div
 							class="mycafeDetail-poastDetail-body-title mycafeDetail-poastDetail-body-title-banner">
 							<div>
+							<!------------------------------------------- 게시글 제목 시작  -------------------------------------------->
 								<input
 									class="mycafeDetail-poastDetail-input post-input title basic"
 									type="text" maxlength="100" placeholder="이력서 제목(필수)"
 									name="title" value="김동엽 1" />
+							<!------------------------------------------- 게시글 제목 끝  -------------------------------------------->
 							</div>
 						</div>
 						<div>
@@ -100,12 +102,10 @@
 					<div class="mycafePostDetail-mycafePostDetail-body-about">
 						<div class="mycafePostDetail-mycafePostDetail-body-about-header">간단
 							소개글</div>
-						<p class="mycafePostDetail-mycafePostDetail-body-guode">
-							• 최대 4000글자 내에서 카페를 홍보할 수 있습니다.<br />• 스터디가 카페를 이용 할 경우의 규칙을
-							간략하게 적여주세요!
-						</p>
+						<p class="mycafePostDetail-mycafePostDetail-body-guode">• 최대 4000글자 내에서 카페를 홍보할 수 있습니다.<br />• 스터디가 카페를 이용 할 경우의 규칙을	간략하게 적여주세요!</p>
 						<div>
 							<div class="DynamicTextarea-Textarea">
+							<!------------------------------------------------ 내 카페 소개 글 작성 시작  -------------------------------------------------->
 								<textarea
 									class="mycafeDetail-poastDetail-input post-input about"
 									maxlength="4000" placeholder="내 카페를 홍보하세요! (최대 4000글자)"
@@ -114,6 +114,7 @@
 								<textarea class="DynamicTextarea-Textarea-clone" readonly=""
 									style="top: 0px; left: 0px; width: 1060px; padding: 0px; font-size: 16px; font-weight: 400; position: absolute; visibility: hidden; z-index: -9999; height: 0px; background: transparent;"></textarea>
 							</div>
+							<!------------------------------------------------ 내 카페 소개 글 작성 끝  -------------------------------------------------->
 						</div>
 					</div>
 					<div class="mycafeFooter-mycafePostFooter-Fixed">
