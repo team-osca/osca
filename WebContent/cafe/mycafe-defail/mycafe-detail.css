@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
@@ -631,7 +632,6 @@ svg:not(:root) {
   align-items: flex-start;
   padding-bottom: 4px;
   height: auto;
-  overflow-x: auto;
   -ms-scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
   -ms-scroll-chaining: none;
@@ -1070,7 +1070,7 @@ img {
   clear: both;
 }
 
-.attached-file-container>div>label {
+.attached-file-container > div > label {
   width: 56px;
   height: 60px;
   margin: 0;
@@ -1083,17 +1083,15 @@ img {
 }
 
 .uploadFile {
-    display: block;
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    border-radius: 25px;
-    border: 1px solid #e1e2e3;
-    line-height: 50px;
-    margin: 24px 0 10px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border-radius: 25px;
+  border: 1px solid #e1e2e3;
+  line-height: 50px;
+  margin: 24px 0 10px;
 }
-
-
 
 .Applying_addNewResume__7iB1V {
   width: 100%;
@@ -1108,7 +1106,6 @@ img {
   letter-spacing: normal;
   color: #666;
 }
-
 
 .cafe-woner-footer {
   padding: 24px 20px;
@@ -1128,104 +1125,85 @@ img {
 
 /* aside css 끝 */
 
-/* footer 시작*/
-.mycafeDetail-footer {
-  display: none;
-}
-
-.Footer-footer {
-  padding: 18px 0 65px;
-  background-color: #fff;
-  border-top: 1px solid #ececec;
-}
-
-.Footer-row {
-  width: 90%;
-  max-width: 1060px;
-  margin: 0 auto 18px;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.NavLinks-NavLinks {
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.NavLinks-NavLinks-logo {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-right: 43px;
-  width: 113px;
-}
-
-.NavLinks-NavLinks-logo svg~svg {
-  -webkit-transform: translateY(-10%);
-  transform: translateY(-10%);
-}
-
-.NavLinks-NavLinks {
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.NavLinks-NavLinks>a {
-  font-size: 15px;
-  color: #3a3a3a;
-  font-weight: 500;
-  line-height: 2.6;
-  margin-right: 45px;
-  white-space: nowrap;
-}
-
-.SocialLinks-SocialLinks {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  line-height: 2.6;
-}
-
-.SocialLinks-SocialLinks a {
-  position: relative;
+#map {
   display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* footer 시작*/
+
+.cafe_footer img{
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1100px;
+  height: 632.64px;
+}
+
+.col-xs-12{
+  width: 100%;
+}
+
+.col-md-3{
+  width: 25%;
   float: left;
-  height: 20px;
 }
 
-.SocialLinks-SocialLinks a img {
-  margin-left: 14px;
+.col-sm-6{
+   width: 50%;
+   float: left;
 }
 
-.Footer-row {
-  width: 90%;
-  max-width: 1060px;
-  margin: 0 auto 18px;
-  display: -ms-flexbox;
-  display: flex;
+.col-md-3, .col-sm-4, .col-xs-12, .col-sm-6, .col-xs-6{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-.Footer-border {
+.padding{
+  padding:40px 0;
+}
+
+.cafe_footer p {
+  margin: 0 0 10px;
+}
+
+.cafe_footer{
+  background-color: rgba(255, 255, 255, 1);
+  margin-top: 60px;
+  color: #333;
+  border-top: 1px solid #c2c2c2;
   border-top: 1px solid #ececec;
-  padding-top: 25px;
+  display: block;
 }
 
-.Footer-footerText {
-  float: left;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.6666666667em;
-  color: #767676;
-  width: calc(100% - 290px);
-  margin-right: 40px;
+.footer_content{
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+#footer_content_logo{
+  width: 15%;
+  margin-top: 5px;
+}
+
+#footer_content_1, #footer_content_2, #footer_content_3{
+  width: 15%;
+}
+
+.footer_content p{
+  margin-bottom: 0;
+  text-align: left;
+  line-height: 1.5;
+  background-color: #fff;
 }
 
 /* footer 끝 */
