@@ -38,7 +38,7 @@
     }
 }
 @media(max-width:767px) {
-    .nav_title_area>p {
+    .nav_title>p {
         display: none
     }
 }
@@ -129,6 +129,16 @@
         margin-top: 34px
     }
 }
+
+@media(max-width:767px) {
+    .matchUpStatus_ {
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+        width: calc(100% + 40px)
+    }
+}
 @media(max-width:767px) {
     .matchUpStatus_ .matchUpStatus-item {
         display: -ms-flexbox;
@@ -217,5 +227,128 @@
 @media(max-width:767px) {
     .enterInterestArea .enterInterestArea-fieldset>a>span {
         opacity: 1
+    }
+}
+@media(max-width:767px) {
+    .form_main .formFooter {
+        padding-right: 20px;
+        padding-left: 20px
+    }
+}
+
+@media(max-width:767px) {
+    .footer_.isChild button {
+        width: 100%
+    }
+
+    .footer_ {
+        padding: 20px
+    }
+}
+@media(max-width:767px) {
+    .footer_ button {
+        width: calc(50% - 5px);
+        margin: 0 0 0 10px
+    }
+
+    .footer_ button:first-of-type {
+        margin-left: 0
+    }
+}
+
+@media(max-width: 767px) {
+    .padding {
+        height:110px
+    }
+}
+
+@media(min-width: 768px)and (max-width:991px) {
+    .padding {
+        height:110px
+    }
+}
+@media(max-width:767px) {
+    .select-container h6 {
+        top: auto;
+        left: auto;
+        width: auto;
+        margin-bottom: 8px;
+        position: relative;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+@media(max-width:767px) {
+    .select_box select {
+        width: 100%;
+        margin: 0
+    }
+}
+@media(max-width:767px) {
+    .multiSelect {
+        padding-top: 7px;
+        padding-bottom: 7px
+    }
+}
+@media(max-width:767px) {
+    .multiSelect h6 {
+        top: auto;
+        left: auto;
+        width: auto;
+        position: relative;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+@media(max-width:767px) {
+    .multiSelect .options {
+        width: 100%;
+        margin: 3px 0 5px
+    }
+}
+@media(max-width:767px) {
+    .button_ h6 {
+        top: auto;
+        left: auto;
+        width: auto;
+        position: relative;
+        -webkit-transform: none;
+        transform: none;
+        margin-bottom: 10px
+    }
+}
+@media(max-width:767px) {
+    .button_ button {
+        width: 100%;
+        margin: 0
+    }
+}
+
+@media(max-width:767px) {
+    .resumeInfoSetting .careerPeriod {
+        padding-left: 0;
+        margin-bottom: 25px
+    }
+}
+@media(max-width:767px) {
+    .resumeInfoSetting .careerPeriod .checkBoxWrapper {
+        margin-top: 15px
+    }
+}
+
+@media(max-width:767px) {
+    .resumeInfoSetting .careerPeriod .resumePeriodErrorMsg {
+        position: absolute;
+        top: 68px;
+        left: 0
+    }
+
+    .resumeBasicInfo {
+        margin-top: 40px
+    }
+}
+@media(max-width:767px) {
+    .textarea p {
+        margin-bottom: 19px
     }
 }
