@@ -1,0 +1,549 @@
+@charset "UTF-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+:root {
+    --nav-height: 50px
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+html {
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%
+}
+body {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    background-color: #f8f8f8;
+    line-height: 1.42857143;
+    font-family: Pretendard Variable,Pretendard JP Variable,
+    -apple-system,system-ui,BlinkMacSystemFont,Roboto,Segoe UI,
+    Helvetica,Arial,Apple SD Gothic Neo,Nanum Gothic,
+    Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,
+    Segoe UI Symbol,sans-serif
+}
+
+a {
+    cursor: pointer;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+
+a, a:active, a:hover, a:visited {
+    color: inherit;
+}
+
+a {
+    font-family: inherit;
+    text-decoration: inherit;
+    cursor: pointer;
+}
+
+
+.NavBar_Header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+    z-index: 800;
+}
+
+.Header_isLoggedIn{
+    position: relative;
+    max-width: 1060px;
+    height: 50px;
+}
+.Full_Header{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+
+.logo_img{
+    height: 18px;
+}
+
+.Header_menu{
+    /* 헤더 안의 리스트 */
+    height: inherit;
+    text-align: center;
+    margin: 0;
+}
+
+.Header_menu li {
+    height: inherit;
+    display: inline-block;
+    position: relative;
+}
+
+.Header_menu li a {
+    position: relative;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 15px;
+    display: inline-block;
+}
+
+
+/* Header_right */
+.Aside_className_e5Bi {
+    height: 100%;
+    padding: 10px 0;
+}
+
+.Header_right_isLoggedIn {
+    padding: 9px 0;
+}
+
+.Header_right_isLoggedIn>ul {
+    height: 100%;
+    margin: 0;
+}
+.Header_right_isLoggedIn>ul li {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.Header_right_isLoggedIn>ul li>*{
+    height: 100%;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.Header_right_isLoggedIn>ul .profileBox {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.Header_right_isLoggedIn > ul li .profileButton .avatarBorder > div {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+.Header_right_isLoggedIn>ul li .notiButton{
+    position: relative;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+/* 헤더 끝 */
+.Padding{
+    height: 50px;
+}
+
+/* 바디 */
+.StudyPostDetail{
+    display: flex;
+    width: 1070px;
+    margin: 80px auto 0;
+}
+
+.StudyPostDetail>*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.PostDetail_side>*{
+    position: sticky;
+    top: 165px;
+}
+
+/* 바디 왼쪽 고정 */
+
+.PostDetail_side {
+    flex: 0 0 180px;
+    margin-right: 100px;
+}
+
+
+.PostDetail_side_top{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e1e2e3;
+    margin-bottom: 25px;
+    padding-left: 6px;
+    
+}
+
+.PostDetail_side_top>a:first-child{
+    display: flex;
+    width: 0;
+}
+
+.AuthorBox_Study_leftSide {
+    display: inline-flex;
+    align-items: center;
+
+}
+.AuthorBox_avatarWrapper{
+    position: relative;
+}
+
+.AuthorBox_verticalArea {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.AuthorBox_Study_leftSide>div{
+    max-width: 126px;
+}
+
+.AuthorBox_UserAvatar, .AuthorBox_Study_leftSide {
+    width: 37px;
+    height: 37px;
+}
+
+.AuthorBox_UserAvatar {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ececec;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #d8d8d8;
+    background-image: url(https://static.wanted.co.kr/images/profile_default.png);
+    background-size: cover;
+    margin-right: 7px
+}
+
+.AuthorBox_UserAvatar>img{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+}
+.AuthorBox_verticalBox{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;}
+
+.AuthorBox_verticalBox {
+    color: #333;
+    font-weight: 700;
+}
+
+.AuthorBox_header 
+.AuthorBox_username {
+    font-size: 16px;
+}
+
+
+.AuthorBox_header {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.large
+.AuthorBox_verticalBox {
+    font-size: 14px;
+}
+.AuthorBox_username {
+    color: #000;
+    overflow: hidden;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.AuthorBox_username_post {
+    color: #000;
+    font-size: 13px;
+    overflow: hidden;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.AuthorBox_avatarWrapper_2 {
+    position: relative;
+    margin-right: 7px;
+}
+
+.large .username {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.large .AuthorBox_UserAvatar {
+    width: 37px;
+    height: 37px;
+}
+
+.AuthorBox__verticalBox 
+.AuthorBox__createAt {
+    font-size: 12px;
+    color: #939393;
+} 
+.AuthorBox__createAt {
+    -ms-flex: none;
+    flex: none;
+    color: #666;
+    font-size: 13px;
+    line-height: 100%;
+    white-space: nowrap;
+}
+
+.PostDetail_bottom {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 6px;
+}
+
+.PostDetail_bottom>* {
+    -ms-flex: 1 1;
+    flex: 1 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.CommunityPostDetail {
+    -ms-flex: 1 0 790px;
+    flex: 1 0 790px;
+    background-color: #fff;
+}
+
+.PostContents {
+    padding: 56px 39px 40px;
+    background-color: #fff;
+    border: 1px solid #e1e2e3;
+}
+
+.PostContents__header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.PostContents__author {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+.PostContents__author>:first-child {
+    display: -ms-flexbox;
+    display: flex;
+    width: 0;
+    margin-right: auto;
+}
+
+.AuthorBox_verticalArea {
+    text-align: left;
+}
+
+.AuthorBox__verticalBox{
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    
+}
+
+.AuthorBox__userInfo{
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 3px;
+    -ms-flex-align: center;
+    align-items: center;
+    
+}
+
+
+@media (min-width: 1200px){
+    .Header_isLoggedIn{
+        /* 헤더 */
+        width: 87.72%;
+        margin: 0 auto;
+        height: 50px;
+    }}
+
+    /* 포스트 내용 */
+
+    .PostContents__title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #333;
+        word-break: break-all;
+        margin-top: 88px;
+        margin-bottom: 32px;
+    }
+
+    .PostContents__body {
+        max-width: 710px;
+        margin-bottom: 80px;
+        font-size: 1.7rem;
+        line-height: 1.65;
+        color: #333;
+        text-align: left;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        word-break: keep-all;
+    }
+
+    .PostContents .PostContents_metaTags {
+        margin-bottom: 20px;
+    }
+
+    .PostContents__images {
+        margin-top: 20px;
+    }
+
+    .PostContents__menu_button {
+        display: -ms-flexbox;
+        display: flex;
+      
+
+    }
+
+    .enroll {
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: relative;
+        height: 40px;
+        padding-right: 20px;
+        padding-left: 20px ;
+        border-radius: 9999px;
+        background-color: #144F79;
+        /* margin-left: auto; */
+        white-space: nowrap;
+        color: #fff;
+    }
+.PostContents__menu_button{
+     display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-right: 16px;
+        font-size: 24px;
+    
+}
+    .PostContents_bottomActions {
+        display: -ms-flexbox;
+        display: flex;
+        color: #333;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .MenuPopup {
+        display: none;
+        position: absolute;
+        right: -14px;
+        color: #333;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 13px 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+        box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+        border: 1px solid #ccc;
+        background-color: #fff;
+        bottom: 27px;
+    }
+
+    .MenuPopup_menu_item:not(:last-of-type) {
+        margin-bottom: 2px;
+    }
+
+    .MenuPopup__menu_link__red{
+        color: #fe415c;
+    }
+    .MenuPopup__menu_link {
+        display: block;
+        padding: 4px 17px 4px 10px;
+        border-radius: 3px;
+        text-align: left;
+        width: 100%;
+    }
+
