@@ -12,7 +12,8 @@
 	href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
 <link rel="stylesheet" href="mycafe-header.css" />
 <link rel="stylesheet" href="mycafe-post-main.css" />
-<title>카페 등록 페이지</title>
+<link rel="icon" type="image/x-icon" href="../../allimages/logo.jpg">
+<title>카페 등록</title>
 </head>
 <body>
 	<div class="__next">
@@ -23,8 +24,8 @@
 					<div class="mainbar-nav-top">
 						<div class="mainbar-nav-logo">
 							<a href="/jobsfeed" class="mainbar-logo-plus"
-								aria-label="jobsfeed link"><img src="logo/logo.png"
-								alt="logo" width="74" height="17" /></a>
+								aria-label="jobsfeed link"><img
+								src="../../allimages/logo.jpg" alt="logo" width="74" height="17" /></a>
 						</div>
 						<button id="SignupBtn" class="xsSignUpButton isLoggedIn"
 							type="button">회원가입하기</button>
@@ -77,31 +78,31 @@
 									<!------------------------------------------- 게시글 제목 시작  -------------------------------------------->
 									<input
 										class="mycafeDetail-poastDetail-input post-input title basic"
-										type="text" maxlength="100" placeholder="이력서 제목(필수)"
-										name="title" value="김동엽 1" />
+										type="text" maxlength="100" placeholder="게시글 제목을 적어주세요.(필수)"
+										name="title" value="" />
 									<!------------------------------------------- 게시글 제목 끝  -------------------------------------------->
 								</div>
 							</div>
 							<div>
 								<input class="mycafeDetail-poastDetail-input post-input name"
-									type="text" maxlength="100" placeholder="이름(필수)" name="name"
-									value="김동엽" />
+									type="text" maxlength="100" placeholder="카페명을 적어주세요.(필수)"
+									name="name" value="" />
 							</div>
 							<div>
 								<input class="mycafeDetail-poastDetail-input post-input email"
-									type="email" maxlength="120" placeholder="이메일(필수)" name="email"
-									value="404notfound.kdy@gmail.com" />
+									type="email" maxlength="120" placeholder="카페 위치를 적어주세요(선택)"
+									name="location" value="" />
 							</div>
 							<div>
 								<input class="mycafeDetail-poastDetail-input post-input mobile"
-									type="tel" maxlength="200"
-									placeholder="연락처(필수) ex) 010-0000-0000" name="mobile"
-									value="+821076501147" />
+									type="tel" maxlength="200" placeholder="태그를 ,로 나누에서서 적어주새요(선택)"
+									name="tags" value="" />
 							</div>
 						</div>
 						<div class="mycafePostDetail-mycafePostDetail-body-about">
-							<div class="mycafePostDetail-mycafePostDetail-body-about-header">간단	 소개글</div>
-							<p class="mycafePostDetail-mycafePostDetail-body-guode">• 최대 4000글자 내에서 카페를 홍보할 수 있습니다.<br />• 스터디가 카페를 이용 할 경우의 규칙을 간략하게 적여주세요!
+							<div class="mycafePostDetail-mycafePostDetail-body-about-header">간단
+								소개글</div>
+							<p class="mycafePostDetail-mycafePostDetail-body-guode">• 최대 4000글자 내에서 카페를 홍보할 수 있습니다.<br />• 스터디가 카페를 이용 할 경우의 규칙을	간략하게 적여주세요!
 							</p>
 							<div>
 								<div class="DynamicTextarea-Textarea">
@@ -114,16 +115,18 @@
 									<textarea class="DynamicTextarea-Textarea-clone" readonly=""
 										style="top: 0px; left: 0px; width: 1060px; padding: 0px; font-size: 16px; font-weight: 400; position: absolute; visibility: hidden; z-index: -9999; height: 0px; background: transparent;"></textarea>
 								</div>
-								<div align="right" >
-									<label for="img" class="label-file"> 
-										<svg xmlns="https://www.w3.org/2000/svg" width="24" height="24"	viewBox="0 0 24 24" fill="none">
+								<div align="right">
+									<label for="img" class="label-file"> <svg
+											xmlns="https://www.w3.org/2000/svg" width="24" height="24"
+											viewBox="0 0 24 24" fill="none">
 										<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M7.52489 11.47L9.9908 13.9387L15.4533 8.46998C15.7462 8.17668 16.2216 8.17668 16.5145 8.46998L22.5076 14.47C22.6481 14.6106 22.727 14.8012 22.727 15V19.0395C22.727 19.4539 22.3909 19.7897 21.9765 19.7895L1.99951 19.7763C1.58501 19.776 1.24932 19.4396 1.25 19.0251L1.273 4.99877C1.27368 4.58465 1.60987 4.24946 2.02399 4.25L22.001 4.27632C22.4163 4.27686 22.7521 4.61486 22.75 5.0302L22.727 9.4677C22.7248 9.88191 22.3873 10.216 21.9731 10.2138C21.5589 10.2117 21.2249 9.87414 21.227 9.45993L21.2461 5.77532L2.77177 5.75099L2.75123 18.2768L21.227 18.289V15.3104L15.9839 10.0613L10.5214 15.53C10.2285 15.8233 9.75313 15.8233 9.46017 15.53L6.99425 13.0613L5.52718 14.53C5.23446 14.8231 4.75959 14.8234 4.46653 14.5306C4.17346 14.2379 4.17319 13.763 4.46591 13.47L6.46361 11.47C6.75658 11.1767 7.23192 11.1767 7.52489 11.47ZM9 9.75H5C4.58579 9.75 4.25 9.41421 4.25 9C4.25 8.58579 4.58579 8.25 5 8.25H9C9.41421 8.25 9.75 8.58579 9.75 9C9.75 9.41421 9.41421 9.75 9 9.75Z"
 												fill="currentColor"></path>
                         					<mask id="mask0_150_2361"
 												maskUnits="userSpaceOnUse" x="1" y="4" width="22"
 												height="16">
-                          						<path fill-rule="evenodd" clip-rule="evenodd"
+                          						<path fill-rule="evenodd"
+												clip-rule="evenodd"
 												d="M7.52489 11.47L9.9908 13.9387L15.4533 8.46998C15.7462 8.17668 16.2216 8.17668 16.5145 8.46998L22.5076 14.47C22.6481 14.6106 22.727 14.8012 22.727 15V19.0395C22.727 19.4539 22.3909 19.7897 21.9765 19.7895L1.99951 19.7763C1.58501 19.776 1.24932 19.4396 1.25 19.0251L1.273 4.99877C1.27368 4.58465 1.60987 4.24946 2.02399 4.25L22.001 4.27632C22.4163 4.27686 22.7521 4.61486 22.75 5.0302L22.727 9.4677C22.7248 9.88191 22.3873 10.216 21.9731 10.2138C21.5589 10.2117 21.2249 9.87414 21.227 9.45993L21.2461 5.77532L2.77177 5.75099L2.75123 18.2768L21.227 18.289V15.3104L15.9839 10.0613L10.5214 15.53C10.2285 15.8233 9.75313 15.8233 9.46017 15.53L6.99425 13.0613L5.52718 14.53C5.23446 14.8231 4.75959 14.8234 4.46653 14.5306C4.17346 14.2379 4.17319 13.763 4.46591 13.47L6.46361 11.47C6.75658 11.1767 7.23192 11.1767 7.52489 11.47ZM9 9.75H5C4.58579 9.75 4.25 9.41421 4.25 9C4.25 8.58579 4.58579 8.25 5 8.25H9C9.41421 8.25 9.75 8.58579 9.75 9C9.75 9.41421 9.41421 9.75 9 9.75Z"
 												fill="white"></path>
                         					</mask>
@@ -176,7 +179,7 @@
 									</button>
 									<button
 										class="Button-Button-root Button-Button-contained Button-Button-containedPrimary Button-Button-containedSizeLarge mycafeFooter-mycafePostFooter-Footer-btns-btn">
-										<span class="Button-Button-label">작성 완료</span><span
+										<span class="Button-Button-label">등록 하기</span><span
 											class="Button-Button-interaction"></span>
 									</button>
 								</div>
