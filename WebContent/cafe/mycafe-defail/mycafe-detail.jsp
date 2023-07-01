@@ -33,14 +33,13 @@
 							회원가입하기</button>
 					</div>
 					<ul class="menu">
-						<li class=""><a href="/wdlist" class="">스터디</a></li>
-						<li class=""><a href="/events" class="">카페</a></li>
-						<li class="smMoreVisible"><a href="/cv/list" class="">내카페</a>
+						<li class=""><a href="" class="">Oh!스카 소개</a></li>
+						<li class=""><a href="" class="">FAQ</a></li>
+						<li class="smMoreVisible"><a href="" class="">오늘의 스터디</a>
 						</li>
-						<li class="smMoreVisible"><a href="/community" class="">FAQ</a>
+						<li class="smMoreVisible"><a href="/community" class="">오늘의 카페</a>
 						</li>
-						<li class="smMoreVisible"><a href="/aiscore/resume" class="">사이트
-								소개</a></li>
+						<li class="smMoreVisible"><a href="/aiscore/resume" class="">내 카페</a></li>
 					</ul>
 					<aside class="aside isLoggedIn">
 						<ul>

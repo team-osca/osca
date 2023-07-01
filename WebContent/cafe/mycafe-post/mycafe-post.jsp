@@ -31,14 +31,13 @@
 							type="button">회원가입하기</button>
 					</div>
 					<ul class="menu">
-						<li class=""><a href="/wdlist" class="">스터디</a></li>
-						<li class=""><a href="/events" class="">카페</a></li>
-						<li class="smMoreVisible"><a href="/cv/list" class="">내카페</a>
+						<li class=""><a href="" class="">Oh!스카 소개</a></li>
+						<li class=""><a href="" class="">FAQ</a></li>
+						<li class="smMoreVisible"><a href="" class="">오늘의 스터디</a>
 						</li>
-						<li class="smMoreVisible"><a href="/community" class="">FAQ</a>
+						<li class="smMoreVisible"><a href="" class="">오늘의 카페</a>
 						</li>
-						<li class="smMoreVisible"><a href="/aiscore/resume" class="">사이트
-								소개</a></li>
+						<li class="smMoreVisible"><a href="" class="">내 카페</a></li>
 					</ul>
 					<aside class="aside isLoggedIn">
 						<ul>
@@ -102,7 +101,7 @@
 						<div class="mycafePostDetail-mycafePostDetail-body-about">
 							<div class="mycafePostDetail-mycafePostDetail-body-about-header">간단
 								소개글</div>
-							<p class="mycafePostDetail-mycafePostDetail-body-guode">• 최대 4000글자 내에서 카페를 홍보할 수 있습니다.<br />• 스터디가 카페를 이용 할 경우의 규칙을	간략하게 적여주세요!
+							<p class="mycafePostDetail-mycafePostDetail-body-guode">• 최대 4000글자 내에서 카페를 홍보할 수 있습니다.<br />• 카페를 이용 할 경우의 규칙을 간략하게 적여주세요!
 							</p>
 							<div>
 								<div class="DynamicTextarea-Textarea">
@@ -166,8 +165,7 @@
 										</div>
 										<div class="ProgressBar-ProgressBar-emoji">👍</div>
 										<div class="ProgressBar-ProgressBar-description">
-											<div class="ProgressBar-ProgressBar-description-text">
-												훌륭한 카페군요!</div>
+											<div class="ProgressBar-ProgressBar-description-text">훌륭한 카페군요!</div>
 										</div>
 									</div>
 								</div>
