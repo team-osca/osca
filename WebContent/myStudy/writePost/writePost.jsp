@@ -3,123 +3,133 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-   <title>게시글 작성</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 작성</title>
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/THGWCGF/FAVICON.jpg">
     <link rel="stylesheet" href="writePost.css" />
     <link rel="preload" as="style" crossorigin="anonymous"
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
-  	
-</head>
-  <body>
-
-<!-- 헤더 -->
-<div class="NavBar_Header" style="position: fixed">
-    <div class="Header_isLoggedIn">
-      <nav class="Full_Header">
-        <div class="Header_left">
-          <div class="Header_left_logo">
-            <img class= "logo_img" src="https://i.ibb.co/YNfQCNW/Oh-Sca-LOGOjpg.jpg" alt="">
-          </div>
-         
+  
+  </head>
+    <body>
+    <!-- 헤더 -->
+    <div class="NavBar_Header" style="position: fixed">
+        <div class="Header_isLoggedIn">
+          <nav class="Full_Header">
+            <div class="Header_left">
+              <div class="Header_left_logo">
+                <img class="logo_img" src="https://i.ibb.co/YNfQCNW/Oh-Sca-LOGOjpg.jpg" alt="" />
+              </div>
+            </div> 
+            <ul class="Header_menu">
+              <li>
+                <a href="" class="">스터디</a>
+              </li>
+              <li>
+                <a href="" class="">카페</a>
+              </li>
+              <li>
+                <a href="" class="">내 스터디</a>
+              </li>
+              <li>
+                <a href="" class="">FAQ</a>
+              </li>
+              <li>
+                <a href="">사이트 소개</a>
+              </li>
+            </ul>
+            <aside class="Header_right_isLoggedIn">
+              <ul>
+                <li class="profileBox">
+                  <button
+                    type="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    data-attribute-id="gnb"
+                    data-gnb-kind="photo"
+                    class="profileButton"
+                    aria-label="avatarButton"
+                    data-badge="true"
+                  >
+                    <div class="avatarBorder">
+                      <div
+                        class="avatarImage"
+                        style="
+                          background-image: url(https://static.wanted.co.kr/oneid-user/profile_default.png),
+                            url(https://static.wanted.co.kr/images/profile_default.png);
+                        "
+                      ></div>
+                    </div>
+                  </button>
+                </li>
+  
+  
+              </ul>
+            </aside>
+          </nav>
         </div>
-        <ul class="Header_menu">
-          <li>
-            <a href="" class="">스터디</a>
-          </li>
-          <li>
-            <a href="" class="">카페</a>
-          </li>
-          <li>
-            <a href="" class="">내 스터디</a>
-          </li>
-          <li>
-            <a href="" class="">FAQ</a>
-          </li>
-          <li>
-            <a href="">사이트 소개</a>
-          </li>
-        </ul>
-        <aside class="Header_right_isLoggedIn">
-          <ul>
-            <li class="profileBox">
-              <button
-              type="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              data-attribute-id="gnb"
-              data-gnb-kind="photo"
-              class="profileButton"
-              aria-label="avatarButton"
-              data-badge="true"
-              >
-              <div class="avatarBorder">
-                <div
-                  class="avatarImage"
-                  style="
-                    background-image: url(https://static.wanted.co.kr/oneid-user/profile_default.png),
-                      url(https://static.wanted.co.kr/images/profile_default.png);
-                  "
-                ></div>
-                </div></button
-              >
-            </li>
-        </aside>
-      </nav>
-    </div>
-  </div>
-  <div class="Padding"></div>
-
-      <!-- 게시글 -->
-<!-- ㄱ고정된 등록하기 -->
+      </div>
+  
+      <div class="Padding"></div>
+<!-- 고정된 등록하기 -->
     <main class="PostWrite __9mT5h">
       <form id="write">
         <div class="Header_PostWrite __yoM82">
           <div class="Header_PostWrite__content __o8Uvu">
             <div class="Header_PostWrite__button __Js48X">
               <button
-                class="Button_Button__root__V1ie3 Button_Button__contained__toUI5 Button_Button__containedPrimary__gFaT9 Button_Button__containedSizeMedium__c2z9c Button_Button__containedDisabled__qiqtc Button_Button__disabled__2eyyF Button_Button__fullWidth__RU4tf"
+                class="Button_Button __root__V1ie3 
+                Button_Button__contained__toUI5 
+                Button_Button__containedPrimary__gFaT9 
+                Button_Button__containedSizeMedium__c2z9c 
+                Button_Button__containedDisabled__qiqtc 
+                Button_Button__disabled__2eyyF 
+                Button_Button__fullWidth__RU4tf"
                 type="submit"
                 form="write"
                 aria-label="registration button"
                 disabled=""
               >
-                <span class="Button__label" >등록하기</span>
+                <span class="Button__label">등록하기</span>
+                <span class="Button__interaction __kkYaa"></span>
               </button>
             </div>
           </div>
         </div>
         <!-- 글 작성 -->
-        <div class="CommunityWrite_CommunityWrite__content__t7rnC">
-          <div class="Paper_CommunityWritePaper__zgggO">
-
-            <div class="AutoTextarea_AutoTextarea__odSEo Paper_CommunityWritePaper__title__0zYfC">
+        <div class="PostWrite__content __t7rnC">
+          <div class="Paper_PostWritePaper __zgggO">
+            <div class="AutoTextarea __odSEo 
+            Paper_PostWritePaper__title __0zYfC">
               <textarea
-                class="AutoTextarea_AutoTextarea__textarea__zScTG"
+                class="AutoTextarea__textarea __zScTG"
                 name="title"
                 placeholder="제목을 입력해주세요."
                 required=""
                 style="height: 38px"
               ></textarea
               ><textarea
-                class="AutoTextarea_AutoTextarea__textarea__zScTG AutoTextarea_AutoTextarea__hidden__ScJax"
+                class="AutoTextarea__textarea __zScTG
+                AutoTextarea__hidden __ScJax"
                 readonly=""
                 style="height: 38px"
               ></textarea>
             </div>
-            <div class="Paper_CommunityWritePaper__content__KM9Nk">
-              <div class="AutoTextarea_AutoTextarea__odSEo">
+            <div class="Paper_PostWritePaper__content __KM9Nk">
+              <div class="AutoTextarea __odSEo">
                 <textarea
-                  class="AutoTextarea_AutoTextarea__textarea__zScTG"
+                  class="AutoTextarea__textarea __zScTG"
                   name="content"
                   placeholder="내용을 작성해주세요."
                   required=""
                   style="height: 56px"
                 ></textarea
                 ><textarea
-                  class="AutoTextarea_AutoTextarea__textarea__zScTG AutoTextarea_AutoTextarea__hidden__ScJax"
+                  class="AutoTextarea__textarea __zScTG 
+                  AutoTextarea__hidden __ScJax"
                   readonly=""
                   style="height: 56px"
                 ></textarea>
@@ -128,32 +138,15 @@
           </div>
         </div>
       </form>
-      <div class="CommunityWrite_CommunityWriteMobileSubmit__nbhwO">
-        <div class="CommunityWrite_CommunityWriteMobileSubmit__gradient__O8wbg"></div>
-        <div class="CommunityWrite_CommunityWriteMobileSubmit__button__TRLXF">
-          <button
-            class="Button_Button__root__V1ie3 Button_Button__contained__toUI5 Button_Button__containedPrimary__gFaT9 Button_Button__containedSizeMedium__c2z9c Button_Button__containedDisabled__qiqtc Button_Button__disabled__2eyyF Button_Button__fullWidth__RU4tf"
-            type="submit"
-            form="write"
-            disabled=""
-          >
-            <span class="Button_Button__label__1Kk0v">등록하기</span>
-          </button>
-        </div>
-      </div>
       <input
-        class="CommunityWrite_CommunityPhotoFile__YOQL3"
+        class="PostWrite_PostPhotoFile __YOQL3"
         type="file"
         accept="image/png, image/jpeg"
       />
-      <div class="CommunityWrite_CommunityPhotoButton__SIrUN">
-        <!-- <div class="Tooltip_Tooltip__O0gp_">
-          <span>사진을 추가해 보세요!</span>
-          <div class="Tooltip_Tooltip__bubblePoint__SmEXP"></div>
-        </div> -->
-        <button
+      <div class="PostWrite_PostPhotoButton __SIrUN">
+         <button
           type="button"
-          class="PhotoButton_PhotoButton__uSl7I"
+          class="PhotoButton_PhotoButton __uSl7I"
           aria-label="add photo button"
           data-attribute-id="community__content__addImage"
         >

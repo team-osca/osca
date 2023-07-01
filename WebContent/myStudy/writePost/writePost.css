@@ -205,6 +205,11 @@ a {
 }
 
 /* 헤더 끝 */
+.Padding{
+    height: 50px;
+}
+
+
 
 .Header_PostWrite {
     position: fixed;
@@ -218,21 +223,87 @@ a {
     border-color: rgb(225, 226, 227);
     border-image: initial;
 }
+.Header_PostWrite__content{
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px 0;
+}
 
 .Header_PostWrite__button {
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-pack: center;
+    /* justify-content: space-evenly; */
+    -ms-flex-align: center;
+    /* align-items: center; */
     width: 135px;
     height: 40px;
     margin-left: auto;
 }
 
+.Button__interaction {
+    /* overflow: hidden; */
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    opacity: 0;
+    background-color: var(--button-color);
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    will-change: opacity;
+}
+
 .Header_PostWrite__button button {
     width: 100%;
     height: 100%;
-    background-color: rgb(242, 244, 247);
-    color: rgb(204, 204, 204);
+    background-color: #f2f4f7;
+    color: #ccc;
+}
+
+.Button_Button {
+    border-radius: 1000px;
+    border: none;
+}
+
+.Button_Button {
+    --button-color: #171717;
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: normal;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+/* 유효성 검사 */
+.Header_PostWrite__button.valid button {
+    background-color: #36f;
+    color: #fff;
+}
+
+.Header_PostWrite__button button {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(242, 244, 247);
+    color: rgb(204, 204, 204); */
+    background-color: #36f;
+    color: #fff;
 }
 
 .Button__label {
@@ -252,13 +323,39 @@ a {
     max-width: 1060px;
     margin: 0px auto;
 }}
-.CommunityWrite_CommunityWrite__content__t7rnC {
+
+
+
+.PostWrite__content {
     position: relative;
     width: 100%;
     padding-top: 60px;
 }
 
-.Paper_CommunityWritePaper__zgggO {
+.Paper_PostWritePaper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: calc(100vh - 110px);
+    padding: 39px 40px;
+    border: 1px solid #e1e2e3;
+    border-top: 0;
+    background-color: #fff;
+}
+
+.Paper_PostWritePaper__title {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding-bottom: 21px;
+    border-bottom: 2px solid #e1e2e3;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+/* .Paper_PostWritePaper {
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 110px);
@@ -269,23 +366,32 @@ a {
     border-color: rgb(225, 226, 227) rgb(225, 226, 227) rgb(225, 226, 227);
     border-image: initial;
     border-top: 0px;
-}
+} */
 
-.Paper_CommunityWritePaper__title__0zYfC {
-    display: flex;
-    width: 100%;
-    padding-bottom: 21px;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 38px;
-    border-bottom: 2px solid rgb(225, 226, 227);
-}
+@media (min-width: 1200px){
+    .Paper_PostWritePaper {
+        max-width: 790px;
+        margin: 0 auto;
+    }}
 
-.AutoTextarea_AutoTextarea__odSEo {
+@media (min-width: 1200px){
+.Paper_PostWritePaper {
+    max-width: 790px;
+    margin: 0 auto;
+}}
+.AutoTextarea {
     position: relative;
 }
 
-.AutoTextarea_AutoTextarea__textarea__zScTG {
+.Paper_PostWritePaper__title>textarea {
+    height: 38px;
+}
+
+.AutoTextarea__textarea {
+    font-family: Pretendard Variable, Pretendard JP Variable, -apple-system, system-ui,
+    BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial, Apple SD Gothic Neo, Nanum Gothic,
+    Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+
     width: 100%;
     height: auto;
     font-size: inherit;
@@ -301,32 +407,31 @@ a {
     outline: 0px;
     overflow: hidden;
 }
+.AutoTextarea__textarea {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: #333;
+    outline: 0;
+    resize: none;
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 
-.AutoTextarea_AutoTextarea__hidden__ScJax {
+.AutoTextarea__hidden {
     position: absolute;
     top: 0px;
     left: 0px;
     visibility: hidden;
     pointer-events: none;
 }
-.AutoTextarea_AutoTextarea__textarea__zScTG {
-    width: 100%;
-    height: auto;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    color: rgb(51, 51, 51);
-    resize: none;
-    padding: 0px;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
-    outline: 0px;
-    overflow: hidden;
-}
 
-.Paper_CommunityWritePaper__content__KM9Nk {
+.Paper_PostWritePaper__content {
     width: 100%;
     padding-top: 28px;
     font-size: 17px;
@@ -334,39 +439,15 @@ a {
     line-height: 28px;
 }
 
-.AutoTextarea_AutoTextarea__odSEo {
+.AutoTextarea {
     position: relative;
 }
 
-.AutoTextarea_AutoTextarea__textarea__zScTG{
-    width: 100%;
-    height: auto;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    color: rgb(51, 51, 51);
-    resize: none;
-    padding: 0px;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
-    outline: 0px;
-    overflow: hidden;
-}
 
-.AutoTextarea_AutoTextarea__hidden__ScJax {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-input[type=file].CommunityWrite_CommunityPhotoFile__YOQL3 {
+input[type=file].PostWrite_PostPhotoFile  {
     display: none;
 }
-.CommunityWrite_CommunityPhotoButton__SIrUN {
+.PostWrite_PostPhotoButton {
     position: fixed;
     top: 0;
     left: 0;
@@ -379,7 +460,7 @@ input[type=file].CommunityWrite_CommunityPhotoFile__YOQL3 {
     pointer-events: none;
 }
 
-.PhotoButton_PhotoButton__uSl7I {
+.PhotoButton_PhotoButton {
     position: absolute;
     right: 38px;
     bottom: 60px;
@@ -402,8 +483,17 @@ input[type=file].CommunityWrite_CommunityPhotoFile__YOQL3 {
     color: #333;
 }
 
-svg {
-    width: 24;
-    height: 24;
-    fill: none;
+.PhotoButton_PhotoButton>span {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12px;
+    color: inherit;
+}
+.PhotoButton_PhotoButton>span>em {
+    font-style: normal;
+    color: #36f;
+}
+
+
+
 }
