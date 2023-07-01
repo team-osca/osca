@@ -3,7 +3,7 @@ $settingContainer = $('.setting_container >li:not(:last)');
 
 $inputFile = $('#input-file');
 $settingPage = $('#setting_page');
-
+$updateContent = $('.update_content');
 
 $settingContainer.on('click', showModal);
 
@@ -12,26 +12,42 @@ $inputFile.on('change', function(){
 })
 
 function showModal() {
-    $settingPage.append(modalData[this.id]);
+    modalData[this.id]();
     $body.css('overflow', 'hidden');
-    
-    $('.cansel_button').on('click', hideModal);
-    $('.exit_svg_box').on('click', hideModal);
+
+    $('.submit_button').attr('disabled', true);
+    $('.cansel_button, .exit_svg_box').on('click', hideModal);
 }
 function hideModal(){
     $('.modal_area').remove();
     $body.css('overflow', 'unset');
 }
 
-const NAME_CHANGE = (
+function drawModal(modalConent) {
+    $settingPage.append(modalConent);
+}
+
+const NAME_CHANGE = function(){
+    drawModal(NAME_MODAL);
+}
+const PHONE_CHANGE = function(){
+    drawModal(PHONE_MODAL);
+}
+const PASSWORD_CHANGE = function(){
+    drawModal(PASSWORD_MODAL);
+}
+const modalData = {NAME_CHANGE , PHONE_CHANGE, PASSWORD_CHANGE};
+
+
+const NAME_MODAL = (
     `
     <div class="modal_area">
         <div class="modal">
             <div class="modal_title_area">
                 <div class="modal_white_space"></div>
                 <div class="modal_title_box">
-                    <p data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="modal_title">
-                        <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="modal_title_text">이름</span>
+                    <p  color="var(--theme-palette-colors-black-100)" class="modal_title">
+                        <span  color="var(--theme-palette-colors-black-100)" class="modal_title_text">이름</span>
                     </p>
                 </div>
                 <div class="exit_svg_area">
@@ -47,14 +63,14 @@ const NAME_CHANGE = (
             <div class="modal_content_area">
                 <form>
                     <div class="modal_input_area">
-                        <input type="text" placeholder="이름을 입력해주세요." name="username" data-testid="Input_username" class="modal_input" value="유희준">
+                        <input type="text" placeholder="이름을 입력해주세요." name="username" class="modal_input" value="유희준">
                     </div>
                     <div class="modal_button_area">
-                        <button type="button" data-testid="Button" class="cansel_button">
-                            <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="button_text">취소</span>
+                        <button type="button"  class="cansel_button">
+                            <span color="var(--theme-palette-colors-black-100)" class="button_text">취소</span>
                         </button>
-                        <button type="submit" data-testid="Button" class="submit_button">
-                            <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="button_text">저장</span>
+                        <button type="submit"  class="submit_button">
+                            <span color="var(--theme-palette-colors-black-100)" class="button_text">저장</span>
                         </button>
                     </div>
                 </form>
@@ -62,16 +78,16 @@ const NAME_CHANGE = (
         </div>
     </div>
     `
-    )
-const PHONE_CHANGE = (
+);
+const PHONE_MODAL = (
     `
     <div class="modal_area">
         <div class="modal">
             <div class="modal_title_area">
                 <div class="modal_white_space"></div>
                 <div class="modal_title_box">
-                    <p data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="modal_title">
-                        <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="modal_title_text">휴대폰 번호</span>
+                    <p color="var(--theme-palette-colors-black-100)" class="modal_title">
+                        <span color="var(--theme-palette-colors-black-100)" class="modal_title_text">휴대폰 번호</span>
                     </p>
                 </div>
                 <div class="exit_svg_area">
@@ -90,24 +106,24 @@ const PHONE_CHANGE = (
                         <div>
                             <div class="auth_area">
                                 <input type="text" placeholder="(예시) 01013245768" name="mobile" class="input_mobile" value="" readonly>
-                                <button type="button" data-testid="Button" class="auth_button">
-                                    <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="button_text">번호 변경</span>
+                                <button type="button" class="auth_button">
+                                    <span color="var(--theme-palette-colors-black-100)" class="button_text">번호 변경</span>
                                 </button>
                             </div>
                             <div class="auth_area">
                                 <input type="text" placeholder="인증번호를 입력해주세요." name="authCode" readonly="" class="input_authCode" value="">
                             </div>
-                            <p data-testid="Typography" color="var(--theme-palette-colors-green-400)" class="auth_info">인증되었습니다.</p>
-                            <!-- <p data-testid="Typography" color="var(--theme-palette-colors-blue-400)" class="auth_request_info">인증번호가 요청되었습니다.</p> -->
-                            <!-- <p data-testid="Typography" color="var(--theme-palette-colors-blue-400)" class="auth_time">유효시간 02:52</p> -->
+                            <p color="var(--theme-palette-colors-green-400)" class="auth_info">인증되었습니다.</p>
+                            <!-- <p color="var(--theme-palette-colors-blue-400)" class="auth_request_info">인증번호가 요청되었습니다.</p> -->
+                            <!-- <p color="var(--theme-palette-colors-blue-400)" class="auth_time">유효시간 02:52</p> -->
                         </div>
                     </div>
                     <div class="modal_button_area">
-                        <button type="button" data-testid="Button" class="cansel_button">
-                            <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="button_text">취소</span>
+                        <button type="button" class="cansel_button">
+                            <span color="var(--theme-palette-colors-black-100)" class="button_text">취소</span>
                         </button>
-                        <button type="submit" data-testid="Button" class="submit_button">
-                            <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="button_text">저장</span>
+                        <button type="submit" class="submit_button">
+                            <span color="var(--theme-palette-colors-black-100)" class="button_text">저장</span>
                         </button>
                     </div>
                 </form>
@@ -115,16 +131,16 @@ const PHONE_CHANGE = (
         </div>
     </div>
     `
-    );
-const PASSWORD_CHANGE = (
+);
+const PASSWORD_MODAL = (
     `
     <div class="modal_area">
         <div class="modal">
             <div class="modal_title_area">
                 <div class="modal_white_space"></div>
                 <div class="modal_title_box">
-                    <p data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="modal_title">
-                        <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="modal_title_text">비밀번호 변경</span>
+                    <p color="var(--theme-palette-colors-black-100)" class="modal_title">
+                        <span color="var(--theme-palette-colors-black-100)" class="modal_title_text">비밀번호 변경</span>
                     </p>
                 </div>
                 <div class="exit_svg_area">
@@ -140,19 +156,19 @@ const PASSWORD_CHANGE = (
             <div class="modal_content_area">
                 <form>
                     <div class="modal_input_area">
-                        <div class="password_area"><label data-testid="Typography" color="var(--theme-palette-colors-gray-600)" for="email" class="input_password_label">현재 비밀번호</label></div>
+                        <div class="password_area"><label color="var(--theme-palette-colors-gray-600)" for="email" class="input_password_label">현재 비밀번호</label></div>
                         <input type="password" placeholder="비밀번호를 입력해주세요." name="oldPassword" class="input_password" value="">
-                        <div class="password_area"><label data-testid="Typography" color="var(--theme-palette-colors-gray-600)" for="email" class="input_password_label">새 비밀번호</label></div>
+                        <div class="password_area"><label color="var(--theme-palette-colors-gray-600)" for="email" class="input_password_label">새 비밀번호</label></div>
                         <input type="password" placeholder="새 비밀번호를 입력해주세요." name="password"  class="input_password" value="" aria-autocomplete="list">
                         <input type="password" placeholder="새 비밀번호를 다시 한번 입력해주세요." name="passwordConfirm" class="input_password" value="">
-                        <p data-testid="Typography" color="var(--theme-palette-colors-gray-600)" class="input_info">영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합해 8자 이상 16자 이하로 입력해주세요.</p>
+                        <p color="var(--theme-palette-colors-gray-600)" class="input_info">영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합해 8자 이상 16자 이하로 입력해주세요.</p>
                     </div>
                     <div class="modal_button_area">
-                        <button type="button" data-testid="Button" class="cansel_button">
-                            <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="button_text">취소</span>
+                        <button type="button" class="cansel_button">
+                            <span color="var(--theme-palette-colors-black-100)" class="button_text">취소</span>
                         </button>
-                        <button type="submit" data-testid="Button" class="submit_button">
-                            <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="button_text">저장</span>
+                        <button type="submit" class="submit_button">
+                            <span color="var(--theme-palette-colors-black-100)" class="button_text">저장</span>
                         </button>
                     </div>
                 </form>
@@ -160,5 +176,4 @@ const PASSWORD_CHANGE = (
         </div>
     </div>
     `
-    );
-const modalData = {NAME_CHANGE, PHONE_CHANGE, PASSWORD_CHANGE};
+);
