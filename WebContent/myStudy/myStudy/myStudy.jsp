@@ -3,16 +3,23 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>내 스터디</title>
- <link rel="stylesheet" href="myStudy.css" />
-    <link rel="preload" as="style" crossorigin="anonymous"
-	href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
-  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/THGWCGF/FAVICON.jpg">
-   
+    <link rel="stylesheet" href="myStudy.css" />
+    <link
+      rel="preload"
+      as="style"
+      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
+    />
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/THGWCGF/FAVICON.jpg" />
   </head>
-   <body>
+  <body>
     <!-- 헤더 -->
     <div class="NavBar_Header" style="position: fixed">
       <div class="Header_isLoggedIn">
@@ -63,21 +70,21 @@
                   </div>
                 </button>
               </li>
-
-
             </ul>
           </aside>
         </nav>
       </div>
     </div>
-    <!-- 내용 -->
-    <div class="Padding"></div>
 
+    <div class="Padding"></div>
+    <!-- 바디 -->
     <div class="Container">
+      <!-- 왼쪽 상단부분 -->
       <nav class="Study_status">
         <h2 class="title">
           <p>스터디 현황</p>
         </h2>
+        <!-- 오른쪽 상단 개설하기 버튼 -->
         <div class="newStudy">
           <button class="newStudy-button" type="button">
             <span class="PostWriteButton_writeIcon">
@@ -90,9 +97,18 @@
                   ></path></svg></span
             ></span>
           </button>
+          <button
+            class="Posting-Button-root Posting-Button-outlined Posting-Button-outlinedPrimary Posting-Button-outlinedSizeMedium InterestCategoryItem-InterestCategoryItem"
+            style="background: #36f; color: #fff"
+          >
+            <span class="Button_Button__label__1Kk0v">등록하기</span
+            ><span class="Button_Button__interaction__kkYaa"></span>
+          </button>
         </div>
       </nav>
+
       <div class="Study_status_all">
+        <!-- 왼쪽 스터디 타입 리스트  -->
         <div class="Staus-Left-bar">
           <dl>
             <dt>내 스터디</dt>
@@ -120,6 +136,7 @@
             </dd>
           </dl>
         </div>
+        <!-- 오른쪽 스터디 목록 -->
         <section>
           <div class="List_wrapper">
             <header class="Study-header">
@@ -164,9 +181,9 @@
                       삭제하기
                     </button>
                   </li>
-                  <li class="MenuPopup_MenuPopup__menu_item__p_vG7">
+                  <li class="MenuPopup_menu_item">
                     <a
-                      class="MenuPopup_MenuPopup__menu_link___Rsar"
+                      class="MenuPopup__menu_link___Rsar"
                       data-attribute-id="community__contentDetail__more__edit"
                       data-content-title="아침형 인간이 되고 싶었으나"
                       data-content-id="9430"
@@ -218,9 +235,9 @@
                       삭제하기
                     </button>
                   </li>
-                  <li class="MenuPopup_MenuPopup__menu_item__p_vG7">
+                  <li class="MenuPopup_menu_item">
                     <a
-                      class="MenuPopup_MenuPopup__menu_link___Rsar"
+                      class="MenuPopup__menu_link___Rsar"
                       data-attribute-id="community__contentDetail__more__edit"
                       data-content-title="아침형 인간이 되고 싶었으나"
                       data-content-id="9430"
@@ -244,4 +261,3 @@
     </div>
   </body>
 </html>
- 
