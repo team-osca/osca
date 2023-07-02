@@ -19,7 +19,7 @@
     />
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/THGWCGF/FAVICON.jpg" />
   </head>
-  <body>
+ <body>
     <!-- 헤더 -->
     <div class="NavBar_Header" style="position: fixed">
       <div class="Header_isLoggedIn">
@@ -68,6 +68,8 @@
                       "
                     ></div>
                   </div>
+
+                  
                 </button>
               </li>
             </ul>
@@ -144,6 +146,9 @@
                 <li class="col col-1">스터디명</li>
                 <li class="col col-2">일자</li>
                 <li class="col col-3">상태</li>
+                <li class="col col-4">인원</li>
+                <div class="space"></div>
+              
               </ul>
             </header>
             <ul class="Study-content list1">
@@ -152,6 +157,8 @@
               </li>
               <li class="col col-2">2059-11-08</li>
               <li class="col col-3">진행중</li>
+              <li class="col col-4">1/6</li>
+              
               <button
                 type="button"
                 class="PostContents__menu_button"
@@ -206,6 +213,7 @@
               </li>
               <li class="col col-2">2056-01-28</li>
               <li class="col col-3">종료</li>
+              <li class="col col-4">5/6</li>
               <button
                 type="button"
                 class="PostContents__menu_button"

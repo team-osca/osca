@@ -448,17 +448,26 @@ a {
 }
 
 .col-1 {
-  width: 57.0886075949%;
+  width: 50.0886075949%;
 }
 .col-2 {
-  width: 22.7848101266%;
+  width: 17.7848101266%;
   display: flex;
 }
 
 .col-3 {
   width: 6.1265822785%;
+  padding-right: 20px;
+  display: flex;
 }
+.col-4{
+    width: 6.1265822785%;
 
+}
+.space{
+    padding-left: 50px;
+
+}
 .List_wrapper .Study-header .col-3 {
   display: -ms-flexbox;
   display: flex;
@@ -468,7 +477,7 @@ a {
 .List_row .col-3 {
   -ms-flex-positive: 1;
   flex-grow: 1;
-  padding-right: 20px;
+  padding-right: 30px;
 }
 
 .List_wrapper .Study-empty {
