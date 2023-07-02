@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-  <head>
+    <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,13 +13,13 @@
       crossorigin="anonymous"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
     />
-    <link	
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
     />
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/THGWCGF/FAVICON.jpg" />
   </head>
- <body>
+  <body>
     <!-- 헤더 -->
     <div class="NavBar_Header" style="position: fixed">
       <div class="Header_isLoggedIn">
@@ -117,19 +117,19 @@
             <dd>
               <ul>
                 <li class="active">
-                  <a href="" class=""
+                  <a href="#" class=""
                     >전체
                     <div class="label_">2</div>
-                  </a>
+                  </a> 
                 </li>
-                <li>
-                  <a href="" class=""
+                <li class="">
+                  <a href="#" class=""
                     >내가 개설한 스터디
                     <div class="label_">1</div></a
                   >
                 </li>
-                <li>
-                  <a href="" class=""
+                <li class="">
+                  <a href="#" class=""
                     >참여 스터디
                     <div class="label_">1</div></a
                   >
@@ -268,4 +268,6 @@
       </div>
     </div>
   </body>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="myStudy.js"></script>
 </html>

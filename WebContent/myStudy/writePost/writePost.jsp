@@ -220,7 +220,69 @@
         </button>
       </div>
     </main>
-
+<!-- 지역태그 -->
+<div class="Modal_Modal__root__lNnQN undefined">
+    <div class="Modal_Modal__root__backdrop__ENcJl Modal_Modal__root__blur__bKLQ5"></div>
+    <div
+      class="Modal_Modal__root__body__1_X6A Modal_Modal__root__body__scrollContent__ro_P_ SelectTagsModal_SelectTagsModal__5SMcy"
+    >
+      <div
+        class="ModalTitle_ModalTitle__root__y_KMH SelectTagsModal_SelectTagsModal__title__nZKuF"
+      >
+        <h4>태그 선택</h4>
+        <!-- <span class="SelectTagsModal_badge__eVbO1">0</span> -->
+        <button type="button" title="close">
+          <span class="SvgIcon_SvgIcon__root__8vwon"
+            ><svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 24 24">
+              <path
+                d="M17.97 19.03a.749.749 0 1 0 1.06-1.06l-6.5-6.5a.749.749 0 0 0-1.06 0l-6.5 6.5a.749.749 0 1 0 1.06 1.06L12 13.06l5.97 5.97zM12 10.94 6.03 4.97a.749.749 0 1 0-1.06 1.06l6.5 6.5a.749.749 0 0 0 1.06 0l6.5-6.5a.749.749 0 1 0-1.06-1.06L12 10.94z"
+              ></path></svg
+          ></span>
+        </button>
+      </div>
+      <div class="ModalContent_ModalContent__root__1Z9d1">
+        <div class="SelectTagsModal_SelectTagsModal__contents__edpIA">
+          <p class="SelectTagsModal_message__z_ihm">
+            스터디가 진행되는 장소의 지역을 선택해주세요.
+          </p>
+          <div class="SelectTagsModal_interestsTags__BHJl7">
+            <ul>
+              <li>
+                <ul class="SelectTagsModal_subTags__dIvTw">
+                  <li class=""><button type="button">서울</button></li>
+                  <li class=""><button type="button">경기</button></li>
+                  <li class=""><button type="button">인천</button></li>
+                  <li class=""><button type="button">대전</button></li>
+                  <li class=""><button type="button">대구</button></li>
+                  <li class=""><button type="button">부산</button></li>
+                  <li class=""><button type="button">광주</button></li>
+                  <li class=""><button type="button">울산</button></li>
+                  <li class=""><button type="button">강원</button></li>
+                  <li class=""><button type="button">전남</button></li>
+                  <li class=""><button type="button">전북</button></li>
+                  <li class=""><button type="button">경남</button></li>
+                  <li class=""><button type="button">경북</button></li>
+                  <li class=""><button type="button">충남</button></li>
+                  <li class=""><button type="button">충북</button></li>
+                  <li class=""><button type="button">제주</button></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ModalActions_ModalActions__root__8OUZk SelectTagsModal_SelectTagsModal__actions__1UVKu"
+      >
+        <button
+          class="Button_Button__root__V1ie3 Button_Button__contained__toUI5 Button_Button__containedPrimary__gFaT9 Button_Button__containedSizeLarge__jIgXK Button_Button__containedDisabled__qiqtc Button_Button__disabled__2eyyF Button_Button__fullWidth__RU4tf"
+          disabled=""
+        >
+          <span class="Button_Button__label__1Kk0v">완료</span>
+        </button>
+      </div>
+    </div>
+  </div>
   </body>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="writePost.js"></script>
