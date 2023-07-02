@@ -1,11 +1,16 @@
 $body = $('body');
 $settingContainer = $('.setting_container >li:not(:last)');
+$lastSettingContainer = $('.setting_container >li:last');
 
 $inputFile = $('#input-file');
 $settingPage = $('#setting_page');
 $updateContent = $('.update_content');
 
 $settingContainer.on('click', showModal);
+
+$lastSettingContainer.on('click', function () {
+    window.location.href = 'http://localhost:8090/templates/member/mypage/withdraw.jsp';
+});
 
 $inputFile.on('change', function(){
     
@@ -14,8 +19,10 @@ $inputFile.on('change', function(){
 function showModal() {
     modalData[this.id]();
     $body.css('overflow', 'hidden');
-
-    $('.submit_button').attr('disabled', true);
+	
+	if(this.id != 'NAME_CHANGE'){
+    	$('.submit_button').attr('disabled', true);
+	}
     $('.cansel_button, .exit_svg_box').on('click', hideModal);
 }
 function hideModal(){
