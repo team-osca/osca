@@ -1,36 +1,35 @@
 Object.prototype.forEach = Array.prototype.forEach;
 
-const defaultCheckBox = (
+const defaultCheckBox = (idx)=>{return (
     `
-        <div class="withdraw_checkbox_area"></div>
+        <div class="withdraw_checkbox_area" id="checkbox${idx}"></div>
     `
-);
-const checkedCheckBox = (
+)};
+const checkedCheckBox = (idx)=>{return (
     `
-        <div class="svg_div"><span class="svg_wrapper"><svg viewBox="0 0 12 8" class="check_svg"><path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-common-white)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div>
+        <div class="svg_div" id="checkbox${idx}"><span class="svg_wrapper"><svg viewBox="0 0 12 8" class="check_svg"><path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-common-white)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div>
     `
-);
+)};
 
-function returnCheckBoxType(type){
-    return type ? checkedCheckBox : defaultCheckBox;
+function returnCheckBoxType(type, idx){
+    return type == "svg_div" ? checkedCheckBox(idx) : defaultCheckBox(idx);
 }
 
-let checked = false;
 let $withdrawCheckArea = $('.withdraw_check_area');
 
 function exchangeCheckBox(element, idx){
-    console.log(element + " " + idx);
-    if($(element)){
-        $(element)[idx].remove();
+    $checkbox = $(`.${element.className}>#checkbox${idx}`);
+    if($checkbox){
+        $checkbox.remove();
+        $(element).prepend(returnCheckBoxType($checkbox.attr('class') == "withdraw_checkbox_area" ? "svg_div" : "withdraw_checkbox_area", idx));
     }
+    $('.withdrawBtn').prop('disabled', $('.svg_div').length == 2 ? false : true);
+
 }
-function appendCheckBox(){
-    $withdrawCheckArea.forEach((element) => {element.prepend(returnCheckBoxType(checked))});
-    checked = checked ? false : true;
-}
+
 $(document).ready(function(){
-    $withdrawCheckArea.prepend(returnCheckBoxType(checked));
-    $('.withdraw_checkbox_area').forEach((element, idx) => {
-        $(this).on('click', () => exchangeCheckBox(element, idx));
+    $withdrawCheckArea.forEach((element, idx) => {
+        $(element).prepend(returnCheckBoxType("withdraw_checkbox_area", idx));
+        $(element).on('click', () => exchangeCheckBox(element, idx));
     });
 });
