@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+    
+    <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +16,9 @@
 </head>
 <body>
     <div id="login">
+        <!-- 전체 페이지 영역 -->
         <div class="area">
+            <!-- 로그인 박스 영역 -->
             <div class="boxarea">
                 <div class="box">
                     <div class="setting">

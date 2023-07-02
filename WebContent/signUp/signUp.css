@@ -1,10 +1,14 @@
 @charset "UTF-8";
 
-html, body, #singup{
+html::-webkit-scrollbar{
+    display: none;
+}
+
+html, body, #signup{
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 100%;
+    height: 100;
     min-width: 320px;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -23,7 +27,6 @@ html, body, #singup{
 
 body{
     display: block;
-    margin: 8px;
 }
 
 @media only screen and (min-width: 768px){
@@ -155,29 +158,8 @@ body{
     --theme-palette-colors-blue-600: #2658f6;
 }
 
-div{
-    display: block;
-}
-
-
-p{
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
-form{
-    display: block;
-    margin-top: 0em;
-}
-
-label{
-    cursor: default;
-}
-
 .page{
+    padding: 50px;
     width: 100%;
     height: 100%;
     display: -webkit-box;
@@ -286,7 +268,7 @@ label{
     align-items: center;
 }
 
-.singuppage{
+.signuppage{
     color: var(--theme-palette-colors-black-100);
     font-weight: var(--text-weight-headline-bold);
     text-align: center;
@@ -357,44 +339,6 @@ label{
     opacity: 1;
 }
 
-input:not([type="range"]):not([type="color"]) {
-    writing-mode: horizontal-tb !important;
-}
-
-input:disabled {
-    cursor: default;
-    background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3));
-    color: -internal-light-dark(rgb(84, 84, 84), rgb(170, 170, 170));
-    border-color: rgba(118, 118, 118, 0.3);
-}
-
-input[type="email" i] {
-    padding: 1px 2px;
-}
-
-input {
-    text-rendering: auto;
-    color: fieldtext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    background-color: field;
-    margin: 0em;
-    padding: 1px 2px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
-}
-
 .phonenumber{
     margin: 17px 0px 7px 0px;
 }
@@ -426,36 +370,6 @@ input {
     font-size: 16px;
     color: var(--theme-palette-colors-gray-900);
     font-weight: 400;
-}
-
-select:not(:-internal-list-box) {
-    overflow: visible !important;
-}
-
-select {
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: fieldtext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    box-sizing: border-box;
-    align-items: center;
-    -webkit-rtl-ordering: logical;
-    background-color: field;
-    cursor: default;
-    margin: 0em;
-    border-width: 1px;
-    border-style: solid;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
-    border-radius: 0px;
 }
 
 option {
@@ -506,11 +420,6 @@ option {
     font-size: inherit;
 }
 
-svg:not(:root) {
-    overflow-clip-margin: content-box;
-    overflow: hidden;
-}
-
 .number{
     display: flex;
     flex-direction: row;
@@ -556,12 +465,6 @@ svg:not(:root) {
     flex: 0 0 auto;
     border-radius: 5px;
     border: 1px solid var(--theme-palette-colors-bluegray-200);
-}
-
-button:disabled {
-    background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
-    color: -internal-light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
-    border-color: -internal-light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
 }
 
 .verificationbtn:disabled span {
@@ -750,6 +653,10 @@ hr{
     align-items: center;
     margin-right: 18px;
     cursor: pointer;
+}
+
+.notice input[type="checkbox"] {
+    display: none;
 }
 
 label{
