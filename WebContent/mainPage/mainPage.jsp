@@ -108,25 +108,25 @@
                                 <div id="slider-wrap">
                                     <ul id="slider">
                                        <li>
-                                            <img src="banner/images/001.png">
+                                            <img src="/mainPage/images/001.png">
                                        </li>
                                        <li>
-                                            <img src="banner/images/002.png">
+                                            <img src="/mainPage/images/002.png">
                                        </li>
                                        <li>
-                                            <img src="banner/images/003.png">
+                                            <img src="/mainPage/images/003.png">
                                        </li>
                                        <li>
-                                            <img src="banner/images/004.png">
+                                            <img src="/mainPage/images/004.png">
                                        </li>
                                        <li>
-                                            <img src="banner/images/005.png">
+                                            <img src="/mainPage/images/005.png">
                                        </li>
                                        <li>
-                                            <img src="banner/images/006.png">
+                                            <img src="/mainPage/images/006.png">
                                        </li>
                                        <li>
-                                            <img src="banner/images/006.png">
+                                            <img src="/mainPage/images/006.png">
                                        </li>
                                     </ul>
                                      <!-- 컨트롤 버튼-->
@@ -248,5 +248,5 @@
         <div></div>
     </div>
 </body>
-<script src="mainpage.js"></script>
+<script src="mainPage.js"></script>
 </html>
