@@ -1,480 +1,613 @@
 @charset "UTF-8";
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 :root {
-    --nav-height: 50px
+  --nav-height: 50px;
 }
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 html {
-    font-size: 10px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 body {
-    margin: 0;
-    font-size: 14px;
-    color: #333;
-    background-color: #f8f8f8;
-    line-height: 1.42857143;
-    font-family: Pretendard Variable,Pretendard JP Variable,
-    -apple-system,system-ui,BlinkMacSystemFont,Roboto,Segoe UI,
-    Helvetica,Arial,Apple SD Gothic Neo,Nanum Gothic,
-    Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,
-    Segoe UI Symbol,sans-serif
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.42857143;
+  font-family: Pretendard Variable, Pretendard JP Variable, -apple-system, system-ui,
+    BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial, Apple SD Gothic Neo, Nanum Gothic,
+    Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
 }
 
 a {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: none;
-    cursor: pointer;
-    font-family: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-
-a, a:active, a:hover, a:visited {
-    color: inherit;
+a,
+a:active,
+a:hover,
+a:visited {
+  color: inherit;
 }
 
 a {
-    font-family: inherit;
-    text-decoration: inherit;
-    cursor: pointer;
+  font-family: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
 }
 
-
+/* 헤더 */
 .NavBar_Header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: #fff;
-    -webkit-box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
-    z-index: 800;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  z-index: 800;
 }
 
-.Header_isLoggedIn{
-    position: relative;
-    max-width: 1060px;
-    height: 50px;
+.Header_isLoggedIn {
+  position: relative;
+  max-width: 1060px;
+  height: 50px;
 }
-.Full_Header{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-
-.logo_img{
-    height: 18px;
+.Full_Header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
-.Header_menu{
-    /* 헤더 안의 리스트 */
-    height: inherit;
-    text-align: center;
-    margin: 0;
+.logo_img {
+  height: 18px;
+}
+
+.Header_menu {
+  /* 헤더 안의 리스트 */
+  height: inherit;
+  text-align: center;
+  margin: 0;
 }
 
 .Header_menu li {
-    height: inherit;
-    display: inline-block;
-    position: relative;
+  height: inherit;
+  display: inline-block;
+  position: relative;
 }
 
 .Header_menu li a {
-    position: relative;
-    vertical-align: middle;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    padding: 15px;
-    display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  padding: 15px;
+  display: inline-block;
 }
-
 
 /* Header_right */
 .Aside_className_e5Bi {
-    height: 100%;
-    padding: 10px 0;
+  height: 100%;
+  padding: 10px 0;
 }
 
 .Header_right_isLoggedIn {
-    padding: 9px 0;
+  padding: 9px 0;
 }
 
-.Header_right_isLoggedIn>ul {
-    height: 100%;
-    margin: 0;
+.Header_right_isLoggedIn > ul {
+  height: 100%;
+  margin: 0;
 }
-.Header_right_isLoggedIn>ul li {
-    position: relative;
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-
-.Header_right_isLoggedIn>ul li>*{
-    height: 100%;
-    padding: 0 5px;
-    font-size: 14px;
-    color: #333;
-    font-weight: 600;
-    line-height: 1;
+.Header_right_isLoggedIn > ul li {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
-.Header_right_isLoggedIn>ul .profileBox {
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-right: 5px;
+.Header_right_isLoggedIn > ul li > * {
+  height: 100%;
+  padding: 0 5px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.Header_right_isLoggedIn > ul .profileBox {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 5px;
 }
 
 .Header_right_isLoggedIn > ul li .profileButton .avatarBorder > div {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-position: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-.Header_right_isLoggedIn>ul li .notiButton{
-    position: relative;
-    margin-right: 10px;
-    margin-top: 5px;
+.Header_right_isLoggedIn > ul li .notiButton {
+  position: relative;
+  margin-right: 10px;
+  margin-top: 5px;
 }
 
 /* 헤더 끝 */
 
+.Padding {
+  height: 50px;
+}
+/* 바디 */
 .Container {
-    position: relative;
-    max-width: 1060px;
+  position: relative;
+  max-width: 1060px;
 }
 
+/* 왼쪽 스터디 타입 */
 .Study_status {
-    position: relative;
-    line-height: normal;
+  position: relative;
+  line-height: normal;
 }
 
-.title>p {
-    font-size: 20px;
-    font-weight: 700;
-    color: #333;
-    padding: 50px 0 20px;
+.title > p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  padding: 50px 0 20px;
 }
-
 
 .Study_status_all {
-    position: relative;
-    margin: 20px auto 0;
-    max-width: 1060px;
-    display: flex;
+  position: relative;
+  margin: 20px auto 0;
+  max-width: 1060px;
+  display: flex;
 }
 .Staus-Left-bar {
-    float: left;
-    width: 25.4716981132%;
-    margin-bottom: 0;
-    padding-right: 20px;
+  float: left;
+  width: 25.4716981132%;
+  margin-bottom: 0;
+  padding-right: 20px;
 }
 .Staus-Left-bar dl:last-child {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 .Staus-Left-bar dl dt {
-    padding-bottom: 17px;
-    border-bottom: 1px solid #e1e2e3;
-    margin-bottom: 20px;
-    color: #999;
-    font-size: 14px;
-    font-weight: 400;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #e1e2e3;
+  margin-bottom: 20px;
+  color: #999;
+  font-size: 14px;
+  font-weight: 400;
 }
 .Staus-Left-bar dl dd ul li {
-    margin: 0;
-    color: #333;
-    font-size: 16px;
-    font-weight: 400;
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.Staus-Left-bar dl dd ul li.active>a {
-    color: #36f;
-    font-weight: 700;
+.Staus-Left-bar dl dd ul li.active > a {
+  color: #36f;
+  font-weight: 700;
 }
 .Staus-Left-bar dl dd ul li a .label_ {
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    /* min-width: 26px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /* min-width: 26px;
     height: 24px; */
-    padding: 4px 10px;
-    border-radius: 3px;
-    background-color: #ececec;
-    color: #171717;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background-color: #ececec;
+  color: #171717;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
 }
-.Staus-Left-bar dl dd ul li+li {
-    margin-top: 15px;
+.Staus-Left-bar dl dd ul li + li {
+  margin-top: 15px;
 }
 .Staus-Left-bar dl dd ul li a {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.Study_status_all>section {
-    float: left;
-    width: 74.5283018868%;
-    padding-top: 13px;
+.Study_status_all > section {
+  float: left;
+  width: 74.5283018868%;
+  padding-top: 13px;
 }
 
-
-.newStudy{
-    position: relative;
-    display: flex;
- flex-direction: row-reverse;
+/* 화면 오른쪽 개설하기 버튼 */
+.newStudy {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
 }
-.newStudy-button{
-    position: relative;
-    display: flex;
-    padding: 5px;
-    margin-left: 10px;
-    border-radius: 10%;
-
+.newStudy-button {
+  position: relative;
+  display: flex;
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 10%;
 }
+
+/* 스터디 목록 */
 .List_wrapper .Study-header {
-    margin-top: -1px;
-    line-height: normal;
-    color: #999;
+  margin-top: -1px;
+  line-height: normal;
+  color: #999;
 }
 
 .List_wrapper .Study-header ul {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
-.List_row, .Study-content{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
+.List_row,
+.Study-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.Study-header .col-1, .Study-content .col-1{
-    padding-left: 20px;
+.Study-header .col-1,
+.Study-content .col-1 {
+  padding-left: 20px;
 }
 
-.Study-content{
-    border: 1px solid #dbdbdb;
-    background-color: white;
-    border-radius: 99px
+.Study-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  background: #fff;
+  border-bottom: 1px solid rgba(209, 209, 209, 0.4);
+  border-top: 1px solid rgba(209, 209, 209, 0.4);
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  min-height: 44px;
+  line-height: 44px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-break: break-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
+
 .col-1 {
-    width: 57.0886075949%;
+  width: 57.0886075949%;
 }
 .col-2 {
-    width: 22.7848101266%;
+  width: 22.7848101266%;
+  display: flex;
 }
 
 .col-3 {
-    width: 6.1265822785%;
+  width: 6.1265822785%;
 }
-
 
 .List_wrapper .Study-header .col-3 {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .List_row .col-3 {
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    padding-right: 20px;
-    
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding-right: 20px;
 }
 
 .List_wrapper .Study-empty {
-    margin: 100px 0;
-    color: #ccc;
-    font-size: 16px;
-    text-align: center;
+  margin: 100px 0;
+  color: #ccc;
+  font-size: 16px;
+  text-align: center;
 }
 
 .List_wrapper .Study-content {
-    position: relative;
-    display: flex;
-    margin-bottom: 5px;
+  position: relative;
+  display: flex;
 }
 
 .List_wrapper .edit {
-    position: relative;
-    display: flex;
-    padding: 5px;
-    margin-left: 10px;
-    border-radius: 20%;
-    background-color: rgb(216, 216, 216);
-    
-}
-.Study-empty{
-    display: none;
-}
-.click-for-details{
-    display: flex;
-    width: auto;
+  position: relative;
+  display: flex;
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 20%;
+  background-color: rgb(216, 216, 216);
 }
 
-@media (min-width: 1200px){
-    .Header_isLoggedIn{
-        /* 헤더 */
-        width: 87.72%;
-        margin: 0 auto;
-        height: 50px;
-    }
-
-    .Aside_className_e5Bi>ul li>*{
-        /* 헤더의 알림 아이콘 */
-        padding: 0 10px;
-    }
-
-    .Container {
-        padding-top: 50px;
-        padding-bottom: 100px;
-        margin: 0 auto;
-        width: 87.72%;
-    }
-
-
-
+/* 스터디 목록이 없을 경우 */
+.Study-empty {
+  display: none;
 }
-.PostContents__menu_button{
-
+.click-for-details {
+  display: flex;
+  width: auto;
 }
 
+/* 수정 삭제 버튼 */
 .MenuPopup {
-    display: none;
-    position: absolute;
-    right: -14px;
-    color: #333;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 13px 5px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
-    border: 1px solid #ccc;
-    background-color: #fff;
-    bottom: 27px;
+  display: none;
+  position: absolute;
+  right: -14px;
+  color: #333;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 13px 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  background-color: #fff;
+  bottom: 27px;
 }
 
-.PostContents__menu_button{
-    margin-left: 52px;
+.PostContents__menu_button {
+  margin-left: 52px;
 }
-
-
 
 .MenuPopup_menu_item:not(:last-of-type) {
-    margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
-.MenuPopup__menu_link__red{
-    color: #fe415c;
+.MenuPopup__menu_link__red {
+  color: #fe415c;
 }
 .MenuPopup__menu_link {
-    display: block;
-    padding: 4px 17px 4px 10px;
-    border-radius: 3px;
-    text-align: left;
-    width: 100%;
+  display: block;
+  padding: 4px 17px 4px 10px;
+  border-radius: 3px;
+  text-align: left;
+  width: 100%;
 }
 
-.PostWriteButton_writeIcon {
-    font-size: 25px;
+@media (min-width: 1200px) {
+  .Header_isLoggedIn {
+    /* 헤더 */
+    width: 87.72%;
+    margin: 0 auto;
+    height: 50px;
+  }
+
+  .Container {
+    padding-bottom: 100px;
+    margin: 0 auto;
+    width: 87.72%;
+  }
 }
-.SvgIcon_SvgIcon__root {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: inherit;
-    align-items: inherit;
-    -ms-flex-pack: inherit;
-    justify-content: inherit;
+
+/* 개설하기 버튼 */
+
+
+.Posting-Button-outlined {
+  border-radius: 1000px;
+  background-color: #fff;
 }
-.SvgIcon_SvgIcon__root__svg {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    fill: currentColor;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    font-size: inherit;
+
+.Posting-Button-outlined,
+.Posting-Button-outlinedPrimary {
+  --button-color: #36f;
+  color: var(--button-color);
+  -webkit-box-shadow: 0 0 0 1px var(--button-color) inset;
+  box-shadow: 0 0 0 1px var(--button-color) inset;
+}
+
+.Button_Button__containedSizeMedium__c2z9c,
+.Posting-Button-outlinedSizeMedium {
+  padding: 0 20px;
+  min-width: 64px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.InterestCategoryItem-InterestCategoryItem {
+  padding: 9px 22px !important;
+  line-height: 146.7% !important;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  outline: none;
+  scroll-snap-align: start;
+}
+
+.CommunityPostList_CommunityPostList__SFEO_ *,
+.CommunityPostList_CommunityPostList__SFEO_ :after,
+.CommunityPostList_CommunityPostList__SFEO_ :before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.Button_Button__label__1Kk0v {
+  width: 100%;
+  font-size: inherit;
+  font-weight: inherit;
+  display: inherit;
+  -ms-flex-align: inherit;
+  align-items: inherit;
+  -ms-flex-pack: inherit;
+  justify-content: inherit;
+  color: inherit;
+}
+
+.CommunityPostList_CommunityPostList__SFEO_ *,
+.CommunityPostList_CommunityPostList__SFEO_ :after,
+.CommunityPostList_CommunityPostList__SFEO_ :before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
