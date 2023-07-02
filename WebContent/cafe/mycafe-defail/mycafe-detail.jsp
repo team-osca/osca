@@ -16,7 +16,7 @@
 <title>카페 상세보기</title>
 </head>
 <body>
-	<div class="__naxt">
+	<div id="mycafe-detail">
 		<div role="presentation" class="navbar"
 			style="position: fixed; padding-right: initial">
 			<div class="mainbar isLoggedIn" role="presentation">
@@ -178,14 +178,14 @@
 									<p>직무와 맞는 포지션일수록 서류합격률이 높아져요!</p>
 								</div>
 								<div class="cafe-owner-bodyContent">
-									<h3 class="Information-title">지원 정보</h3>
+									<h3 class="Information-title">사장님 정보</h3>
 									<div class="information">
-										<label for="name" class="Input-cn"><h4>이름</h4> 
+										<label for="name" class="Input-cn"><h4>닉네임</h4> 
 										<input disabled type="text" name="name" value="김동엽" /></label> <label for="email"
 											class="Input-cn"><h4>이메일</h4> <input disabled=""
 											type="text" name="email" value="dongyeop1147@daum.net" /></label>
 										<div class="Information-mobileInput">
-											<h4>휴대폰 번호</h4>
+											<h4>대표 번호</h4>
 											<button type="button" class="hasMobile">
 												+821076501147
 												<svg width="10" height="10" viewBox="0 0 12 12">
@@ -197,13 +197,13 @@
 									</div>
 									<div class="CrossBorder_cn">
 										<div class="CrossBorder-domestic">
-											<p>원티드 이력서로 지원하면 최종 합격률이 40% 높아집니다.</p>
+											<p>한줄 글 작성.</p>
 										</div>
 									</div>
 								</div>
 							</div>
 							<footer class="cafe-woner-footer">
-								<button type="button" disabled="">제출하기</button>
+								<button type="button" disabled="">수정하기</button>
 							</footer>
 						</div>
 					</aside>
