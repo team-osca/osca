@@ -1,0 +1,431 @@
+@charset "UTF-8";
+.cafe-list-body{
+    min-height: calc(100vh - 282px);
+}
+
+.header-title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 127.3%;
+    letter-spacing: -.012em;
+    color: #171717;
+    max-width: 1060px;
+    width: 90%;
+}
+
+.filter-box{
+    position: sticky;
+}
+
+.filter-header{
+    top: 50px;
+    z-index: 10;
+    background-color: #fff;
+    border-bottom: 1px solid transparent;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    transition: all .3s;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+}
+
+.cafe-list-filter-header{
+    margin-top: -5px
+}
+
+.region-filter-container{
+    position: relative;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.interestTagSlide{
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    position: relative;
+    margin: 20px 0;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    grid-gap: 8px;
+    gap: 8px;
+}
+
+div.categoryList{
+    margin: 20px 0 0;
+    max-width: 1060px;
+    width: 90%;
+}
+
+.scrollsnap{
+    position: relative;
+    display: flex;
+}
+
+.scrollsnap-hidden{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.regionTagSlide_width{
+    max-width: calc(100%);
+}
+
+/* main에서 목록 부분에서 영역을 나누는 선 */
+.main-category-divider{
+    height: 1px;
+    margin: 0;
+    border: none;
+    flex-shrink: 0;
+    background-color: #e1e2e4;
+} 
+
+.header-divider{
+    max-width: 1060px;
+    width: 90%;
+    margin: 30px 0!important;
+}
+
+.scrollsnap2 {
+    flex-direction: row;
+    align-items: center;
+    /* 이부분을 hidden으로 바꾸면 되긴 함 */
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.scrollsnap3 {
+    overscroll-behavior: contain;
+}
+
+.scrollsnap4 {
+    scroll-snap-type: x mandatory;
+}
+
+.tagSlide-content-interval{
+    grid-gap: 12px;
+    gap: 12px;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 0.5px;
+}
+
+.button-shape{
+    --button-color: #171717;
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    line-height: normal;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.button-outline-shape {
+    border-radius: 1000px;
+    background-color: #fff;
+}
+
+.button-outline-primary{
+    --button-color: #36f;
+    color: var(--button-color);
+    -webkit-box-shadow: 0 0 0 1px var(--button-color) inset;
+    box-shadow: 0 0 0 1px var(--button-color) inset;
+}
+
+.button-outline-medium {    
+    padding: 0 20px;
+    min-width: 64px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.region-category-item{
+    padding: 9px 22px!important;
+    line-height: 146.7%!important;
+    flex-shrink: 0;
+    outline: none;
+    scroll-snap-align: start;
+}
+
+.region-button-contentButton{
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    color: inherit;
+}
+
+.region-button-interaction{
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    opacity: 0;
+    background-color: var(--button-color);
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    will-change: opacity;
+}
+
+.button-content-color{
+    color: #8a8a8a;
+    --button-color: #8a8a8a;
+}
+
+.tagslide-arrow{
+    width: 80px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 20px;
+    height: 100%;
+    z-index: 1;
+}
+
+.tagslide-arrow>button{
+    min-width: 40px;
+    height: 40px;
+    font-size: 18px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e1e2e4;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.05);
+    color: #8a8a8a;
+    position: relative;
+}
+
+.tagslide-rightarrow{
+    right: 0;
+    justify-content: flex-end;
+    background: -webkit-gradient(linear,right top,left top,color-stop(21.82%,#fff),to(hsla(0,0%,100%,0)));
+    background: linear-gradient(270deg,#fff 21.82%,hsla(0,0%,100%,0));
+}
+
+.tagslide-lefttarrow{
+    left: 0;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    background: -webkit-gradient(linear,left top,right top,color-stop(21.82%,#fff),to(hsla(0,0%,100%,0)));
+    background: linear-gradient(90deg,#fff 21.82%,hsla(0,0%,100%,0))
+}
+
+.tagslide-arrow-visible{
+    display: flex;
+}
+
+/* 메인부분!! 카페 리스트가 나오는 부분 */
+.all-cafe-list {
+    max-width: 1060px;
+    width: 87.72%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    grid-gap: 32px 20px;
+    gap: 32px 20px;
+    width: 1060px;
+    margin: 0 auto;
+}
+
+.cafe-list-container {
+    position: relative;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.cafe-card-container{
+    position: relative;
+    -webkit-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+    will-change: transform;
+    width: calc(25% - 15px);
+}
+
+.cafe-card-interactionr{
+    -webkit-transition: opacity,color .1s ease-out;
+    transition: opacity,color .1s ease-out;
+}
+
+.cafe-thumbnail-image{
+    position: relative;
+    height: auto;
+    padding-left: 0;
+    width: 100%;
+    padding-bottom: 70%;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,.06);
+    overflow: hidden;
+} 
+
+.cafe-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-position: center;
+    z-index: 2;
+}
+
+.cafe-image-cover{
+    object-fit: cover;
+}
+
+.section{
+    margin-top: 12px;
+    display: flex;
+    padding-right: 4px!important;
+} 
+
+.section-column{
+    flex-direction: column;
+    grid-gap: 4px;
+    gap: 4px;
+}
+
+.BadgeList{
+    padding: 0 0 2px;
+    display: flex;
+    grid-gap: 5px;
+    gap: 5px;
+}
+
+.badge-root {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: 0;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    line-height: normal;
+}
+
+.badge-outline {
+    color: #0095ff;
+    background-color: transparent;
+    border: 1px solid rgba(0,149,255,.4)
+}
+
+.badge-size{
+    height: 24px;
+}
+
+.badge-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: inherit;
+    color: inherit;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.badge-label-responsive {
+    font-size: 12px;
+    padding: 0 6px;
+}
+
+.title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: 600;
+    color: #171717;
+    margin: 0;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+
+.title-responsive {
+    font-size: 18px;
+    line-height: 144.4%;
+    letter-spacing: -.0002em
+}
+
+.additional-section {
+    margin-top: 6px;
+    display: flex;
+    padding: 0;
+    padding-right: 4px!important
+}
+
+.additional-section-column{
+    flex-direction: column;
+    grid-gap: 2px;
+    gap: 2px;
+}
+
+.period {    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 4px 0;
+    color: #8a8a8a;
+    font-weight: 400;
+}
+
+.period-responsive {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: .025em;
+}
+
+.tag {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    color: #8a8a8a;
+}
+
+.tag-responsive {
+    font-size: 13px;
+    line-height: 138.5%;
+    letter-spacing: .025em;
+}
+
+.tag-responsive span{
+    font-style: normal;
+    font-weight: 600;
+    margin-right: 8px;
+}
