@@ -41,8 +41,8 @@
                     </a>
                     <div class="logout_box">
                         <div class="more_action">
-                            <button type="button" data-testid="Button" data-attribute-id="accountSetting__gnb" data-gnb-kind="더보기" class="_button">
-                                <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="button_text"></span>
+                            <button type="button" class="_button">
+                                <span color="var(--theme-palette-colors-black-100)" class="button_text"></span>
                                 <span class="svg_wrapper">
                                     <svg viewBox="0 0 24 24" class="more_svg">
                                     <path d="m5 3.25c-0.9665 0-1.75 0.7835-1.75 1.75s0.7835 1.75 1.75 1.75 1.75-0.7835 1.75-1.75-0.7835-1.75-1.75-1.75zm7 0c-0.9665 0-1.75 0.7835-1.75 1.75s0.7835 1.75 1.75 1.75 1.75-0.7835 1.75-1.75-0.7835-1.75-1.75-1.75zm7 0c-0.9665 0-1.75 0.7835-1.75 1.75s0.7835 1.75 1.75 1.75 1.75-0.7835 1.75-1.75-0.7835-1.75-1.75-1.75zm-14 7c-0.9665 0-1.75 0.7835-1.75 1.75s0.7835 1.75 1.75 1.75 1.75-0.7835 1.75-1.75-0.7835-1.75-1.75-1.75zm7 0c-0.9665 0-1.75 0.7835-1.75 1.75s0.7835 1.75 1.75 1.75 1.75-0.7835 1.75-1.75-0.7835-1.75-1.75-1.75zm7 0c-0.9665 0-1.75 0.7835-1.75 1.75s0.7835 1.75 1.75 1.75 1.75-0.7835 1.75-1.75-0.7835-1.75-1.75-1.75zm-14 7c-0.9665 0-1.75 0.7835-1.75 1.75s0.7835 1.75 1.75 1.75 1.75-0.7835 1.75-1.75-0.7835-1.75-1.75-1.75zm7 0c-0.9665 0-1.75 0.7835-1.75 1.75s0.7835 1.75 1.75 1.75 1.75-0.7835 1.75-1.75-0.7835-1.75-1.75-1.75zm7 0c-0.9665 0-1.75 0.7835-1.75 1.75s0.7835 1.75 1.75 1.75 1.75-0.7835 1.75-1.75-0.7835-1.75-1.75-1.75z" clip-rule="evenodd" fill="var(--theme-palette-colors-black-100)" fill-rule="evenodd">
@@ -52,8 +52,8 @@
                             </button>
                         </div>
                         <hr class="seperator">
-                        <button type="button" data-testid="Button" data-attribute-id="accountSetting__gnb" data-gnb-kind="로그아웃" class="_button">
-                            <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="button_text">로그아웃</span>
+                        <button type="button" class="_button">
+                            <span color="var(--theme-palette-colors-black-100)" class="button_text">로그아웃</span>
                         </button>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <section class="profile_image_container">
                     <div class="profile_image_box">
                         <img width="80" height="80" src="https://static.wanted.co.kr/oneid-user/profile_default.png">
-                        <label data-testid="pancilIcon" class="profile_image_area">
+                        <label class="profile_image_area">
                             <input accept=".jpg, .png" type="file" id="input-file" style="display: none;">
                             <span class="profile_image_svg_container">
                                 <svg viewBox="0 0 15 15" class="profile_image_svg">
@@ -72,19 +72,19 @@
                             </span>
                         </label>
                     </div>
-                    <p data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="user_name">유희준님, 환영해요.</p>
+                    <p color="var(--theme-palette-colors-black-100)" class="user_name">유희준님, 환영해요.</p>
                 </section>
                 <section class="setting_area">
-                    <p data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="setting_area_title">계정 관리</p>
-                    <p data-testid="Typography" color="var(--theme-palette-colors-gray-700)" class="setting_area_content">서비스에서 사용하는 내 계정 정보를 관리할 수 있습니다.</p>
+                    <p color="var(--theme-palette-colors-black-100)" class="setting_area_title">계정 관리</p>
+                    <p color="var(--theme-palette-colors-gray-700)" class="setting_area_content">서비스에서 사용하는 내 계정 정보를 관리할 수 있습니다.</p>
                     <ul class="setting_container">
                         <li id="EMAIL_CHANGE" tabindex="0" class="fixed_area">
-                            <p data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="update_title">이메일</p>
-                            <p data-testid="Typography" color="var(--theme-palette-colors-gray-900)" class="fixed_update_content">yhj3855@naver.com</p>
+                            <p color="var(--theme-palette-colors-black-100)" class="update_title">이메일</p>
+                            <p color="var(--theme-palette-colors-gray-900)" class="fixed_update_content">yhj3855@naver.com</p>
                         </li>
                         <li id="NAME_CHANGE" tabindex="0" class="update_area">
-                            <p data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="update_title">이름</p>
-                            <p data-testid="Typography" color="var(--theme-palette-colors-gray-600)" class="update_content">유희준</p>
+                            <p color="var(--theme-palette-colors-black-100)" class="update_title">이름</p>
+                            <p color="var(--theme-palette-colors-gray-600)" class="update_content">유희준</p>
                             <span class="svg_wrapper">
                                 <svg viewBox="0 0 8 14" color="var(--theme-palette-colors-gray-600)" class="do_modal_svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.969605 13.0303C1.2625 13.3232 1.73737 13.3232 2.03027 13.0303L7.53027 7.53033C7.82316 7.23744 7.82316 6.76257 7.53027 6.46967L2.03033 0.969673C1.73744 0.676778 1.26257 0.676775 0.969673 0.969667C0.676778 1.26256 0.676776 1.73743 0.969667 2.03033L5.93928 7L0.969605 11.9697C0.676712 12.2626 0.676712 12.7374 0.969605 13.0303Z" fill="var(--theme-palette-colors-gray-600)">
@@ -93,8 +93,8 @@
                             </span>
                         </li>
                         <li id="PHONE_CHANGE" tabindex="0" class="update_area">
-                            <p data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="update_title">휴대폰 번호</p>
-                            <p data-testid="Typography" color="var(--theme-palette-colors-gray-600)" class="update_content">+82 010-8200-3855</p>
+                            <p color="var(--theme-palette-colors-black-100)" class="update_title">휴대폰 번호</p>
+                            <p color="var(--theme-palette-colors-gray-600)" class="update_content">+82 010-8200-3855</p>
                             <span class="svg_wrapper">
                                 <svg viewBox="0 0 8 14" color="var(--theme-palette-colors-gray-600)" class="do_modal_svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.969605 13.0303C1.2625 13.3232 1.73737 13.3232 2.03027 13.0303L7.53027 7.53033C7.82316 7.23744 7.82316 6.76257 7.53027 6.46967L2.03033 0.969673C1.73744 0.676778 1.26257 0.676775 0.969673 0.969667C0.676778 1.26256 0.676776 1.73743 0.969667 2.03033L5.93928 7L0.969605 11.9697C0.676712 12.2626 0.676712 12.7374 0.969605 13.0303Z" fill="var(--theme-palette-colors-gray-600)">
@@ -105,12 +105,12 @@
                     </ul>
                 </section>
                 <section class="setting_area">
-                    <p data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="setting_area_title">개인 정보 보호</p>
-                    <p data-testid="Typography" color="var(--theme-palette-colors-gray-700)" class="setting_area_content">서비스에서 사용하는 내 계정 정보를 관리할 수 있습니다.</p>
+                    <p color="var(--theme-palette-colors-black-100)" class="setting_area_title">개인 정보 보호</p>
+                    <p color="var(--theme-palette-colors-gray-700)" class="setting_area_content">서비스에서 사용하는 내 계정 정보를 관리할 수 있습니다.</p>
                     <ul class="setting_container">
                         <li id="PASSWORD_CHANGE" tabindex="0" class="update_area">
-                            <p data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="update_title">비밀번호 변경</p>
-                            <p data-testid="Typography" color="var(--theme-palette-colors-gray-600)" class="update_content"></p>
+                            <p color="var(--theme-palette-colors-black-100)" class="update_title">비밀번호 변경</p>
+                            <p color="var(--theme-palette-colors-gray-600)" class="update_content"></p>
                             <span class="svg_wrapper">
                                 <svg viewBox="0 0 8 14" color="var(--theme-palette-colors-gray-600)" class="do_modal_svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.969605 13.0303C1.2625 13.3232 1.73737 13.3232 2.03027 13.0303L7.53027 7.53033C7.82316 7.23744 7.82316 6.76257 7.53027 6.46967L2.03033 0.969673C1.73744 0.676778 1.26257 0.676775 0.969673 0.969667C0.676778 1.26256 0.676776 1.73743 0.969667 2.03033L5.93928 7L0.969605 11.9697C0.676712 12.2626 0.676712 12.7374 0.969605 13.0303Z" fill="var(--theme-palette-colors-gray-600)">
@@ -119,8 +119,8 @@
                             </span>
                         </li>
                         <li id="MEMBER_EXIT" tabindex="0" class="update_area">
-                            <p data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="update_title">회원 탈퇴</p>
-                            <p data-testid="Typography" color="var(--theme-palette-colors-gray-600)" class="update_content"></p>
+                            <p color="var(--theme-palette-colors-black-100)" class="update_title">회원 탈퇴</p>
+                            <p color="var(--theme-palette-colors-gray-600)" class="update_content"></p>
                             <span class="svg_wrapper">
                                 <svg viewBox="0 0 8 14" color="var(--theme-palette-colors-gray-600)" class="do_modal_svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.969605 13.0303C1.2625 13.3232 1.73737 13.3232 2.03027 13.0303L7.53027 7.53033C7.82316 7.23744 7.82316 6.76257 7.53027 6.46967L2.03033 0.969673C1.73744 0.676778 1.26257 0.676775 0.969673 0.969667C0.676778 1.26256 0.676776 1.73743 0.969667 2.03033L5.93928 7L0.969605 11.9697C0.676712 12.2626 0.676712 12.7374 0.969605 13.0303Z" fill="var(--theme-palette-colors-gray-600)">
@@ -133,10 +133,10 @@
             </div>
             <div class="more_info">
                 <div class="more_info_wrapper">
-                    <a data-testid="Typography" color="var(--theme-palette-colors-black-100)" href="https://id.wanted.jobs/terms/ko" target="_blank" class="terms_of_Use">이용약관</a>
-                    <a data-testid="Typography" color="var(--theme-palette-colors-black-100)" href="https://id.wanted.jobs/privacy/ko?user=true" target="_blank" class="privacy_policy">개인정보처리방침</a>
+                    <a color="var(--theme-palette-colors-black-100)" href="https://id.wanted.jobs/terms/ko" target="_blank" class="terms_of_Use">이용약관</a>
+                    <a color="var(--theme-palette-colors-black-100)" href="https://id.wanted.jobs/privacy/ko?user=true" target="_blank" class="privacy_policy">개인정보처리방침</a>
                 </div>
-                <p data-testid="Typography" color="var(--theme-palette-colors-gray-600)" class="copyright">© Wantedlab, Inc.</p>
+                <p color="var(--theme-palette-colors-gray-600)" class="copyright">© Wantedlab, Inc.</p>
             </div>
         </div>
     </div>

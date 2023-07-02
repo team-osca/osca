@@ -14,8 +14,8 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_khb/teamProject/osca/WebContent/WEB-INF/lib/mybatis-3.5.10.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_khb/teamProject/osca/WebContent/WEB-INF/lib/mysql-connector-j-8.0.32.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_khb/teamProject/osca/WebContent/WEB-INF/lib/org.json.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/mybatis-3.5.10.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/mysql-connector-j-8.0.32.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/org.json.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
