@@ -558,12 +558,13 @@ input[type=text], textarea {
 	background-color: #fff;
 }
 
-.Button-Button-outlined, .Button-Button-outlinedPrimary { 
-	-button-color: #36f;
-	color: var(- -button-color);
-	-webkit-box-shadow: 0 0 0 1px var(- -button-color) inset;
-	box-shadow: 0 0 0 1px var(- -button-color) inset;
+.Button-Button-outlined, .Button-Button-outlinedPrimary {
+    --button-color: #36f;
+    color: var(--button-color);
+    -webkit-box-shadow: 0 0 0 1px var(--button-color) inset;
+    box-shadow: 0 0 0 1px var(--button-color) inset;
 }
+
 
 .Button-Button-containedSizeLarge, .Button-Button-outlinedSizeLarge {
 	padding: 0 28px;

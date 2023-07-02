@@ -23,7 +23,7 @@ body {
   margin: 0;
   font-size: 14px;
   color: #333;
-  background-color: #f8f8f8;
+  background-color: #fff;
   line-height: 1.42857143;
   font-family: Pretendard Variable, Pretendard JP Variable, -apple-system, system-ui,
     BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial, Apple SD Gothic Neo, Nanum Gothic,
@@ -668,10 +668,6 @@ img {
   display: none;
 }
 
-.cafeDescription-cafeDescription {
-  padding: 30px;
-}
-
 .cafeDescription-cafeDescription h6,
 .cafeDescription-cafeDescription p {
   color: #333;
@@ -781,10 +777,6 @@ img {
   font-size: 16px;
   font-weight: 600;
   color: #999;
-}
-
-.cafe-owner-body {
-  overflow-y: scroll;
 }
 
 .cafe-owner-isfit {
