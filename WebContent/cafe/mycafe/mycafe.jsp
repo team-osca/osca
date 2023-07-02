@@ -16,7 +16,7 @@
 <title>내 카페 홍보글 관리</title>
 </head>
 <body>
-	<div class="__naxt">
+	<div id="mycafeList">
 		<div role="presentation" class="navbar"
 			style="position: fixed; padding-right: initial">
 			<div class="mainbar isLoggedIn" role="presentation">

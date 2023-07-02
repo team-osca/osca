@@ -16,7 +16,7 @@
 <title>카페 등록</title>
 </head>
 <body>
-	<div class="__next">
+	<div id="mycafef-post">
 		<div role="presentation" class="navbar"
 			style="position: fixed; padding-right: initial">
 			<div class="mainbar isLoggedIn" role="presentation">
