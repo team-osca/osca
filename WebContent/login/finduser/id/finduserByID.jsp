@@ -253,7 +253,8 @@
                     name="mobile"
                     class="check-phonenumber"
                     value=""
-                  /><button type="button" class="check-phonenumber-bth" disabled="">
+                    id="phonenumner-input"
+                  /><button type="button" id="AuthenticationNumberBtn" class="check-phonenumber-bth" disabled>
                     <span
                         color="var(--theme-palette-colors-black-100)"
                       class="check-phonenumber-bth-span"
@@ -261,12 +262,14 @@
                     >
                   </button>
                 </div>
+                <p color="var(--theme-palette-colors-red-400)" class="isnot-a-phonenumber">올바른 전화번호를 입력해주세요.</p>
                 <div class="check-phonenumber-wrapper">
                   <input
+                    id="input-authCode"
                     type="text"
                     placeholder="인증번호를 입력해주세요."
                     name="authCode"
-                    readonly=""
+                    readonly
                     class="check-phonenumber"
                     value=""
                   />
@@ -285,4 +288,6 @@
       </div>
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="phonenumber-regex.js"></script>
 </html>
