@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* footer 스타일*/
+.cafe_footer img{
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1100px;
+    height: 632.64px;
+}
+
+.col-xs-12{
+    width: 100%;
+}
+
+.col-md-3{
+    width: 25%;
+    float: left;
+}
+
+.col-sm-6{
+     width: 50%;
+     float: left;
+}
+
+.col-md-3, .col-sm-4, .col-xs-12, .col-sm-6, .col-xs-6{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.padding{
+    padding:40px 0;
+}
+
+.cafe_footer p {
+    margin: 0 0 10px;
+}
+
+.cafe_footer{
+    background-color: rgba(255, 255, 255, 1);
+    margin-top: 60px;
+    color: #333;
+    border-top: 1px solid #c2c2c2;
+    border-top: 1px solid #ececec;
+    display: block;
+}
+
+.footer_content{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#footer_content_logo{
+    width: 15%;
+    margin-top: 5px;
+}
+
+#footer_content_1, #footer_content_2, #footer_content_3{
+    width: 15%;
+}
+
+.footer_content p{
+    margin-bottom: 0;
+    text-align: left;
+    line-height: 1.5;
+    background-color: #fff;
+}
