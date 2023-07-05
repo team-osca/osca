@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -360,6 +359,8 @@ a {
 /* 지역 태그 */
 .TagPanel_tagPanel {
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 .TagPanel_tagPanel  .TagPanel_tagMessage  {
@@ -374,8 +375,14 @@ a {
     width: 85px;
     height: 34px;
 }
-
-
+.TagPanel_tagWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start
+}
+.HideWhenTagOk{
+    visibility: visible;
+}
 
 /* 제목 */
 .Paper_PostWritePaper__title {
@@ -546,9 +553,9 @@ input[type=file].PostWrite_PostPhotoFile  {
 
 
 /* 모달창이 보이게 하기 */
-/* .Modal_Modal__root__lNnQN {
+.Modal_Modal__root {
     position: fixed;
-    z-index: 1400;
+    z-index: -100;
     right: 0;
     bottom: 0;
     top: 0;
@@ -561,30 +568,32 @@ input[type=file].PostWrite_PostPhotoFile  {
     justify-content: center;
 }
 
-.Modal_Modal__root__blur__bKLQ5 {
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
+.Modal_Modal__root__blur {
+    -webkit-backdrop-filter:  none;
+    backdrop-filter: none;
+ 
 }
 
-.Modal_Modal__root__backdrop__ENcJl {
-    z-index: -1;
+.Modal_Modal__root__backdrop {
+    z-index: -100;
     position: fixed;
     right: 0;
     bottom: 0;
     top: 0;
     left: 0;
     background-color: rgba(0,0,0,.5);
-} */
+    visibility: hidden;
+}
 /* 모달창 내용 */
 /* 모달창 사이즈 */
-.SelectTagsModal_SelectTagsModal__5SMcy {
+.SelectTagsModal_SelectTagsModal_ {
     width: 460px;
     padding: 0;
     max-height: 400px;
 }
 
 /* 모달 몸통 색갈 */
-.Modal_Modal__root__body__1_X6A {
+.Modal_Modal__root__body {
     background-color: #fff;
     border-radius: 5px;
     -webkit-box-shadow: 4px 4px 4px 0 rgba(0,0,0,.1);
@@ -594,11 +603,11 @@ input[type=file].PostWrite_PostPhotoFile  {
 
 @media (min-width: 1200px){
 
-.SelectTagsModal_SelectTagsModal__title__nZKuF {
+.SelectTagsModal_SelectTagsModal__title {
     padding: 20px;
 }}
 
-.SelectTagsModal_SelectTagsModal__title__nZKuF {
+.SelectTagsModal_SelectTagsModal__title {
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-align: center;
@@ -606,7 +615,7 @@ input[type=file].PostWrite_PostPhotoFile  {
     position: relative;
     padding: 15px;
 }
-.ModalTitle_ModalTitle__root__y_KMH {
+.ModalTitle_ModalTitle__root {
     display: -ms-flexbox;
     display: flex;
     margin: 0;
@@ -614,13 +623,14 @@ input[type=file].PostWrite_PostPhotoFile  {
     flex: 0 0 auto;
 }
 
-.SelectTagsModal_SelectTagsModal__title__nZKuF>h4 {
+.SelectTagsModal_SelectTagsModal__title>h4 {
     font-size: 16px;
     text-align: center;
     font-weight: 700;
 }
 
-.SelectTagsModal_SelectTagsModal__5SMcy .SelectTagsModal_badge__eVbO1 {
+.SelectTagsModal_SelectTagsModal_ 
+.SelectTagsModal_badge__eVbO1 {
     display: -ms-flexbox;
     display: flex;
     color: #fff;
@@ -639,39 +649,61 @@ input[type=file].PostWrite_PostPhotoFile  {
 }
 
 @media (min-width: 1200px){
-.SelectTagsModal_SelectTagsModal__title__nZKuF>button {
+.SelectTagsModal_SelectTagsModal__title>button {
     top: 5px;
 }}
-.SelectTagsModal_SelectTagsModal__title__nZKuF>button {
+
+
+.SelectTagsModal_SelectTagsModal__title>button {
     padding: 10px;
     font-size: 25px;
     position: absolute;
     right: 5px;
     top: 0;
 }
-
-
-.ModalContent_ModalContent__root__1Z9d1 {
+.SvgIcon_SvgIcon__root__close {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+}
+.SvgIcon_SvgIcon__root__svg__DKYBi {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentColor;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    font-size: inherit;
+}
+.ModalContent_ModalContent__root {
     -ms-flex: 1 1;
     flex: 1 1;
     overflow-y: auto;
     padding: 8px 24px;
 }
-.SelectTagsModal_SelectTagsModal__contents__edpIA {
+.SelectTagsModal_SelectTagsModal__contents {
     padding-top: 7px;
 }
-.SelectTagsModal_SelectTagsModal__contents__edpIA .SelectTagsModal_message__z_ihm {
+.SelectTagsModal_SelectTagsModal__contents 
+.SelectTagsModal_message {
     font-size: 16px;
     line-height: 1.4;
     font-weight: 600;
     margin-bottom: 30px;
 }
 
-.SelectTagsModal_SelectTagsModal__5SMcy .SelectTagsModal_interestsTags__BHJl7 {
+.SelectTagsModal_SelectTagsModal_ .SelectTagsModal_interestsTags {
     margin-bottom: 24px;
 }
 
-.SelectTagsModal_SelectTagsModal__5SMcy .SelectTagsModal_interestsTags__BHJl7>ul {
+.SelectTagsModal_SelectTagsModal_ .SelectTagsModal_interestsTags>ul {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -679,12 +711,14 @@ input[type=file].PostWrite_PostPhotoFile  {
 }
 
 
-.SelectTagsModal_SelectTagsModal__5SMcy .SelectTagsModal_interestsTags__BHJl7>ul>li ul.SelectTagsModal_subTags__dIvTw>li {
+.SelectTagsModal_SelectTagsModal_ .SelectTagsModal_interestsTags>ul>li ul.SelectTagsModal_subTags>li {
     float: left;
     margin: 0 10px 16px 0;
     height: 38px;
 }
-.SelectTagsModal_SelectTagsModal__5SMcy .SelectTagsModal_interestsTags__BHJl7>ul>li ul.SelectTagsModal_subTags__dIvTw>li>button {
+
+/* 지역 태그 버튼 색깔 */
+.SelectTagsModal_SelectTagsModal_ .SelectTagsModal_interestsTags>ul>li ul.SelectTagsModal_subTags>li>button {
     display: inline-block;
     padding: 0 15px;
     font-size: 15px;
@@ -697,17 +731,43 @@ input[type=file].PostWrite_PostPhotoFile  {
     line-height: 1em;
 }
 
+/* active 시의 변경된 색갈 */
+.SelectTagsModal_SelectTagsModal_ 
+.SelectTagsModal_interestsTags>ul>li ul.SelectTagsModal_subTags>li.SelectTagsModal_active>button {
+    background: #fff;
+    border-color: #36f;
+    color: #36f;
+    font-weight: 700;
+}
+
+/* 고른 태그 메인바디에 보이는거 */
+.selectedTagButton{
+    padding: 0 15px;
+    font-size: 15px;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: 21px;
+    line-height: 1em;
+    background: #fff;
+    border-color: #36f;
+    color: #36f;
+    font-weight: 700;
+    margin: 0 10px;
+    height: 38px;
+    visibility: hidden;
+}
+
 
 @media (min-width: 1200px){
-.SelectTagsModal_SelectTagsModal__actions__1UVKu {
+.SelectTagsModal_SelectTagsModal__actions {
     padding: 20px;
 }}
-.SelectTagsModal_SelectTagsModal__actions__1UVKu {
+.SelectTagsModal_SelectTagsModal__actions {
     padding: 15px;
     border-top: 1px solid #eee;
 }
 
-.ModalActions_ModalActions__root__8OUZk {
+.ModalActions_ModalActions__root {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -717,13 +777,13 @@ input[type=file].PostWrite_PostPhotoFile  {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
 }
-.Button_Button__fullWidth__RU4tf {
+.Button_Button__fullWidth {
     width: 100%;
 }
 
 /* 모달창 완료 버튼 */
 
-.Button_Button__containedSizeLarge__jIgXK, .Button_Button__outlinedSizeLarge__n_OOf {
+.Button_Button__containedSizeLarge, .Button_Button__outlinedSizeLarge__n_OOf {
     padding: 0 28px;
     min-width: 84px;
     height: 48px;
@@ -731,27 +791,23 @@ input[type=file].PostWrite_PostPhotoFile  {
     font-weight: 600;
 }
 
-.Button_Button__containedDisabled__qiqtc {
+.Button_Button__containedDisabled {
     cursor: default;
     background-color: #f4f4f5;
     color: #c4c4c4;
 }
 
-.Button_Button__contained__toUI5, .Button_Button__containedPrimary__gFaT9 {
+.Button_Button__contained__toUI5, .Button_Button__containedPrimary {
     color: #fff;
     background-color: #36f;
 }
 
-.Button_Button__contained__toUI5 {
+.Button_Button__contained {
     border-radius: 1000px;
     border: none;
 }
 
-.Button_Button__disabled__2eyyF {
-    pointer-events: none;
-}
-
-.Button_Button__root__V1ie3 {
+.Button_Button__root {
     --button-color: #171717;
     position: relative;
     display: -ms-inline-flexbox;
@@ -769,3 +825,22 @@ input[type=file].PostWrite_PostPhotoFile  {
     cursor: pointer;
     white-space: nowrap;
 }
+
+
+.Button_Button__interaction {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    opacity: 0;
+    background-color: var(--button-color);
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    will-change: opacity;
+}
+
+

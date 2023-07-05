@@ -3,16 +3,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>스터디 상세</title>
-    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/THGWCGF/FAVICON.jpg">
-    <link rel="stylesheet" href="studyDetailView.css" />
-    <link rel="preload" as="style" crossorigin="anonymous"
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
-  
-</head>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/THGWCGF/FAVICON.jpg" />
+    <link rel="stylesheet" href="myStudyDetailView.css" />
+    <link
+      rel="preload"
+      as="style"
+      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
+    />
+  </head>
   <body>
     <!-- 헤더 -->
     <div class="NavBar_Header" style="position: fixed">
@@ -22,7 +28,7 @@
             <div class="Header_left_logo">
               <img class="logo_img" src="https://i.ibb.co/YNfQCNW/Oh-Sca-LOGOjpg.jpg" alt="" />
             </div>
-          </div>
+          </div> 
           <ul class="Header_menu">
             <li>
               <a href="" class="">스터디</a>
@@ -65,12 +71,13 @@
                 </button>
               </li>
 
+
             </ul>
           </aside>
         </nav>
       </div>
     </div>
-    
+
     <div class="Padding"></div>
     <!-- 바디 -->
     <main class="StudyPostDetail">
@@ -128,8 +135,10 @@
             </h1>
           </div>
           <div class="PostContents__body">
-            하지만 올빼미는 인간이 될 수 없죠 ㅠㅠ 그러니 아침형 올빼미가 되어보는
-            스터디를 해 보려고 합니다. 같이 하실 분 모집합니다!
+            하지만 올빼미는 인간이 될 수 없죠 ㅠㅠ 
+            그러니 아침형 올빼미가 되어보는
+            스터디를 해 보려고 합니다. 
+            같이 하실 분 모집합니다!
             <div class="PostContents_metaTags"></div>
             <div class="PostContents__images"></div>
           </div>
@@ -161,11 +170,11 @@
               </svg>
             </button>
             <div class="MenuPopup">
-              <ul>
+              <ul> 
                 <li class="MenuPopup_menu_item">
                   <button
                     type="button"
-                    class="MenuPopup__menu_link__red"
+                    class="MenuPopup__menu_link__red MenuPopup__menu_link"
                     data-attribute-id="community__contentDetail__more__delete"
                     data-content-title="아침형 인간이 되고 싶었으나"
                     data-content-id="9430"
@@ -175,9 +184,9 @@
                     삭제하기
                   </button>
                 </li>
-                <li class="MenuPopup_MenuPopup__menu_item__p_vG7">
+                <li class="MenuPopup_menu_item">
                   <a
-                    class="MenuPopup_MenuPopup__menu_link___Rsar"
+                    class="MenuPopup__menu_link"
                     data-attribute-id="community__contentDetail__more__edit"
                     data-content-title="아침형 인간이 되고 싶었으나"
                     data-content-id="9430"
@@ -190,12 +199,16 @@
                 </li>
               </ul>
               <div
-                class="MenuPopup_MenuPopup__bubblePoint__j2qkU MenuPopup_MenuPopup__bubblePoint_bottom__EqWcp"
+                class="MenuPopup_MenuPopup__bubblePoint 
+                MenuPopup_MenuPopup__bubblePoint_bottom"
               ></div>
             </div>
           </div>
         </article>
       </section>
     </main>
+    
   </body>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="myStudyDetailView.js"></script>
 </html>
