@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ-상세보기</title>
-    <link rel="icon" type="image/png" sizes="4.4x2.4" href="/all-images/favicon.png">
+    <link rel="icon" type="image/png" sizes="4.4x2.4" href="../../allimages/favicon.png">
     <link rel="stylesheet" href="faq-detail.css">
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
@@ -23,7 +23,7 @@
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="logo">
                         <a href="">
-                            <img src="../all-images/logo.jpg" alt="Oh!스카 로고" id="header_logo_image">
+                            <img src="../../allimages/logo.jpg" alt="Oh!스카 로고" style="height: 16px;" id="header_logo_image">
                         </a>
                         <a href="http://127.0.0.1:5500/team-project/FAQ/FAQ.html">
                             <img src="https://theme.zdassets.com/theme_assets/9309779/e5142629ce02b25eae55476f21e3ad5525958812.png" alt="FAQ로고" id="header_logo_image">
@@ -123,7 +123,7 @@
             <div class="row" style="text-align: center; height: 64.6px;">
                 <div class="col-md-3 col-sm-3 col-xs-6" id="footer_content_logo" style="text-align: left;">
                     <a href="">
-                    <img src="../all-images/logo.jpg" margin-top="21px" width="125px" alt="Oh!스카 로고">
+                    <img src="../../allimages/logo.jpg" margin-top="21px" width="90px" alt="Oh!스카 로고">
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6" id="footer_content_1">

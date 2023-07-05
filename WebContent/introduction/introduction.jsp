@@ -95,7 +95,7 @@
         <div class="footer_wrapper common_wrapper">
             <div class="footer_section" style="height:66px">
                 <div class="footer_section_link" style="height:66px">
-                    <img src="../all-images/logo.jpg" height="20px" width="100px" alt="Oh!스카 로고">
+                    <img src="../all-images/logo.jpg" height="20px" width="90px" alt="Oh!스카 로고">
                     <a href="">스터디</a>
                     <a href="">카페</a>
                     <a href="http://127.0.0.1:5500/team-project/FAQ/FAQ.html">FAQ</a>

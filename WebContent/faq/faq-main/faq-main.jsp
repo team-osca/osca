@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh!스카 FAQ</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="//static.wanted.co.kr/favicon/16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../allimages/favicon.png">
     <link rel="stylesheet" href="faq-main.css">
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
@@ -20,7 +20,7 @@
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="logo">
                         <a href="http://127.0.0.1:5500/team-project/FAQ/FAQ.html">
-                            <img src="../all-images/logo.jpg" alt="FAQ로고" id="header_logo_image">
+                            <img src="../../allimages/logo.jpg"" alt="Oh!스카 로고" id="header_logo_image">
                         </a>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
             <div class="row" style="text-align: center; height: 64.6px;">
                 <div class="col-md-3 col-sm-3 col-xs-6" id="footer_content_logo" style="text-align: left;">
                     <a href="">
-                    <img src="../all-images/logo.jpg" margin-top="21px" width="100px" alt="원티드 로고">
+                    <img src="../../allimages/logo.jpg" margin-top="21px" width="100px" alt="Oh!스카 로고">
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6" id="footer_content_2">
