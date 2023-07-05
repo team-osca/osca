@@ -1,5 +1,4 @@
-@charset "UTF-8";
-
+@charset "UTF-8
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -492,7 +491,7 @@ a {
         padding-right: 20px;
         padding-left: 20px ;
         border-radius: 9999px;
-        background-color: #36f;
+        background-color: #144F79;
         /* margin-left: auto; */
         white-space: nowrap;
         color: #fff;
@@ -516,6 +515,7 @@ a {
         align-items: center;
     }
 
+
     .MenuPopup {
         display: none;
         position: absolute;
@@ -531,6 +531,10 @@ a {
         background-color: #fff;
         bottom: 27px;
     }
+    
+    .toggle{
+        display: block;
+    }
 
     .MenuPopup_menu_item:not(:last-of-type) {
         margin-bottom: 2px;
@@ -539,6 +543,7 @@ a {
     .MenuPopup__menu_link__red{
         color: #fe415c;
     }
+
     .MenuPopup__menu_link {
         display: block;
         padding: 4px 17px 4px 10px;
@@ -547,3 +552,29 @@ a {
         width: 100%;
     }
 
+    .MenuPopup_MenuPopup__bubblePoint_bottom:after {
+        margin-top: -12px;
+        border-bottom-left-radius: 2px;
+    }
+
+    .MenuPopup_MenuPopup__bubblePoint:after {
+        content: "";
+        border: 1px solid #cdcdcd;
+        background-color: #fff;
+        height: 14px;
+        width: 14px;
+        display: block;
+        -webkit-transform: rotate(-55deg) skewX(-20deg);
+        transform: rotate(-55deg) skewX(-20deg);
+    }
+
+    .MenuPopup_MenuPopup__bubblePoint_bottom {
+        top: 100%;
+    }
+
+    .MenuPopup_MenuPopup__bubblePoint {
+        position: absolute;
+        overflow: hidden;
+        right: 19px;
+        height: 7px;
+    }
