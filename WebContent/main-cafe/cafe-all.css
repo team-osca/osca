@@ -23,7 +23,6 @@ body {
     margin: 0;
     font-size: 14px;
     color: #333;
-    background-color: #f8f8f8;
     line-height: 1.42857143;
     font-family: 'Noto Sans KR', 'Pretendard Variable', Pretendard, -apple-system,
 	BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
@@ -39,8 +38,6 @@ ol, ul{
     margin: 0;
     padding: 0;
 }
-
-
 
 blockquote,q {
     quotes: none
@@ -73,12 +70,11 @@ button {
     cursor: pointer;
     font-family: inherit
 }
-img {
-    vertical-align: middle
-}
+
 input,input:focus {
     outline: none!important
 }
+
 input,input:focus,input[type=text],textarea {
     -webkit-box-shadow: none!important;
     box-shadow: none!important

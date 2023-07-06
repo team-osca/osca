@@ -1,7 +1,4 @@
 @charset "UTF-8";
-
-@charset "UTF-8";
-
 .nav-bar {
     width: 100%;
     position: fixed;
@@ -91,7 +88,6 @@
     padding: 15px;
     display: inline-block;
 }
-
 .menu li:hover:not(.selectedNav):before {
     display: block;
     border-color: #ddd;
