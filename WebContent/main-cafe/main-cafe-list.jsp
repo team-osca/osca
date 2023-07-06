@@ -16,7 +16,7 @@
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css">
-
+	<link rel="icon" type="image/x-icon" href="../allimages/favicon.jpg">
 </head>
 </head>
 
