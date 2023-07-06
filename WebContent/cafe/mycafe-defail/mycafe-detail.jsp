@@ -169,13 +169,13 @@
 					<aside class="cafe-owner" style="top: 70px">
 						<div class="cafe-owner-container">
 							<header class="cafe-owner-header">
-								<h2>지원하기</h2>
+								<h2>수정하기</h2>
 							</header>
 							<div class="cafe-owner-body scroll-lock cafe-owner-small"
 								id="MODAL_BODY">
 								<div class="cafe-owner-isfit">
-									<p>주요 업무 내용을 한 번 더 확인해 주세요.</p>
-									<p>직무와 맞는 포지션일수록 서류합격률이 높아져요!</p>
+									<p>주요 알림사항 한 번 더 확인해 주세요.</p>
+									<p>카페 포스팅 수정은 카페 사장님만 가능합니다!</p>
 								</div>
 								<div class="cafe-owner-bodyContent">
 									<h3 class="Information-title">사장님 정보</h3>

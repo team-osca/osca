@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh!스카 FAQ</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="../../allimages/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../allimages/favicon.jpg">
     <link rel="stylesheet" href="faq-main.css">
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">

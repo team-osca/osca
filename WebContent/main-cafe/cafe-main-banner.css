@@ -16,7 +16,8 @@
 
 .slick-slider{
     position: relative;
-    display: block;
+    /* display: block; */
+    float: left;
     margin-bottom: 30px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -31,7 +32,7 @@
 
 div.image {
     float: left;
-    width: 1060px;
+    width: 3200px;
     height: 299.98px;
     background-size: 100%;
     background-repeat: no-repeat;
