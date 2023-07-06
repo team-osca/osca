@@ -103,7 +103,6 @@ div.categoryList{
 .scrollsnap2 {
     flex-direction: row;
     align-items: center;
-    /* 이부분을 hidden으로 바꾸면 되긴 함 */
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -146,7 +145,6 @@ div.categoryList{
 }
 
 .button-outline-primary{
-    --button-color: #36f;
     color: var(--button-color);
     -webkit-box-shadow: 0 0 0 1px var(--button-color) inset;
     box-shadow: 0 0 0 1px var(--button-color) inset;
@@ -178,25 +176,14 @@ div.categoryList{
     color: inherit;
 }
 
-.region-button-interaction{
-    overflow: hidden;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: inherit;
-    opacity: 0;
-    background-color: var(--button-color);
-    -webkit-transition: opacity .2s ease;
-    transition: opacity .2s ease;
-    will-change: opacity;
+.clicked {
+    color: #3366FF !important;
+    --button-color: #3366FF !important;
 }
-
+ 
 .button-content-color{
-    color: #8a8a8a;
-    --button-color: #8a8a8a;
+     color: #8a8a8a;
+     --button-color: #8a8a8a;
 }
 
 .tagslide-arrow{
@@ -237,7 +224,11 @@ div.categoryList{
     -ms-flex-pack: start;
     justify-content: flex-start;
     background: -webkit-gradient(linear,left top,right top,color-stop(21.82%,#fff),to(hsla(0,0%,100%,0)));
-    background: linear-gradient(90deg,#fff 21.82%,hsla(0,0%,100%,0))
+    background: linear-gradient(90deg,#fff 21.82%,hsla(0,0%,100%,0));    
+}
+
+.leftarrow-button{
+    visibility: hidden;
 }
 
 .tagslide-arrow-visible{
@@ -303,7 +294,6 @@ div.categoryList{
 
 .section{
     margin-top: 12px;
-    display: flex;
     padding-right: 4px!important;
 } 
 
