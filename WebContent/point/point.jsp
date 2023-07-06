@@ -34,15 +34,15 @@
                                         alt="hamberger menu" height="16" style="width:17px;height:14px;object-fit:contain">
                                 </button>
                                 <a href="" class="main-bar-nav-top-logo-a">
-                                    <img src="/all-images/logo.jpg"  width="74" height="16" alt="Oh!스카 로고">
+                                    <img src="../allimages/logo.jpg"  width="74" height="16" alt="Oh!스카 로고">
                                 </a>
                             </div>
                         </div>
                     </section>
                     <section>
                         <ul class="menu">
-                            <li><a href="">스터디</a></li>
-                            <li><a href="">카페</a></li>
+                            <li><a href="">오늘의 스터디</a></li>
+                            <li><a href="">오늘의 카페</a></li>
                             <li><a href="">내 카페</a></li>
                             <li><a href="">FAQ</a></li>
                             <li><a href="">Oh!스카 소개</a></li>
@@ -274,7 +274,7 @@
             <div class="row" style="text-align: center; height: 64.6px;">
                 <div class="col-md-3 col-sm-3 col-xs-6" id="footer_content_logo" style="text-align: left;">
                     <a href="">
-                    <img src="/all-images/logo.jpg" margin-top="21px" width="90px" alt="원티드 로고">
+                    <img src="../allimages/logo.jpg" margin-top="21px" width="90px" alt="오스카 로고">
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6" id="footer_content_1">
