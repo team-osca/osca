@@ -66,17 +66,22 @@
                   >
                 </div>
                 <input
+                  id="pw-input"
                   type="password"
                   placeholder="새 비밀번호를 입력해주세요."
                   name="password"
                   class="new-password"
                   aria-autocomplete="list"
-                /><input
+                />
+                <p id="check-pw-msg" color="var(--theme-palette-colors-red-400)" class="pw-error">올바르지 않은 비밀번호입니다.</p>
+                <input
+                  id="pw-input-check"
                   type="password"
                   placeholder="새 비밀번호를 다시 한번 입력해주세요."
                   name="passwordConfirm"
                   class="new-password"
                 />
+                <p id="not-eq-err" color="var(--theme-palette-colors-red-400)" class="pw-error">비밀번호가 서로 일치하지 않습니다.</p>
                 <p
                   color="var(--theme-palette-colors-gray-600)"
                   class="guide-msg"
