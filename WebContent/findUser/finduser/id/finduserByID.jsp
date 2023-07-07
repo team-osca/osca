@@ -12,6 +12,7 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
     <link rel="preload" href=btn-span"https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css" as="style">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../allimages/favicon.jpg">
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="find-id.css">
     <title>아이디 찾기</title>

@@ -27,6 +27,7 @@
     />
     <link rel="stylesheet" href="reset-password-base.css" />
     <link rel="stylesheet" href="reset-password.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../allimages/favicon.jpg">
     <title>비밀번호 변경</title>
   </head>
   <body>
