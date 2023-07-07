@@ -7,12 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ-상세보기</title>
-    <link rel="icon" type="image/png" sizes="4.4x2.4" href="../../allimages/favicon.png">
+    <link rel="icon" type="image/png" sizes="4.4x2.4" href="../../allimages/favicon.jpg">
     <link rel="stylesheet" href="faq-detail.css">
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="../allimages/favicon.jpg">
     
 </head>
 
