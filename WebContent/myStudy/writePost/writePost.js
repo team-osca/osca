@@ -24,7 +24,7 @@ $(document).ready(function() {
   });
 
 
-//   모달 관련 어쩌구 ㅋㅋ
+//   모달
   const $modal = $('.Modal_Modal__root');
   const $blur = $('.Modal_Modal__root__blur');
   const $backdrop = $('.Modal_Modal__root__backdrop');
