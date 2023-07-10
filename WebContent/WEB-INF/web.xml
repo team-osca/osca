@@ -9,4 +9,148 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+
+<!-- 1.Cafe -->
+   <servlet>
+  	<servlet-name>Cafe</servlet-name>
+  	<servlet-class>com.gitOsca.cafe.CafeFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Cafe</servlet-name>
+  	<url-pattern>*.cafe</url-pattern>
+  </servlet-mapping>
+  
+<!-- 2.CafeImage -->
+  <servlet>
+  	<servlet-name>CafeImage</servlet-name>
+  	<servlet-class>com.gitOsca.cafeImage.CafeImageFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>CafeImage</servlet-name>
+  	<url-pattern>*.cafeImage</url-pattern>
+  </servlet-mapping>
+  
+<!-- 3.Ceo -->  
+  <servlet>
+  	<servlet-name>Ceo</servlet-name>
+  	<servlet-class>com.gitOsca.ceo.CeoFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Ceo</servlet-name>
+  	<url-pattern>*.ceo</url-pattern>
+  </servlet-mapping>
+   <servlet>
+     
+<!-- 4.General -->
+  <servlet-name>General</servlet-name>
+  	<servlet-class>com.gitOsca.general.GeneralFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>General</servlet-name>
+  	<url-pattern>*.general</url-pattern>
+  </servlet-mapping>
+  
+<!-- 5. Job -->
+  <servlet>
+  	<servlet-name>Job</servlet-name>
+  	<servlet-class>com.gitOsca.job.JobFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Job</servlet-name>
+  	<url-pattern>*.job</url-pattern>
+  </servlet-mapping>
+  
+<!-- 6.JobCategory -->
+     <servlet>
+  	<servlet-name>JobCategory</servlet-name>
+  	<servlet-class>com.gitOsca.jobCategory.JobCategoryFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>JobCategory</servlet-name>
+  	<url-pattern>*.jobCategory</url-pattern>
+  </servlet-mapping>
+  
+<!-- 7. JobField  -->
+  <servlet>
+  	<servlet-name>JobField</servlet-name>
+  	<servlet-class>com.gitOsca.jobField.JobFieldFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>JobField</servlet-name>
+  	<url-pattern>*.jobField</url-pattern>
+  </servlet-mapping>
+  
+<!-- 8. Member  -->
+  <servlet>
+  	<servlet-name>Member</servlet-name>
+  	<servlet-class>com.gitOsca.member.MemberFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Member</servlet-name>
+  	<url-pattern>*.member</url-pattern>
+  </servlet-mapping>
+
+<!-- 9. Skill -->    
+   <servlet>
+  	<servlet-name>Skill</servlet-name>
+  	<servlet-class>com.gitOsca.skill.SkillFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Skill</servlet-name>
+  	<url-pattern>*.skill</url-pattern>
+  </servlet-mapping>
+  
+<!-- 10. SkillList -->    
+  <servlet>
+  	<servlet-name>SkillList</servlet-name>
+  	<servlet-class>com.gitOsca.skillList.SkillListFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>SkillList</servlet-name>
+  	<url-pattern>*.skillList</url-pattern>
+  </servlet-mapping>
+  
+<!-- 11. Study -->    
+  <servlet>
+  	<servlet-name>Study</servlet-name>
+  	<servlet-class>com.gitOsca.study.StudyFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Study</servlet-name>
+  	<url-pattern>*.study</url-pattern>
+  </servlet-mapping>
+  
+<!-- 12. StudyApplicant -->    
+  <servlet>
+  	<servlet-name>StudyApplicant</servlet-name>
+  	<servlet-class>com.gitOsca.studyApplicant.StudyApplicantController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>StudyApplicant</servlet-name>
+  	<url-pattern>*.studyApplicant</url-pattern>
+  </servlet-mapping>
+ 
+<!-- 13. StudyImage -->    
+  <servlet>
+  	<servlet-name>StudyImage</servlet-name>
+  	<servlet-class>com.gitOsca.studyImage.StudyImageFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>StudyImage</servlet-name>
+  	<url-pattern>*.studyImage</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
