@@ -1,7 +1,7 @@
 package com.gitOsca.study.domain;
 
 public class StudyVO {
-	private Long studyId;
+	private Long Id;
 	private String studyTitle;
 	private String studyContents;
 	private String studyLocation;
@@ -9,15 +9,16 @@ public class StudyVO {
 	private String studyContactPhonenumber;
 	private String studyRegistDate;
 	private String studyUpdateDate;
+	private Long generalId;
 	
 	public StudyVO() {;}
 
-	public Long getStuyYId() {
-		return studyId;
+	public Long getId() {
+		return Id;
 	}
 
-	public void setStudyId(Long studyId) {
-		this.studyId = studyId;
+	public void setId(Long id) {
+		Id = id;
 	}
 
 	public String getStudyTitle() {
@@ -76,19 +77,27 @@ public class StudyVO {
 		this.studyUpdateDate = studyUpdateDate;
 	}
 
+	public Long getGeneralId() {
+		return generalId;
+	}
+
+	public void setGeneralId(Long generalId) {
+		this.generalId = generalId;
+	}
+
 	@Override
 	public String toString() {
-		return "StudyVO [studyId=" + studyId + ", studyTitle=" + studyTitle + ", studyContents=" + studyContents
+		return "StudyVO [Id=" + Id + ", studyTitle=" + studyTitle + ", studyContents=" + studyContents
 				+ ", studyLocation=" + studyLocation + ", studyContactEmail=" + studyContactEmail
 				+ ", studyContactPhonenumber=" + studyContactPhonenumber + ", studyRegistDate=" + studyRegistDate
-				+ ", studyUpdateDate=" + studyUpdateDate + "]";
+				+ ", studyUpdateDate=" + studyUpdateDate + ", generalId=" + generalId + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((studyId == null) ? 0 : studyId.hashCode());
+		result = prime * result + ((Id == null) ? 0 : Id.hashCode());
 		return result;
 	}
 
@@ -101,15 +110,11 @@ public class StudyVO {
 		if (getClass() != obj.getClass())
 			return false;
 		StudyVO other = (StudyVO) obj;
-		if (studyId == null) {
-			if (other.studyId != null)
+		if (Id == null) {
+			if (other.Id != null)
 				return false;
-		} else if (!studyId.equals(other.studyId))
+		} else if (!Id.equals(other.Id))
 			return false;
 		return true;
 	}
-	
-	
-	
-	
 }

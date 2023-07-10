@@ -1,7 +1,7 @@
 package com.gitOsca.cafe.domain;
 
 public class CafeVO {
-	private Long cafeId;
+	private Long Id;
 	private String cafeTitle;
 	private String cafeContents;
 	private String cafeLocation;
@@ -11,15 +11,16 @@ public class CafeVO {
 	private String cafePhoneNumber;
 	private String cafeRegistDate;
 	private String cafeUpdateDate;
-		
+	private Long ceoId;
+	
 	public CafeVO() {;}
 
-	public Long getCafeId() {
-		return cafeId;
+	public Long getId() {
+		return Id;
 	}
 
-	public void setCafeId(Long cafeId) {
-		this.cafeId = cafeId;
+	public void setId(Long id) {
+		Id = id;
 	}
 
 	public String getCafeTitle() {
@@ -94,19 +95,28 @@ public class CafeVO {
 		this.cafeUpdateDate = cafeUpdateDate;
 	}
 
+	public Long getCeoId() {
+		return ceoId;
+	}
+
+	public void setCeoId(Long ceoId) {
+		this.ceoId = ceoId;
+	}
+
 	@Override
 	public String toString() {
-		return "CafeVO [cafeId=" + cafeId + ", cafeTitle=" + cafeTitle + ", cafeContents=" + cafeContents
-				+ ", cafeLocation=" + cafeLocation + ", cafeOpenTime=" + cafeOpenTime + ", cafeEndTime=" + cafeEndTime
+		return "CafeVO [Id=" + Id + ", cafeTitle=" + cafeTitle + ", cafeContents=" + cafeContents + ", cafeLocation="
+				+ cafeLocation + ", cafeOpenTime=" + cafeOpenTime + ", cafeEndTime=" + cafeEndTime
 				+ ", cafeContactEmail=" + cafeContactEmail + ", cafePhoneNumber=" + cafePhoneNumber
-				+ ", cafeRegistDate=" + cafeRegistDate + ", cafeUpdateDate=" + cafeUpdateDate + "]";
+				+ ", cafeRegistDate=" + cafeRegistDate + ", cafeUpdateDate=" + cafeUpdateDate + ", ceoId=" + ceoId
+				+ "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((cafeId == null) ? 0 : cafeId.hashCode());
+		result = prime * result + ((Id == null) ? 0 : Id.hashCode());
 		return result;
 	}
 
@@ -119,10 +129,10 @@ public class CafeVO {
 		if (getClass() != obj.getClass())
 			return false;
 		CafeVO other = (CafeVO) obj;
-		if (cafeId == null) {
-			if (other.cafeId != null)
+		if (Id == null) {
+			if (other.Id != null)
 				return false;
-		} else if (!cafeId.equals(other.cafeId))
+		} else if (!Id.equals(other.Id))
 			return false;
 		return true;
 	}
