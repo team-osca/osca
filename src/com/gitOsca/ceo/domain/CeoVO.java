@@ -1,17 +1,18 @@
 package com.gitOsca.ceo.domain;
 
 public class CeoVO {
-	private Long ceoId;
+	private Long id;
 	private String ceoBusinessNumber;
+	private Long memberId;
 
 	public CeoVO() {;}
 
-	public Long getCeoId() {
-		return ceoId;
+	public Long getId() {
+		return id;
 	}
 
-	public void setCeoId(Long ceoId) {
-		this.ceoId = ceoId;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getCeoBusinessNumber() {
@@ -22,16 +23,24 @@ public class CeoVO {
 		this.ceoBusinessNumber = ceoBusinessNumber;
 	}
 
+	public Long getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(Long memberId) {
+		this.memberId = memberId;
+	}
+
 	@Override
 	public String toString() {
-		return "CeoVO [ceoId=" + ceoId + ", ceoBusinessNumber=" + ceoBusinessNumber + "]";
+		return "CeoVO [id=" + id + ", ceoBusinessNumber=" + ceoBusinessNumber + ", memberId=" + memberId + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((ceoId == null) ? 0 : ceoId.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
 
@@ -44,11 +53,14 @@ public class CeoVO {
 		if (getClass() != obj.getClass())
 			return false;
 		CeoVO other = (CeoVO) obj;
-		if (ceoId == null) {
-			if (other.ceoId != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!ceoId.equals(other.ceoId))
+		} else if (!id.equals(other.id))
 			return false;
 		return true;
 	}
+	
+	
+
 }
