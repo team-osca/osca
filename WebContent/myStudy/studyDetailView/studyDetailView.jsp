@@ -2,12 +2,15 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>스터디 상세</title>
-    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/THGWCGF/FAVICON.jpg" />
-    <link rel="stylesheet" href="myStudyDetailView.css" />
+    <link rel="icon" type="image/x-icon" href="../../allimages/favicon.jpg">
+    <link rel="stylesheet" href="studyDetailView.css" />
+    <link rel="stylesheet" href="../myStudy/study-header.css" />
+
+
     <link
       rel="preload"
       as="style"
@@ -20,65 +23,70 @@
     />
   </head>
   <body>
-    <!-- 헤더 -->
-    <div class="NavBar_Header" style="position: fixed">
-      <div class="Header_isLoggedIn">
-        <nav class="Full_Header">
-          <div class="Header_left">
-            <div class="Header_left_logo">
-              <img class="logo_img" src="https://i.ibb.co/YNfQCNW/Oh-Sca-LOGOjpg.jpg" alt="" />
-            </div>
-          </div> 
-          <ul class="Header_menu">
-            <li>
-              <a href="" class="">스터디</a>
-            </li>
-            <li>
-              <a href="" class="">카페</a>
-            </li>
-            <li>
-              <a href="" class="">내 스터디</a>
-            </li>
-            <li>
-              <a href="" class="">FAQ</a>
-            </li>
-            <li>
-              <a href="">사이트 소개</a>
-            </li>
-          </ul>
-          <aside class="Header_right_isLoggedIn">
-            <ul>
-              <li class="profileBox">
-                <button
-                  type="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  data-attribute-id="gnb"
-                  data-gnb-kind="photo"
-                  class="profileButton"
-                  aria-label="avatarButton"
-                  data-badge="true"
-                >
-                  <div class="avatarBorder">
-                    <div
-                      class="avatarImage"
-                      style="
-                        background-image: url(https://static.wanted.co.kr/oneid-user/profile_default.png),
-                          url(https://static.wanted.co.kr/images/profile_default.png);
-                      "
-                    ></div>
-                  </div>
-                </button>
-              </li>
+    <header>
+      <div role="presentation" class="nav-bar" style="position: fixed; padding-right: initial">
+        <div class="main-bar isLoggedIn" role="presentation">
+          <nav class="main-bar-nav">
 
+              <div class="main-bar-nav-top">
+                <div class="main-bar-nav-top-logo">
+                  <a href="" class="main-bar-nav-top-logo-a">
+                    <img src="../../allimages/logo.jpg" width="74" height="16" alt="Oh!스카 로고" />
+                  </a>
+                </div>
+              </div>
 
-            </ul>
-          </aside>
-        </nav>
+              <ul class="menu">
+                <li class="selectedNav"><a href="">오늘의 스터디</a></li>
+                <li><a href="">오늘의 카페</a></li>
+                <li class="smMoreVisible"><a href="">내 스터디</a></li>
+                <li class="smMoreVisible"><a href="">FAQ</a></li>
+                <li class="smMoreVisible"><a href="">Oh!스카 소개</a></li>
+              </ul>
+
+              <aside class="aside isLoggedIn">
+                <ul>
+                  <li class="profile moreVisible">
+                    <button
+                      type="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      data-attribute-id="gnb"
+                      data-gnb-kind="photo"
+                      class="profileButton"
+                      aria-label="avatarButton"
+                      data-badge="true"
+                    >
+                      <div class="avatarBorder">
+                        <div
+                          class="avatarImage"
+                          style="
+                            background-image: url(https://static.wanted.co.kr/oneid-user/profile_default.png),
+                              url(https://static.wanted.co.kr/images/profile_default.png);
+                          "
+                        ></div>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="isNotLoggedIn">
+                    <button
+                      class="signUpButton"
+                      type="button"
+                      data-attribute-id="gnb"
+                      data-gnb-kind="signupLogin"
+                    >
+                      회원가입/로그인
+                    </button>
+                  </li>
+                </ul>
+              </aside>
+
+          </nav>
+        </div>
       </div>
-    </div>
+      <div class="padding"></div>
+    </header>
 
-    <div class="Padding"></div>
     <!-- 바디 -->
     <main class="StudyPostDetail">
       <aside class="PostDetail_side">
@@ -88,10 +96,7 @@
               <div class="AuthorBox_Study_leftSide large">
                 <div class="AuthorBox_avatarWrapper">
                   <div class="AuthorBox_UserAvatar">
-                    <img
-                      src="https://static.wanted.co.kr/images/profile_default.png"
-                      alt=""
-                    />
+                    <img src="https://static.wanted.co.kr/images/profile_default.png" alt="" />
                   </div>
                 </div>
                 <div class="AuthorBox_verticalBox">
@@ -114,10 +119,7 @@
                   <div class="AuthorBox_verticalArea">
                     <div class="AuthorBox__avatarWrapper_2">
                       <div class="AuthorBox_UserAvatar">
-                        <img
-                          src="https://static.wanted.co.kr/images/profile_default.png"
-                          alt=""
-                        />
+                        <img src="https://static.wanted.co.kr/images/profile_default.png" alt="" />
                       </div>
                     </div>
                     <div class="AuthorBox__verticalBox">
@@ -130,15 +132,26 @@
                 </div>
               </a>
             </div>
-            <h1 itemprop="headline" class="PostContents__title">
-              아침형 인간이 되고 싶어요
-            </h1>
+            <h1 itemprop="headline" class="PostContents__title">스프링 로드맵 스터디 8주 완성</h1>
           </div>
           <div class="PostContents__body">
-            하지만 올빼미는 인간이 될 수 없죠 ㅠㅠ 
-            그러니 아침형 올빼미가 되어보는
-            스터디를 해 보려고 합니다. 
-            같이 하실 분 모집합니다!
+            스프링을 핵심부터 고급편까지 학습 후, 간단한 토이프로젝트를 진행하는 스터디입니다.
+
+            📌스터디 주제 
+            스프링 로드맵 스터디 8주완성 
+
+            📌스터디 목표 
+            스프링 로드맵의 '완전한 이해'를 목표 
+
+            📌예상 스터디 일정(횟수) 
+            8주 
+
+            📌예상 모집인원 
+            6명 
+
+            📌스터디 장소 
+            투썸플레이스
+            
             <div class="PostContents_metaTags"></div>
             <div class="PostContents__images"></div>
           </div>
@@ -146,7 +159,7 @@
             <a
               class="PostContents_tag_button"
               data-attribute-id="community__contentDetail__interestTag__click"
-              data-content-title="아침형 인간이 되고 싶어요"
+              data-content-title="스프링 로드맵 스터디 8주 완성"
               data-content-id="9430"
               data-comment-count="1"
             ></a>
@@ -159,7 +172,7 @@
               type="button"
               class="PostContents__menu_button"
               data-attribute-id="community__contentDetail__more__click"
-              data-content-title="아침형 인간이 되고 싶어요"
+              data-content-title="스프링 로드맵 스터디 8주 완성"
               data-content-id="9430"
             >
               <svg width="24" height="24" viewBox="0 0 24 24">
@@ -170,13 +183,13 @@
               </svg>
             </button>
             <div class="MenuPopup">
-              <ul> 
+              <ul>
                 <li class="MenuPopup_menu_item">
                   <button
                     type="button"
                     class="MenuPopup__menu_link__red MenuPopup__menu_link"
                     data-attribute-id="community__contentDetail__more__delete"
-                    data-content-title="아침형 인간이 되고 싶었으나"
+                    data-content-title="스프링 로드맵 스터디 8주 완성"
                     data-content-id="9430"
                     data-like-count="1"
                     data-comment-count="1"
@@ -188,7 +201,7 @@
                   <a
                     class="MenuPopup__menu_link"
                     data-attribute-id="community__contentDetail__more__edit"
-                    data-content-title="아침형 인간이 되고 싶었으나"
+                    data-content-title="스프링 로드맵 스터디 8주 완성"
                     data-content-id="9430"
                     data-like-count="1"
                     data-comment-count="1"
@@ -199,15 +212,13 @@
                 </li>
               </ul>
               <div
-                class="MenuPopup_MenuPopup__bubblePoint 
-                MenuPopup_MenuPopup__bubblePoint_bottom"
+                class="MenuPopup_MenuPopup__bubblePoint MenuPopup_MenuPopup__bubblePoint_bottom"
               ></div>
             </div>
           </div>
         </article>
       </section>
     </main>
-    
   </body>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="myStudyDetailView.js"></script>

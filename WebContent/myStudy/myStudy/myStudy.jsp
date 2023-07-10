@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>내 스터디</title>
     <link rel="stylesheet" href="myStudy.css" />
+    <link rel="stylesheet" href="study-header.css" />
     <link
       rel="preload"
       as="style"
@@ -17,68 +18,65 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
     />
-    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/THGWCGF/FAVICON.jpg" />
+    <link rel="icon" type="image/x-icon" href="../../allimages/favicon.jpg">
   </head>
   <body>
-    <!-- 헤더 -->
-    <div class="NavBar_Header" style="position: fixed">
-      <div class="Header_isLoggedIn">
-        <nav class="Full_Header">
-          <div class="Header_left">
-            <div class="Header_left_logo">
-              <img class="logo_img" src="https://i.ibb.co/YNfQCNW/Oh-Sca-LOGOjpg.jpg" alt="" />
-            </div>
-          </div>
-          <ul class="Header_menu">
-            <li>
-              <a href="" class="">스터디</a>
-            </li>
-            <li>
-              <a href="" class="">카페</a>
-            </li>
-            <li>
-              <a href="" class="">내 스터디</a>
-            </li>
-            <li>
-              <a href="" class="">FAQ</a>
-            </li>
-            <li>
-              <a href="">사이트 소개</a>
-            </li>
-          </ul>
-          <aside class="Header_right_isLoggedIn">
-            <ul>
-              <li class="profileBox">
-                <button
-                  type="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  data-attribute-id="gnb"
-                  data-gnb-kind="photo"
-                  class="profileButton"
-                  aria-label="avatarButton"
-                  data-badge="true"
-                >
-                  <div class="avatarBorder">
-                    <div
-                      class="avatarImage"
-                      style="
-                        background-image: url(https://static.wanted.co.kr/oneid-user/profile_default.png),
-                          url(https://static.wanted.co.kr/images/profile_default.png);
-                      "
-                    ></div>
-                  </div>
-
-                  
-                </button>
-              </li>
-            </ul>
-          </aside>
-        </nav>
+    <header>
+      <div role="presentation" class="nav-bar" style="position: fixed; padding-right: initial">
+        <div class="main-bar isLoggedIn" role="presentation">
+          <nav class="main-bar-nav">
+            <section>
+              <div class="main-bar-nav-top">
+                <div class="main-bar-nav-top-logo">
+                  <a href="" class="main-bar-nav-top-logo-a">
+                    <img src="../../allimages/logo.jpg" width="74" height="16" alt="Oh!스카 로고" />
+                  </a>
+                </div>
+              </div>
+            </section>
+            <section>
+              <ul class="menu">
+                <li><a href="">오늘의 스터디</a></li>
+                <li><a href="">오늘의 카페</a></li>
+                <li class="selectedNav"><a href="">내 스터디</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Oh!스카 소개</a></li>
+              </ul>
+            </section>
+            <section>
+              <aside class="aside isLoggedIn">
+                <ul>
+                  <li class="profile moreVisible">
+                    <button
+                      type="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      data-attribute-id="gnb"
+                      data-gnb-kind="photo"
+                      class="profileButton"
+                      aria-label="avatarButton"
+                      data-badge="true"
+                    >
+                      <div class="avatarBorder">
+                        <div
+                          class="avatarImage"
+                          style="
+                            background-image: url(https://static.wanted.co.kr/oneid-user/profile_default.png),
+                              url(https://static.wanted.co.kr/images/profile_default.png);
+                          "
+                        ></div>
+                      </div>
+                    </button>
+                  </li>
+                </ul>
+              </aside>
+            </section>
+          </nav>
+        </div>
       </div>
-    </div>
+      <div class="padding"></div>
+    </header>
 
-    <div class="Padding"></div>
     <!-- 바디 -->
     <div class="Container">
       <!-- 왼쪽 상단부분 -->
@@ -119,19 +117,19 @@
                 <li class="active">
                   <a href="#" class=""
                     >전체
-                    <div class="label_">2</div>
-                  </a> 
+                    <div class="label_1">2</div>
+                  </a>
                 </li>
                 <li class="">
                   <a href="#" class=""
                     >내가 개설한 스터디
-                    <div class="label_">1</div></a
+                    <div class="label_2">1</div></a
                   >
                 </li>
                 <li class="">
                   <a href="#" class=""
                     >참여 스터디
-                    <div class="label_">1</div></a
+                    <div class="label_3">1</div></a
                   >
                 </li>
               </ul>
@@ -148,120 +146,126 @@
                 <li class="col col-3">상태</li>
                 <li class="col col-4">인원</li>
                 <div class="space"></div>
-              
               </ul>
             </header>
-            <ul class="Study-content list1">
-              <li class="col col-1">
-                <a href="" class="click-for-details">아침형 인간이 되고 싶어요!</a>
-              </li>
-              <li class="col col-2">2059-11-08</li>
-              <li class="col col-3">진행중</li>
-              <li class="col col-4">1/6</li>
-              
-              <button
-                type="button"
-                class="PostContents__menu_button"
-                data-attribute-id="community__contentDetail__more__click"
-                data-content-title="아침형 인간이 되고 싶어요"
-                data-content-id="9430"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
-                  ></path>
-                </svg>
-              </button>
-              <div class="MenuPopup">
-                <ul>
-                  <li class="MenuPopup_menu_item">
+            <div class="studyListCount">
+              <li class="Study-content">
+                <div role="presentation">
+                  <span class="List-table-td study-name">JAVA기초 스터디 모집</span>
+                  <span class="List-table-td create-time">2023. 6. 8</span>
+                  <span class="List-table-td status">진행중</span>
+                  <span class="List-table-td people-count">1/6</span>
+                  <span class="List-table-td option-menu">
                     <button
                       type="button"
-                      class="MenuPopup__menu_link__red"
-                      data-attribute-id="community__contentDetail__more__delete"
-                      data-content-title="아침형 인간이 되고 싶었으나"
+                      class="PostContents__menu_button"
+                      data-attribute-id="community__contentDetail__more__click"
+                      data-content-title="JAVA기초 스터디 모집"
                       data-content-id="9430"
-                      data-like-count="1"
-                      data-comment-count="1"
                     >
-                      삭제하기
+                      <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                          fill="currentColor"
+                          d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
+                        ></path>
+                      </svg>
                     </button>
-                  </li>
-                  <li class="MenuPopup_menu_item">
-                    <a
-                      class="MenuPopup__menu_link___Rsar"
-                      data-attribute-id="community__contentDetail__more__edit"
-                      data-content-title="아침형 인간이 되고 싶었으나"
-                      data-content-id="9430"
-                      data-like-count="1"
-                      data-comment-count="1"
-                      href="/community/edit/9430"
-                    >
-                      수정하기</a
-                    >
-                  </li>
-                </ul>
-                <div
-                  class="MenuPopup_MenuPopup__bubblePoint__j2qkU MenuPopup_MenuPopup__bubblePoint_bottom__EqWcp"
-                ></div>
-              </div>
-            </ul>
-            <ul class="Study-content list2">
-              <li class="col col-1">
-                <a href="" class="click-for-details">개굴 직원이 진행하는 개발 스터디</a>
+                    <div class="MenuPopup">
+                      <ul>
+                        <li class="MenuPopup_menu_item">
+                          <button
+                            type="button"
+                            class="MenuPopup__menu_link MenuPopup__menu_link__red"
+                            data-attribute-id="community__contentDetail__more__delete"
+                            data-content-title="JAVA기초 스터디 모집"
+                            data-content-id="9430"
+                            data-like-count="1"
+                            data-comment-count="1"
+                          >
+                            삭제하기
+                          </button>
+                        </li>
+                        <li class="MenuPopup_menu_item">
+                          <a
+                            class="MenuPopup__menu_link"
+                            data-attribute-id="community__contentDetail__more__edit"
+                            data-content-title="JAVA기초 스터디 모집"
+                            data-content-id="9430"
+                            data-like-count="1"
+                            data-comment-count="1"
+                            href="/community/edit/9430"
+                          >
+                            수정하기</a
+                          >
+                        </li>
+                      </ul>
+                      <div
+                        class="MenuPopup_MenuPopup__bubblePoint MenuPopup_MenuPopup__bubblePoint_bottom"
+                      ></div>
+                    </div>
+                  </span>
+                </div>
               </li>
-              <li class="col col-2">2056-01-28</li>
-              <li class="col col-3">종료</li>
-              <li class="col col-4">5/6</li>
-              <button
-                type="button"
-                class="PostContents__menu_button"
-                data-attribute-id="community__contentDetail__more__click"
-                data-content-title="아침형 인간이 되고 싶어요"
-                data-content-id="9430"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
-                  ></path>
-                </svg>
-              </button>
-              <div class="MenuPopup">
-                <ul>
-                  <li class="MenuPopup_menu_item">
+            </div>
+            <div class="studyListCount">
+              <li class="Study-content">
+                <div role="presentation">
+                  <span class="List-table-td study-name">스프링 로드맵 스터디 8주 완성</span>
+                  <span class="List-table-td create-time">2022. 1. 28</span>
+                  <span class="List-table-td status">종료</span>
+                  <span class="List-table-td people-count">5/6</span>
+                  <span class="List-table-td option-menu">
                     <button
                       type="button"
-                      class="MenuPopup__menu_link__red"
-                      data-attribute-id="community__contentDetail__more__delete"
-                      data-content-title="아침형 인간이 되고 싶었으나"
+                      class="PostContents__menu_button"
+                      data-attribute-id="community__contentDetail__more__click"
+                      data-content-title="스프링 로드맵 스터디 8주 완성"
                       data-content-id="9430"
-                      data-like-count="1"
-                      data-comment-count="1"
                     >
-                      삭제하기
+                      <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                          fill="currentColor"
+                          d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
+                        ></path>
+                      </svg>
                     </button>
-                  </li>
-                  <li class="MenuPopup_menu_item">
-                    <a
-                      class="MenuPopup__menu_link___Rsar"
-                      data-attribute-id="community__contentDetail__more__edit"
-                      data-content-title="아침형 인간이 되고 싶었으나"
-                      data-content-id="9430"
-                      data-like-count="1"
-                      data-comment-count="1"
-                      href="/community/edit/9430"
-                    >
-                      수정하기</a
-                    >
-                  </li>
-                </ul>
-                <div
-                  class="MenuPopup_MenuPopup__bubblePoint__j2qkU MenuPopup_MenuPopup__bubblePoint_bottom__EqWcp"
-                ></div>
-              </div>
-            </ul>
+                    <div class="MenuPopup">
+                      <ul>
+                        <li class="MenuPopup_menu_item">
+                          <button
+                            type="button"
+                            class="MenuPopup__menu_link MenuPopup__menu_link__red"
+                            data-attribute-id="community__contentDetail__more__delete"
+                            data-content-title="스프링 로드맵 스터디 8주 완성"
+                            data-content-id="9430"
+                            data-like-count="1"
+                            data-comment-count="1"
+                          >
+                            삭제하기
+                          </button>
+                        </li>
+                        <li class="MenuPopup_menu_item">
+                          <a
+                            class="MenuPopup__menu_link"
+                            data-attribute-id="community__contentDetail__more__edit"
+                            data-content-title="스프링 로드맵 스터디 8주 완성"
+                            data-content-id="9430"
+                            data-like-count="1"
+                            data-comment-count="1"
+                            href="/community/edit/9430"
+                          >
+                            수정하기</a
+                          >
+                        </li>
+                      </ul>
+                      <div
+                        class="MenuPopup_MenuPopup__bubblePoint MenuPopup_MenuPopup__bubblePoint_bottom"
+                      ></div>
+                    </div>
+                  </span>
+                </div>
+              </li>
+            </div>
             <div class="Study-empty">요청하신 결과가 없습니다.</div>
           </div>
         </section>
@@ -269,5 +273,5 @@
     </div>
   </body>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="myStudy.js"></script>
+  <script src="myStudy.js"></script>
 </html>
