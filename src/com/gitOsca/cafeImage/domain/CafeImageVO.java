@@ -1,47 +1,56 @@
 package com.gitOsca.cafeImage.domain;
 
 public class CafeImageVO {
-	private Long cafeImageId;
-	private String fileName;
-	private String fileOriginalName;
-	
+	private Long id;
+	private String cafeImagefileName;
+	private String cafeImagefileOriginalName;
+	private Long cafeId;
+
 	public CafeImageVO() {;}
-	
-	public Long getCafeImageId() {
-		return cafeImageId;
+
+	public Long getId() {
+		return id;
 	}
 
-	public void setCafeImageId(Long cafeImageId) {
-		this.cafeImageId = cafeImageId;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
-	public String getFileName() {
-		return fileName;
+	public String getCafeImagefileName() {
+		return cafeImagefileName;
 	}
 
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
+	public void setCafeImagefileName(String cafeImagefileName) {
+		this.cafeImagefileName = cafeImagefileName;
 	}
 
-	public String getFileOriginalName() {
-		return fileOriginalName;
+	public String getCafeImagefileOriginalName() {
+		return cafeImagefileOriginalName;
 	}
 
-	public void setFileOriginalName(String fileOriginalName) {
-		this.fileOriginalName = fileOriginalName;
+	public void setCafeImagefileOriginalName(String cafeImagefileOriginalName) {
+		this.cafeImagefileOriginalName = cafeImagefileOriginalName;
+	}
+
+	public Long getCafeId() {
+		return cafeId;
+	}
+
+	public void setCafeId(Long cafeId) {
+		this.cafeId = cafeId;
 	}
 
 	@Override
 	public String toString() {
-		return "CafeImageVO [cafeImageId=" + cafeImageId + ", fileName=" + fileName + ", fileOriginalName="
-				+ fileOriginalName + "]";
+		return "CafeImageVO [id=" + id + ", cafeImagefileName=" + cafeImagefileName + ", cafeImagefileOriginalName="
+				+ cafeImagefileOriginalName + ", cafeId=" + cafeId + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((cafeImageId == null) ? 0 : cafeImageId.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
 
@@ -54,10 +63,10 @@ public class CafeImageVO {
 		if (getClass() != obj.getClass())
 			return false;
 		CafeImageVO other = (CafeImageVO) obj;
-		if (cafeImageId == null) {
-			if (other.cafeImageId != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!cafeImageId.equals(other.cafeImageId))
+		} else if (!id.equals(other.id))
 			return false;
 		return true;
 	}
