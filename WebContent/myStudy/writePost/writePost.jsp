@@ -6,8 +6,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>게시글 작성</title>
-    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/THGWCGF/FAVICON.jpg" />
+    <link rel="icon" type="image/x-icon" href="../../allimages/favicon.jpg">
     <link rel="stylesheet" href="writePost.css" />
+    <link rel="stylesheet" href="../myStudy/study-header.css" />
     <link
       rel="preload"
       as="style"
@@ -20,64 +21,50 @@
     />
   </head>
   <body>
-    <!-- 헤더 -->
-    <div class="NavBar_Header" style="position: fixed">
-      <div class="Header_isLoggedIn">
-        <nav class="Full_Header">
-          <div class="Header_left">
-            <div class="Header_left_logo">
-              <img class="logo_img" src="https://i.ibb.co/YNfQCNW/Oh-Sca-LOGOjpg.jpg" alt="" />
-            </div>
+    <header>
+      <div role="presentation" class="nav-bar" style="position: fixed; padding-right: initial;">
+          <div class="main-bar isLoggedIn" role="presentation">
+              <nav class="main-bar-nav">
+                  <section>
+                      <div class="main-bar-nav-top">
+                          <div class="main-bar-nav-top-logo">
+                              <a href="" class="main-bar-nav-top-logo-a">
+                                  <img src="../../allimages/logo.jpg"  width="74" height="16" alt="Oh!스카 로고">
+                              </a>
+                          </div>
+                      </div>
+                  </section>
+                  <section>
+                      <ul class="menu">
+                          <li class="selectedNav"><a href="">오늘의 스터디</a></li>
+                          <li><a href="">오늘의 카페</a></li>
+                          <li><a href="">내 스터디</a></li>
+                          <li><a href="">FAQ</a></li>
+                          <li><a href="">Oh!스카 소개</a></li>
+                      </ul>
+                  </section>
+                  <section>
+                      <aside class="aside isLoggedIn">
+                          <ul>
+                              <li class="profile moreVisible">
+                                  <button type="button" aria-haspopup="true" aria-expanded="false" data-attribute-id="gnb" data-gnb-kind="photo" class="profileButton" aria-label="avatarButton" data-badge="true">
+                                      <div class="avatarBorder">
+                                          <div class="avatarImage" 
+                                          style="background-image:url(https://static.wanted.co.kr/oneid-user/profile_default.png), url(https://static.wanted.co.kr/images/profile_default.png)">
+                                          </div>
+                                      </div>
+                                  </button>
+                              </li>
+                          </ul>
+                      </aside>
+                  </section>    
+              </nav>
           </div>
-          <ul class="Header_menu">
-            <li>
-              <a href="" class="">스터디</a>
-            </li>
-            <li>
-              <a href="" class="">카페</a>
-            </li>
-            <li>
-              <a href="" class="">내 스터디</a>
-            </li>
-            <li>
-              <a href="" class="">FAQ</a>
-            </li>
-            <li>
-              <a href="">사이트 소개</a>
-            </li>
-          </ul>
-          <aside class="Header_right_isLoggedIn">
-            <ul>
-              <li class="profileBox">
-                <button
-                  type="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  data-attribute-id="gnb"
-                  data-gnb-kind="photo"
-                  class="profileButton"
-                  aria-label="avatarButton"
-                  data-badge="true"
-                >
-                  <div class="avatarBorder">
-                    <div
-                      class="avatarImage"
-                      style="
-                        background-image: url(https://static.wanted.co.kr/oneid-user/profile_default.png),
-                          url(https://static.wanted.co.kr/images/profile_default.png);
-                      "
-                    ></div>
-                  </div>
-                </button>
-              </li>
-            </ul>
-          </aside>
-        </nav>
       </div>
-    </div>
-
-    <div class="Padding"></div>
-    <!-- 고정된 등록하기 -->
+      <div class="padding"></div>
+  </header> 
+  
+      <!-- 고정된 등록하기 -->
     <main class="PostWrite">
       <form id="write">
         <div class="Header_PostWrite">
