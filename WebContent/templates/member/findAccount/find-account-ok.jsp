@@ -13,9 +13,9 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
     <link rel="preload" href=btn-span"https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css" as="style">
     <link rel="icon" type="image/png" sizes="16x16" href="../../allimages/favicon.jpg">
-    <link rel="stylesheet" href="findIdOk-base.css">
-    <link rel="stylesheet" href="findIdOK.css">
-    <title>ID-OK</title>
+    <link rel="stylesheet" href="/static/findAccount/css/findAccountOKBase.css">
+    <link rel="stylesheet" href="/static/findAccount/css/findAccountOK.css.css">
+    <title>계정을 찾았습니다.</title>
   </head>
   <body style="overflow: unset">
     <div id="ID-OK">
@@ -93,5 +93,5 @@
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="findIdOK.js"></script>
+  <script src="/static/findAccount/js/findIdOK.js"></script>
 </html>

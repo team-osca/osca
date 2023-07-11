@@ -13,8 +13,8 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
     <link rel="preload" href=btn-span"https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css" as="style">
     <link rel="icon" type="image/png" sizes="16x16" href="../../allimages/favicon.jpg">
-    <link rel="stylesheet" href="notFoundUser-base.css">
-    <link rel="stylesheet" href="notFoundUser.css">
+    <link rel="stylesheet" href="/static/findAccount/css/notFoundAccountBase.css">
+    <link rel="stylesheet" href="/static/findAccount/css/notFoundAccount.css">
     <title>계정을 찾지 못했습니다.</title>
   </head>
   <body>
