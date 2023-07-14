@@ -7,11 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cafe 목록 보기</title>
-    <link rel="stylesheet" href="cafe-all.css">
-    <link rel="stylesheet" href="main-cafe-header.css">
-    <link rel="stylesheet" href="cafe-main-list.css">
-    <link rel="stylesheet" href="cafe-footer.css"> 
-    <link rel="stylesheet" href="cafe-main-banner.css"> 
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/main-cafe/css/cafe-all.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/main-cafe/css/main-cafe-header.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/main-cafe/css/cafe-main-list.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/main-cafe/css/cafe-footer.css"> 
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/main-cafe/css/cafe-main-banner.css"> 
     <link rel="preload" as="style" crossorigin="anonymous"
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css">
     <link rel="stylesheet"
@@ -95,25 +95,25 @@
                         <div id="slider-wrap">
                             <ul id="slider">
                                <li>
-                                    <img src="images/cafe-banner01.png">
+                                    <img src="${pageContext.request.contextPath}/static/main-cafe/images/cafe-banner01.png">
                                </li>
                                <li>
-                                    <img src="images/cafe-banner02.png">
+                                    <img src="${pageContext.request.contextPath}/static/main-cafe/images/cafe-banner02.png">
                                </li>
                                <li>
-                                    <img src="images/cafe-banner03.png">
+                                    <img src="${pageContext.request.contextPath}/static/main-cafe/images/cafe-banner03.png">
                                </li>
                                <li>
-                                    <img src="images/cafe-banner01.png">
+                                    <img src="${pageContext.request.contextPath}/static/main-cafe/images/cafe-banner01.png">
                                 </li>
                                 <li>
-                                    <img src="images/cafe-banner02.png">
+                                    <img src="${pageContext.request.contextPath}/static/main-cafe/images/cafe-banner02.png">
                                 </li>
                                 <li>
-                                    <img src="images/cafe-banner03.png">
+                                    <img src="${pageContext.request.contextPath}/static/main-cafe/images/cafe-banner03.png">
                                 </li>
                                <li>
-                                    <img src="images/cafe-banner03.png">
+                                    <img src="${pageContext.request.contextPath}/static/main-cafe/images/cafe-banner03.png">
                                </li>
                             </ul>
                                      <!-- 컨트롤 버튼-->
@@ -377,6 +377,6 @@
     </main>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script src="cafe-region.js"></script>
-<script src="cafe-main-banner.js"></script>
+<script src="${pageContext.request.contextPath}/static/main-cafe/js/cafe-region.js"></script>
+<script src="${pageContext.request.contextPath}/static/main-cafe/js/cafe-main-banner.js"></script>
 </html>>

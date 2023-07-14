@@ -12,8 +12,9 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
     <link rel="preload" href=btn-span"https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css" as="style">
-    <link rel="stylesheet" href="findIdOk-base.css">
-    <link rel="stylesheet" href="findIdOK.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/findAccount/css/findAccountOKBase.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/findAccount/css/findAccount.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/findAccount/css/findAccountOK.css">
     <title>ID-OK</title>
   </head>
   <body style="overflow: unset">
@@ -92,5 +93,5 @@
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="findIdOK.js"></script>
+  <script src="${pageContext.request.contextPath}/static/findAccount/js/findIdOK.js"></script>
 </html>

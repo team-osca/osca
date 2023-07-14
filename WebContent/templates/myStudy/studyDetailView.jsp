@@ -6,9 +6,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>스터디 상세</title>
-    <link rel="icon" type="image/x-icon" href="../../allimages/favicon.jpg">
-    <link rel="stylesheet" href="studyDetailView.css" />
-    <link rel="stylesheet" href="../myStudy/study-header.css" />
+    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/favicon.jpg">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/myStudy/css/studyDetailView.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/myStudy/css/study-header.css" />
 
 
     <link
@@ -31,7 +31,7 @@
               <div class="main-bar-nav-top">
                 <div class="main-bar-nav-top-logo">
                   <a href="" class="main-bar-nav-top-logo-a">
-                    <img src="../../allimages/logo.jpg" width="74" height="16" alt="Oh!스카 로고" />
+                    <img src="${pageContext.request.contextPath}/static/allimages/logo.jpg" width="74" height="16" alt="Oh!스카 로고" />
                   </a>
                 </div>
               </div>
@@ -221,5 +221,5 @@
     </main>
   </body>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="myStudyDetailView.js"></script>
+  <script src="${pageContext.request.contextPath}/static/myStudy/js/studyDetailView.js"></script>
 </html>

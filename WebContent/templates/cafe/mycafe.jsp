@@ -6,13 +6,13 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" type="image/x-icon" href="../../allimages/favicon.jpg">
+<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/favicon.jpg">
 <link rel="preload" as="style" crossorigin="anonymous"
 	href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
-<link rel="stylesheet" href="mycafe-header.css" />
-<link rel="stylesheet" href="mycafe-section.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/cafe/css/mycafe-header.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/cafe/css/mycafe-section.css" />
 <title>내 카페 홍보글 관리</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
 						<div class="mainbar-nav-logo">
 							<a href="/jobsfeed" class="mainbar-logo-plus"
 								aria-label="jobsfeed link"><img
-								src="../../allimages/logo.jpg" alt="logo" width="74" height="17" /></a>
+								src="${pageContext.request.contextPath}/static/allimages/logo.jpg" alt="logo" width="74" height="17" /></a>
 						</div>
 						<button id="SignupBtn" class="xsSignUpButton isLoggedIn"
 							type="button">회원가입하기</button>
@@ -161,5 +161,5 @@
 	</div>
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="mycafe.js"></script>
+<script src="${pageContext.request.contextPath}/static/cafe/js/mycafe.js"></script>
 </html>

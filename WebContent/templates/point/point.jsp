@@ -7,18 +7,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>결제창 만들기</title>
-    <link rel="stylesheet" href="../../static/main-cafe/cafe-all.css">
-    <link rel="stylesheet" href="../../static/main-cafe/main-cafe-header.css">
-    <link rel="stylesheet" href="../../static/main-cafe/cafe-footer.css"> 
-    <link rel="stylesheet" href="../../static/point/modal.css">
-    <link rel="stylesheet" href="../../static/point/point.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/main-cafe/css/cafe-all.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/main-cafe/css/main-cafe-header.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/main-cafe/css/cafe-footer.css"> 
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/point/css/modal.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/point/css/point.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <link rel="preload" as="style" crossorigin="anonymous"
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css">
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css">
     <link rel="stylesheet" as="style" href="Pretendard-Medium.otf">
-	<link rel="icon" type="image/x-icon" href="../../static/allimages/favicon.jpg">
+	<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/static/allimages/favicon.jpg">
 	
 </head>
 <body>
@@ -35,7 +35,7 @@
                                         alt="hamberger menu" height="16" style="width:17px;height:14px;object-fit:contain">
                                 </button>
                                 <a href="" class="main-bar-nav-top-logo-a">
-                                    <img src="../allimages/logo.jpg"  width="74" height="16" alt="Oh!스카 로고">
+                                    <img src="${pageContext.request.contextPath}/static/allimages/logo.jpg"  width="74" height="16" alt="Oh!스카 로고">
                                 </a>
                             </div>
                         </div>
@@ -275,7 +275,7 @@
             <div class="row" style="text-align: center; height: 64.6px;">
                 <div class="col-md-3 col-sm-3 col-xs-6" id="footer_content_logo" style="text-align: left;">
                     <a href="">
-                    <img src="../allimages/logo.jpg" margin-top="21px" width="90px" alt="오스카 로고">
+                    <img src="${pageContext.request.contextPath}/static/allimages/logo.jpg" margin-top="21px" width="90px" alt="오스카 로고">
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6" id="footer_content_1">
@@ -313,6 +313,6 @@
         </div>
     </footer>
 </body>
-<script src="../../static/point/modal.js">
+<script src="${pageContext.request.contextPath}/static/point/js/modal.js">
 </script>
 </html>
