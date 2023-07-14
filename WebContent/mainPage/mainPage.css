@@ -255,10 +255,6 @@ a {
 }
 
 .padding {
-    padding: 40px 0;
-}
-
-.padding {
     height: 50px;
 }
 
@@ -366,7 +362,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .lineBanner{
     width: 1060px;
-    margin: 60px auto;
+    margin: 50px auto;
 }
 
 .lineBanner_link{
@@ -378,7 +374,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .box_gradient{
     background-image: -webkit-gradient(linear,left top,right top,color-stop(-12%,#01a9fe),color-stop(37%,#2f5fef),color-stop(72%,#046afe),color-stop(110%,#00d2dd));
-    background-image: linear-gradient(90deg,#01a9fe -12%,#2f5fef 37%,#046afe 72%,#00d2dd 110%);
+    background-image: linear-gradient(90deg,#1A679D -12%,#16517B 37%,#16517B 72%,#1A679D 110%);
 
 }
 
