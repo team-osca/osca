@@ -247,20 +247,24 @@
     </button>
                 </div>
             </div>
-            <div class="modal_content_area">
+           <div class="modal_content_area">
                 <form>
                     <div class="modal_input_area">
-                    	현재 보유하고 있는 point
-                        <input type="text" placeholder="이름을 입력해주세요." name="username" data-testid="Input_username" class="modal_input" value="5000point">
-                    	사용될 예정인 point
-                        <input type="text" placeholder="이름을 입력해주세요." name="username" data-testid="Input_username" class="modal_input" value="1000point">
+                        <div id="modal_point_title">결제 예정 point</div>
+                    	<div class="modal_point_text1">현재 보유하고 있는 point</div>
+                        <span class="point_price">+ 5000point</span>
+                    	<div class="modal_point_text1">사용될 예정인 point</div>
+                        <span class="point_price" style="color:red">- 1000point</span>
+                        <hr style="border:solid 1px #dad8d8;">
+                        <div class="modal_point_text2">결제 후 point</div>
+                        <span class="point_price">+ 4000point</span>
                     </div>
                     <div class="modal_button_area">
-                        <button type="button" data-testid="Button" class="cansel_button">
-                            <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="button_text">취소</span>
-                        </button>
                         <button type="submit" data-testid="Button" class="submit_button">
-                            <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="button_text">결제</span>
+                            <span color="var(--theme-palette-colors-black-100)" class="button_text">결제</span>
+                        </button>
+                        <button type="button" data-testid="Button" class="cancel_button">
+                            <span color="var(--theme-palette-colors-black-100)" class="button_text ">취소</span>
                         </button>
                     </div>
                 </form>

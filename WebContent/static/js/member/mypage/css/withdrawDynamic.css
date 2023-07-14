@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@media only screen and (min-width: 768px) {
+    :root {
+        --text-spacing-headline:-0.002em;
+        --text-spacing-heading: -0.0195em;
+        --text-spacing-subtitle: -0.0236em;
+        --text-spacing-title: -0.0282em;
+        --text-spacing-display: -0.0319;
+        --text-height-headline: 26px;
+        --text-height-heading: 28px;
+        --text-height-subtitle: 38px;
+        --text-height-title: 52px;
+        --text-height-display: 72px;
+        --text-size-headline: 18px;
+        --text-size-heading: 22px;
+        --text-size-subtitle: 28px;
+        --text-size-title: 40px;
+        --text-size-display: 56px
+    }
+}
+@media (max-width: 767px) {
+    .menubar {
+        min-width: auto;
+    }
+}
+@media (max-width: 767px){
+    .main_wrapper {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-width: 767px){
+    .main_box {
+        border-radius: 0px;
+        border: none;
+        max-height: 100%;
+        height: 100%;
+    }
+}
