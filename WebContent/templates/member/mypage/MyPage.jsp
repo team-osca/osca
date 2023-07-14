@@ -14,10 +14,10 @@
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <link rel="stylesheet" href="/static/all.css"/>
-    <link rel="stylesheet" href="/static/mypage/css/menuBar.css"/>
-    <link rel="stylesheet" href="/static/mypage/css/menuBarDynamic.css">
-    <link rel="stylesheet" href="/static/mypage/css/body.css">
-    <link rel="stylesheet" href="/static/mypage/css/bodyDynamic.css">
+    <link rel="stylesheet" href="/static/member/mypage/css/menuBar.css"/>
+    <link rel="stylesheet" href="/static/member/mypage/css/menuBarDynamic.css">
+    <link rel="stylesheet" href="/static/member/mypage/css/body.css">
+    <link rel="stylesheet" href="/static/member/mypage/css/bodyDynamic.css">
     <style>
         .padding{
             height: 50px ;
@@ -25,8 +25,8 @@
     </style>
 </head>
 <body>
-     
-    <div id="">
+    <body > 
+    <div id="mypage">
         <div role="presentation" class="nav-bar" style="position: fixed; padding-right: initial;">
             <div class="main-bar isLoggedIn" role="presentation">
                 <nav class="main-bar-nav">
@@ -130,291 +130,15 @@
                     </div>
                 </aside>
 
-
-
                 <section>
-                    <div>
-                        <div class="matchUpForm form_main resume">
-                            <header class="form-header">
-                                <dl class="form-title">
-                                    <dt>기본 이력서</dt>
-                                </dl>
-                            </header>
-                            <div class="formBlock block_">
-                                <div class="formBlock-content content_">
-                                    <div class="mainResume-fieldset">
-                                        <div class="info">
-                                            <div class="info-label">학교</div>
-                                            <div class="info-body">
-                                                <div class="info_content">
-                                                    <span class="resumeEntry-major">한신대학교</span>
-                                                    <span class="resumeEntry-minor is-empty">전공 미입력</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="info-label">직장</div>
-                                            <div class="info-body">
-                                                <div class="info_content">
-                                                    <span class="resumeEntry-major is-empty">직장 미입력</span>
-                                                    <span class="resumeEntry-minor is-empty">직책 미입력</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a href="" class="mainResume-edit"><span class="edit-area"><svg class="edit-area-svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.9338 2.08059C17.5629 1.80534 17.0366 1.83583 16.7002 2.17212L3.43579 15.4323L3.33867 15.5461C3.22211 15.7068 3.1582 15.9013 3.1582 16.1023V19.8947L3.16685 20.0233C3.22958 20.4857 3.62596 20.8421 4.10558 20.8421H7.2678L7.39635 20.8335C7.85877 20.7707 8.21517 20.3744 8.21517 19.8947L8.20652 19.7662C8.14379 19.3038 7.74742 18.9474 7.2678 18.9474H5.05168V16.4956L13.2631 8.28674L15.7123 10.7359L9.7494 16.6985L9.65767 16.8047C9.38244 17.1756 9.41297 17.7019 9.74927 18.0383C10.1192 18.4083 10.719 18.4083 11.0891 18.0384L21.8281 7.30155L21.9198 7.1953C22.195 6.82447 22.1645 6.29818 21.8283 5.96181L18.04 2.17233L17.9338 2.08059ZM17.0521 9.39616L19.8181 6.63032L17.3688 4.18232L14.6031 6.94717L17.0521 9.39616Z" fill="#3366FF"></path></svg></span></a>
-                                    </div>
-                                    <div class="mainResume-about">안녕하세요. 신입 웹 개발자입니다.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="matchUpForm form_main enterInterestArea">
-                            <header class="form-header">
-                                <dl class="form-title">
-                                    <dt>전문분야 설정</dt>
-                                </dl>
-                            </header>
-                            <div class="formBlock block_">
-                                <div class="formBlock-content content_">
-                                    <div class="enterInterestArea-fieldset">
-                                        <div class="info">
-                                            <div class="info-label">직군</div>
-                                            <div class="info-body">개발</div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="info-label">직무</div>
-                                            <div class="info-body">웹 개발자</div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="info-label">경력</div>
-                                            <div class="info-body">신입</div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="info-label">스킬</div>
-                                            <div class="info-body">Java, JavaScript, AWS, HTML5, CSS3, JSP, Spring Framework, React.js, React Native, Spring Boot, Next.js</div>
-                                        </div>
-                                        <a href="" class="enterInterestArea-edit"><span class="edit-area"><svg class="edit-area-svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.9338 2.08059C17.5629 1.80534 17.0366 1.83583 16.7002 2.17212L3.43579 15.4323L3.33867 15.5461C3.22211 15.7068 3.1582 15.9013 3.1582 16.1023V19.8947L3.16685 20.0233C3.22958 20.4857 3.62596 20.8421 4.10558 20.8421H7.2678L7.39635 20.8335C7.85877 20.7707 8.21517 20.3744 8.21517 19.8947L8.20652 19.7662C8.14379 19.3038 7.74742 18.9474 7.2678 18.9474H5.05168V16.4956L13.2631 8.28674L15.7123 10.7359L9.7494 16.6985L9.65767 16.8047C9.38244 17.1756 9.41297 17.7019 9.74927 18.0383C10.1192 18.4083 10.719 18.4083 11.0891 18.0384L21.8281 7.30155L21.9198 7.1953C22.195 6.82447 22.1645 6.29818 21.8283 5.96181L18.04 2.17233L17.9338 2.08059ZM17.0521 9.39616L19.8181 6.63032L17.3688 4.18232L14.6031 6.94717L17.0521 9.39616Z" fill="#3366FF"></path></svg></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- ajax -->
                 </section>
 
-
-
-
-                <!-- start of 전문분야 수정 부분 -->
-                <section>
-                    <div class="matchUpForm form_main">
-                        <header class="form-header">
-                            <dl class="form-title">
-                                <dt>전문분야 설정</dt>
-                            </dl>
-                        </header>
-                        <div class="formBlock block_">
-                            <div class="formBlock-content content_">
-                                <div class="select-container selected">
-                                    <h6>직군</h6>
-                                    <div class="select_box">
-                                        <select>
-                                            <option value="----default----" hidden="" disabled="">선택하기</option>
-                                            <option value="518">개발</option>
-                                            <option value="507">경영·비즈니스</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="multiSelect">
-                                    <h6>직무</h6>
-                                    <div class="options">
-                                        <button type="button" class="option-select active" disabled>웹 개발자</button>
-                                        <button type="button" class="option-select" disabled>Node.js 개발자</button>
-                                        <button type="button" class="option-select" disabled>DevOps / 시스템 관리자</button>
-                                        <button type="button" class="option-select active" disabled>자바 개발자</button>
-                                        <button type="button" class="option-select" disabled >DevOps / 시스템 관리자</button>
-                                        <button type="button" class="option-select" disabled >DevOps / 시스템 관리자</button>
-                                        <button type="button" class="option-select" disabled >DevOps / 시스템 관리자</button>
-                                        <button type="button" class="option-select" disabled >DevOps / 시스템 관리자</button>
-                                        <button type="button" class="option-select" disabled >DevOps / 시스템 관리자</button>
-                                        <button type="button" class="option-select" disabled >DevOps / 시스템 관리자</button>
-                                        <button type="button" class="option-select" disabled >DevOps / 시스템 관리자</button>
-                                        <button type="button" class="option-select" disabled >DevOps / 시스템 관리자</button>
-                                        <button type="button" class="option-select" disabled >DevOps / 시스템 관리자</button>
-                                        <button type="button" class="toggleEditable">+</button>
-                                    </div>
-                                </div>
-                                <div class="select-container selected">
-                                    <h6>경력</h6>
-                                    <div class="select_box">
-                                        <select>
-                                            <option value="----default----" hidden="" disabled="">선택하기</option>
-                                            <option value="0">신입</option>
-                                            <option value="1">1 년</option>
-                                            <option value="2">2 년</option>
-                                            <option value="3">3 년</option>
-                                            <option value="4">4 년</option>
-                                            <option value="5">5 년</option>
-                                            <option value="6">6 년</option>
-                                            <option value="7">7 년</option>
-                                            <option value="8">8 년</option>
-                                            <option value="9">9 년</option>
-                                            <option value="10">10 년</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="formButton button_ selected">
-                                    <h6 class="formButton-label">현재 연봉</h6>
-                                    <button type="button" class="formButton-button">
-                                        연간 / 3,000만원
-                                        <svg width="12" height="12" viewBox="0 0 12 12">
-                                            <path fill="currentColor" d="M3.345 9.72a.75.75 0 0 0 1.06 1.06l4.25-4.25a.75.75 0 0 0 0-1.06l-4.25-4.25a.75.75 0 0 0-1.06 1.06L7.065 6l-3.72 3.72z">
-                                            </path>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="formButton button_ selected">
-                                    <h6 class="formButton-label">스킬</h6>
-                                    <button type="button" class="formButton-button">
-                                        Java, JavaScript, AWS, HTML5, CSS3, JSP, Spring Framework, React.js, React Native, Spring Boot, Next.js
-                                        <svg width="12" height="12" viewBox="0 0 12 12">
-                                            <path fill="currentColor" d="M3.345 9.72a.75.75 0 0 0 1.06 1.06l4.25-4.25a.75.75 0 0 0 0-1.06l-4.25-4.25a.75.75 0 0 0-1.06 1.06L7.065 6l-3.72 3.72z">
-                                            </path>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="modal"></div>
-                            </div>
-                        </div>
-                        <footer class="formFooter footer_ isChild">
-                            <button type="button" >확인</button>
-                        </footer>
-                    </div>
-                </section>
-                <!-- end of 전문분야 수정 부분 -->
-
-
-
-
-                    <!-- start of 학교 직장 등록 수정 부분 -->
-                    <section>
-                        <div class="resumeInfoSetting">
-                            <div class="matchUpForm form_main fixedFooter">
-                                <header class="form-header">
-                                    <dl class="form-title">
-                                        <dt>학교·직장등록</dt>
-                                    </dl>
-                                </header>
-                                <div class="formBlock block_">
-                                    <div class="formBlock-content content_">
-                                        <div class="formButton button_ selected">
-                                            <h6 class="formButton-label">학교</h6>
-                                            <button type="button" class="formButton-button">한신대학교
-                                                <svg width="12" height="12" viewBox="0 0 12 12">
-                                                    <path fill="currentColor" d="M3.345 9.72a.75.75 0 0 0 1.06 1.06l4.25-4.25a.75.75 0 0 0 0-1.06l-4.25-4.25a.75.75 0 0 0-1.06 1.06L7.065 6l-3.72 3.72z">
-                                                    </path>
-                                                </svg>
-                                            </button>
-                                        </div>
-    
-                                        <div class="formButton button_">
-                                            <h6 class="FormButton-label">직장</h6>
-                                            <button type="button" class="formButton-button">직장명 검색
-                                                <svg width="12" height="12" viewBox="0 0 12 12">
-                                                    <path fill="currentColor" d="M3.345 9.72a.75.75 0 0 0 1.06 1.06l4.25-4.25a.75.75 0 0 0 0-1.06l-4.25-4.25a.75.75 0 0 0-1.06 1.06L7.065 6l-3.72 3.72z">
-                                                    </path>
-                                                </svg>
-                                            </button>
-                                        </div>
-    
-    
-                                        <div class="careerPeriod">
-                                            <select class="yearSelect yearSelect_notSelect" name="startYear">
-                                                <option disabled="" hidden="" value="0">YYYY</option>
-                                                <option value="2023">2023</option>
-                                                <option value="2022">2022</option>
-                                                <option value="2021">2021</option>
-                                                <option value="2020">2020</option>
-                                                <option value="2019">2019</option>
-                                                <option value="2018">2018</option>
-                                                <option value="2017">2017</option>
-                                                <option value="2016">2016</option>
-                                                <option value="2015">2015</option>
-                                                <option value="2014">2014</option>
-                                                <option value="2013">2013</option>
-                                            </select>
-                                            <span class="monthDot">.</span>
-                                            <select class="monthSelect monthSelect_notSelect" name="startMonth">
-                                                <option disabled="" hidden="" value="0">MM</option>
-                                                <option value="1">01</option>
-                                                <option value="2">02</option>
-                                                <option value="3">03</option>
-                                                <option value="4">04</option>
-                                                <option value="5">05</option>
-                                                <option value="6">06</option>
-                                                <option value="7">07</option>
-                                                <option value="8">08</option>
-                                                <option value="9">09</option>
-                                                <option value="10">10</option>
-                                                <option value="11">11</option>
-                                                <option value="12">12</option>
-                                            </select>
-                                            <span class="termDash">-</span>
-                                            <select class="yearSelect yearSelect_notSelect" name="endYear">
-                                                <option disabled="" hidden="" value="0">YYYY</option>
-                                                <option value="2023">2023</option>
-                                                <option value="2022">2022</option>
-                                                <option value="2021">2021</option>
-                                                <option value="2020">2020</option>
-                                                <option value="2019">2019</option>
-                                                <option value="2018">2018</option>
-                                                <option value="2017">2017</option>
-                                                <option value="2016">2016</option>
-                                                <option value="2015">2015</option>
-                                                <option value="2014">2014</option>
-                                                <option value="2013">2013</option>
-                                            </select>
-                                            <span class="monthDot">.</span>
-                                            <select class="monthSelect monthSelect_notSelect" name="endMonth">
-                                                <option disabled="" hidden="" value="0">MM</option>
-                                                <option value="1">01</option>
-                                                <option value="2">02</option>
-                                                <option value="3">03</option>
-                                                <option value="4">04</option>
-                                                <option value="5">05</option>
-                                                <option value="6">06</option>
-                                                <option value="7">07</option>
-                                                <option value="8">08</option>
-                                                <option value="9">09</option>
-                                                <option value="10">10</option>
-                                                <option value="11">11</option>
-                                                <option value="12">12</option>
-                                            </select>   
-                                            <div class="checkBoxWrapper">
-                                                <input type="checkbox">
-                                                <span>현재 재직중</span>
-                                            </div>
-                                        </div>
-    
-    
-    
-                                        <label for="name" class="textarea resumeBasicInfo">
-                                            <h6>간단 소개글</h6>
-                                            <p>직무 내용, 경험, 목표 등을 추가해서 더욱 멋진 소개글을 작성해보세요.</p>
-                                            <textarea id="name" autocomplete="off">안녕하세요. 신입 웹 개발자입니다.</textarea>
-                                        </label>
-                                    </div>
-                                </div>
-                                <footer class="formFooter footer_ isChild">
-                                    <button type="button" >확인</button>
-                                </footer>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- end of 학교 직장 등록 수정 부분 -->
             </div>
         </div>
     </div>
     <!-- end of 기본 html -->
 </body>
-<script src="/static/mypage/js/menuBar.js"></script>
-<script src="/static/mypage/js/body.js"></script>
+<script src="/static/member/mypage/js/menuBar.js"></script>
+<script src="/static/member/mypage/js/body.js"></script>
 </html>
