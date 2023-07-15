@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,13 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
-    <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" as="style">
-    <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
-    <link rel="preload" href=btn-span"https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css" as="style">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findAccount/base.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findAccount/findAccount.css">
-    <title>아이디 찾기</title>
+    <title>계정 찾기</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   </head>
   <body>
     <div id="find-id" style="overflow: unset;">
@@ -59,7 +61,7 @@
                 >
               </div>
               <div>
-                <div class="select-box-wrapper">
+                <div class="select-box-wrapper"> 
                   <select class="local-select-box">
                     <option value="KR">South Korea +82</option>
                     <option value="JP">Japan +81</option>
@@ -249,14 +251,14 @@
                 <div class="check-phonenumber-wrapper">
                   <input
                     type="text"
-                    placeholder="(예시) 01013245768"
+                    placeholder="(예시) 01012345768"
                     name="mobile"
                     class="check-phonenumber"
                     value=""
-                    id="phonenumner-input"
+                    id="phonenumber-input"
                   /><button type="button" id="AuthenticationNumberBtn" class="check-phonenumber-bth" disabled>
-                    <span
-                        color="var(--theme-palette-colors-black-100)"
+                    <spano
+                       color="var(--theme-palette-colors-black-100)"
                       class="check-phonenumber-bth-span"
                       >인증번호 받기</span
                     >
@@ -272,10 +274,17 @@
                     readonly
                     class="check-phonenumber"
                     value=""
-                  />
+                    >
+                    <button type="button" class="certification-Btn">
+      					<span
+        					color="var(--theme-palette-colors-black-100)"
+        					class="certification-Number-Btn-span"
+        					>인증하기
+        				</span>
+    				</button>
                 </div>
-              </div>
-              <button type="button" disabled="" data-testid="Button" class="continue-btn">
+                <p var(--theme-palette-colors-blue-400) class="Authentication-Number-Guide">인증번호가 요청되었습니다.</p>
+              <button type="button" disabled="" class="continue-btn">
                 <span
                   color="var(--theme-palette-colors-black-100)"
                   class="check-phonenumber-bth-span"
@@ -288,6 +297,8 @@
       </div>
     </div>
   </body>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="${pageContext.request.contextPath}/static/js/findAccount/phonenumber-regex.js"></script>
+  <script>
+  	let contextPath = "${pageContext.request.contextPath}"
+  </script>
+  <script src="${pageContext.request.contextPath}/static/js/findAccount/find-account.js"></script>
 </html>
