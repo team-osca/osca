@@ -10,7 +10,7 @@
     <title>Document</title>
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
-    <link rel="stylesheet" href="signUp.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/signUp/signUp.css">
 </head>
 <body style="overflow: unset;">
     <div id="signup">

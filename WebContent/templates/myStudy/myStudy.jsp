@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>내 스터디</title>
-    <link rel="stylesheet" href="myStudy.css" />
-    <link rel="stylesheet" href="study-header.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/myStudy/myStudy.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/myStudy/study-header.css" />
     <link
       rel="preload"
       as="style"
@@ -18,7 +18,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
     />
-    <link rel="icon" type="image/x-icon" href="../../allimages/favicon.jpg">
+    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
   </head>
   <body>
     <header>
@@ -29,7 +29,7 @@
               <div class="main-bar-nav-top">
                 <div class="main-bar-nav-top-logo">
                   <a href="" class="main-bar-nav-top-logo-a">
-                    <img src="../../allimages/logo.jpg" width="74" height="16" alt="Oh!스카 로고" />
+                    <img src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg" width="74" height="16" alt="Oh!스카 로고" />
                   </a>
                 </div>
               </div>
@@ -273,5 +273,5 @@
     </div>
   </body>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="myStudy.js"></script>
+  <script src="${pageContext.request.contextPath}/static/js/myStudy/myStudy.js"></script>
 </html>

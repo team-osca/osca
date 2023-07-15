@@ -12,8 +12,8 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
     <link rel="preload" href=btn-span"https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css" as="style">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="find-id.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findAccount/base.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findAccount/findAccount.css">
     <title>아이디 찾기</title>
   </head>
   <body>
@@ -289,5 +289,5 @@
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="phonenumber-regex.js"></script>
+  <script src="${pageContext.request.contextPath}/static/js/findAccount/phonenumber-regex.js"></script>
 </html>
