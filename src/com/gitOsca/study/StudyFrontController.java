@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.gitOsca.Result;
+import com.gitOsca.study.controller.StudyDetailOkController;
 
 public class StudyFrontController extends HttpServlet{
 	@Override
@@ -17,6 +18,9 @@ public class StudyFrontController extends HttpServlet{
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
+		if(target.equals("detailOk")) {
+			result = new StudyDetailOkController().execute(req, resp);
+		}
 		
 		if(result != null) {
 			if(result.isRedirect()) {

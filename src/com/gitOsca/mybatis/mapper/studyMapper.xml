@@ -3,4 +3,10 @@
 
 <mapper namespace="study">
 
+	<select id="getStudyDetail" resultType="studyVO">
+		select study_title, study_contents, study_location, study_contact_email, study_contact_phonenumber from tbl_study
+		where id = #{id} 
+	</select>
+	
 </mapper>
+
