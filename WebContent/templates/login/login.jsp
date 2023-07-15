@@ -12,7 +12,7 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/login/css/login.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login/login.css">
 </head>
 <body>
     <div id="login">
@@ -93,5 +93,5 @@
         </div>
     </div>
 </body>
-<script src = "${pageContext.request.contextPath}/static/login/js/email-validation.js"></script>
+<script src = "${pageContext.request.contextPath}/static/js/login/email-validation.js"></script>
 </html>

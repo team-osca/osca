@@ -25,8 +25,8 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css"
     />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/findPassword/css/reset-password-base.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/findPassword/css/reset-password.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findPassword/reset-password-base.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findPassword/reset-password.css" />
     <title>비밀번호 변경</title>
   </head>
   <body>
@@ -104,5 +104,5 @@
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="${pageContext.request.contextPath}/static/findPassword/js/reset-password.js"></script>
+  <script src="${pageContext.request.contextPath}/static/js/findPassword/reset-password.js"></script>
 </html>

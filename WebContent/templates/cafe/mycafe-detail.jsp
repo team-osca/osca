@@ -6,13 +6,13 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/favicon.jpg">
+<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
 <link rel="preload" as="style" crossorigin="anonymous"
 	href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/cafe/css/mycafe-detail.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/cafe/css/mycafe-detail-medias-under1200px.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/cafe/mycafe-detail.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/cafe/mycafe-detail-medias-under1200px.css" />
 <title>카페 상세보기</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
 						<div class="mainbar-nav-logo">
 							<a href="/jobsfeed" class="mainbar-logo-plus"
 								aria-label="jobsfeed link" data-attribute-id="gnb"
-								data-gnb-kind="jobsfeed"><img src="${pageContext.request.contextPath}/static/allimages/logo.jpg"
+								data-gnb-kind="jobsfeed"><img src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg"
 								alt="logo" width="74" height="17" /></a>
 						</div>
 						<button id="SignupBtn" class="xsSignUpButton isLoggedIn"
@@ -269,6 +269,6 @@
 <script type="text/javascript"
 	src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f84848dfe600d3519b76d49148f91c84&libraries=services"></script>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/cafe/js/mycafe-detail.js"></script>
-<script src="${pageContext.request.contextPath}/static/cafe/js/mycafe-detail-kakaomap.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/cafe/mycafe-detail.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/cafe/mycafe-detail-kakaomap.js"></script>
 </html>

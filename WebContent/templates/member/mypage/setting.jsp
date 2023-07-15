@@ -10,8 +10,8 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/member/mypage/css/setting.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/member/mypage/css/settingDynamic.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/setting.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/settingDynamic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <style>
                 /* validate */
@@ -144,5 +144,5 @@
         <!-- 모달! -->
 
 </body>
-<script src="${pageContext.request.contextPath}/static/member/mypage/js/setting.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/member/mypage/setting.js"></script>
 </html>

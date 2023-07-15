@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh!스카 FAQ</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/static/allimages/favicon.jpg">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/faq/css/faq-main.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/faq/faq-main.css">
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
 </head>
@@ -20,7 +20,7 @@
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="logo">
                         <a href="http://127.0.0.1:5500/team-project/FAQ/FAQ.html">
-                            <img src="${pageContext.request.contextPath}/static/allimages/logo.jpg" alt="Oh!스카 로고" id="header_logo_image">
+                            <img src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg" alt="Oh!스카 로고" id="header_logo_image">
                         </a>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
             <div class="row" style="text-align: center; height: 64.6px;">
                 <div class="col-md-3 col-sm-3 col-xs-6" id="footer_content_logo" style="text-align: left;">
                     <a href="">
-                    <img src="${pageContext.request.contextPath}/static/allimages/logo.jpg" margin-top="21px" width="100px" alt="Oh!스카 로고">
+                    <img src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg" margin-top="21px" width="100px" alt="Oh!스카 로고">
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6" id="footer_content_2">

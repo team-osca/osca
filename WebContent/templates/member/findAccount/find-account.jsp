@@ -12,9 +12,9 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css" as="style">
-    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/static/allimages/favicon.jpg">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/findAccount/css/base.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/findAccount/css/findAccount.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findAccount/base.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findAccount/findAccount.css">
     <title>계정 찾기</title>
   </head>
   <body>
@@ -297,5 +297,5 @@
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="${pageContext.request.contextPath}/static/findAccount/js/phonenumber-regex.js"></script>
+  <script src="${pageContext.request.contextPath}/js/static/findAccount/phonenumber-regex.js"></script>
 </html>

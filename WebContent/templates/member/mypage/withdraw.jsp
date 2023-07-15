@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css">
     <title>withdrawPage</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/mypage/css/withdraw.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/mypage/css/withdrawDynamic.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/withdraw.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/withdrawDynamic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
 </head>
@@ -120,5 +120,5 @@
         </div>
     </div>
 </body>
-<script src="${pageContext.request.contextPath}/static/mypage/js/withdraw.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/member/mypage/withdraw.js"></script>
 </html>

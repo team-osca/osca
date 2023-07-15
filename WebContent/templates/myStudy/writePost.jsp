@@ -6,9 +6,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>게시글 작성</title>
-    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/favicon.jpg">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/myStudy/css/writePost.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/myStudy/css/study-header.css" />
+    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/myStudy/writePost.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/myStudy/study-header.css" />
     <link
       rel="preload"
       as="style"
@@ -29,7 +29,7 @@
                       <div class="main-bar-nav-top">
                           <div class="main-bar-nav-top-logo">
                               <a href="" class="main-bar-nav-top-logo-a">
-                                  <img src="${pageContext.request.contextPath}/static/allimages/logo.jpg"  width="74" height="16" alt="Oh!스카 로고">
+                                  <img src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg"  width="74" height="16" alt="Oh!스카 로고">
                               </a>
                           </div>
                       </div>
@@ -291,6 +291,6 @@
     </div>
   </body>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="${pageContext.request.contextPath}/static/myStudy/js/writePost.js"></script>
+  <script src="${pageContext.request.contextPath}/static/js/myStudy/writePost.js"></script>
 </html>
  

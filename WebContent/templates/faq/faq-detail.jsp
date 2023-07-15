@@ -7,13 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ-상세보기</title>
-    <link rel="icon" type="image/png" sizes="4.4x2.4" href="${pageContext.request.contextPath}/static/allimages/favicon.jpg">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/faq/css/faq-detail.css">
+    <link rel="icon" type="image/png" sizes="4.4x2.4" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/faq/faq-detail.css">
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/favicon.jpg">
+    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
     
 </head>
 
@@ -24,7 +24,7 @@
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="logo">
                         <a href="">
-                            <img src="${pageContext.request.contextPath}/static/allimages/logo.jpg" alt="Oh!스카 로고" style="height: 16px;" id="header_logo_image">
+                            <img src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg" alt="Oh!스카 로고" style="height: 16px;" id="header_logo_image">
                         </a>
                         <a href="http://127.0.0.1:5500/team-project/FAQ/FAQ.html">
                             <img src="https://theme.zdassets.com/theme_assets/9309779/e5142629ce02b25eae55476f21e3ad5525958812.png" alt="FAQ로고" id="header_logo_image">
@@ -169,5 +169,5 @@
     </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/faq/js/faq-detail.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/faq/faq-detail.js"></script>
 </html>

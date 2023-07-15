@@ -24,8 +24,8 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css"
     />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/findPassword/css/findPassowrd-base.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/findPassword/css/findPassword.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findPassword/findPassowrd-base.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findPassword/findPassword.css">
     <title>비밀번호 찾기</title>
   </head>
   <body>

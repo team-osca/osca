@@ -10,9 +10,9 @@
 	href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/cafe/mycafe-post/mycafe-header.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/cafe/css/mycafe-post-main.css" />
-<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/logo.jpg">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/cafe/mycafe-post/mycafe-header.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/cafe/css/mycafe-post-main.css" />
+<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg">
 <title>카페 등록</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
 						<div class="mainbar-nav-logo">
 							<a href="/jobsfeed" class="mainbar-logo-plus"
 								aria-label="jobsfeed link"><img
-								src="${pageContext.request.contextPath}/static/allimages/logo.jpg" alt="logo" width="74" height="17" /></a>
+								src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg" alt="logo" width="74" height="17" /></a>
 						</div>
 						<button id="SignupBtn" class="xsSignUpButton isLoggedIn"
 							type="button">회원가입하기</button>
@@ -191,5 +191,5 @@
 	</div>
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/cafe/js/mycafe-post.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/cafe/mycafe-post.js"></script>
 </html>
