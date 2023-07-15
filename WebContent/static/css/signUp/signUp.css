@@ -772,11 +772,44 @@ label{
     line-height: var(--text-height-body);
 }
 
-.password-container{
-    margin: 17px 0px 7px 0px;
+.check_active {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--theme-palette-colors-blue-400);
 }
-
-
-
-
-
+.check_svg_box{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: inherit;
+    -webkit-box-align: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -webkit-box-pack: inherit;
+    -ms-flex-pack: inherit;
+    -webkit-justify-content: inherit;
+    justify-content: inherit;
+}
+.check_svg{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentColor;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    font-size: inherit;
+}
