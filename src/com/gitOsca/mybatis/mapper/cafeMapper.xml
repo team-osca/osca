@@ -2,5 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cafe">
-
+	<select id="findAll" resultType="com.gitOsca.cafe.domain.CafeVO">
+		select 
+			id, ceo_id, cafe_title, cafe_contents, cafe_locaion, cafe_open_time, cafe_end_time, cafe_contact_email, cafe_contact_phonenumber, cafe_regist_date, cafe_update_date
+		from tbl_cafe
+	</select>
 </mapper>

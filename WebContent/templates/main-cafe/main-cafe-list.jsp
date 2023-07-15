@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     
 <!DOCTYPE html>
 <html lang="ko">
@@ -379,4 +380,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/main-cafe/cafe-region.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/main-cafe/cafe-main-banner.js"></script>
+<script>
+let cafes = `${cafes}`;
+console.log(cafes)
+</script>
 </html>>
