@@ -8,9 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/signUp/signUp.css">
+    <link rel="stylesheet" href="signUp.css">
 </head>
 <body style="overflow: unset;">
     <div id="signup">
@@ -70,7 +71,7 @@
                                     <input type="text" placeholder="인증번호를 입력해주세요." name="authCode" readonly class="authenticationcode" value>
                                 </div>
                             </div>
-                            <div>
+                            <div class="password-container">
                                 <label color="var(--theme-palette-colors-gray-600)" for="password" class="label">비밀번호</label>
                             </div>
                             <input type="password" placeholder="비밀번호를 입력해주세요." name="password" class="passwordbox" value>
@@ -157,4 +158,5 @@
         </div>
     </div>
 </body>
+<script src="signup.js"></script>
 </html>

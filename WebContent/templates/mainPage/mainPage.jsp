@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-    <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -29,9 +29,7 @@
                                         <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=17&q=75" alt="hamberger menu" height="14" style="width:17px; height:14px; object-fit:contain">
                                     </button>
                                     <a href="" class="main-bar-nav-top-logo-a">
-                                        <svg width="74" hieght="21" viewBox="0 0 140 32">
-                                            <path fill="currentColor" d="M89.8 2.2l-5.6 2.4v4.8h-3.8v5.2h3.8v10.2c0 4.2 2.6 7 6.6 7 1.6 0 2.6-.4 3.2-.6V26c-.2 0-1 .2-1.8.2-1.6 0-2.4-.6-2.4-2.6v-8.8H94V9.6h-4.2V2.2zM28.6 9.6l-4 14-4.6-14h-5.6l-4.6 14L6 9.6H0l6.8 21.8h6l4.4-14.6 4.6 14.6h6l6.8-21.8zM134.4 2.2v8.6c-1.4-1-3-1.6-4.8-1.8h-.4-1.6c-5 .4-8.2 4.2-9.2 9-.2.8-.2 1.4-.2 2.2V22c.6 5.6 4.4 10 10.2 10 2.4 0 4.4-.6 6-1.8v1.4h5.4V0l-5.4 2.2zm-5.2 24.4c-3 0-5.6-2.4-5.6-6.2 0-4 2.6-6.2 5.6-6.2s5.2 2.2 5.2 6c0 4.2-2.2 6.4-5.2 6.4zM116.2 18c-.8-5.2-4.6-9-10-9s-9.2 3.8-10 9c-.2.8-.2 1.6-.2 2.6v1.6c.6 5.6 4.4 10 10.2 10 4.6 0 8-2.8 9.4-6.8l-5-1.2c-.8 1.8-2.4 3.2-4.4 3.2-2.8 0-4.6-2.2-5-5.2h15.2v-1.6c0-1 0-1.8-.2-2.6zm-14.8 0c.8-2.2 2.4-3.6 4.8-3.6s4 1.6 4.8 3.6h-9.6zM50.6 11c-1.4-1-3.2-1.8-5.2-1.8H44.8h-.6c-5.2.4-8.6 4-9.4 9-.2.8-.2 1.4-.2 2.2v1.8c.6 5.6 4.4 10 10.2 10 2.4 0 4.4-.6 6-1.8v1.4h5.6V9.6h-5.6V11zm-5.2 15.6c-3 0-5.6-2.4-5.6-6.2 0-4 2.6-6.2 5.6-6.2s5.2 2.2 5.2 6c0 4.2-2.2 6.4-5.2 6.4zM71.2 9c-2.2 0-4.6 1-6 3.2V9.6h-5.6v21.8h5.6V18.8c0-2.6 1.4-4.6 4-4.6 2.8 0 3.8 2 3.8 4.4v12.8h5.6V17.6c.2-4.8-2.2-8.6-7.4-8.6z"></path>
-                                        </svg>
+                                        <img class="osca" src="images/logo.jpg">
                                     </a>
                                 </div>
                             </div>
@@ -81,7 +79,6 @@
             </div>
             <div class="padding"></div>
         </header>
-    </div>
         <main>
             <section class="section">
                 <div class="topBanner">
@@ -94,52 +91,72 @@
                             </span>
                         </button>
                         <div class="slick-list" style="padding: 0px 50px;">
-                            <div class="slick-slider slick-initialized">
-                                <button type="button" class="topBanner-arrow topBanner-nextArrow">
-                                    <span class="svgIcon">
-                                        <svg class="svgIcon-root" viewBox="0 0 18 18">
-                                            <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
-                                        </svg>
-                                    </span>
-                                </button>
-                            </div>
                             <!-- 슬릭 트랙리스트 -->
                             <div id="wrapper">
                                 <div id="slider-wrap">
                                     <ul id="slider">
-                                       <li>
-                                            <img src="/mainPage/images/001.png">
-                                       </li>
-                                       <li>
-                                            <img src="/mainPage/images/002.png">
-                                       </li>
-                                       <li>
-                                            <img src="/mainPage/images/003.png">
-                                       </li>
-                                       <li>
-                                            <img src="/mainPage/images/004.png">
-                                       </li>
-                                       <li>
-                                            <img src="/mainPage/images/005.png">
-                                       </li>
-                                       <li>
-                                            <img src="/mainPage/images/006.png">
-                                       </li>
-                                       <li>
-                                            <img src="/mainPage/images/006.png">
-                                       </li>
+                                        <li>
+                                            <img src="images/d.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/e.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/f.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/a.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/b.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/c.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/d.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/e.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/f.png">
+                                        </li>
+                                        <li class="current_banner">
+                                            <img src="images/a.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/b.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/c.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/d.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/e.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/f.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/a.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/b.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/c.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/d.png">
+                                        </li>
                                     </ul>
-                                     <!-- 컨트롤 버튼-->
-                                    <div class="btns" id="next"></div>
-                                    <div class="btns" id="previous"></div>
-                                      <ul>
-                                      </ul>
-                                    </div>
                                 </div>
-                            
-                             </div>
+                            </div>
                         </div>
-                        <button type="button" class="topBanner-arrow topBanner-prevArrow">
+                        <button type="button" class="topBanner-arrow topBanner-nextArrow">
                             <span class="svgIcon">
                                 <svg class="svgIcon-root" viewBox="0 0 18 18">
                                     <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
@@ -152,40 +169,161 @@
                     <a href="https://www.wanted.co.kr/wdlist" class>
                         <div class="lineBanner_link">
                             <div class="lineBanner_box box_gradient">
-                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 18 18">
-                                    <defs>
-                                        <path id="qt2dnsql4a" d="M15.727 17.273a.563.563 0 10.796-.796l-4.875-4.875-.19-.165a.563.563 0 00-.764.028 5.063 5.063 0 111.261-2.068.562.562 0 101.073.338 6.188 6.188 0 10-1.943 2.894l4.642 4.644z"></path>
-                                    </defs>
-                                    <g fill="none" fill-rule="evenodd">
-                                        <use fill="#fff" fill-rule="nonzero" stroke="#fff" stroke-width=".3" xlink:href="#qt2dnsql4a"></use>
-                                    </g>
-                                </svg>
-                                채용 중인 포지션 보러가기
+                                내 스터디 바로가기
                             </div>
                         </div>
                     </a>
                 </aside>
-                <article class="matched_jobList matching-container" style="background-image: url"https://static.wanted.co.kr/images/home/ai_banner/ai_banner_bg.png";">
-                    <header class="matched_jobList_title_wrapper matched_jobList_title_wrapper_notMatched">
-                        <div class="matched_jobList_aiBanner">
-                            <div class="matched_jobList_aiBanner_container">
-                                <div class="matched_jobList_aiBanner_container_titleWrapper">
-                                    <img src="https://static.wanted.co.kr/images/ai/logo-wantedai.png" width="113" alt="logo-wantedai" style="margin-bottom: 3px;">
-                                    <p class="matched_jobList_aiBanner_container_titleWrapper_title">가 제안하는 합격률 높은 포지션</p>
+                <article class="study-tag">
+                    <div class="study-list">
+                        <header class="study-list-header">
+                            <div class="study-list-wrapper">
+                                <h2 class="study-title">
+                                    <p>#인기있는 스터디</p>
+                                    <img src="https://cdn3.iconfinder.com/data/icons/baby-154/512/book_kid_school_educate_fairy_tale_learning-64.png">
+                                    <span>소개합니다</span>
+                                </h2>
+                                <div class="study-title-button">
+                                    <a href="#">
+                                        <span>스터디 더보기</span>
+                                        <span class="study-list-arrow">
+                                            <svg xmlns="https://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.34467 8.24802C0.0517767 8.51161 0.0517767 8.93898 0.34467 9.20257C0.637563 9.46617 1.11244 9.46617 1.40533 9.20257L5.65533 5.37773C5.94822 5.11414 5.94822 4.68677 5.65533 4.42317L1.40533 0.59833C1.11244 0.334736 0.637563 0.334736 0.34467 0.59833C0.0517767 0.861923 0.0517767 1.28929 0.34467 1.55288L4.06434 4.90045L0.34467 8.24802Z" fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
                                 </div>
-                                <p class="Typography_matched_jobList_aiBanner_container_titleWrapper">
-                                    회원가입 후, 이력서와 포지션 분석을 통해
-                                    <br ::after></br>
-                                    적합한 포지션을 추천받으세요!
-                                </p>
                             </div>
-                            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fhome%2Fai_banner%2Fidentify_people.png&w=486&q=75" alt>
-                            <button type="button" class="style-wrapper">
-                                <p class="start-now">지금 시작하기</p>
-                            </button>
+                        </header>
+                        <div class="study-slider-container">
+                            <div class="study-slider study-initialized">
+                                <div class="studylist">
+                                    <div class="studytrack" style="width: 6480px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                        <div class="study-slide" style="outline: none; width: 540px;">
+                                            <div>
+                                                <div class="card-container">
+                                                    <a href="#" class>
+                                                        <header role="img" style="background-image: url(images/01.png); width: 520px; height: 100px;" class="board-content" >
+                                                        </header>
+                                                        <div class="card-content">
+                                                            <div class="card-body">
+                                                                <div class="card-image">
+                                                                    <img src="images/design.png" style="width: 42px; height: 42px;">
+                                                                </div>
+                                                                <div class="card-info">
+                                                                    <p class="card-info-title">canvas three.js 화면 개발</p>
+                                                                    <p class="card-info-category">프론트엔드</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="study-slide" style="outline: none; width: 540px;">
+                                            <div>
+                                                <div class="card-container">
+                                                    <a href="#" class>
+                                                        <header role="img" style="background-image: url(images/02.png); width: 520px; height: 100px;" class="board-content" >
+                                                        </header>
+                                                        <div class="card-content">
+                                                            <div class="card-body">
+                                                                <div class="card-image">
+                                                                    <img src="images/big-data.png" style="width: 42px; height: 42px;">
+                                                                </div>
+                                                                <div class="card-info">
+                                                                    <p class="card-info-title">한동석의 DROP THE TABLE</p>
+                                                                    <p class="card-info-category">빅데이터</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h2 class="matched_jobList_title"></h2>
-                    </header>
+                    </div>
+                </article>
+                <article class="cafe-tag">
+                    <div class="cafe-list">
+                        <header class="cafe-list-header">
+                            <div class="cafe-list-wrapper">
+                                <h2 class="cafe-title">
+                                    <p>#인기있는 카페</p>
+                                    <img src="https://cdn0.iconfinder.com/data/icons/set-02-coffee-colors-doodle/91/Coffee_Doodle_Colors_97-64.png">
+                                    <span>소개합니다</span>
+                                </h2>
+                                <div class="cafe-title-button">
+                                    <a href="#">
+                                        <span>카페 더보기</span>
+                                        <span class="cafe-list-arrow">
+                                            <svg xmlns="https://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.34467 8.24802C0.0517767 8.51161 0.0517767 8.93898 0.34467 9.20257C0.637563 9.46617 1.11244 9.46617 1.40533 9.20257L5.65533 5.37773C5.94822 5.11414 5.94822 4.68677 5.65533 4.42317L1.40533 0.59833C1.11244 0.334736 0.637563 0.334736 0.34467 0.59833C0.0517767 0.861923 0.0517767 1.28929 0.34467 1.55288L4.06434 4.90045L0.34467 8.24802Z" fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="cafe-slider-container">
+                            <div class="cafe-slider cafe-initialized">
+                                <div class="cafelist">
+                                    <div class="cafetrack" style="width: 6480px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                        <div class="cafe-slide" style="outline: none; width: 540px;">
+                                            <div>
+                                                <div class="card-container">
+                                                    <a href="#" class>
+                                                        <header role="img" style="background-image: url('https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F49%2F1eeyyoie3qgnqsj0__1080_790.jpg&w=520&q=100')" class="board-content" >
+                                                        </header>
+                                                        <div class="card-content">
+                                                            <div class="card-body">
+                                                                <div class="card-image">
+                                                                    <img src="images/talk.png" style="width: 42px; height: 42px;">
+                                                                </div>
+                                                                <div class="card-info">
+                                                                    <p class="card-info-title">시끌벅적한 곳이 더 집중이 잘 된다면</p>
+                                                                    <p class="card-info-category">서울 서초구</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cafe-slide" style="outline: none; width: 540px;">
+                                            <div>
+                                                <div class="card-container">
+                                                    <a href="#" class>
+                                                        <header role="img" style="background-image: url('https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F136%2Fjhtqznnhtixesx0t__1080_790.jpg&w=520&q=100')" class="board-content" >
+                                                        </header>
+                                                        <div class="card-content">
+                                                            <div class="card-body">
+                                                                <div class="card-image">
+                                                                    <img src="images/cafe.png" style="width: 42px; height: 42px;">
+                                                                </div>
+                                                                <div class="card-info">
+                                                                    <p class="card-info-title">차분한 분위기가 좋다면</p>
+                                                                    <p class="card-info-category">성남시 분당구</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="osca-advertisement osca-adv-container" style="background-image: url"https://static.wanted.co.kr/images/home/ai_banner/ai_banner_bg.png";">
+                    <div class="osca-adv">
+                        <img src="images/osca.png">
+                    </div>
                 </article>
             </section>
             <footer class="footer">
@@ -248,5 +386,6 @@
         <div></div>
     </div>
 </body>
+<!-- <script src="mainPage_uheejoonVer.js"></script> -->
 <script src="mainPage.js"></script>
 </html>
