@@ -267,16 +267,14 @@ svg:not(:root) {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    width: 1em;
-    height: 1em;
     display: inline-block;
     fill: currentColor;
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
     font-size: inherit;
-    width: 93px;
-    height: 28px;
+    width: 108px;
+    height: 27px;
 }
 
 form{
