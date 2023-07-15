@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
+    <meta name="viewport" content="width=device-width
     , initial-scale=1.0">
     <title>main</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
@@ -14,7 +14,7 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css">
-    <link rel="stylesheet" href="mainPage.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/mainPage/mainPage.css">
 </head>
 <body>
     <div id="mainpage">
@@ -29,7 +29,7 @@
                                         <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=17&q=75" alt="hamberger menu" height="14" style="width:17px; height:14px; object-fit:contain">
                                     </button>
                                     <a href="" class="main-bar-nav-top-logo-a">
-                                        <img class="osca" src="images/logo.jpg">
+                                        <img class="osca" src="${pageContext.request.contextPath}/static/allimages/main-page/logo.jpg">
                                     </a>
                                 </div>
                             </div>
@@ -37,16 +37,16 @@
                         <section>
                             <ul class="menu">
                                 <li>
-                                    <a href="">Oh!스카 소개</a ::after>
+                                    <a href="">Oh!스카 소개</a>
                                 </li>
                                 <li>
-                                    <a href="">FAQ</a ::after>
+                                    <a href="">FAQ</a>
                                 </li>
                                 <li>
-                                    <a href="">오늘의 스터디</a ::after>
+                                    <a href="">오늘의 스터디</a>
                                 </li>
                                 <li>
-                                    <a href="">오늘의 카페</a ::after>
+                                    <a href="">오늘의 카페</a>
                                 </li>
                             </ul>
                         </section>
@@ -96,61 +96,61 @@
                                 <div id="slider-wrap">
                                     <ul id="slider">
                                         <li>
-                                            <img src="images/d.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/d.png">
                                         </li>
                                         <li>
-                                            <img src="images/e.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/e.png">
                                         </li>
                                         <li>
-                                            <img src="images/f.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/f.png">
                                         </li>
                                         <li>
-                                            <img src="images/a.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/a.png">
                                         </li>
                                         <li>
-                                            <img src="images/b.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/b.png">
                                         </li>
                                         <li>
-                                            <img src="images/c.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/c.png">
                                         </li>
                                         <li>
-                                            <img src="images/d.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/d.png">
                                         </li>
                                         <li>
-                                            <img src="images/e.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/e.png">
                                         </li>
                                         <li>
-                                            <img src="images/f.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/f.png">
                                         </li>
                                         <li class="current_banner">
-                                            <img src="images/a.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/a.png">
                                         </li>
                                         <li>
-                                            <img src="images/b.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/b.png">
                                         </li>
                                         <li>
-                                            <img src="images/c.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/c.png">
                                         </li>
                                         <li>
-                                            <img src="images/d.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/d.png">
                                         </li>
                                         <li>
-                                            <img src="images/e.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/e.png">
                                         </li>
                                         <li>
-                                            <img src="images/f.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/f.png">
                                         </li>
                                         <li>
-                                            <img src="images/a.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/a.png">
                                         </li>
                                         <li>
-                                            <img src="images/b.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/b.png">
                                         </li>
                                         <li>
-                                            <img src="images/c.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/c.png">
                                         </li>
                                         <li>
-                                            <img src="images/d.png">
+                                            <img src="${pageContext.request.contextPath}/static/allimages/main-page/d.png">
                                         </li>
                                     </ul>
                                 </div>
@@ -203,12 +203,12 @@
                                             <div>
                                                 <div class="card-container">
                                                     <a href="#" class>
-                                                        <header role="img" style="background-image: url(images/01.png); width: 520px; height: 100px;" class="board-content" >
+                                                        <header role="img" style="background-image: url(${pageContext.request.contextPath}/static/allimages/main-page/01.png); width: 520px; height: 100px;" class="board-content" >
                                                         </header>
                                                         <div class="card-content">
                                                             <div class="card-body">
                                                                 <div class="card-image">
-                                                                    <img src="images/design.png" style="width: 42px; height: 42px;">
+                                                                    <img src="${pageContext.request.contextPath}/static/allimages/main-page/design.png" style="width: 42px; height: 42px;">
                                                                 </div>
                                                                 <div class="card-info">
                                                                     <p class="card-info-title">canvas three.js 화면 개발</p>
@@ -224,12 +224,12 @@
                                             <div>
                                                 <div class="card-container">
                                                     <a href="#" class>
-                                                        <header role="img" style="background-image: url(images/02.png); width: 520px; height: 100px;" class="board-content" >
+                                                        <header role="img" style="background-image: url(${pageContext.request.contextPath}/static/allimages/main-page/02.png); width: 520px; height: 100px;" class="board-content" >
                                                         </header>
                                                         <div class="card-content">
                                                             <div class="card-body">
                                                                 <div class="card-image">
-                                                                    <img src="images/big-data.png" style="width: 42px; height: 42px;">
+                                                                    <img src="${pageContext.request.contextPath}/static/allimages/main-page/big-data.png" style="width: 42px; height: 42px;">
                                                                 </div>
                                                                 <div class="card-info">
                                                                     <p class="card-info-title">한동석의 DROP THE TABLE</p>
@@ -281,7 +281,7 @@
                                                         <div class="card-content">
                                                             <div class="card-body">
                                                                 <div class="card-image">
-                                                                    <img src="images/talk.png" style="width: 42px; height: 42px;">
+                                                                    <img src="${pageContext.request.contextPath}/static/allimages/main-page/talk.png" style="width: 42px; height: 42px;">
                                                                 </div>
                                                                 <div class="card-info">
                                                                     <p class="card-info-title">시끌벅적한 곳이 더 집중이 잘 된다면</p>
@@ -302,7 +302,7 @@
                                                         <div class="card-content">
                                                             <div class="card-body">
                                                                 <div class="card-image">
-                                                                    <img src="images/cafe.png" style="width: 42px; height: 42px;">
+                                                                    <img src="${pageContext.request.contextPath}/static/allimages/main-page/cafe.png" style="width: 42px; height: 42px;">
                                                                 </div>
                                                                 <div class="card-info">
                                                                     <p class="card-info-title">차분한 분위기가 좋다면</p>
@@ -322,7 +322,7 @@
                 </article>
                 <article class="osca-advertisement osca-adv-container" style="background-image: url"https://static.wanted.co.kr/images/home/ai_banner/ai_banner_bg.png";">
                     <div class="osca-adv">
-                        <img src="images/osca.png">
+                        <img src="${pageContext.request.contextPath}/static/allimages/main-page/osca.png">
                     </div>
                 </article>
             </section>
@@ -386,6 +386,5 @@
         <div></div>
     </div>
 </body>
-<!-- <script src="mainPage_uheejoonVer.js"></script> -->
-<script src="mainPage.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mainPage/mainPage_uheejoonVer.js"></script>
 </html>

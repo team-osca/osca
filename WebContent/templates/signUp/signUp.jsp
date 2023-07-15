@@ -7,11 +7,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/THGWCGF/FAVICON.jpg" />
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
-    <link rel="stylesheet" href="signUp.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/signUp/signUp.css">
 </head>
 <body style="overflow: unset;">
     <div id="signup">
@@ -71,14 +72,20 @@
                                     <input type="text" placeholder="인증번호를 입력해주세요." name="authCode" readonly class="authenticationcode" value>
                                 </div>
                             </div>
-                            <div class="password-container">
+                            <div>
                                 <label color="var(--theme-palette-colors-gray-600)" for="password" class="label">비밀번호</label>
                             </div>
                             <input type="password" placeholder="비밀번호를 입력해주세요." name="password" class="passwordbox" value>
                             <input type="password" placeholder="비밀번호를 다시 한번 입력해주세요." name="passwordConfirm" class="passwordbox" value>
                             <p color="var(--theme-palette-colors-gray-600)" class="description">영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합해 8자 이상 16자 이하로 입력해주세요.</p>
                             <div class="agreements">
-                                <div class="check"></div>
+                                <div class="check">
+                                    <span class="check_svg_box">
+                                        <svg viewBox="0 0 12 8" class="check_svg">
+                                            <path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-common-white)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
                                 <input type="checkbox" name="is_agree_all" class="checkbox">
                                 <div class="content">
                                     <p color="var(--theme-palette-colors-gray-900)" class="agree-all">전체 동의</p>
@@ -86,33 +93,58 @@
                             </div>
                             <hr class="district">
                             <div class="term">
-                                <div class="check"></div>
+                                <div class="check">
+                                    <span class="check_svg_box">
+                                        <svg viewBox="0 0 12 8" class="check_svg">
+                                            <path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-common-white)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
                                 <input type="checkbox" name="is_above_14" class="checkbox">
                                 <div class="content">
                                     <p color="var(--theme-palette-colors-gray-600)" class="context">만 14세 이상입니다. (필수)</p>
                                 </div>
                             </div>
                             <div class="term">
-                                <div class="check"></div>
+                                <div class="check">
+                                    <span class="check_svg_box">
+                                        <svg viewBox="0 0 12 8" class="check_svg">
+                                            <path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-common-white)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
                                 <input type="checkbox" name="is_above_14" class="checkbox">
                                 <div class="content">
-                                    <p color="var(--theme-palette-colors-gray-600)" class="context">원티드 이용약관 동의 (필수)</p>
+                                    <p color="var(--theme-palette-colors-gray-600)" class="context">오스카 이용약관 동의 (필수)</p>
                                 </div>
                                 <a color="var(--theme-palette-colors-gray-600)" href="https://id.wanted.jobs/terms/ko" target="_blank" class="more">자세히</a>
                             </div>
                             <div class="term">
-                                <div class="check"></div>
+                                <div class="check">
+                                    <span class="check_svg_box">
+                                        <svg viewBox="0 0 12 8" class="check_svg">
+                                            <path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-common-white)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
                                 <input type="checkbox" name="is_collect_information" class="checkbox">
                                 <div class="content">
-                                    <p color="var(--theme-palette-colors-gray-600)" class="context">원티드 개인정보 수집 및 이용 동의 (필수)</p>
+                                    <p color="var(--theme-palette-colors-gray-600)" class="context">오스카 개인정보 수집 및 이용 동의 (필수)</p>
                                 </div>
                                 <a color="var(--theme-palette-colors-gray-600)" href="https://id.wanted.jobs/privacy/ko" class="more">자세히</a>
                             </div>
                             <div class="term">
-                                <div class="check"></div>
+                                <div class="check">
+                                    <span class="check_svg_box">
+                                        <svg viewBox="0 0 12 8" class="check_svg">
+                                            <path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-common-white)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                               
                                 <input type="checkbox" name="is_accept_event_all" class="checkbox">
                                 <div class="content">
-                                    <p color="var(--theme-palette-colors-gray-600)" class="context">채용 소식, 커리어 콘텐츠, 이벤트 등 원티드 맞춤 정보 받기</p>
+                                    <p color="var(--theme-palette-colors-gray-600)" class="context">채용 소식, 커리어 콘텐츠, 이벤트 등 오스카 맞춤 정보 받기</p>
                                 </div>
                             </div>
                             <div class="inform">
@@ -120,7 +152,7 @@
                                     <input name="accept_marketing_email" type="checkbox">
                                     <span class="receive">
                                         <svg viewBox="0 0 12 8" class="container">
-                                            <path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-blue-400)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-gray-300)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                         </svg>
                                     </span>
                                     <p color="var(--theme-palette-colors-gray-600)" class="mean">이메일</p>
@@ -129,7 +161,7 @@
                                     <input name="accept_marketing_email" type="checkbox">
                                     <span class="receive">
                                         <svg viewBox="0 0 12 8" class="container">
-                                            <path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-blue-400)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-gray-300)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                         </svg>
                                     </span>
                                     <p color="var(--theme-palette-colors-gray-600)" class="mean">앱 푸시</p>
@@ -138,7 +170,7 @@
                                     <input name="accept_marketing_email" type="checkbox">
                                     <span class="receive">
                                         <svg viewBox="0 0 12 8" class="container">
-                                            <path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-blue-400)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-gray-300)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                         </svg>
                                     </span>
                                     <p color="var(--theme-palette-colors-gray-600)" class="mean">문자 메시지</p>
@@ -158,5 +190,5 @@
         </div>
     </div>
 </body>
-<script src="signup.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/signUp/signUp.js"></script>
 </html>
