@@ -19,31 +19,23 @@ public class MemberFrontController extends HttpServlet{
 		
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
+
+		    if (target.equals("checkEmailOk")) {
+		        result = new CheckEmailOkController().execute(req, resp);
+		    } else if (target.equals("signUpOk")) {
+		        result = new SignUpOkController().execute(req, resp);
+		    }
+
+		    if (result != null) {
+		        if (result.isRedirect()) {
+		            resp.sendRedirect(result.getPath());
+		        } else {
+		            req.getRequestDispatcher(result.getPath()).forward(req, resp);
+		        }
+		    }
 		
-		if(target.equals("checkEmailOk")) {
-			result = new CheckEmailOkController().execute(req, resp);
-			
-		}else if(target.equals("signUp")){
-			result = new Result();
-			result.setPath("templates/signUp/signUp.jsp");
-			
-		} else if(target.equals("signUpOk")){
-			result = new SignUpOkController().execute(req, resp);
-		}
-		
-		if(result != null) {
-			if(result.isRedirect()) {
-				resp.sendRedirect(result.getPath());
-			}else {
-				req.getRequestDispatcher(result.getPath()).forward(req, resp);
-			}
-		}
+	
 	}
 	
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doGet(req, resp);
-	}
-
 }
 
