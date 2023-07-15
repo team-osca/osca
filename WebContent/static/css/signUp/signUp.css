@@ -772,6 +772,10 @@ label{
     line-height: var(--text-height-body);
 }
 
+.password-container{
+    margin: 17px 0px 7px 0px;
+}
+
 
 
 

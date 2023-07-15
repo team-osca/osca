@@ -96,6 +96,15 @@
                                 <div id="slider-wrap">
                                     <ul id="slider">
                                         <li>
+                                            <img src="images/d.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/e.png">
+                                        </li>
+                                        <li>
+                                            <img src="images/f.png">
+                                        </li>
+                                        <li>
                                             <img src="images/a.png">
                                         </li>
                                         <li>
@@ -142,12 +151,6 @@
                                         </li>
                                         <li>
                                             <img src="images/d.png">
-                                        </li>
-                                        <li>
-                                            <img src="images/e.png">
-                                        </li>
-                                        <li>
-                                            <img src="images/f.png">
                                         </li>
                                     </ul>
                                 </div>
@@ -383,6 +386,6 @@
         <div></div>
     </div>
 </body>
-<script src="mainPage_uheejoonVer.js"></script>
-<!-- <script src="mainPage.js"></script> -->
+<!-- <script src="mainPage_uheejoonVer.js"></script> -->
+<script src="mainPage.js"></script>
 </html>
