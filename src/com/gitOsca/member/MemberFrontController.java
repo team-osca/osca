@@ -7,7 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.gitOsca.Action;
 import com.gitOsca.Result;
+import com.gitOsca.member.controller.CheckEmailOkController;
+import com.gitOsca.member.controller.SignUpOkController;
 
 public class MemberFrontController extends HttpServlet{
 	@Override
@@ -17,6 +20,16 @@ public class MemberFrontController extends HttpServlet{
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
+		if(target.equals("checkEmailOk")) {
+			result = new CheckEmailOkController().execute(req, resp);
+			
+		}else if(target.equals("signUp")){
+			result = new Result();
+			result.setPath("templates/signUp/signUp.jsp");
+			
+		} else if(target.equals("signUpOk")){
+			result = new SignUpOkController().execute(req, resp);
+		}
 		
 		if(result != null) {
 			if(result.isRedirect()) {

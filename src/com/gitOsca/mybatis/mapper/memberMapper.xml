@@ -3,4 +3,10 @@
 
 <mapper namespace="member">
 
+<insert id="insert">
+		insert into tbl_member
+		(member_name, member_email, member_password, member_phonenumber, member_role)
+		values( #{memberName}, #{memberEmail}, #{memberPassword}, #{memberPhonenumber}, #{memberRole})
+	</insert>
+
 </mapper>
