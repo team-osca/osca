@@ -13,11 +13,11 @@
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="/static/all.css"/>
-    <link rel="stylesheet" href="/static/member/mypage/css/menuBar.css"/>
-    <link rel="stylesheet" href="/static/member/mypage/css/menuBarDynamic.css">
-    <link rel="stylesheet" href="/static/member/mypage/css/body.css">
-    <link rel="stylesheet" href="/static/member/mypage/css/bodyDynamic.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/menuBar.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/menuBarDynamic.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/body.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/bodyDynamic.css">
     <style>
         .padding{
             height: 50px ;
@@ -139,6 +139,6 @@
     </div>
     <!-- end of 기본 html -->
 </body>
-<script src="/static/member/mypage/js/menuBar.js"></script>
-<script src="/static/member/mypage/js/body.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/member/mypage/menuBar.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/member/mypage/js/body.js"></script>
 </html>
