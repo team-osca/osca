@@ -12,8 +12,8 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
     <link rel="preload" href=btn-span"https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css" as="style">
-    <link rel="stylesheet" href="notFoundUser-base.css">
-    <link rel="stylesheet" href="notFoundUser.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findAccount/notFoundAccountBase.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findAccount/notFoundAccount.css">
     <title>계정을 찾지 못했습니다.</title>
   </head>
   <body>
@@ -66,7 +66,6 @@
           </div>
         </div>
       </div>
-      ;
     </div>
   </body>
 </html>

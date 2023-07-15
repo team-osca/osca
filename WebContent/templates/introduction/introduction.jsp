@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh! 스카</title>
-    <link rel="icon" type="image/x-icon" href="../all-images/favicon.png">
-    <link rel="stylesheet" href="introduction.css">
+    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/introduction/introduction.css">
     <link rel="preload" as="style" crossorigin="anonymous"
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css">
     <link rel="stylesheet"
@@ -23,7 +23,7 @@
             <div class = "header_wrapper common_wrapper">
                 <div class="header_nav_logo">
                     <a href="#vision">
-                        <img src="https://i.ibb.co/YNfQCNW/Oh-Sca-LOGOjpg.jpg" alt=""" height="18px" width="82px" alt="Oh!스카 로고">
+                        <img src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg" alt=""" height="18px" width="82px" alt="Oh!스카 로고">
                     </a>
                         
                     </div>
