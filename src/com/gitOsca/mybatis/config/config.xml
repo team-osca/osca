@@ -37,4 +37,8 @@
    		<mapper resource="com/gitOsca/mybatis/mapper/studyImageMapper.xml"/> 
    </mappers>
    
+   	<typeAliases>
+		<typeAlias type="com.gitOsca.member.domain.MemberVO" alias="memberVO"/>
+
+	</typeAliases>
 </configuration>
