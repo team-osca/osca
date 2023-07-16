@@ -1,4 +1,4 @@
-package com.gitOsca.member;
+package com.gitOsca.member.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,7 +19,7 @@ import net.nurigo.java_sdk.exceptions.CoolsmsException;
 public class AuthenticationNumberController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-//		인증번호 응답
+//		인증번호 응답 화면 쪽으로 보내기
 		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("text.html; charset=utf-8");
 		PrintWriter out = resp.getWriter();
@@ -30,7 +30,7 @@ public class AuthenticationNumberController implements Action {
 
 //		인증번호 SMS로 보내기
 //		String phoneNumber = req.getParameter("phoneNumber").replace("-", "").trim();
-//		String api_key = "NCSLHZBRFR5JZIGX";
+//		String api_key = "NCSLHZBRFR5JZIGX"; 
 //		String api_secret = "TMWIDCSYTTIWBNNP4PDQFBM2S5T2F8HY";
 //		Message coolsms = new Message(api_key, api_secret);
 //		// 4 params(to, from, type, text) are mandatory. must be filled
