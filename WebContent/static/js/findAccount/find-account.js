@@ -10,7 +10,9 @@ let flag;
 
 // ------------------ 이전 버튼 클릭 이벤트 ----------------
 
+// 이전 버튼 클릭 시 로그인 페이지로 이동 
 $('pre-bth').click(function() {
+	// location.href = link; 로 로그인 페이지로 경로 이동 
 	history.back();
 });
 
@@ -26,6 +28,7 @@ const checkphoneNumber = (phoneNumber) => {
 	if (/^010-?[0-9]{4}-?[0-9]{4}$/.test(phoneNumber)) {
 		$authenticationNumberBtn.prop('disabled', false);
 		$('.isnot-a-phonenumber').css('display', 'none');
+		$('#AuthenticationNumberBtn>.check-phonenumber-bth-span').css('color', 'var(--theme-palette-colors-blue-400)');
 	} else {
 		$authenticationNumberBtn.prop('disabled', true);
 		$('.isnot-a-phonenumber').css('display', 'block');
@@ -68,11 +71,17 @@ $("#input-authCode").keyup(function() {
 // 버튼 클릭 시 인증번호 체크하고 계속 버튼 활성화 
 $('.certification-Btn').click(function() {
 	let input = $('#input-authCode').val();
+	let $AuthenticationNumberGuide = $('.Authentication-Number-Guide');
 	if (input && input === authenticationData) {
 		$('.continue-btn').removeAttr("disabled");
 		$('.continue-btn span').removeAttr("disabled");
+		$AuthenticationNumberGuide.css('color', 'green');
+		$AuthenticationNumberGuide.text('인증되었습니다.');
+		$('#input-authCode').attr('readonly', true);
+		$('.certification-Btn').css('display', 'none');
 	} else {
-		alert("인증번호를 확인해 주세요.");
+		$AuthenticationNumberGuide.css('color', 'red');
+		$AuthenticationNumberGuide.text('올바르지 않은 인증번호입니다 인증번호를 확인해 주세요.');
 	}
 });
 
@@ -85,12 +94,15 @@ $authenticationNumberBtn.on('click', function() {
 })
 // 인증번호 받으면 인증번호 전송 버튼 활성화
 
-//------------------- 계속 버튼 클릭 이벤트-------------------
+//------------------- 계속 버튼 클릭 이벤트 (계정 찾기)-------------------
 
 $('.continue-btn').click(function() {
-	let URL = contextPath + "/find_account.member?phoneNumber=" + $('#phonenumber-input').val();
+	let phoneNumber =  $('#phonenumber-input').val();
+	let URL = contextPath + "/find_account.member";
 	$.ajax({
 		url: URL,
+		type : "POST",
+		data: {"phoneNumber": phoneNumber},
 		dataType: 'json',
 		success: function(result) {
 			let account = result.account;
@@ -108,7 +120,7 @@ $('.continue-btn').click(function() {
 
 });
 
-//------------------- 계속 버튼 클릭 이벤트-------------------
+//------------------- 계속 버튼 클릭 이벤트 (계정 찾기) -------------------
 
 
 

@@ -92,5 +92,8 @@
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="${pageContext.request.contextPath}/static/js/findAccount/find-account-ok.js"></script>
+    <script>
+  	let contextPath = "${pageContext.request.contextPath}"
+  </script>
+  <script src="${pageContext.request.contextPath}/static/js/findAccount/find-account-result.js"></script>
 </html>
