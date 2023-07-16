@@ -19,18 +19,17 @@ public class CheckEmailOkController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		resp.setContentType("text/html;charset=utf-8");
-		String memberEmail = req.getParameter("memberEmail");
-		
+		String memberEmail = req.getParameter("email");
+		Result result = new Result();
 		MemberDAO memberDAO = new MemberDAO();
 		boolean check = memberDAO.selectEmail(memberEmail) == null;
-	
 		 if (check) {
-		        resp.sendRedirect("templates/signUp/signUp.jsp");
+		        result.setPath("templates/signUp/signUp.jsp");
 		    } else {
-		        resp.sendRedirect("templates/login.jsp");
+		    	 result.setPath("templates/login/password.jsp");
+		    	 result.setRedirect(true);
 		    }
-		
-		return null;
+		return result;
 	}
 
 }

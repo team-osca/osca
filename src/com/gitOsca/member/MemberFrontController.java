@@ -22,33 +22,41 @@ public class MemberFrontController extends HttpServlet {
 		Result result = null;
 
 		if (target.equals("sign_infind_account")) {
-			// °èÁ¤ Ã£±â ÆäÀÌÁö·Î ÀÌµ¿
+			// ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
 			result = new Result();
 			result.setPath("templates/findAccount/find-account.jsp");
 		} else if (target.equals("get_authentication_number")) {
-			// ÀÎÁõ¹øÈ£ ¹Þ±â
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ ï¿½Þ±ï¿½
 			result = new AuthenticationNumberController().execute(req, resp);
 		} else if (target.equals("sign_infind_account_next")) {
-			// °èÁ¤À» Ã£Àº ÆäÀÌÁö·Î °¥Áö ¸ø Ã£Àº ÆäÀÌÁö·Î °¥Áö ºÐ±âÃ³¸®
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ð±ï¿½Ã³ï¿½ï¿½
 			result = new Result();
 			String path = req.getParameter("flag").equals("true")
 					? "templates/findAccount/find-account-ok.jsp?account=" + req.getParameter("account")
 					: "templates/findAccount/not-found-account.jsp";
 			result.setPath(path);
 		} else if ( target.equals("find_account") ) {
-			// °èÁ¤ Ã£±â
+			// ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½
 			result = new findAccountOkController().execute(req, resp);
 		} else if ( target.equals("go-to-main") ) {
-			// ¸ÞÀÎÀ¸·Î °¡±â Àü¿¡ reqÃÊ±âÈ­
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ reqï¿½Ê±ï¿½È­
 			result = new GotoMainController().execute(req, resp);
 		} else if (target.equals("mypage")) {
-			// ¸¶ÀÌÆäÀÌÁö·Î ÀÌµ¿	
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½	
 			result = new Result();
 			result.setPath("templates/member/mypage/mypage.jsp");
 		} else if (target.equals("mypageOk")) {
-			//¸¶ÀÌÆäÀÌÁö ÇÁ·ÎÇÊ
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			result = new MyPageOkController().execute(req, resp);
-		} 
+		} 		else if(target.equals("signUp")) {
+			result = new Result();
+			
+		}else if(target.equals("emailCheck")){
+			result = new CheckEmailOkController().execute(req,resp);
+			
+		}else if(target.equals("password")){
+			result = new Result();
+		}
 
 		
 		if (result != null) {
