@@ -10,8 +10,8 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" as="style">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/findPassword/css/reset-password-base.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/findPassword/css/reset-password.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findPassword/reset-password-base.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findPassword/reset-password.css" />
     <title>비밀번호 변경</title>
   </head>
   <body>

@@ -1,4 +1,4 @@
-package com.gitOsca.member;
+package com.gitOsca.member.controller;
 
 import java.io.IOException;
 

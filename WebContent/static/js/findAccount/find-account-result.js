@@ -13,7 +13,7 @@ $('.prebtn').click(function(){
 // ------------------ 메인으로 돌아가기 버튼 클릭 이벤트 ----------------
 
 $('#go-to-main').click(function() {
-	let link = "http://localhost:8090/go-to-main.member";
+	let link = contextPath + "/go_to_main.member";
 	location.href = link;
 });
 
