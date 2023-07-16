@@ -14,14 +14,20 @@ public class MemberDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
-	// °èÁ¤ Ã£±â
+	// ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½
 	public String selectAccount(String phoneNumber) {
 	 return sqlSession.selectOne("member.selectAccount", phoneNumber);
 	}
 	
-//	¸¶ÀÌÆäÀÌÁö
+//	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public Optional<MemberVO> findById(Long id){
 		return Optional.ofNullable(sqlSession.selectOne("member.findById", id));
 	}
+	
+//	ì´ë©”ì¼ ì¤‘ë³µê²€ì‚¬
+	public String selectEmail(String memberEmail) {
+		return sqlSession.selectOne("member.selectEmail", memberEmail);
+	}
+	
 }
 

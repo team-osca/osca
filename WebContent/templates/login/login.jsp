@@ -29,21 +29,21 @@
                             	<img class="wanted" src="${pageContext.request.contextPath}/static/allimages/main-page/logo.jpg">
                             </span>
                         </div>
-                        <form>
+                        <form action="${pageContext.request.contextPath}/emailCheck.member">
                             <h1 data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="topphr">하나의 계정으로<br>더욱 편리하게</h1>
                             <h2 data-testid="Typography" color="var(--theme-palette-colors-gray-600)" class="bottomphr">오스카가 제공하는 서비스를<br>하나의 계정으로 모두 이용할 수 있습니다.</h2>
                             <div>
                                 <div class="emailbox">
                                     <label data-testid="Typography" color="var(--theme-palette-colors-gray-600)" for="email" class="subject">이메일</label>
                                 </div>
-                                <input type="email" placeholder="이메일을 입력해주세요." name="email" data-testid="Input_email" class="emailCheck" value>
+                                <input type="email" placeholder="이메일을 입력해주세요." name="email" class="emailCheck" value>
                             </div>
-                            <button type="submit" disabled data-testid="Button" data-attribute-id="signupLogin__start" data-method="email" class="email-next">
+                            <button type="submit" disabled   class="email-next">
                                 <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="keep">이메일로 계속하기</span>
                             </button>
                             <p data-testid="Typography" color="var(--theme-palette-colors-gray-500)" class="else">또는</p>
                             <div class="icons">
-                                <button type="button" data-attribute-id="signupLogin__start" data-method="apple" class="apple-login">
+                                <button type="button"  class="apple-login">
                                     <span class="apple-account">
                                         <svg viewBox="0 0 57 56" class="apple-link">
                                             <path d="M0.5 28C0.5 12.536 13.036 0 28.5 0C43.964 0 56.5 12.536 56.5 28C56.5 43.464 43.964 56 28.5 56C13.036 56 0.5 43.464 0.5 28Z" fill="black"></path>
@@ -63,18 +63,18 @@
                                     </span>
                                     <p data-testid="Typography" color="var(--theme-palette-colors-gray-600)" class="opt2">Google</p>
                                 </button>
-                                <button type="button" data-attribute-id="signupLogin__start" data-method="kakao" class="kakao-login">
+                                <button type="button" class="kakao-login">
                                     <span class="kakao-account">
                                         <svg viewBox="0 0 57 56" class="kakao-link">
                                             <path d="M0.5 28C0.5 12.536 13.036 0 28.5 0C43.964 0 56.5 12.536 56.5 28C56.5 43.464 43.964 56 28.5 56C13.036 56 0.5 43.464 0.5 28Z" fill="#FEE500"></path>
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5 16.2063C21.5606 16.2063 15.9286 20.5812 15.9286 25.9617C15.9286 29.3183 18.1034 32.2474 21.4223 34.0326L20.0269 39.1492C20.0005 39.2509 20.006 39.3583 20.0424 39.4569C20.0788 39.5555 20.1446 39.6406 20.2307 39.7008C20.3169 39.761 20.4195 39.7934 20.5246 39.7937C20.6297 39.7939 20.7324 39.7621 20.8189 39.7023L26.9286 35.6417C27.444 35.6417 27.972 35.7297 28.5 35.7297C35.4394 35.7297 41.0714 31.3549 41.0714 25.9617C41.0714 20.5686 35.4394 16.2063 28.5 16.2063Z" fill="#181600"></path>
                                         </svg>
                                     </span>
-                                    <p data-testid="Typography" color="var(--theme-palette-colors-gray-600)" class="opt3">Kakao</p>
+                                    <p color="var(--theme-palette-colors-gray-600)" class="opt3">Kakao</p>
                                 </button>
                             </div>
                             <button class="forgot">
-                                <p data-testid="Typography" color="var(--theme-palette-colors-gray-700)" class="forgot-account">계정을 잊으셨나요?<span class="find">
+                                <p  color="var(--theme-palette-colors-gray-700)" class="forgot-account">계정을 잊으셨나요?<span class="find">
                                     <svg viewBox="0 0 12 12" color="var(--theme-palette-colors-gray-600)" class="find-account">
                                         <path d="M3.34467 9.71967C3.05178 10.0126 3.05178 10.4874 3.34467 10.7803C3.63756 11.0732 4.11244 11.0732 4.40533 10.7803L8.65533 6.53033C8.94822 6.23744 8.94822 5.76256 8.65533 5.46967L4.40533 1.21967C4.11244 0.926777 3.63756 0.926777 3.34467 1.21967C3.05178 1.51256 3.05178 1.98744 3.34467 2.28033L7.06434 6L3.34467 9.71967Z" fill="var(--theme-palette-colors-gray-600)"></path>
                                     </svg>
@@ -82,10 +82,10 @@
                             </button>
                             <hr class="district">
                             <div class="terms">
-                                <a data-testid="Typography" color="var(--theme-palette-colors-gray-700)" href="https://id.wanted.jobs/terms/ko" target="_blank" class="conditions">이용약관</a>
-                                <a data-testid="Typography" color="var(--theme-palette-colors-gray-700)" href="https://id.wanted.jobs/privacy/ko?user=true" target="_blank" class="privacy">개인정보처리방침</a>
+                                <a color="var(--theme-palette-colors-gray-700)" href="https://id.wanted.jobs/terms/ko" target="_blank" class="conditions">이용약관</a>
+                                <a  color="var(--theme-palette-colors-gray-700)" href="https://id.wanted.jobs/privacy/ko?user=true" target="_blank" class="privacy">개인정보처리방침</a>
                             </div>
-                            <p data-testid="Typography" color="var(--theme-palette-colors-gray-600)" class="label">© Oscalab, Inc.</p>
+                            <p color="var(--theme-palette-colors-gray-600)" class="label">© Oscalab, Inc.</p>
                         </form>
                     </div>
                 </div>
