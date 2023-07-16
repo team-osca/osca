@@ -6,4 +6,9 @@
 		select member_email from tbl_member
 		where #{phoneNumber} = member_phonenumber
 	</select>
+	
+	<select id="findById" resultType="memberVO">
+		select id, member_name, member_email, member_phonenumber from tbl_member
+		where id = #{id}
+	</select>
 </mapper>

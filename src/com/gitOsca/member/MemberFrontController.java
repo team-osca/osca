@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.gitOsca.Result;
+import com.gitOsca.member.controller.AuthenticationNumberController;
+import com.gitOsca.member.controller.GotoMainController;
+import com.gitOsca.member.controller.MyPageOkController;
+import com.gitOsca.member.controller.findAccountOkController;
 
 public class MemberFrontController extends HttpServlet {
 	@Override
@@ -37,7 +41,15 @@ public class MemberFrontController extends HttpServlet {
 		} else if ( target.equals("go-to-main") ) {
 			// 메인으로 가기 전에 req초기화
 			result = new GotoMainController().execute(req, resp);
+		} else if (target.equals("mypage")) {
+			// 마이페이지로 이동	
+			result = new Result();
+			result.setPath("templates/member/mypage/mypage.jsp");
+		} else if (target.equals("mypageOk")) {
+			//마이페이지 프로필
+			result = new MyPageOkController().execute(req, resp);
 		} 
+
 		
 		if (result != null) {
 			if (result.isRedirect()) {
