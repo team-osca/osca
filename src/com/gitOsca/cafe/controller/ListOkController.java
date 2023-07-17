@@ -23,6 +23,9 @@ public class ListOkController implements Action {
 		Result result = new Result();
 		JSONArray jsonArray = new JSONArray();
 		
+		
+		
+		
 		cafeDAO.findAll().stream().map(JSONObject::new).forEach(jsonArray::put);
 		
 		req.setAttribute("cafes", jsonArray.toString());
