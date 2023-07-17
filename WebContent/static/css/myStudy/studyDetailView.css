@@ -120,10 +120,13 @@ a {
     flex-direction: row;
 }
 
-
-.logo_img{
-    height: 18px;
+.main-bar-nav-top-logo{
+	padding-top: 8px;
 }
+
+/* .logo_img{
+    height: 18px;
+}  */
 
 .Header_menu{
     /* 헤더 안의 리스트 */

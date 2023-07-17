@@ -3,4 +3,32 @@
 
 <mapper namespace="study">
 
+	<select id = "getStudyDetail" resultType="studyVO">
+		select study_title, study_contents, study_location, study_contact_email, study_contact_phonenumber from tbl_study
+		where id = #{id} 
+		
+	</select>
+	<select id="getAppliedStudies" resultType="studyVO">
+		select study_title, study_regist_date from tbl_study
+		where id in (
+			select study_id from tbl_study_applicant
+			where study_applicant_id = #{id}
+		)
+	</select>
+	
+	<select id="getOpenedStudies" resultType="studyVO">
+		select study_title, study_regist_date, study_status, study_total from tbl_study
+		where member_id = #{id}
+	</select>
+	
+	<select id="getWholeStudies" resultType="studyVO">
+		select study_title, study_regist_date, study_status, study_total from tbl_study
+		where id in (
+			select study_id from tbl_study_applicant
+			where study_applicant_id = #{id}
+		) or member_id = #{id}
+	</select>
+	
+	
 </mapper>
+
