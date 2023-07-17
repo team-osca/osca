@@ -20,12 +20,17 @@ public class OpenedStudyOkController implements Action{
 	public Result execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
 		response.setContentType("text/html; charset=UTF-8");
-		
+		Long id = Long.parseLong(request.getParameter("id"));
 		StudyDAO studyDAO = new StudyDAO();
 		PrintWriter out = response.getWriter();
-		out.print(new JSONObject(studyDAO.getOpenedStudies(Long.parseLong(request.getParameter("id")))).toString());
+		JSONArray jsonArray = new JSONArray();
+		
+		studyDAO.getOpenedStudies(id).stream().map(JSONObject::new).forEach(jsonArray::put);
+		
+		out.print(jsonArray.toString());
 		out.close();
 		return null;
+	
 	
 }
 	

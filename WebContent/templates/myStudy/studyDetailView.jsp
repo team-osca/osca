@@ -89,7 +89,7 @@
 
     <!-- 바디 -->
     <main class="StudyPostDetail">
-      <aside class="PostDetail_side">
+      <!-- <aside class="PostDetail_side">
         <div>
           <div class="PostDetail_side_top">
             <a href="user profile link">
@@ -109,7 +109,7 @@
             <div class="userInfo">유저 간단 정보</div>
           </div>
         </div>
-      </aside>
+      </aside> -->
       <section class="CommunityPostDetail">
         <article class="PostContents">
           <div class="PostContents__header">
@@ -221,5 +221,44 @@
     </main>
   </body>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="${pageContext.request.contextPath}/static/js/myStudy/studyDetailView.js"></script>
-</html>
+  <script>
+  	const $wrapper = $('.StudyPostDetail')
+	const path = "${pageContext.request.contextPath}"
+	let memberId = 3;
+	
+	$.ajax({
+		url: path + "/detailOk.study?id=" + memberId,
+		dataType: "json",
+		success: function(data){
+			const miniProfile = `
+			<aside class="PostDetail_side">
+		        <div>
+		          <div class="PostDetail_side_top">
+		            <a href="user profile link">
+		              <div class="AuthorBox_Study_leftSide large">
+		                <div class="AuthorBox_avatarWrapper">
+		                  <div class="AuthorBox_UserAvatar">
+		                    <img src="https://static.wanted.co.kr/images/profile_default.png" alt="" />
+		                  </div>
+		                </div>
+		                <div class="AuthorBox_verticalBox">
+		                  <div class="AuthorBox_username">` + data.memberName + `</div>
+		                </div>
+		              </div>
+		            </a>
+		          </div>
+		          <div class="PostDetail_bottom">
+		            <div class="userInfo">` + data.memberEmail + `</div>
+		          </div>
+		        </div>
+		      </aside>
+		`
+		$wrapper.prepend(miniProfile);
+		}, 
+		error: function(a, b, c){
+			console.log(a, b, c);
+		}
+	})
+	</script>
+  	<script src="${pageContext.request.contextPath}/static/js/myStudy/studyDetailView.js"></script>
+ </html>

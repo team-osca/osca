@@ -25,6 +25,9 @@ public class WholeStudyOkController implements Action{
 		PrintWriter out = response.getWriter();
 		JSONArray jsonArray = new JSONArray();
 		
+//		강사님이 출력해보래서 했는데 아예 안가져와 ㅇㅇㅇㅇㅇㅇ
+		System.out.println(id);
+		
 //		dao에서 id로 전체 조회 한 후 각각을 JSON객체로 만든 뒤 JSONArray객체에 삽입
 		studyDAO.getWholeStudies(id).stream().map(JSONObject::new).forEach(jsonArray::put);
 		

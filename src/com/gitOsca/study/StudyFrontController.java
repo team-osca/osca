@@ -21,8 +21,6 @@ public class StudyFrontController extends HttpServlet{
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
-		
-		
 		if(target.equals("detailOk")) {
 			result = new StudyDetailOkController().execute(req, resp);
 		}

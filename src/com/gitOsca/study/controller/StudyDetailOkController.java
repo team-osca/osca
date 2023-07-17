@@ -23,10 +23,12 @@ public class StudyDetailOkController implements Action{
 		
 		StudyDAO studyDAO = new StudyDAO();
 		PrintWriter out = response.getWriter();
-		out.print(new JSONObject(studyDAO.getStudyDetail(Long.parseLong(request.getParameter("id")))).toString());
+		Long id = Long.parseLong(request.getParameter("id"));
+        JSONObject jsonObject = new JSONObject(studyDAO.getStudyDetail(id));
+        out.print(jsonObject.toString());
 		out.close();
 		return null;
-	
+		
 }
 	
 }
