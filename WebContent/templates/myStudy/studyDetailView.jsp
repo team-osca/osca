@@ -223,6 +223,8 @@
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script>
   	const $wrapper = $('.StudyPostDetail')
+  	const $postContent = $('.PostContents__body')
+  	const $postTitle = $('.PostContents__title')
 	const path = "${pageContext.request.contextPath}"
 	let memberId = 3;
 	
@@ -230,35 +232,40 @@
 		url: path + "/detailOk.study?id=" + memberId,
 		dataType: "json",
 		success: function(data){
-			const miniProfile = `
-			<aside class="PostDetail_side">
-		        <div>
-		          <div class="PostDetail_side_top">
-		            <a href="user profile link">
-		              <div class="AuthorBox_Study_leftSide large">
-		                <div class="AuthorBox_avatarWrapper">
-		                  <div class="AuthorBox_UserAvatar">
-		                    <img src="https://static.wanted.co.kr/images/profile_default.png" alt="" />
-		                  </div>
-		                </div>
-		                <div class="AuthorBox_verticalBox">
-		                  <div class="AuthorBox_username">` + data.memberName + `</div>
-		                </div>
-		              </div>
-		            </a>
-		          </div>
-		          <div class="PostDetail_bottom">
-		            <div class="userInfo">` + data.memberEmail + `</div>
-		          </div>
-		        </div>
-		      </aside>
-		`
-		$wrapper.prepend(miniProfile);
+		$wrapper.prepend(miniProfile(data));
+		$postTitle.text(data.studyTitle);
+		$postContent.text(data.studyContents);
 		}, 
 		error: function(a, b, c){
 			console.log(a, b, c);
 		}
 	})
+	
+	const miniProfile = (data) => {return (`
+			<aside class="PostDetail_side">
+	        <div>
+	          <div class="PostDetail_side_top">
+	            <a href="user profile link">
+	              <div class="AuthorBox_Study_leftSide large">
+	                <div class="AuthorBox_avatarWrapper">
+	                  <div class="AuthorBox_UserAvatar">
+	                    <img src="https://static.wanted.co.kr/images/profile_default.png" alt="" />
+	                  </div>
+	                </div>
+	                <div class="AuthorBox_verticalBox">
+	                  <div class="AuthorBox_username">` + data.memberName + `</div>
+	                </div>
+	              </div>
+	            </a>
+	          </div>
+	          <div class="PostDetail_bottom">
+	            <div class="userInfo">` + data.memberEmail + `</div>
+	          </div>
+	        </div>
+	      </aside>
+	`)}
+	
+	
 	</script>
   	<script src="${pageContext.request.contextPath}/static/js/myStudy/studyDetailView.js"></script>
  </html>
