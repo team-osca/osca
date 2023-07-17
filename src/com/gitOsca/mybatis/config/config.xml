@@ -8,6 +8,7 @@
 	
 	<typeAliases>
 		<typeAlias type="com.gitOsca.member.domain.MemberVO" alias="memberVO"/>
+		<typeAlias type="com.gitOsca.study.domain.StudyVO" alias="studyVO"/>
 	</typeAliases>
 
    <environments default="mysql">

@@ -117,19 +117,19 @@
                 <li class="active">
                   <a href="#" class=""
                     >전체
-                    <div class="label_1">2</div>
+                    <div class="label_1">0</div>
                   </a>
                 </li>
                 <li class="">
                   <a href="#" class=""
                     >내가 개설한 스터디
-                    <div class="label_2">1</div></a
+                    <div class="label_2">0</div></a
                   >
                 </li>
                 <li class="">
                   <a href="#" class=""
                     >참여 스터디
-                    <div class="label_3">1</div></a
+                    <div class="label_3">0</div></a
                   >
                 </li>
               </ul>
@@ -148,7 +148,7 @@
                 <div class="space"></div>
               </ul>
             </header>
-            <div class="studyListCount">
+            <!-- <div class="studyListCount">
               <li class="Study-content">
                 <div role="presentation">
                   <span class="List-table-td study-name">JAVA기초 스터디 모집</span>
@@ -206,66 +206,7 @@
                   </span>
                 </div>
               </li>
-            </div>
-            <div class="studyListCount">
-              <li class="Study-content">
-                <div role="presentation">
-                  <span class="List-table-td study-name">스프링 로드맵 스터디 8주 완성</span>
-                  <span class="List-table-td create-time">2022. 1. 28</span>
-                  <span class="List-table-td status">종료</span>
-                  <span class="List-table-td people-count">5/6</span>
-                  <span class="List-table-td option-menu">
-                    <button
-                      type="button"
-                      class="PostContents__menu_button"
-                      data-attribute-id="community__contentDetail__more__click"
-                      data-content-title="스프링 로드맵 스터디 8주 완성"
-                      data-content-id="9430"
-                    >
-                      <svg width="24" height="24" viewBox="0 0 24 24">
-                        <path
-                          fill="currentColor"
-                          d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
-                        ></path>
-                      </svg>
-                    </button>
-                    <div class="MenuPopup">
-                      <ul>
-                        <li class="MenuPopup_menu_item">
-                          <button
-                            type="button"
-                            class="MenuPopup__menu_link MenuPopup__menu_link__red"
-                            data-attribute-id="community__contentDetail__more__delete"
-                            data-content-title="스프링 로드맵 스터디 8주 완성"
-                            data-content-id="9430"
-                            data-like-count="1"
-                            data-comment-count="1"
-                          >
-                            삭제하기
-                          </button>
-                        </li>
-                        <li class="MenuPopup_menu_item">
-                          <a
-                            class="MenuPopup__menu_link"
-                            data-attribute-id="community__contentDetail__more__edit"
-                            data-content-title="스프링 로드맵 스터디 8주 완성"
-                            data-content-id="9430"
-                            data-like-count="1"
-                            data-comment-count="1"
-                            href="/community/edit/9430"
-                          >
-                            수정하기</a
-                          >
-                        </li>
-                      </ul>
-                      <div
-                        class="MenuPopup_MenuPopup__bubblePoint MenuPopup_MenuPopup__bubblePoint_bottom"
-                      ></div>
-                    </div>
-                  </span>
-                </div>
-              </li>
-            </div>
+            </div> -->
             <div class="Study-empty">요청하신 결과가 없습니다.</div>
           </div>
         </section>
@@ -273,5 +214,70 @@
     </div>
   </body>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="${pageContext.request.contextPath}/static/js/myStudy/myStudy.js"></script>
+  <script>
+	/* const $study_name = $(".List-table-td study-name");
+	const $study_regis_date = $(".List-table-td create-time");
+	const $study_status = $(".List-table-td status"); */
+	const $listWrapper = $('.List_wrapper')
+	Object.prototype.forEach = Array.prototype.forEach;
+	const path = "${pageContext.request.contextPath}"
+	let memberId = 1;
+	
+	$.ajax({
+		url: path + "/wholeStudyOk.study?id=" + memberId,
+		dataType: "json",
+		success: function(datas){
+			if(datas.length == 0){
+				$('.Study-empty').css('display' , 'block');
+			}
+			else{
+				datas.forEach((data)=>{
+					console.log(data.studyTitle)
+					$listWrapper.append(li(data));
+				});				
+			}
+			const totalLen = datas.length
+			$('.label_1').text(totalLen);
+		},
+		error: function(a, b, c){
+			console.log(a, b, c);
+		}
+	});
+	const li = (data) => {return (`
+			<div class="studyListCount">
+            <li class="Study-content">
+              <div role="presentation">
+                <span class="List-table-td study-name">` + data.studyTitle + `</span>
+                <span class="List-table-td create-time">`+ data.studyRegistDate.split(" ")[0] +`</span>
+                <span class="List-table-td status">`+ data.studyStatus + `</span>
+                <span class="List-table-td people-count">`+ data.studyTotal + `</span>
+                <span class="List-table-td option-menu">
+                  <button type="button" class="PostContents__menu_button">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"></path>
+                    </svg>
+                  </button>
+                  <div class="MenuPopup">
+                    <ul>
+                      <li class="MenuPopup_menu_item">
+                        <button type="button" class="MenuPopup__menu_link MenuPopup__menu_link__red">
+                          삭제하기
+                        </button>
+                      </li>
+                      <li class="MenuPopup_menu_item">
+                        <a class="MenuPopup__menu_link" href="/community/edit/9430">
+                          수정하기
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="MenuPopup_MenuPopup__bubblePoint MenuPopup_MenuPopup__bubblePoint_bottom">
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </li>
+          </div>		
+	`)}
+</script>
+ <script src="${pageContext.request.contextPath}/static/js/myStudy/myStudy.js"></script>
 </html>
