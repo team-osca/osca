@@ -223,8 +223,8 @@
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script>
   	const $wrapper = $('.StudyPostDetail')
-  	const $postContent = $('.PostContents__body')
   	const $postTitle = $('.PostContents__title')
+  	const $postContent = $('.PostContents__body')
 	const path = "${pageContext.request.contextPath}"
 	let memberId = 3;
 	
@@ -232,9 +232,9 @@
 		url: path + "/detailOk.study?id=" + memberId,
 		dataType: "json",
 		success: function(data){
-		$wrapper.prepend(miniProfile(data));
-		$postTitle.text(data.studyTitle);
-		$postContent.text(data.studyContents);
+			$wrapper.prepend(miniProfile(data));
+			$postTitle.text(data.studyTitle);
+			$postContent.text(data.studyContents);
 		}, 
 		error: function(a, b, c){
 			console.log(a, b, c);

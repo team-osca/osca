@@ -15,17 +15,31 @@ import com.gitOsca.Result;
 import com.gitOsca.study.dao.StudyDAO;
 
 
-public class OpenedStudyOkController implements Action{
+public class StudyOkController implements Action{
+	private final int WHOLE_STUDY = 1;
+	private final int OPENED_STUDY = 2;
+	private final int APPLIED_STUDY = 3;
 	
 	public Result execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
 		response.setContentType("text/html; charset=UTF-8");
 		Long id = Long.parseLong(request.getParameter("id"));
+		Integer type = Integer.parseInt(request.getParameter("type"));
 		StudyDAO studyDAO = new StudyDAO();
 		PrintWriter out = response.getWriter();
 		JSONArray jsonArray = new JSONArray();
 		
-		studyDAO.getOpenedStudies(id).stream().map(JSONObject::new).forEach(jsonArray::put);
+		
+		if (type == WHOLE_STUDY) {
+			studyDAO.getWholeStudies(id).stream().map(JSONObject::new).forEach(jsonArray::put);
+		}
+		else if (type == OPENED_STUDY) {
+			studyDAO.getOpenedStudies(id).stream().map(JSONObject::new).forEach(jsonArray::put);
+		}
+		else if (type == APPLIED_STUDY) {
+			studyDAO.getAppliedStudies(id).stream().map(JSONObject::new).forEach(jsonArray::put);
+		}
+		
 		
 		out.print(jsonArray.toString());
 		out.close();

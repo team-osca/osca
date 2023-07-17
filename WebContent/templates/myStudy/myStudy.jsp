@@ -37,7 +37,7 @@
             <section>
               <ul class="menu">
                 <li><a href="">오늘의 스터디</a></li>
-                <li><a href="">오늘의 카페</a></li>
+                <li><a href="${pageContext.request.contextPath}/listCafe.study">오늘의 카페</a></li>
                 <li class="selectedNav"><a href="">내 스터디</a></li>
                 <li><a href="">FAQ</a></li>
                 <li><a href="">Oh!스카 소개</a></li>
@@ -115,22 +115,16 @@
             <dd>
               <ul>
                 <li class="active">
-                  <a href="#" class=""
-                    >전체
-                    <div class="label_1">0</div>
-                  </a>
+               		<a href="javascript:void(0)" onclick="selectData(1)">전체
+                   </a>
                 </li>
                 <li class="">
-                  <a href="#" class=""
-                    >내가 개설한 스터디
-                    <div class="label_2">0</div></a
-                  >
+                  	<a href="javascript:void(0)" onclick="selectData(2)">내가 개설한 스터디
+                   </a>
                 </li>
                 <li class="">
-                  <a href="#" class=""
-                    >참여 스터디
-                    <div class="label_3">0</div></a
-                  >
+                  	<a href="javascript:void(0)" onclick="selectData(3)">참여 스터디
+                   </a>
                 </li>
               </ul>
             </dd>
@@ -222,27 +216,30 @@
 	Object.prototype.forEach = Array.prototype.forEach;
 	const path = "${pageContext.request.contextPath}"
 	let memberId = 1;
+	selectData(1);
 	
-	$.ajax({
-		url: path + "/wholeStudyOk.study?id=" + memberId,
-		dataType: "json",
-		success: function(datas){
-			if(datas.length == 0){
-				$('.Study-empty').css('display' , 'block');
+	function selectData(type){
+		$.ajax({
+			url: path + "/studyOk.study?id=" + memberId + "&type=" + type,
+			dataType: "json",
+			success: function(datas){
+				$(".studyListCount").detach();
+				if(datas.length == 0){
+					$('.Study-empty').css('display' , 'block');
+				}
+				else{
+					datas.forEach((data)=>{
+						$listWrapper.append(li(data));
+						console.log(data);
+					});				
+				}
+			},
+			error: function(a, b, c){
+				console.log(a, b, c);
 			}
-			else{
-				datas.forEach((data)=>{
-					console.log(data.studyTitle)
-					$listWrapper.append(li(data));
-				});				
-			}
-			const totalLen = datas.length
-			$('.label_1').text(totalLen);
-		},
-		error: function(a, b, c){
-			console.log(a, b, c);
-		}
-	});
+		});
+	}
+	
 	const li = (data) => {return (`
 			<div class="studyListCount">
             <li class="Study-content">
