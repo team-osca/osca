@@ -217,7 +217,9 @@ a {
 .PostWrite__content {
     position: relative;
     width: 100%;
-    padding-top: 60px;
+    padding-top: 150px;
+    height: inherit;
+    margin-bottom: 50px;
 }
 
 .Paper_PostWritePaper {

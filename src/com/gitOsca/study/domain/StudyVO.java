@@ -9,6 +9,8 @@ public class StudyVO {
 	private String studyContactPhonenumber;
 	private String studyRegistDate;
 	private String studyUpdateDate;
+	private String studyStatus;
+	private int studyTotal;
 	private Long generalId;
 	
 	public StudyVO() {;}
@@ -77,20 +79,28 @@ public class StudyVO {
 		this.studyUpdateDate = studyUpdateDate;
 	}
 
+	public String getStudyStatus() {
+		return studyStatus;
+	}
+
+	public void setStudyStatus(String studyStatus) {
+		this.studyStatus = studyStatus;
+	}
+
+	public int getStudyTotal() {
+		return studyTotal;
+	}
+
+	public void setStudyTotal(int studyTotal) {
+		this.studyTotal = studyTotal;
+	}
+
 	public Long getGeneralId() {
 		return generalId;
 	}
 
 	public void setGeneralId(Long generalId) {
 		this.generalId = generalId;
-	}
-
-	@Override
-	public String toString() {
-		return "StudyVO [Id=" + Id + ", studyTitle=" + studyTitle + ", studyContents=" + studyContents
-				+ ", studyLocation=" + studyLocation + ", studyContactEmail=" + studyContactEmail
-				+ ", studyContactPhonenumber=" + studyContactPhonenumber + ", studyRegistDate=" + studyRegistDate
-				+ ", studyUpdateDate=" + studyUpdateDate + ", generalId=" + generalId + "]";
 	}
 
 	@Override
@@ -117,4 +127,16 @@ public class StudyVO {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "StudyVO [Id=" + Id + ", studyTitle=" + studyTitle + ", studyContents=" + studyContents
+				+ ", studyLocation=" + studyLocation + ", studyContactEmail=" + studyContactEmail
+				+ ", studyContactPhonenumber=" + studyContactPhonenumber + ", studyRegistDate=" + studyRegistDate
+				+ ", studyUpdateDate=" + studyUpdateDate + ", studyStatus=" + studyStatus + ", studyTotal=" + studyTotal
+				+ ", generalId=" + generalId + "]";
+	}
+
+	
+	
 }

@@ -585,3 +585,7 @@ a {
   display: flex;
   justify-content: center;
 }
+
+.padding{
+	padding-top: 50px;
+}

@@ -31,7 +31,7 @@
               <div class="main-bar-nav-top">
                 <div class="main-bar-nav-top-logo">
                   <a href="" class="main-bar-nav-top-logo-a">
-                    <img src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg" width="74" height="16" alt="Oh!스카 로고" />
+                    <img src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg" width="74" height="19" alt="Oh!스카 로고" />
                   </a>
                 </div>
               </div>

@@ -6,10 +6,6 @@ $(document).ready(function() {
     });
   });
 
-// 스터디 리스트 수에 따라 왼쪽 토탈 스터디 수 변경
-const ulCount = document.querySelectorAll('.studyListCount ul').length;
-const label1 = document.querySelector('.label_1');
-label1.textContent = ulCount.toString();
 
 // ... 수정 삭제  클릭시 열림! 재클릭시 닫힘!!
   const $menuButton = $('.PostContents__menu_button');
