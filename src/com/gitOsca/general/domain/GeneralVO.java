@@ -4,9 +4,9 @@ public class GeneralVO {
 	private Long memberId;
 	private String generalUniversity;
 	private String generalCompany;
+	private String generalIntroduction;
 	private String generalWorkDateBegin;
 	private String generalWorkDateEnd;
-	private String generalIntrodution;
 	private String generalCareer;
 	private Long generalSalary;
 	
@@ -52,14 +52,6 @@ public class GeneralVO {
 		this.generalWorkDateEnd = generalWorkDateEnd;
 	}
 
-	public String getGeneralIntrodution() {
-		return generalIntrodution;
-	}
-
-	public void setGeneralIntrodution(String generalIntrodution) {
-		this.generalIntrodution = generalIntrodution;
-	}
-
 	public String getGeneralCareer() {
 		return generalCareer;
 	}
@@ -76,12 +68,22 @@ public class GeneralVO {
 		this.generalSalary = generalSalary;
 	}
 
+	public String getGeneralIntroduction() {
+		return generalIntroduction;
+	}
+
+	public void setGeneralIntroduction(String generalIntroduction) {
+		this.generalIntroduction = generalIntroduction;
+	}
+	
+	
+
 	@Override
 	public String toString() {
 		return "GeneralVO [memberId=" + memberId + ", generalUniversity=" + generalUniversity + ", generalCompany="
-				+ generalCompany + ", generalWorkDateBegin=" + generalWorkDateBegin + ", generalWorkDateEnd="
-				+ generalWorkDateEnd + ", generalIntrodution=" + generalIntrodution + ", generalCareer=" + generalCareer
-				+ ", generalSalary=" + generalSalary + "]";
+				+ generalCompany + ", generalIntroduction=" + generalIntroduction + ", generalWorkDateBegin="
+				+ generalWorkDateBegin + ", generalWorkDateEnd=" + generalWorkDateEnd + ", generalCareer="
+				+ generalCareer + ", generalSalary=" + generalSalary + "]";
 	}
 
 	@Override

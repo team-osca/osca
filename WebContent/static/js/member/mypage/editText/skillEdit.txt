@@ -81,4 +81,4 @@
         <button type="button" >확인</button>
     </footer>
 </div>
-<script type="text/javascript" src="/static/member/mypage/js/edit/skillEdit.js"></script>
+<script type="text/javascript" src="/static/js/member/mypage/edit/skillEdit.js"></script>
