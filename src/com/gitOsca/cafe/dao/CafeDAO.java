@@ -14,7 +14,7 @@ public class CafeDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
-	public List<CafeVO> findAll(){
-		return sqlSession.selectList("cafe.findAll");
+	public List<CafeVO> findAllByLocation(String location){
+		return sqlSession.selectList("cafe.findAll", location);
 	}
 }
