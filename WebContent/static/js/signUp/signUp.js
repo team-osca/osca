@@ -88,3 +88,30 @@ function checkPath(){
     $($check[4]).attr('class', isAllCheck);
     checkAgreemnts();
 }
+
+
+
+// 카페 회원 여부
+const $term2 = $('.term2');
+const $check2 = $('.check2');
+const $memberRoleCheckbox = $('#memberRoleCheckbox');
+
+    $memberRoleCheckbox.on('change', function () {
+        // Get the value (1 or 0) based on the checkbox state
+        const memberRoleValue = memberRoleCheckbox.checked ? 1 : 0;
+
+        // Set the value to a hidden input field to be submitted with the form
+        $('#memberRoleHiddenInput').value = memberRoleValue;
+    });
+
+    $term2.on('click',changeCheckBox2);
+
+    function changeCheckBox2() {
+        // let this_idx = $term2.index(this) + 1;
+        let checkClassName = $check2.attr('class') == 'check2';
+        $check2.attr('class', checkClassName ? 'check_active' : 'check2');
+        }
+        
+
+
+    

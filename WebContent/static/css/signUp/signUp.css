@@ -549,7 +549,7 @@ option {
     margin: 28px 0px 10px;
 }
 
-.check{
+.check, .check2{
     width: 18px;
     height: 18px;
     font-size: 11px;
@@ -607,7 +607,7 @@ hr{
     border-width: 1px;
 }
 
-.term{
+.term, .term2{
     display: flex;
     flex-direction: row;
     -webkit-box-align: center;
@@ -617,6 +617,7 @@ hr{
     width: 100%;
     margin: 10px 0px;
 }
+
 .context{
     color: var(--theme-palette-colors-gray-600);
     font-weight: var(--text-weight-bodyalt-medium);
@@ -785,6 +786,7 @@ label{
     border: none;
     background-color: var(--theme-palette-colors-blue-400);
 }
+
 .check_svg_box{
     display: -webkit-box;
     display: -webkit-flex;

@@ -31,17 +31,17 @@
                         <div class="blank"></div>
                     </div>
                     <div class="formbox">
-                        <form>
+      				<form action="${pageContext.request.contextPath}/SignUpOk.member">
                             <div>
                                 <div class="box">
                                     <label color="var(--theme-palette-colors-gray-600)" for="email" class="label">이메일</label>
                                 </div>
-                                <input type="email" placeholder="이메일을 입력해주세요." name="email" class="form-input" value disabled>
+                                <input type="email" name="email" class="form-input" <% String userEmail = (String) session.getAttribute("userEmail"); %>value="<%= userEmail %>" disabled>
                             </div>
                             <div class="box">
                                 <label color="var(--theme-palette-colors-gray-600)" for="username" class="label">이름</label>
                             </div>
-                            <input type="text" placeholder="이름을 입력해주세요." name="username" class="form-input" value>
+                            <input type="text" placeholder="이름을 입력해주세요." name="memberName" class="form-input" value>
                             <div class="phonenumber">
                                 <label color="var(--theme-palette-colors-gray-600)" for="mobile" class="label">휴대폰 번호</label>
                             </div>
@@ -63,7 +63,7 @@
                                     </div>
                                 </div>
                                 <div class="number">
-                                    <input type="text" placeholder="(예시)01013245768" name="mobile" class="putnumber" value>
+                                    <input type="text" placeholder="(예시)01013245768" name="memberPhone" class="putnumber" value>
                                     <button type="button" class="verificationbtn" disabled>
                                         <span color="var(--theme-palette-colors-black-100)" class="getverification">인증번호 받기</span>
                                     </button>
@@ -75,9 +75,31 @@
                             <div>
                                 <label color="var(--theme-palette-colors-gray-600)" for="password" class="label">비밀번호</label>
                             </div>
-                            <input type="password" placeholder="비밀번호를 입력해주세요." name="password" class="passwordbox" value>
+                            <input type="password" placeholder="비밀번호를 입력해주세요." name="memberPassword" class="passwordbox" value>
                             <input type="password" placeholder="비밀번호를 다시 한번 입력해주세요." name="passwordConfirm" class="passwordbox" value>
                             <p color="var(--theme-palette-colors-gray-600)" class="description">영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합해 8자 이상 16자 이하로 입력해주세요.</p>
+                            <!-- 회원 유형  -->
+                            <div>
+                            <div class="box">
+                                <label color="var(--theme-palette-colors-gray-600)" for="username" class="label">회원 유형</label>
+                            </div>          
+                            <div class="term2">
+                                <div class="check2">
+                                    <span class="check_svg_box">
+                                        <svg viewBox="0 0 12 8" class="check_svg">
+                                            <path d="M1.5 4L4.5 7L10.5 1" stroke="var(--theme-palette-colors-common-white)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <input type="checkbox" name="memberRole" class="checkbox" id="memberRoleCheckbox">
+                                <input type="hidden" name="memberRole" id="memberRoleHiddenInput" value="0">
+                                <div class="content">
+                                    <p color="var(--theme-palette-colors-gray-600)" class="context">카페 회원으로 가입합니다.</p>
+                                </div>
+                            </div>
+                            <hr class="district">
+                            </div>
+                            <!-- 회원 유형 -->
                             <div class="agreements">
                                 <div class="check">
                                     <span class="check_svg_box">
@@ -86,6 +108,7 @@
                                         </svg>
                                     </span>
                                 </div>
+
                                 <input type="checkbox" name="is_agree_all" class="checkbox">
                                 <div class="content">
                                     <p color="var(--theme-palette-colors-gray-900)" class="agree-all">전체 동의</p>
@@ -179,7 +202,7 @@
                             <div class="complete">
                                 <div class="completebox"></div>
                                 <div class="upper-padding"></div>
-                                <button type="submit" disabled class="submission">
+                                <button type="submit" disabled class="submission" name="finishButton">
                                     <span color="var(--theme-palette-colors-black-100)" class="signupcomplete">가입하기</span>
                                 </button>
                             </div>

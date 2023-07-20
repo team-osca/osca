@@ -7,3 +7,7 @@ function validEmailCheck(obj){
 $('.emailCheck').on('input', function(){
     $('.email-next').attr('disabled', validEmailCheck(this) ? false : true);
 })
+
+  $('.email-next').on('click', function() {
+    var email = $('.emailCheck').val(); // Get the entered email value
+  });

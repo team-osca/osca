@@ -297,5 +297,5 @@
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="${pageContext.request.contextPath}/js/static/findAccount/phonenumber-regex.js"></script>
+  <script src="${pageContext.request.contextPath}/js/static/findAccount/find-account.js"></script>
 </html>
