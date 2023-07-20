@@ -36,14 +36,6 @@ public class CafeVO {
 		this.cafeContents = cafeContents;
 	}
 
-	public String getCafeLocation() {
-		return cafeLocation;
-	}
-
-	public void setCafeLocation(String cafeLocation) {
-		this.cafeLocation = cafeLocation;
-	}
-
 	public String getCafeOpenTime() {
 		return cafeOpenTime;
 	}
@@ -58,22 +50,6 @@ public class CafeVO {
 
 	public void setCafeEndTime(String cafeEndTime) {
 		this.cafeEndTime = cafeEndTime;
-	}
-
-	public String getCafeContactEmail() {
-		return cafeContactEmail;
-	}
-
-	public void setCafeContactEmail(String cafeContactEmail) {
-		this.cafeContactEmail = cafeContactEmail;
-	}
-
-	public String getCafePhoneNumber() {
-		return cafePhoneNumber;
-	}
-
-	public void setCafePhoneNumber(String cafePhoneNumber) {
-		this.cafePhoneNumber = cafePhoneNumber;
 	}
 
 	public String getCafeRegistDate() {
@@ -101,15 +77,6 @@ public class CafeVO {
 	}
 
 	@Override
-	public String toString() {
-		return "CafeVO [Id=" + Id + ", cafeTitle=" + cafeTitle + ", cafeContents=" + cafeContents + ", cafeLocation="
-				+ cafeLocation + ", cafeOpenTime=" + cafeOpenTime + ", cafeEndTime=" + cafeEndTime
-				+ ", cafeContactEmail=" + cafeContactEmail + ", cafePhoneNumber=" + cafePhoneNumber
-				+ ", cafeRegistDate=" + cafeRegistDate + ", cafeUpdateDate=" + cafeUpdateDate + ", ceoId=" + ceoId
-				+ "]";
-	}
-
-	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -133,4 +100,13 @@ public class CafeVO {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "CafeVO [Id=" + Id + ", cafeTitle=" + cafeTitle + ", cafeContents=" + cafeContents + ", cafeOpenTime="
+				+ cafeOpenTime + ", cafeEndTime=" + cafeEndTime + ", cafeRegistDate=" + cafeRegistDate
+				+ ", cafeUpdateDate=" + cafeUpdateDate + ", ceoId=" + ceoId + "]";
+	}
+
+	
 }
