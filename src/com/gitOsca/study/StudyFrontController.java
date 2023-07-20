@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.gitOsca.Result;
+import com.gitOsca.study.controller.AppliedStudyOkController;
+import com.gitOsca.study.controller.OpenedStudyOkController;
+import com.gitOsca.study.controller.StudyDetailOkController;
+import com.gitOsca.study.controller.WholeStudyOkController;
 
 public class StudyFrontController extends HttpServlet{
 	@Override
@@ -16,6 +20,21 @@ public class StudyFrontController extends HttpServlet{
 		
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
+		
+		
+		
+		if(target.equals("detailOk")) {
+			result = new StudyDetailOkController().execute(req, resp);
+		}
+		else if(target.equals("appliedStudyOk")) {
+			result = new AppliedStudyOkController().execute(req, resp);
+		}
+		else if(target.equals("openedStudyOk")) {
+			result = new OpenedStudyOkController().execute(req, resp);
+		}
+		else if(target.equals("wholeStudyOk")) {
+			result = new WholeStudyOkController().execute(req, resp);
+		}
 		
 		
 		if(result != null) {
