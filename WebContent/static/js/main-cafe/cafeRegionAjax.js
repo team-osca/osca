@@ -43,7 +43,7 @@ function list_data(data) {
 		<li class="cafe-card-container cafe-card-interaction">
 	        <a href="${path}/" style="--base-font-size: 10;">
 	            <div class="cafe-thumbnail-image cafe-thumbnail-responsive">
-	                <img class="cafe-image cafe-image-cover" src="${data.cafeImages?.cafeFileName}" alt="${data.ceoVO?.cafeName}">
+	                <img class="cafe-image cafe-image-cover" src="/static/allimages/main-page/b.png" alt="${data.ceoVO?.cafeName}">
 	            </div>
 	            <div class="section section-column">
 	                <div class="BadgeList">
