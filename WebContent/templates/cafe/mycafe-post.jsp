@@ -11,7 +11,7 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/cafe/mycafe-post/mycafe-header.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/cafe/css/mycafe-post-main.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/cafe/mycafe-post-main.css" />
 <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg">
 <title>카페 등록</title>
 </head>

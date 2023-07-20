@@ -55,6 +55,7 @@
                             <li><a href="">FAQ</a></li>
                             <li><a href="">오늘의 스터디</a></li>
                             <li><a href="">오늘의 카페</a></li>
+                            <li><a href="${pageContext.request.contextPath}/myCafe.cafe">내 카페</a></li>
                         </ul>
                     </section>
                     <section>
@@ -224,7 +225,7 @@
                         </div>
                         </div>
                     <ul class="all-cafe-list cafe-list-container">
-                        <li class="cafe-card-container cafe-card-interaction">
+                        <%-- <li class="cafe-card-container cafe-card-interaction">
                             <a href="" style="--base-font-size: 10;">
                                 <div class="cafe-thumbnail-image cafe-thumbnail-responsive">
                                     <img class="cafe-image cafe-image-cover" src="https://scontent-gmp1-1.xx.fbcdn.net/v/t1.18169-9/24909847_200121040547717_241202769586942938_n.png?_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_ohc=f-RhMTp8drgAX8WBSPM&_nc_ht=scontent-gmp1-1.xx&oh=00_AfCV5kA64O1S7PJ68WBnmPXAGlMZvuveS1ueCoLeOv_Ekw&oe=64CE7151" alt="바나프레소">
@@ -327,7 +328,7 @@
                                     </div>
                                 </div>
                             </a>
-                        </li>
+                        </li> --%>
                     </ul> 
                     <div class="cafe-empty">요청하신 결과가 없습니다.</div>        
                 </div>

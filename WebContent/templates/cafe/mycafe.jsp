@@ -73,7 +73,7 @@
 					<p>내 카페</p>
 				</h2>
 				<div align="right" style="padding-right: 50px;">
-					<button
+					<button onclick="javascript:location.href='${pageContext.request.contextPath}/post.cafe'"
 						class="Posting-Button-root Posting-Button-outlined Posting-Button-outlinedPrimary Posting-Button-outlinedSizeMedium InterestCategoryItem-InterestCategoryItem"
 						style="background: #36f; color: #fff">
 						<span class="Button_Button__label__1Kk0v">등록하기</span><span
