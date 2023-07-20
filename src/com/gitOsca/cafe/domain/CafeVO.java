@@ -4,11 +4,8 @@ public class CafeVO {
 	private Long Id;
 	private String cafeTitle;
 	private String cafeContents;
-	private String cafeLocation;
 	private String cafeOpenTime;
 	private String cafeEndTime;
-	private String cafeContactEmail;
-	private String cafePhoneNumber;
 	private String cafeRegistDate;
 	private String cafeUpdateDate;
 	private Long ceoId;
