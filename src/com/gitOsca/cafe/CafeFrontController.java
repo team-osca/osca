@@ -17,7 +17,16 @@ public class CafeFrontController extends HttpServlet{
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
-		if(target.equals("listOk")) {
+		if(target.equals("list")) {
+			result = new Result();
+			result.setPath(req.getContextPath() + "/templates/main-cafe/main-cafe-list.jsp");
+		}else if(target.equals("myCafe")) {
+			result = new Result();
+			result.setPath(req.getContextPath() + "/templates/cafe/mycafe.jsp");
+		}else if(target.equals("post")) {
+			result = new Result();
+			result.setPath(req.getContextPath() + "/templates/cafe/mycafe-post.jsp");
+		}else if(target.equals("listOk")) {
 			result = new ListOkController().execute(req, resp);
 		}
 		
