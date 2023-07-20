@@ -39,7 +39,7 @@
                     </div>
                     <!-- 내용 입력 영역 -->
                     <div class="formbox">
-                        <form>
+                        <form action="${pageContext.request.contextPath}/LoginOk.member">
                             <!-- 비밀번호 레이블 -->
                             <div class="password-title">
                                 <label data-test-id="Typography" color="var(--theme-palette-colors-gray-600)" for="email" class="password-title-label">비밀번호</label>
@@ -47,7 +47,8 @@
                             <!-- 비밀번호 박스 -->
                             <div class="password-box">
                                 <!-- 비밀번호 입력 -->
-                                <input type="password" placeholder="비밀번호를 입력해주세요." name="password" data-testid="Input_password" class="password-input" value="">
+                                <input type="password" placeholder="비밀번호를 입력해주세요." name="password"  class="password-input" value="">
+ 
                                 <!-- 보이기 / 가리기 아이콘 -->
                                 <button type="button">
                                     <span class="hide">
