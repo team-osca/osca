@@ -15,6 +15,6 @@ public class CafeDAO {
 	}
 
 	public List<CafeVO> findAllByLocation(String location){
-		return sqlSession.selectList("cafe.findAll", location);
+		return sqlSession.selectList("cafe.findAllByLocation", location);
 	}
 }
