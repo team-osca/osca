@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
     <title>mypage</title>
     <script async="" src="https://snap.licdn.com/li.lms-analytics/insight.old.min.js"></script>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -37,22 +38,16 @@
                                     alt="hamberger menu" height="14" style="width:17px;height:14px;object-fit:contain">
                             </button>
                             <a href="" class="main-bar-nav-top-logo-a" >
-                                <svg width="74" height="21" viewBox="0 0 140 32">
-                                    <path fill="currentColor"
-                                        d="M89.8 2.2l-5.6 2.4v4.8h-3.8v5.2h3.8v10.2c0 4.2 2.6 7 6.6 7 1.6 0 2.6-.4 3.2-.6V26c-.2 0-1 .2-1.8.2-1.6 0-2.4-.6-2.4-2.6v-8.8H94V9.6h-4.2V2.2zM28.6 9.6l-4 14-4.6-14h-5.6l-4.6 14L6 9.6H0l6.8 21.8h6l4.4-14.6 4.6 14.6h6l6.8-21.8zM134.4 2.2v8.6c-1.4-1-3-1.6-4.8-1.8h-.4-1.6c-5 .4-8.2 4.2-9.2 9-.2.8-.2 1.4-.2 2.2V22c.6 5.6 4.4 10 10.2 10 2.4 0 4.4-.6 6-1.8v1.4h5.4V0l-5.4 2.2zm-5.2 24.4c-3 0-5.6-2.4-5.6-6.2 0-4 2.6-6.2 5.6-6.2s5.2 2.2 5.2 6c0 4.2-2.2 6.4-5.2 6.4zM116.2 18c-.8-5.2-4.6-9-10-9s-9.2 3.8-10 9c-.2.8-.2 1.6-.2 2.6v1.6c.6 5.6 4.4 10 10.2 10 4.6 0 8-2.8 9.4-6.8l-5-1.2c-.8 1.8-2.4 3.2-4.4 3.2-2.8 0-4.6-2.2-5-5.2h15.2v-1.6c0-1 0-1.8-.2-2.6zm-14.8 0c.8-2.2 2.4-3.6 4.8-3.6s4 1.6 4.8 3.6h-9.6zM50.6 11c-1.4-1-3.2-1.8-5.2-1.8H44.8h-.6c-5.2.4-8.6 4-9.4 9-.2.8-.2 1.4-.2 2.2v1.8c.6 5.6 4.4 10 10.2 10 2.4 0 4.4-.6 6-1.8v1.4h5.6V9.6h-5.6V11zm-5.2 15.6c-3 0-5.6-2.4-5.6-6.2 0-4 2.6-6.2 5.6-6.2s5.2 2.2 5.2 6c0 4.2-2.2 6.4-5.2 6.4zM71.2 9c-2.2 0-4.6 1-6 3.2V9.6h-5.6v21.8h5.6V18.8c0-2.6 1.4-4.6 4-4.6 2.8 0 3.8 2 3.8 4.4v12.8h5.6V17.6c.2-4.8-2.2-8.6-7.4-8.6z">
-                                    </path>
-                                </svg>
+                            	<img src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg" height="18px" width="82px" alt="Oh!스카 로고">
                             </a>
                         </div>
                         <button id="gnbSignupBtn" class="xsSignUpButton isLoggedIn" type="button" >회원가입하기</button>
                     </div>
                     <ul class="menu">
-                        <li ><a href="">채용</a></li>
-                        <li ><a href="">이벤트</a></li>
-                        <li class="smMoreVisible"><a href="">이력서</a></li>
-                        <li class="smMoreVisible"><a href="">커뮤니티</a></li>
-                        <li class="smMoreVisible"><a href="">프리랜서</a></li>
-                        <li class="smMoreVisible"><a href="">AI 합격예측</a></li>
+                        <li ><a href="">오늘의 스터디</a></li>
+                        <li ><a href="">오늘의 카페</a></li>
+                        <li class="smMoreVisible"><a href="">FAQ</a></li>
+                        <li class="smMoreVisible"><a href="">오!스카 소개</a></li>
                     </ul>
                     <aside class="aside isLoggedIn">
                         <ul>
@@ -72,7 +67,7 @@
                                 </button>
                             </li>
                             <li class="leftDivision mdMoreVisible" >
-                                <a class="dashboardButton" href="">기업 서비스</a>
+                                <a class="dashboardButton" href="">oh! 스카</a>
                             </li>
                             <li class="aside_visibleMenu">
                                 <button class="menuButton" type="button">
@@ -104,15 +99,16 @@
                     <header class="aside-header">
                         <div class="aside-avatar">
                             <div class="avatar_root avatar_sizeMedium aside-avatar_image">
-                                <img alt="유희준 프로필 이미지" src="https://static.wanted.co.kr/oneid-user/profile_default.png" class="Avatar_Avatar__img__kcubw">
+                                <img alt="프로필 이미지" src="https://static.wanted.co.kr/oneid-user/profile_default.png" class="Avatar_Avatar__img__kcubw">
                             </div>
                         </div>
                         <div class="aside-me">
-                            <div class="aside-me_name">유희준</div>
-                            <div class="aside-me_email">yhj3855@naver.com</div>
-                            <div class="aside-me_tel">010-8200-3855</div>
+
+                            <div class="aside-me_name">${member.memberName}</div>
+                            <div class="aside-me_email">${member.memberEmail}</div> 
+                            <div class="aside-me_tel">${member.memberPhonenumber}</div>
                         </div>
-                        <a href="setting.jsp" class="aside-edit" target="_blank" rel="noopener noreferrer">기본정보 수정</a>
+                        <a href="${pageContext.request.contextPath}/settingOk.member" class="aside-edit" target="_blank" rel="noopener noreferrer">기본정보 수정</a>
                     </header>
                     <div class="matchUpStatus matchUpStatus_">
                         <a href="" class="matchUpStatus-item">
@@ -140,5 +136,5 @@
     <!-- end of 기본 html -->
 </body>
 <script src="${pageContext.request.contextPath}/static/js/member/mypage/menuBar.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/member/mypage/js/body.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/member/mypage/body.js"></script>
 </html>

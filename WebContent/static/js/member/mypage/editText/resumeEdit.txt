@@ -10,9 +10,9 @@
                 <div class="formButton button_ selected">
                     <h6 class="formButton-label">학교</h6>
                     <div class="input_box">
-                        <input id="university" type="text" placeholder="한신대학교" value="" autocomplete="off">
+                        <input id="university" type="text" placeholder="대학명 입력" value="" autocomplete="off">
                     </div>
-                </div>
+                </div>		
                 <div class="formButton button_">
                     <h6 class="FormButton-label">직장</h6>
                     <div class="input_box">
@@ -98,4 +98,4 @@
         </footer>
     </div>
 </div>
-<script src="/static/member/mypage/js/edit/resumeEdit.js"></script>
+<script src="/static/js/member/mypage/edit/resumeEdit.js"></script>

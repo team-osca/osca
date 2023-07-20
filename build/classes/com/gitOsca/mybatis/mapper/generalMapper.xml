@@ -2,5 +2,22 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="general">
+	<select id="findById" resultType="generalVO">
+		select id, general_university, general_company, general_work_date_begin, general_work_date_end, general_introduction from tbl_general
+		where id = #{id}
+	</select>
+	
+	<insert id="insert">
+		insert into tbl_general
+		(general_university, general_company, general_work_date_begin, general_work_date_end, general_introduction)
+		values(#{generalUniversity}, #{generalCompany}, #{generalWorkDateBegin}, #{generalWorkDateEnd}, #{generalIntroduction})
+	</insert>
 
+	<update id="update">
+		update tbl_general
+		set general_university = #{generalUniversity}, general_company = #{generalCompany}, 
+		general_work_date_begin = #{generalWorkDateBegin}, general_work_date_end = #{generalWorkDateEnd},
+		general_introduction = #{generalIntroduction}
+		where member_id = #{memberId}
+	</update>
 </mapper>

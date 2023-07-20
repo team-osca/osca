@@ -1,4 +1,4 @@
-package com.gitOsca.member.controller;
+package com.gitOsca.general.controller;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.gitOsca.Action;
 import com.gitOsca.Result;
-import com.gitOsca.member.dao.MemberDAO;
-import com.gitOsca.member.domain.MemberVO;
+import com.gitOsca.general.dao.GeneralDAO;
+import com.gitOsca.general.domain.GeneralVO;
 
 public class MyPageOkController implements Action {
 
@@ -19,26 +19,22 @@ public class MyPageOkController implements Action {
 			throws IOException, ServletException {
 		
 		Result result = new Result();
-		MemberDAO memberDAO = new MemberDAO();
+		GeneralDAO generalDAO = new GeneralDAO();
 		
-		Optional<MemberVO> foundMember = memberDAO.findById(1L);
+		Optional<GeneralVO> foundGeneral = generalDAO.findById(1L);
 		
-		if(foundMember.isPresent()) {
-			request.setAttribute("member", foundMember.get());
-//			���۹���� forward�̱� ������
-			result.setPath("templates/member/mypage/MyPage.jsp");			
+		if(foundGeneral.isPresent()) {
+			request.setAttribute("general", foundGeneral.get());
+//			forward
+			result.setPath("test.jsp");			
 		}else {
 			result.setRedirect(true);
-//			redirect�ϱ� ���̱�
+//			redirect로 보내기
 			result.setPath(request.getContextPath() + "/login.member");
 		}
 		return result;
 	}
 }
-
-
-
-
 
 
 
