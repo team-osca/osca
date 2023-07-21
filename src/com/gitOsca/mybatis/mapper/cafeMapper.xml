@@ -17,4 +17,12 @@
 		<include refid="search_location"/>
 		order by id desc
 	</select>
+	
+	<select id="findById" resultType="com.gitOsca.cafe.domain.CafeVO">
+		select 
+			id, ceo_id, cafe_title, cafe_contents, cafe_open_time, cafe_end_time, cafe_regist_date, cafe_update_date
+		from tbl_cafe cafe
+		where id = #{id}
+	</select>
+	
 </mapper>
