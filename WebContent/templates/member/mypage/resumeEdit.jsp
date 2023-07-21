@@ -1,4 +1,22 @@
-<div class="resumeInfoSetting">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css"/>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/menuBar.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/menuBarDynamic.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/body.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/bodyDynamic.css">>
+</head>
+<body>
+	<div class="resumeInfoSetting">
     <div class="matchUpForm form_main fixedFooter">
         <header class="form-header">
             <dl class="form-title">
@@ -98,4 +116,6 @@
         </footer>
     </div>
 </div>
-<script src="/static/js/member/mypage/edit/resumeEdit.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/member/mypage/edit/resumeEdit.js"></script>
+</body>
+</html>

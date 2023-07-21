@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $.ajax({
-        url : "http://localhost:8090/static/js/member/mypage/editText/mypageInit.txt",
+        url : "mypageInit.jsp",
         success : function(data){
             $('.container>section').html(data);
         }

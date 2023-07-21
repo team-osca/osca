@@ -10,27 +10,30 @@ import javax.servlet.http.HttpServletResponse;
 import com.gitOsca.Action;
 import com.gitOsca.Result;
 import com.gitOsca.general.dao.GeneralDAO;
-import com.gitOsca.general.domain.GeneralVO;
+import com.gitOsca.general.domain.GeneralDTO;
 
 public class MyPageOkController implements Action {
 
 	@Override
-	public Result execute(HttpServletRequest request, HttpServletResponse response)
+	public Result execute(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, ServletException {
-		
 		Result result = new Result();
 		GeneralDAO generalDAO = new GeneralDAO();
 		
-		Optional<GeneralVO> foundGeneral = generalDAO.findById(1L);
+		Optional<GeneralDTO> foundGeneral = generalDAO.findById(1L);
 		
 		if(foundGeneral.isPresent()) {
-			request.setAttribute("general", foundGeneral.get());
+			req.setAttribute("general", foundGeneral.get());
+			String contextPath=req.getContextPath();
+			String path =  req.getParameter("memberRole").equals("0")
+			? contextPath + "templates/member/mypage/mypageInit.jsp"
+			: contextPath + "templates/member/mypage/MyPage.jsp";
 //			forward
-			result.setPath("test.jsp");			
+			result.setPath(path);			
 		}else {
 			result.setRedirect(true);
 //			redirect로 보내기
-			result.setPath(request.getContextPath() + "/login.member");
+			result.setPath(req.getContextPath() + "/mypageOk.member");
 		}
 		return result;
 	}
