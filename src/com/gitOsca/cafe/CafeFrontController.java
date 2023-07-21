@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.gitOsca.Result;
+import com.gitOsca.cafe.controller.DetailOkController;
 import com.gitOsca.cafe.controller.ListOkController;
 
 public class CafeFrontController extends HttpServlet{
@@ -28,6 +29,10 @@ public class CafeFrontController extends HttpServlet{
 			result.setPath(req.getContextPath() + "/templates/cafe/mycafe-post.jsp");
 		}else if(target.equals("listOk")) {
 			result = new ListOkController().execute(req, resp);
+		}else if(target.equals("detailOk")) {
+			result = new DetailOkController().execute(req, resp);
+		}else if(target.equals("writeOk")) {
+			result = new DetailOkController().execute(req, resp);
 		}
 		
 		if(result != null) {
