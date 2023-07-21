@@ -1,6 +1,7 @@
 package com.gitOsca.cafe.dao;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -16,5 +17,9 @@ public class CafeDAO {
 
 	public List<CafeVO> findAllByLocation(String location){
 		return sqlSession.selectList("cafe.findAllByLocation", location);
+	}
+	
+	public Optional<CafeVO> findById(Long id) {
+		return Optional.ofNullable(sqlSession.selectOne("cafe.findById", id));
 	}
 }
