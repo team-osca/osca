@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.gitOsca.member.controller.LoginOkController;
+import com.gitOsca.member.controller.SignUpOkController;
 import com.gitOsca.Result;
 import com.gitOsca.member.controller.AuthenticationNumberController;
 import com.gitOsca.member.controller.CheckEmailOkController;
@@ -23,6 +25,8 @@ public class MemberFrontController extends HttpServlet {
 
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
+		System.out.println("멤버 프론트 콘트롤러");
+//		System.out.println(target);
 		// ---------------------------------- 김동엽 ------------------------------------
 		if ( target.equals("sign_infind_account") ) {
 			// 계정 찾기 페이지로 이동
@@ -43,20 +47,47 @@ public class MemberFrontController extends HttpServlet {
 		} else if ( target.equals("find_paassword") ) {
 			result = new FindPasswordController().execute(req, resp);
 		} // -------------------------------- 김동엽 ----------------------------
+		
 		else if (target.equals("mypageOk")) {
 			//���������� ������
 //			result = new MyPageOkController().execute(req, resp);
-		} 		else if(target.equals("signUp")) {
+		} 	
+		// -------------------------------- 선희원 ----------------------------
+		else if(target.equals("emailCheck")){
+		System.out.println("멤버 프론트 콘트롤러 이멜 쳌");
+		result = new CheckEmailOkController().execute(req,resp);
+	}
+		else if ( target.equals("password") ) {
+			System.out.println("비번입력 쳌");
 			result = new Result();
-			
-		}else if(target.equals("emailCheck")){
-			result = new CheckEmailOkController().execute(req,resp);
-			
-		}else if(target.equals("password")){
+			result.setPath("templates/login/password.jsp");
+		} 	
+		else if ( target.equals("signUp") ) {
+			System.out.println("signUp 쳌");
 			result = new Result();
+			result.setPath("templates/signUp/signUp.jsp");
+		} 
+		else if(target.equals("LoginOk")) {
+			System.out.println("loginOk 쳌");
+			result = new LoginOkController().execute(req, resp);
 		}
-
+		else if(target.equals("loginSucess")) {
+			System.out.println("loginSucess 쳌 메인페이지로 이동");
+			result = new Result();
+			result.setPath("/templates/mainPage/mainPage.jsp");
+		}
+		else if(target.equals("SignUpOk")) {
+			System.out.println("SignUpOk 쳌");
+			result = new SignUpOkController().execute(req, resp);
+		}		
+		else if(target.equals("SignUpSucess")) {
+			System.out.println("SignUpSucess 쳌 로긴페이지로 이동");
+			result = new Result();
+			result.setPath("templates/login/login.jsp");
+		}
 		
+		// ---------------------------------- 선희원 ------------------------------------
+
 		if (result != null) {
 			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());

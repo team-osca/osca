@@ -8,6 +8,8 @@
 	
 	<typeAliases>
 		<typeAlias type="com.gitOsca.member.domain.MemberVO" alias="memberVO"/>
+		<typeAlias type="com.gitOsca.study.domain.StudyVO" alias="studyVO"/>
+		<typeAlias type="com.gitOsca.general.domain.GeneralVO" alias="generalVO"/>
 	</typeAliases>
 
    <environments default="mysql">
@@ -37,8 +39,4 @@
    		<mapper resource="com/gitOsca/mybatis/mapper/studyImageMapper.xml"/> 
    </mappers>
    
-   	<typeAliases>
-		<typeAlias type="com.gitOsca.member.domain.MemberVO" alias="memberVO"/>
-
-	</typeAliases>
 </configuration>

@@ -12,7 +12,7 @@ import com.gitOsca.Result;
 import com.gitOsca.member.dao.MemberDAO;
 import com.gitOsca.member.domain.MemberVO;
 
-public class MyPageOkController implements Action {
+public class WithdrawOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest request, HttpServletResponse response)
@@ -25,11 +25,9 @@ public class MyPageOkController implements Action {
 		
 		if(foundMember.isPresent()) {
 			request.setAttribute("member", foundMember.get());
-//			���۹���� forward�̱� ������
-			result.setPath("templates/member/mypage/MyPage.jsp");			
+			result.setPath("templates/member/mypage/withdraw.jsp");			
 		}else {
 			result.setRedirect(true);
-//			redirect�ϱ� ���̱�
 			result.setPath(request.getContextPath() + "/login.member");
 		}
 		return result;
