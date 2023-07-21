@@ -215,8 +215,8 @@
 						<div class="row" style="text-align: center; height: 64.6px;">
 							<div class="col-md-3 col-sm-3 col-xs-6" id="footer_content_logo"
 								style="text-align: left;">
-								<a href=""> <img src="../../allimages/logo.jpg"
-									margin-top="21px" width="125px" alt="로고">
+								<a href=""> <img src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg"
+									 width="125px" height="27px" alt="로고">
 								</a>
 							</div>
 							<div class="col-md-3 col-sm-3 col-xs-6" id="footer_content_1">
@@ -271,4 +271,8 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/cafe/mycafe-detail.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/cafe/mycafe-detail-kakaomap.js"></script>
+<script type="text/javascript">
+	console.log("${contents}")
+	console.log("${images}")
+</script>
 </html>

@@ -41,7 +41,7 @@ function list_data(data) {
 	/*console.log(DAY[new Date(data.cafeRegistDate).getDay()]);*/
 	return (`
 		<li class="cafe-card-container cafe-card-interaction">
-	        <a href="${path}/" style="--base-font-size: 10;">
+	        <a href="${path}/detailOk.cafe?id=${data.id}" style="--base-font-size: 10;">
 	            <div class="cafe-thumbnail-image cafe-thumbnail-responsive">
 	                <img class="cafe-image cafe-image-cover" src="/static/allimages/main-page/b.png" alt="${data.ceoVO?.cafeName}">
 	            </div>
