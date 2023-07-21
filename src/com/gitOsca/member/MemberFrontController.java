@@ -7,15 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.gitOsca.member.controller.LoginOkController;
-import com.gitOsca.member.controller.SignUpOkController;
 import com.gitOsca.Result;
 import com.gitOsca.member.controller.AuthenticationNumberController;
 import com.gitOsca.member.controller.CheckEmailOkController;
 import com.gitOsca.member.controller.FindPasswordController;
 import com.gitOsca.member.controller.GotoMainController;
-//import com.gitOsca.member.controller.MyPageOkController;
+import com.gitOsca.member.controller.LoginOkController;
+import com.gitOsca.member.controller.MyPageOkController;
+import com.gitOsca.member.controller.SettingOkController;
+import com.gitOsca.member.controller.SignUpOkController;
 import com.gitOsca.member.controller.SwitchAccountResutPageController;
+import com.gitOsca.member.controller.WithdrawOkController;
 import com.gitOsca.member.controller.findAccountOkController;
 
 public class MemberFrontController extends HttpServlet {
@@ -48,15 +50,21 @@ public class MemberFrontController extends HttpServlet {
 			result = new FindPasswordController().execute(req, resp);
 		} // -------------------------------- 김동엽 ----------------------------
 		
+		// -------------------------------- 정유진 ----------------------------
 		else if (target.equals("mypageOk")) {
-			//���������� ������
-//			result = new MyPageOkController().execute(req, resp);
+			result = new MyPageOkController().execute(req, resp);
+		} else if (target.equals("settingOk")) {
+			result = new SettingOkController().execute(req, resp);
+		} else if (target.equals("withdrawOk")) {
+			result = new WithdrawOkController().execute(req, resp);
 		} 	
+		// -------------------------------- 정유진 ----------------------------
+		
 		// -------------------------------- 선희원 ----------------------------
 		else if(target.equals("emailCheck")){
 		System.out.println("멤버 프론트 콘트롤러 이멜 쳌");
 		result = new CheckEmailOkController().execute(req,resp);
-	}
+		}
 		else if ( target.equals("password") ) {
 			System.out.println("비번입력 쳌");
 			result = new Result();

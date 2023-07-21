@@ -20,7 +20,7 @@ public class MemberDAO {
 	 return sqlSession.selectOne("member.selectAccount", phoneNumber);
 	}
 	
-//	����������
+//	아이디로 member 내용 찾기
 	public Optional<MemberVO> findById(Long id){
 		return Optional.ofNullable(sqlSession.selectOne("member.findById", id));
 	}

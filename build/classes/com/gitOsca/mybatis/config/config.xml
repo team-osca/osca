@@ -10,6 +10,7 @@
 		<typeAlias type="com.gitOsca.member.domain.MemberVO" alias="memberVO"/>
 		<typeAlias type="com.gitOsca.study.domain.StudyVO" alias="studyVO"/>
 		<typeAlias type="com.gitOsca.general.domain.GeneralVO" alias="generalVO"/>
+		<typeAlias type="com.gitOsca.general.domain.GeneralDTO" alias="generalDTO"/>
 	</typeAliases>
 
    <environments default="mysql">
