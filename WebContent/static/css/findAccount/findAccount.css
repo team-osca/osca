@@ -327,12 +327,13 @@ option {
 
 
 
-.check-phonenumber-bth:disabled span {
-  color: var(--theme-palette-colors-gray-300);
-}
 
 .check-phonenumber-bth span {
   color: var(--theme-palette-colors-blue-400);
+}
+
+.check-phonenumber-bth:disabled span {
+  color: var(--theme-palette-colors-gray-300);
 }
 
 .check-phonenumber:read-only {
@@ -382,7 +383,7 @@ option {
   line-height: var(--text-height-footnote);
   margin-top: 0px;
   margin-bottom: 0px;
-  display: none;  
+  display: none;   
 }
 
 

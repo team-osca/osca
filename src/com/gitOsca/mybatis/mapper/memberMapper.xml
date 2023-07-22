@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="member">
-	
-	    <!-- ================================ 계정/비밀번호 찾기 =========================================== -->
+
+	 <!-- ================================ 계정/비밀번호 찾기 =========================================== -->
 	<select id="selectAccount" parameterType="string" resultType="string">
 		select member_email from tbl_member
 		where #{phoneNumber} = member_phonenumber
@@ -19,7 +19,8 @@
 		set member_password = #{memberPassword}
 		where member_email = #{memberEmail}	
 	</update>
-	<!-- ================================ 계정/비밀번호 찾기 =========================================== -->
+	
+	<!-- ================================ 계정/비밀번호 찾기 =============================================== -->
 		
 	<select id="findById" resultType="memberVO">
 		select id, member_name, member_email, member_phonenumber from tbl_member

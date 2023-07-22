@@ -19,6 +19,7 @@ import net.nurigo.java_sdk.exceptions.CoolsmsException;
 public class SendSMSController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		// 랜덤번호 뽑고 view에 넘겨주기 
 		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html; charset=utf-8");
 		PrintWriter out = resp.getWriter();
@@ -27,7 +28,11 @@ public class SendSMSController implements Action {
 		String randomNumber = Integer.toString((int) (Math.random() * (MAX - MIN + 1)) + MIN);
 		out.print(randomNumber);
 
+//		문자로 인증번호 보내기 
 //		String phoneNumber = req.getParameter("phoneNumber").replace("-", "").trim();
+//		if ( phoneNumber == null || phoneNumber == "" ) {
+//			return null;
+//		}
 //		String api_key = "NCSLHZBRFR5JZIGX"; 
 //		String api_secret = "TMWIDCSYTTIWBNNP4PDQFBM2S5T2F8HY";
 //		Message coolsms = new Message(api_key, api_secret);

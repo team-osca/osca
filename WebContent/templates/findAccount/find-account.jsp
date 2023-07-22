@@ -259,11 +259,11 @@
 	                  />
 	              </form>    
                   <button type="button" id="AuthenticationNumberBtn" class="check-phonenumber-bth" disabled>
-                    <spano
+                    <span 
+                    	
                        color="var(--theme-palette-colors-black-100)"
                       class="check-phonenumber-bth-span"
-                      >인증번호 받기</span
-                    >
+                      >인증번호 받기</span>
                   </button>
                 </div>
                 <p color="var(--theme-palette-colors-red-400)" class="isnot-a-phonenumber">올바른 전화번호를 입력해주세요.</p>
@@ -285,7 +285,7 @@
         				</span>
     				</button>
                 </div>
-                <p var(--theme-palette-colors-blue-400) class="Authentication-Number-Guide">인증번호가 요청되었습니다.</p>
+                <p style="color: var(--theme-palette-colors-blue-400);" class="Authentication-Number-Guide">인증번호가 요청되었습니다.</p>
               <button type="button" disabled="" class="continue-btn">
                 <span
                   color="var(--theme-palette-colors-black-100)"

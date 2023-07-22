@@ -30,26 +30,25 @@ public class MemberFrontController extends HttpServlet {
 		System.out.println("멤버 프론트 콘트롤러");
 //		System.out.println(target);
 //		------------------------------------------- 김동엽 ------------------------------------------
-		if (target.equals("sign_infind_account")) {
-			// 계정 찾기 페이지로 이동
+		if (target.equals("sign_infind_account")) {	// 계정 찾기 페이지로 이동
 			result = new Result();
 			result.setPath("/templates/findAccount/find-account.jsp");
-		} else if (target.equals("get_authentication_number")) {  			// 문자로 인증번호 보내기 
-			result = new SendSMSController().execute(req, resp);		 
-		} else if (target.equals("find_account")) {							// 계정 찾기 + 분기 처리 
+		} else if (target.equals("get_authentication_number")) { // 문자로 인증번호 보내기
+			result = new SendSMSController().execute(req, resp);
+		} else if (target.equals("find_account")) { // 계정 찾기 + 분기 처리
 			result = new findAccountOkController().execute(req, resp);
-		} else if (target.equals("find_paassword")) {						// 비밀번호 재설정 이베일 발송과 이메일 발송 완료 페이지 출력
+		} else if (target.equals("find_paassword")) { // 비밀번호 재설정 이베일 발송과 이메일 발송 완료 페이지 출력
 			result = new SendEmailOkController().execute(req, resp);
-		} else if (target.equals("reset_password")) { 						// 비밀 번호 재설정 페이지로 이동 
+		} else if (target.equals("reset_password")) { // 비밀 번호 재설정 페이지로 이동
 			result = new ResetPasswordController().execute(req, resp);
-		} else if (target.equals("reset_passwordOk")) { 					// 비밀번호 재설정 
+		} else if (target.equals("reset_passwordOk")) { // 비밀번호 재설정
 			result = new ResetPasswordOkController().execute(req, resp);
-		} else if (target.equals("reset_password_next")) {
+		} else if (target.equals("reset_password_next")) { 
 			result = new Result();
 			result.setPath("/templates/findPassword/finded-password.jsp");
 		}
 //		------------------------------------------- 김동엽 ------------------------------------------
-		
+
 		// -------------------------------- 정유진 ----------------------------
 		else if (target.equals("mypageOk")) {
 			result = new MyPageOkController().execute(req, resp);
@@ -57,43 +56,41 @@ public class MemberFrontController extends HttpServlet {
 			result = new SettingOkController().execute(req, resp);
 		} else if (target.equals("withdrawOk")) {
 			result = new WithdrawOkController().execute(req, resp);
-		} 	
-		// -------------------------------- 정유진 ----------------------------
-		
-		// -------------------------------- 선희원 ----------------------------
-		else if(target.equals("emailCheck")){
-		System.out.println("멤버 프론트 콘트롤러 이멜 쳌");
-		result = new CheckEmailOkController().execute(req,resp);
 		}
-		else if ( target.equals("password") ) {
+		// -------------------------------- 정유진 ----------------------------
+
+		// -------------------------------- 선희원 ----------------------------
+		else if (target.equals("emailCheck")) {
+			System.out.println("멤버 프론트 콘트롤러 이멜 쳌");
+			result = new CheckEmailOkController().execute(req, resp);
+		} else if (target.equals("password")) {
 			System.out.println("비번입력 쳌");
 			result = new Result();
 			result.setPath("templates/login/password.jsp");
-		} 	
-		else if ( target.equals("signUp") ) {
+		} else if (target.equals("signUp")) {
 			System.out.println("signUp 쳌");
 			result = new Result();
 			result.setPath("templates/signUp/signUp.jsp");
-		} 
-		else if(target.equals("LoginOk")) {
+		} else if (target.equals("LoginOk")) {
 			System.out.println("loginOk 쳌");
 			result = new LoginOkController().execute(req, resp);
-		}
-		else if(target.equals("loginSucess")) {
+		} else if (target.equals("loginSucess")) {
 			System.out.println("loginSucess 쳌 메인페이지로 이동");
 			result = new Result();
 			result.setPath("/templates/mainPage/mainPage.jsp");
-		}
-		else if(target.equals("SignUpOk")) {
+		} else if (target.equals("SignUpOk")) {
 			System.out.println("SignUpOk 쳌");
 			result = new SignUpOkController().execute(req, resp);
-		}		
-		else if(target.equals("SignUpSucess")) {
+		} else if (target.equals("SignUpSucess")) {
 			System.out.println("SignUpSucess 쳌 로긴페이지로 이동");
 			result = new Result();
 			result.setPath("templates/login/login.jsp");
+		} else if (target.equals("signOrLogin")) {
+			System.out.println("signOrLogin 쳌 이멜 입력 페이지로 이동");
+			result = new Result();
+			result.setPath("templates/login/login.jsp");
 		}
-		
+
 		// ---------------------------------- 선희원 ------------------------------------
 
 		if (result != null) {

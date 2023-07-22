@@ -4,6 +4,6 @@
 
 $('.go-to-login').click(function() {
 	//    let link = contextPath + '/sign_infind_account.member';
-	let link = 'http://localhost:8090/sign_infind_account.member';
+	let link = 'http://localhost:8090/signOrLogin.member';
 	location.href = link;
 });
