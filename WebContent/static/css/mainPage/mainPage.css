@@ -176,7 +176,7 @@ li {
     vertical-align: middle;
 }
 
-.aside.isLoggedIn{
+.aside{
     padding: 9px 0;
 }
 
@@ -248,6 +248,47 @@ li {
     vertical-align: bottom;
     line-height: 32px;
 }
+
+/* 프로필사진 */
+.aside>ul li .profileButton{
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: top;
+    padding: 0;
+    margin-right: 11px;
+}
+.aside>ul li .profileButton .avatarBorder{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #e1e2e3;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.aside>ul li .profileButton .avatarBorder.showMenuPopover {
+    border: 1px solid #36f
+}
+.aside>ul li .profileButton .avatarBorder>div {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.aside>ul .profile{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5px;
+}
+/* 프로필사진 */
 
 a {
     font-family: inherit;

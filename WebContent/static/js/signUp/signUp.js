@@ -1,3 +1,5 @@
+        $(document).ready(function() {
+
 function validPhoneNumberCheck(obj){  
     var pattern =  /^[0-9]{3}-?[0-9]{4}-?[0-9]{4}$/;
     return (obj.value.match(pattern)!=null)
@@ -61,7 +63,6 @@ function checkAgreemnts(){
     $('.term>.check_active').length == 4 ? 
         $('.agreements>.check').attr('class','check_active') :
         $('.agreements>.check_active').attr('class','check');
-    
 }
 
 function checkEssential(){
@@ -91,16 +92,14 @@ function checkPath(){
 
 
 
-// 카페 회원 여부
+// hw  - 카페 회원 여부
 const $term2 = $('.term2');
 const $check2 = $('.check2');
 const $memberRoleCheckbox = $('#memberRoleCheckbox');
 
     $memberRoleCheckbox.on('change', function () {
-        // Get the value (1 or 0) based on the checkbox state
+        // 카페회원 체크박스 여부 
         const memberRoleValue = memberRoleCheckbox.checked ? 1 : 0;
-
-        // Set the value to a hidden input field to be submitted with the form
         $('#memberRoleHiddenInput').value = memberRoleValue;
     });
 
@@ -112,6 +111,6 @@ const $memberRoleCheckbox = $('#memberRoleCheckbox');
         $check2.attr('class', checkClassName ? 'check_active' : 'check2');
         }
         
-
+});
 
     
