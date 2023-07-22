@@ -15,8 +15,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findAccount/base.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findAccount/findAccount.css">
-    <title>계정 찾기</title>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <title>계정 찾기</title>    
   </head>
   <body>
     <div id="find-id" style="overflow: unset;">
@@ -249,14 +248,17 @@
                   </div>
                 </div>
                 <div class="check-phonenumber-wrapper">
-                  <input
-                    type="text"
-                    placeholder="(예시) 01012345768"
-                    name="mobile"
-                    class="check-phonenumber"
-                    value=""
-                    id="phonenumber-input"
-                  /><button type="button" id="AuthenticationNumberBtn" class="check-phonenumber-bth" disabled>
+                <form action="find_account.member" method="post" name="phoneNumberFrom">
+	                  <input
+	                    type="text"
+	                    placeholder="(예시) 01012345768"
+	                    name="phoneNumber"
+	                    class="check-phonenumber"
+	                    value=""
+	                    id="phoneNumber-input"
+	                  />
+	              </form>    
+                  <button type="button" id="AuthenticationNumberBtn" class="check-phonenumber-bth" disabled>
                     <spano
                        color="var(--theme-palette-colors-black-100)"
                       class="check-phonenumber-bth-span"
@@ -297,6 +299,7 @@
       </div>
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script>
   	let contextPath = "${pageContext.request.contextPath}"
   </script>

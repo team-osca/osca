@@ -52,7 +52,7 @@
                   color="var(--theme-palette-colors-black-100)"
                   class="e-mail"
                 >
-                  <c:out value="${e_mail}"></c:out>
+                  <c:out value="${member_email}"></c:out>
                 </p>
               </div>
               <button type="submit" class="goto-main">
