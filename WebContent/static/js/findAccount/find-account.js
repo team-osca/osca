@@ -28,7 +28,8 @@ const checkphoneNumber = (phoneNumber) => {
 	if (/^010-?[0-9]{4}-?[0-9]{4}$/.test(phoneNumber)) {
 		$authenticationNumberBtn.prop('disabled', false);
 		$('.isnot-a-phonenumber').css('display', 'none');
-		$('#AuthenticationNumberBtn>.check-phonenumber-bth-span').css('color', 'var(--theme-palette-colors-blue-400)');
+		/*$('.check-phonenumber-bth-span').css('color', 'var(--theme-palette-colors-blue-400)');*/
+		$('#AuthenticationNumberBtn>.check-phonenumber-bth-span').prop('disabled', false);
 	} else {
 		$authenticationNumberBtn.prop('disabled', true);
 		$('.isnot-a-phonenumber').css('display', 'block');
@@ -47,6 +48,7 @@ $authenticationNumberBtn.click(function() {
 			console.log(authenticationData);
 			// 인증번호가 발송되었습니다. 메시지 출력
 			$('.Authentication-Number-Guide').css('display', 'block');
+			$('#AuthenticationNumberBtn>.check-phonenumber-bth-span').prop('disabled', true);
 		},
 		error: function(a, b, c) {
 			console.log(a, b, c);
@@ -54,6 +56,7 @@ $authenticationNumberBtn.click(function() {
 	});
 
 	$(this).attr("disabled", true);
+	
 });
 
 //-----------------인증번호 받기 버튼 클릭 이벤트----------

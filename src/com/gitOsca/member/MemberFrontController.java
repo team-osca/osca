@@ -33,7 +33,7 @@ public class MemberFrontController extends HttpServlet {
 		if (target.equals("sign_infind_account")) {
 			// 계정 찾기 페이지로 이동
 			result = new Result();
-			result.setPath("/templates/findAccount/find-account.jsp");
+			result.setPath("templates/findAccount/find-account.jsp");
 		} else if (target.equals("get_authentication_number")) {  			// 문자로 인증번호 보내기 
 			result = new SendSMSController().execute(req, resp);		 
 		} else if (target.equals("find_account")) {							// 계정 찾기 + 분기 처리 
