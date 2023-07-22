@@ -27,11 +27,11 @@ public class CheckEmailOkController implements Action {
 		req.getSession().setAttribute("userEmail", memberEmail);
 		 if (check) {
 				System.out.println("가입으로 가여!");
-		        result.setPath("templates/signUp/signUp.jsp");
+		        result.setPath("signUp.member");
 		        result.setRedirect(true);
 		    } else {
 				System.out.println("비번으로 가여!");
-		    	 result.setPath("templates/login/password.jsp");
+		    	 result.setPath("password.member");
 		    	 result.setRedirect(true);
 		    }
 		return result;

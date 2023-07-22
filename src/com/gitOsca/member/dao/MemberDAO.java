@@ -36,7 +36,10 @@ public class MemberDAO {
 		loginMap.put("memberPassword", memberPassword);
 		return sqlSession.selectOne("member.login", loginMap);
 	}
-	
+// 로그인시 회원 유형 확인
+	public String findMemberRoleById(Long memberId) {
+	    return sqlSession.selectOne("member.findMemberRoleById", memberId);
+	}
 //	회원가입
 	public void insert(MemberVO memberVO) {
 		sqlSession.insert("member.insert", memberVO);
