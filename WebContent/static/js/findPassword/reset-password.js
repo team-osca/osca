@@ -1,3 +1,12 @@
+// ------------------------------ 이전 버튼 클릭 시 전으로 이동 ---------------------
+
+$('.pre-btn').click(function(){
+	let link = 'http://localhost:8090/signOrLogin.member';
+	location.href = link;
+});
+
+// ------------------------------ 이전 버튼 클릭 시 전으로 이동 ---------------------
+
 // ----------------------- 비밀번호 재설정 입력-----------------------
 const $pwInput = $('#pw-input');
 $pwInput.on("focus", function() {
@@ -8,7 +17,7 @@ $pwInput.on("focus", function() {
 });
 
 $pwInput.keyup(function() {
-	const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[a-zA-Z\d!@#$%^&*()]{8,16}$/;
+	const regex = /((?=.*[a-z])(?=.*[A-Z])(?=.*\d))|((?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()]))|((?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()]))|((?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()]))/;
 	let $this = $(this);
 	if (!regex.test($this.val())) {
 		$this.attr('style', 'border: 1px solid red !important');

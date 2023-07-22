@@ -30,9 +30,7 @@ public class SendEmailOkController extends Result implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		// 메일 보내기
 		resp.setCharacterEncoding("UTF-8");
-//		HttpSession session = req.getSession();
-//		String userEmail = (String) session.getAttribute("userEmail");
-		String userEmail = "dongyeop1147@naver.com";
+		String userEmail = (String) req.getSession().getAttribute("userEmail");
 		MemberDAO dao = new MemberDAO();
 		String userName = dao.selectUserName(userEmail);
 		Result result = new Result();
@@ -140,7 +138,7 @@ public class SendEmailOkController extends Result implements Action {
 		}
 
 		// 메일 전송 완료 페이지로 이동
-		result.setPath("/templates/findPassword/findPassword.jsp");		
+		result.setPath("templates/findPassword/findPassword.jsp");		
 		return result;
 	}
 
