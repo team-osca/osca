@@ -3,4 +3,9 @@
 
 <mapper namespace="studyApplicant">
 
+	<insert id = "applyStudy" >
+		insert into tbl_study_applicant (study_id, study_applicant_id)
+		values(#{studyId}, #{studyApplicantId})
+	</insert>
+	
 </mapper>

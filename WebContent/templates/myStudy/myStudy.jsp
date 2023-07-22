@@ -38,7 +38,7 @@
               <ul class="menu">
                 <li><a href="">오늘의 스터디</a></li>
                 <li><a href="${pageContext.request.contextPath}/listCafe.study">오늘의 카페</a></li>
-                <li class="selectedNav"><a href="">내 스터디</a></li>
+                <li class="selectedNav"><a href="${pageContext.request.contextPath}/myStudy.study">내 스터디</a></li>
                 <li><a href="">FAQ</a></li>
                 <li><a href="">Oh!스카 소개</a></li>
               </ul>
@@ -220,7 +220,7 @@
 	
 	function selectData(type){
 		$.ajax({
-			url: path + "/studyOk.study?id=" + memberId + "&type=" + type,
+			url: path + "/myStudyOk.study?id=" + memberId + "&type=" + type,
 			dataType: "json",
 			success: function(datas){
 				$(".studyListCount").detach();

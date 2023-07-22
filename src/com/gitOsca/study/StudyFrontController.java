@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.gitOsca.Result;
 import com.gitOsca.study.controller.StudyDetailOkController;
+import com.gitOsca.study.controller.StudyListOkController;
 import com.gitOsca.study.controller.StudyOkController;
 
 public class StudyFrontController extends HttpServlet{
@@ -22,21 +23,23 @@ public class StudyFrontController extends HttpServlet{
 		if(target.equals("detailOk")) {
 			result = new StudyDetailOkController().execute(req, resp);
 		}
-		else if(target.equals("studyOk")) {
+		else if(target.equals("detail")) {
+			result = new Result();
+			result.setPath("templates/myStudy/studyDetailView.jsp");
+		}
+		else if(target.equals("myStudyOk")) {
 			result = new StudyOkController().execute(req, resp);
 		}
-		else if(target.equals("list")) {
+		else if(target.equals("myStudy")) {
 			result = new Result();
 			result.setPath("templates/myStudy/myStudy.jsp");
 		}
-		else if(target.equals("listCafe")) {
+		else if(target.equals("studyListOk")) {
+			result = new StudyListOkController().execute(req, resp);
+		}
+		else if(target.equals("studyList")) {
 			result = new Result();
-			result.setPath(req.getContextPath() + "/cafeList.study");
-			result.setRedirect(true);
-		} 
-		else if(target.equals("cafeList")) {
-			result = new Result();
-			result.setPath("templates/main-cafe/main-cafe-list.jsp");
+			result.setPath("templates/study/study.jsp");
 		}
 		
 		

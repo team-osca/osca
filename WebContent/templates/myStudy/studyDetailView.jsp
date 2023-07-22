@@ -38,8 +38,8 @@
 
               <ul class="menu">
                 <li class="selectedNav"><a href="">오늘의 스터디</a></li>
-                <li><a href="">오늘의 카페</a></li>
-                <li class="smMoreVisible"><a href="">내 스터디</a></li>
+                <li><a href="${pageContext.request.contextPath}/listCafe.study">오늘의 카페</a></li>
+                <li class="smMoreVisible"><a href="${pageContext.request.contextPath}/myStudy.study">내 스터디</a></li>
                 <li class="smMoreVisible"><a href="">FAQ</a></li>
                 <li class="smMoreVisible"><a href="">Oh!스카 소개</a></li>
               </ul>
@@ -232,6 +232,7 @@
 		url: path + "/detailOk.study?id=" + memberId,
 		dataType: "json",
 		success: function(data){
+			console.log(data);
 			$wrapper.prepend(miniProfile(data));
 			$postTitle.text(data.studyTitle);
 			$postContent.text(data.studyContents);
@@ -242,7 +243,7 @@
 	})
 	
 	const miniProfile = (data) => {return (`
-			<aside class="PostDetail_side">
+		<aside class="PostDetail_side">
 	        <div>
 	          <div class="PostDetail_side_top">
 	            <a href="user profile link">
@@ -253,13 +254,13 @@
 	                  </div>
 	                </div>
 	                <div class="AuthorBox_verticalBox">
-	                  <div class="AuthorBox_username">` + data.memberName + `</div>
+	                  <div class="AuthorBox_username">` + data.memberVO.memberName + `</div>
 	                </div>
 	              </div>
 	            </a>
 	          </div>
 	          <div class="PostDetail_bottom">
-	            <div class="userInfo">` + data.memberEmail + `</div>
+	            <div class="userInfo">` + data.memberVO.memberEmail + `</div>
 	          </div>
 	        </div>
 	      </aside>
