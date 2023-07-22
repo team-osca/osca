@@ -68,7 +68,7 @@
       </div>
     </div>
   </body>
-  <script type="text/javascript">
-  	console.log(`${e_mail}`);
-  </script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script> let contextPath = "${pageContext.request.contextPath}"  </script>
+  <script src="${pageContext.request.contextPath}/static/js/findPassword/resetedPW.js"></script>
 </html>
