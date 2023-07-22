@@ -8,15 +8,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.gitOsca.Result;
-import com.gitOsca.member.controller.AuthenticationNumberController;
 import com.gitOsca.member.controller.CheckEmailOkController;
-import com.gitOsca.member.controller.FindPasswordController;
-import com.gitOsca.member.controller.GotoMainController;
 import com.gitOsca.member.controller.LoginOkController;
 import com.gitOsca.member.controller.MyPageOkController;
+import com.gitOsca.member.controller.ResetPasswordController;
+import com.gitOsca.member.controller.ResetPasswordOkController;
+import com.gitOsca.member.controller.SendEmailOkController;
+import com.gitOsca.member.controller.SendSMSController;
 import com.gitOsca.member.controller.SettingOkController;
 import com.gitOsca.member.controller.SignUpOkController;
-import com.gitOsca.member.controller.SwitchAccountResutPageController;
 import com.gitOsca.member.controller.WithdrawOkController;
 import com.gitOsca.member.controller.findAccountOkController;
 
@@ -29,26 +29,26 @@ public class MemberFrontController extends HttpServlet {
 		Result result = null;
 		System.out.println("멤버 프론트 콘트롤러");
 //		System.out.println(target);
-		// ---------------------------------- 김동엽 ------------------------------------
-		if ( target.equals("sign_infind_account") ) {
+//		------------------------------------------- 김동엽 ------------------------------------------
+		if (target.equals("sign_infind_account")) {
 			// 계정 찾기 페이지로 이동
 			result = new Result();
-			result.setPath("templates/findAccount/find-account.jsp");
-		} else if ( target.equals("get_authentication_number") ) {
-			// 인증번호 받기
-			result = new AuthenticationNumberController().execute(req, resp);
-		} else if ( target.equals("sign_infind_account_next") ) {
-			// 계정을 찾은 페이지로 갈지 못 찾은 페이지로 갈지 분기처리
-			result = new SwitchAccountResutPageController().execute(req, resp);
-		} else if ( target.equals("find_account") ) {
-			// 계정 찾기
+			result.setPath("/templates/findAccount/find-account.jsp");
+		} else if (target.equals("get_authentication_number")) {  			// 문자로 인증번호 보내기 
+			result = new SendSMSController().execute(req, resp);		 
+		} else if (target.equals("find_account")) {							// 계정 찾기 + 분기 처리 
 			result = new findAccountOkController().execute(req, resp);
-		} else if ( target.equals("go_to_main") ) {
-			// 메인으로 가기 전에 req초기화
-			result = new GotoMainController().execute(req, resp);
-		} else if ( target.equals("find_paassword") ) {
-			result = new FindPasswordController().execute(req, resp);
-		} // -------------------------------- 김동엽 ----------------------------
+		} else if (target.equals("find_paassword")) {						// 비밀번호 재설정 이베일 발송과 이메일 발송 완료 페이지 출력
+			result = new SendEmailOkController().execute(req, resp);
+		} else if (target.equals("reset_password")) { 						// 비밀 번호 재설정 페이지로 이동 
+			result = new ResetPasswordController().execute(req, resp);
+		} else if (target.equals("reset_passwordOk")) { 					// 비밀번호 재설정 
+			result = new ResetPasswordOkController().execute(req, resp);
+		} else if (target.equals("reset_password_next")) {
+			result = new Result();
+			result.setPath("/templates/findPassword/finded-password.jsp");
+		}
+//		------------------------------------------- 김동엽 ------------------------------------------
 		
 		// -------------------------------- 정유진 ----------------------------
 		else if (target.equals("mypageOk")) {

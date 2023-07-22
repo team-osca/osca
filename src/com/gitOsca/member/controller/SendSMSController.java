@@ -16,19 +16,17 @@ import com.gitOsca.Result;
 import net.nurigo.java_sdk.api.Message;
 import net.nurigo.java_sdk.exceptions.CoolsmsException;
 
-public class AuthenticationNumberController implements Action {
+public class SendSMSController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-//		ÀÎÁõ¹øÈ£ ÀÀ´ä È­¸é ÂÊÀ¸·Î º¸³»±â
 		resp.setCharacterEncoding("UTF-8");
-		resp.setContentType("text.html; charset=utf-8");
+		resp.setContentType("text/html; charset=utf-8");
 		PrintWriter out = resp.getWriter();
 		final int MIN = 1000;
 		final int MAX = 9999;
 		String randomNumber = Integer.toString((int) (Math.random() * (MAX - MIN + 1)) + MIN);
 		out.print(randomNumber);
 
-//		ÀÎÁõ¹øÈ£ SMS·Î º¸³»±â
 //		String phoneNumber = req.getParameter("phoneNumber").replace("-", "").trim();
 //		String api_key = "NCSLHZBRFR5JZIGX"; 
 //		String api_secret = "TMWIDCSYTTIWBNNP4PDQFBM2S5T2F8HY";
@@ -38,7 +36,7 @@ public class AuthenticationNumberController implements Action {
 //		params.put("to", phoneNumber);
 //		params.put("from", "01076501147");
 //		params.put("type", "SMS");
-//		params.put("text", "¿À½ºÄ« ÀÎÁõ¹øÈ£´Â " + randomNumber + " ÀÔ´Ï´Ù.");
+//		params.put("text", "ì˜¤!ìŠ¤ì¹´ì˜ ì¸ì¦ë²ˆí˜¸ëŠ” " + randomNumber + " ì…ë‹ˆë‹¤.");
 //		params.put("app_version", "test app 1.2"); // application name and version
 //
 //		try {

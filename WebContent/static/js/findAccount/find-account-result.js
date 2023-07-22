@@ -13,7 +13,7 @@ $('.prebtn').click(function(){
 // ------------------ 메인으로 돌아가기 버튼 클릭 이벤트 ----------------
 
 $('#go-to-main').click(function() {
-	let link = contextPath + "/go_to_main.member";
+	let link = contextPath + "/sign_infind_account.member";
 	location.href = link;
 });
 

@@ -15,10 +15,22 @@ public class MemberDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
-	// ���� ã��
-	public String selectAccount(String phoneNumber) {
-	 return sqlSession.selectOne("member.selectAccount", phoneNumber);
-	}
+	 // ---------------------------- 김동엽 -------------------------------------
+		// 계정 찾기 (이메일을 반환)
+		public String selectAccount(String phoneNumber) {
+			return sqlSession.selectOne("member.selectAccount", phoneNumber);
+		}
+
+		// 사용자 이름 찾기
+		public String selectUserName(String eMail) {
+			return sqlSession.selectOne("member.selectUserName", eMail);
+		}
+
+		public void updatePassword(HashMap<String, String> map) {
+			sqlSession.update("member.updatePassword", map);
+		}
+		
+	// ---------------------------- 김동엽 -------------------------------------
 	
 //	아이디로 member 내용 찾기
 	public Optional<MemberVO> findById(Long id){
