@@ -63,6 +63,8 @@ public class StudyDAO {
 		sqlSession.insert("study.postStudies", studyVO);
 	}
 	
-	
+	public int countApplicants(Long id) {
+		return sqlSession.selectOne("study.countApplicants", id);
+	}
 }
 

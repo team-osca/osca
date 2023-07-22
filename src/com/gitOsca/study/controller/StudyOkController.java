@@ -29,7 +29,7 @@ public class StudyOkController implements Action{
 		PrintWriter out = response.getWriter();
 		JSONArray jsonArray = new JSONArray();
 		
-		System.out.println("ì—¬ê¸°ë„ ì•„ë¬´ê±°ë‚˜");
+		System.out.println(" —¬ê¸°ë„  •„ë¬´ê±° ‚˜");
 		
 		if (type == WHOLE_STUDY) {
 			studyDAO.getWholeStudies(id).stream().map(JSONObject::new).forEach(jsonArray::put);

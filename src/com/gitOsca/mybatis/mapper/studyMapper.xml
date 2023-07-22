@@ -63,6 +63,11 @@
 		select general_career from tbl_general
 		where member_id = #{id}
 	</select>
+	
+	<select id="countApplicants" resultType="_int">
+		select count(study_applicant_id) from tbl_study_applicant
+		where study_id = #{id}
+	</select>
 
 </mapper>
 

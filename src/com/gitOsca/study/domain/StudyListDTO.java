@@ -13,16 +13,18 @@ public class StudyListDTO {
 	private JobVO jobVO;
 	private List<SkillVO> skillVO;
 	private StudyImageVO studyImageVO;
+	private int numberOfApplicants;
 	
 	public StudyListDTO() {;}
 
 	public StudyListDTO(StudyVO studyVO, GeneralVO generalVO, JobVO jobVO, List<SkillVO> skillVO,
-			StudyImageVO studyImageVO) {
+			StudyImageVO studyImageVO, int numberOfApplicants) {
 		this.studyVO = studyVO;
 		this.generalVO = generalVO;
 		this.jobVO = jobVO;
 		this.skillVO = skillVO;
 		this.studyImageVO = studyImageVO;
+		this.numberOfApplicants = numberOfApplicants;
 	}
 
 	public StudyVO getStudyVO() {
@@ -64,6 +66,15 @@ public class StudyListDTO {
 	public void setStudyImageVO(StudyImageVO studyImageVO) {
 		this.studyImageVO = studyImageVO;
 	}
+	
+
+	public int getNumberOfApplicants() {
+		return numberOfApplicants;
+	}
+
+	public void setNumberOfApplicants(int numberOfApplicants) {
+		this.numberOfApplicants = numberOfApplicants;
+	}
 
 	@Override
 	public int hashCode() {
@@ -93,8 +104,9 @@ public class StudyListDTO {
 	@Override
 	public String toString() {
 		return "StudyListDTO [studyVO=" + studyVO + ", generalVO=" + generalVO + ", jobVO=" + jobVO + ", skillVO="
-				+ skillVO + ", studyImageVO=" + studyImageVO + "]";
+				+ skillVO + ", studyImageVO=" + studyImageVO + ", numberOfApplicants=" + numberOfApplicants + "]";
 	}
+
 	
 	
 	

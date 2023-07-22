@@ -32,15 +32,15 @@ public class StudyListOkController implements Action{
 			.getListInfoForStudyVO()
 			.stream()
 			.map((study)->{
+				int numberOfApplicants = studyDAO.countApplicants(study.getId());
 				GeneralVO generalVO = studyDAO.getListInfoForGeneralVO(study.getMemberId());
 				JobVO jobVO = studyDAO.getListInfoForJobVO(study.getMemberId());
 				List<SkillVO> skillVO = studyDAO.getListInfoForSkillVO(study.getId());
 				StudyImageVO studyImageVO = studyDAO.getListInfoForStudyImageVO(study.getId());
-				StudyListDTO studyListDTO = new StudyListDTO(study, generalVO, jobVO, skillVO, studyImageVO);
+				StudyListDTO studyListDTO = new StudyListDTO(study, generalVO, jobVO, skillVO, studyImageVO, numberOfApplicants);
 				return new JSONObject(studyListDTO);
 			})
 			.forEach(jsonArray::put);
-        
         out.print(jsonArray.toString());
 		out.close();
 		return null;

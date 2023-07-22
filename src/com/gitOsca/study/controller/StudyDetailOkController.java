@@ -23,7 +23,7 @@ public class StudyDetailOkController implements Action{
 		
 		response.setContentType("text/html; charset=UTF-8");
 		
-		System.out.println("ë“¤ì–´ì™”ìš°");
+		System.out.println(" “¤ –´ ™” š°");
 		StudyDAO studyDAO = new StudyDAO();
 		
 		PrintWriter out = response.getWriter();

@@ -162,11 +162,11 @@
             </aside>
             <main class="studyPostList_content">
                 <div class="studyPostList_category">
-                    <div class="interest_category">
+                     <div class="interest_category">
                         <div class="interestTagSlide interestCategorySlide">
-                            <div class="scrollSnap scrollSnap_hide interestSlide "><!-- interestSlide_full -->
-                                <div class="scrollSnap_scroll">
-                                    <button class="interest_category_button">
+                            <div class="scrollSnap scrollSnap_hide interestSlide ">
+                                <div class="scrollSnap_scroll" id="region-button-box">
+                                    <!-- <button class="interest_category_button">
                                         <span class="interest_category_button_label">추천</span>
                                         <span class="interest_category_button_interaction"></span>
                                     </button>
@@ -201,7 +201,7 @@
                                     <button class="interest_category_button not_select">
                                         <span class="interest_category_button_label">서비스기획</span>
                                         <span class="interest_category_button_interaction"></span>
-                                    </button>
+                                    </button> -->
                                 </div>
                                 <div class="tagSlide_arrow tagSlide_leftArrow">
                                     <button type="button">
@@ -229,7 +229,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="studyPostList_body">
+                <div class="studyPostList_body"> 
  	               <%-- study.js --%> 
  	            </div>
            </main>
@@ -248,6 +248,7 @@
 			dataType: "json",
 			success: function(datas){
 				datas.forEach((data)=>{
+					console.log(data)
 					$studyPostList.append(studyPostList(data));
 					if(data.skillVO.length != 0){		
 						data.skillVO.forEach((skill)=>{
@@ -261,6 +262,29 @@
 			}
 		});
 	}
+	
+	const REGION = ["전체", "서울","경기","인천","대전","대구","부산","광주","울산","강원","전남","전북","경남","경북","충남","충북","제주"];
+	
+	function init_region_button() {
+		   /*style="color: #3366FF;  --button-color: #3366FF;"*/
+		   REGION.forEach((data) => {
+		      $('#region-button-box').append(`
+		         <button class="interest_category_button not_select">
+		                <span class="interest_category_button_label">` + data + `</span>
+		                <span class="interest_category_button_interaction"></span>
+		            </button>
+		      `)
+		   })
+		   /*
+		   $('.region-button').on('click', function() {
+		      getCafeList($(this).children('.region-button-contentButton').text())
+		   })
+		   */
+		};
+		
+		init_region_button();
+	
+
 	
 	
 </script>
