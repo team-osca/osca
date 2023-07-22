@@ -24,14 +24,17 @@
                 <div class="box">
                     <div class="title">
                         <div class="back">
-                            <button type="button" class="go-back">
+                         <form  action="${pageContext.request.contextPath}/signOrLogin.member">
+                            <button type="submit" class="go-back">
                                 <span class="back-container">
                                     <svg viewBox="0 0 18 18" class="back-arrow">
                                         <path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path>
                                     </svg>
                                 </span>
                             </button>
+                               </form>
                         </div>
+                    
                         <div class="email-login">
                             <p data-test-id="Typography" color="var(--theme-palette-colors-black-100)" class="login-title">이메일로 로그인</p>
                         </div>

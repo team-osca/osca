@@ -42,7 +42,7 @@
                                 <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="keep">이메일로 계속하기</span>
                             </button>
                             <p data-testid="Typography" color="var(--theme-palette-colors-gray-500)" class="else">또는</p>
-                            <div class="icons">
+                        <%--  <div class="icons">
                                 <button type="button"  class="apple-login">
                                     <span class="apple-account">
                                         <svg viewBox="0 0 57 56" class="apple-link">
@@ -72,7 +72,7 @@
                                     </span>
                                     <p color="var(--theme-palette-colors-gray-600)" class="opt3">Kakao</p>
                                 </button>
-                            </div>
+                            </div>--%>   
                             <button class="forgot">
                                 <p  color="var(--theme-palette-colors-gray-700)" class="forgot-account">계정을 잊으셨나요?<span class="find">
                                     <svg viewBox="0 0 12 12" color="var(--theme-palette-colors-gray-600)" class="find-account">

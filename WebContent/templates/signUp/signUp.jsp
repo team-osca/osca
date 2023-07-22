@@ -20,11 +20,13 @@
             <div class="area">
                 <div class="areabox">
                     <div class="title">
+                    <form  action="${pageContext.request.contextPath}/signOrLogin.member">
                         <div class="cancel">
-                            <button tyoe="button" class="cancelbtn">
+                            <button type="sumbit" class="cancelbtn" id="cancelbtn">
                                 <p color="var(--theme-palette-colors-black-100)" class="cancellation">취소</p>
                             </button>
                         </div>
+                        </form>
                         <div class="signuptitle">
                             <p color="var(--theme-palette-colors-black-100)" class="signuppage">회원가입</p>
                         </div>

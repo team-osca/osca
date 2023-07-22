@@ -26,12 +26,14 @@ public class LoginOkController implements Action {
 		String memberPassword = req.getParameter("password");
 		Long  id = 0L;
 		String memberRole = null;
+		String memberName =  null;
 		Result result = new Result();
 		result.setRedirect(true);
 		System.out.println(memberPassword);
 //		전달받은 아이디와 비밀번호로 회원 번호 조회
 		 id = memberDAO.login(memberEmail, memberPassword);
 		 memberRole = memberDAO.findMemberRoleById(id);
+		 memberName = memberDAO.findById(id).get().getMemberName();
 
 //		회원 번호가 없다면
 		if( id == null) {
@@ -43,6 +45,9 @@ public class LoginOkController implements Action {
 //			세션에 로그인된 회원의 번호 저장
 			session.setAttribute("memberId",  id);
 			session.setAttribute("memberRole", memberRole);
+			session.setAttribute("memberName", memberName);
+			
+			
 			String rolerole = (String)session.getAttribute("memberRole");
 			System.out.println("세션에 넣은" +rolerole);
 //			메인페이지로으로 이동
@@ -52,4 +57,3 @@ public class LoginOkController implements Action {
 		return result;
 	}
 }
-

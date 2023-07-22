@@ -94,7 +94,7 @@
             </div>
             <div class="padding"></div>
         </header>
-        <main>
+        <main>	
             <section class="section">
                 <div class="topBanner">
                     <div class="slick-slider slick-initialized">
@@ -194,7 +194,7 @@
                         <header class="study-list-header">
                             <div class="study-list-wrapper">
                                 <h2 class="study-title">
-                                    <p>#인기있는 스터디</p>
+                                    <p>#최신 스터디</p>
                                     <img src="https://cdn3.iconfinder.com/data/icons/baby-154/512/book_kid_school_educate_fairy_tale_learning-64.png">
                                     <span>소개합니다</span>
                                 </h2>
@@ -267,7 +267,7 @@
                         <header class="cafe-list-header">
                             <div class="cafe-list-wrapper">
                                 <h2 class="cafe-title">
-                                    <p>#인기있는 카페</p>
+                                    <p>#새로운 카페</p>
                                     <img src="https://cdn0.iconfinder.com/data/icons/set-02-coffee-colors-doodle/91/Coffee_Doodle_Colors_97-64.png">
                                     <span>소개합니다</span>
                                 </h2>
