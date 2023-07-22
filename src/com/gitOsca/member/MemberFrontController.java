@@ -62,38 +62,35 @@ public class MemberFrontController extends HttpServlet {
 		
 		// -------------------------------- 선희원 ----------------------------
 		else if(target.equals("emailCheck")){
-		System.out.println("멤버 프론트 콘트롤러 이멜 쳌");
-		result = new CheckEmailOkController().execute(req,resp);
+			result = new CheckEmailOkController().execute(req,resp);
 		}
-		else if ( target.equals("password") ) {
-			System.out.println("비번입력 쳌");
-			result = new Result();
-			result.setPath("templates/login/password.jsp");
-		} 	
-		else if ( target.equals("signUp") ) {
-			System.out.println("signUp 쳌");
-			result = new Result();
-			result.setPath("templates/signUp/signUp.jsp");
-		} 
-		else if(target.equals("LoginOk")) {
-			System.out.println("loginOk 쳌");
-			result = new LoginOkController().execute(req, resp);
-		}
-		else if(target.equals("loginSucess")) {
-			System.out.println("loginSucess 쳌 메인페이지로 이동");
-			result = new Result();
-			result.setPath("/templates/mainPage/mainPage.jsp");
-		}
-		else if(target.equals("SignUpOk")) {
-			System.out.println("SignUpOk 쳌");
-			result = new SignUpOkController().execute(req, resp);
-		}		
-		else if(target.equals("SignUpSucess")) {
-			System.out.println("SignUpSucess 쳌 로긴페이지로 이동");
-			result = new Result();
-			result.setPath("templates/login/login.jsp");
-		}
-		
+			else if ( target.equals("password") ) {
+				result = new Result();
+				result.setPath("templates/login/password.jsp");
+			} 	
+			else if ( target.equals("signUp") ) {
+				result = new Result();
+				result.setPath("templates/signUp/signUp.jsp");
+			} 
+			else if(target.equals("LoginOk")) {
+				result = new LoginOkController().execute(req, resp);
+			}
+			else if(target.equals("loginSucess")) {
+				result = new Result();
+				result.setPath("/templates/mainPage/mainPage.jsp");
+			}
+			else if(target.equals("SignUpOk")) {
+				result = new SignUpOkController().execute(req, resp);
+			}		
+			else if(target.equals("SignUpSucess")) {
+				result = new Result();
+				result.setPath("templates/login/login.jsp");
+			}
+			else if(target.equals("signOrLogin")) {
+				result = new Result();
+				result.setPath("templates/login/login.jsp");
+			}
+			
 		// ---------------------------------- 선희원 ------------------------------------
 
 		if (result != null) {
