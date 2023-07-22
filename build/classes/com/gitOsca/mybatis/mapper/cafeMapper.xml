@@ -18,6 +18,7 @@
 		order by id desc
 	</select>
 	
+<<<<<<< HEAD
 	<select id="findById" resultType="com.gitOsca.cafe.domain.CafeVO">
 		select 
 			id, ceo_id, cafe_title, cafe_contents, cafe_open_time, cafe_end_time, cafe_regist_date, cafe_update_date
@@ -25,4 +26,13 @@
 		where id = #{id}
 	</select>
 	
+=======
+	<select id="findAllById" resultType="com.gitOsca.cafe.domain.CafeVO">
+		select 
+			id, ceo_id, cafe_title, cafe_contents, cafe_open_time, cafe_end_time, cafe_regist_date, cafe_update_date
+		from tbl_cafe cafe
+		where ceo_id = #{id}
+		order by id desc
+	</select>
+>>>>>>> cafe/myCafe_list
 </mapper>

@@ -11,7 +11,6 @@ public class CafeDTO {
 	private String cafeContents;
 	private String cafeOpenTime;
 	private String cafeEndTime;
-	private String cafeRegistDate;
 	private String cafeUpdateDate;
 	private Long ceoId;
 	private CeoVO ceoVO;
@@ -25,7 +24,6 @@ public class CafeDTO {
 		this.cafeContents = cafeVO.getCafeContents();
 		this.cafeOpenTime = cafeVO.getCafeOpenTime();
 		this.cafeEndTime = cafeVO.getCafeEndTime();
-		this.cafeRegistDate = cafeVO.getCafeRegistDate();
 		this.cafeUpdateDate = cafeVO.getCafeUpdateDate();
 		this.ceoId = cafeVO.getCeoId();
 	}
@@ -68,14 +66,6 @@ public class CafeDTO {
 
 	public void setCafeEndTime(String cafeEndTime) {
 		this.cafeEndTime = cafeEndTime;
-	}
-
-	public String getCafeRegistDate() {
-		return cafeRegistDate;
-	}
-
-	public void setCafeRegistDate(String cafeRegistDate) {
-		this.cafeRegistDate = cafeRegistDate;
 	}
 
 	public String getCafeUpdateDate() {
@@ -138,9 +128,8 @@ public class CafeDTO {
 	@Override
 	public String toString() {
 		return "CafeDTO [Id=" + Id + ", cafeTitle=" + cafeTitle + ", cafeContents=" + cafeContents + ", cafeOpenTime="
-				+ cafeOpenTime + ", cafeEndTime=" + cafeEndTime + ", cafeRegistDate=" + cafeRegistDate
-				+ ", cafeUpdateDate=" + cafeUpdateDate + ", ceoId=" + ceoId + ", ceoVO=" + ceoVO + ", cafeImages="
-				+ cafeImages + "]";
+				+ cafeOpenTime + ", cafeEndTime=" + cafeEndTime + ", cafeUpdateDate=" + cafeUpdateDate + ", ceoId=" 
+				+ ceoId + ", ceoVO=" + ceoVO + ", cafeImages=" + cafeImages + "]";
 	}
 
 }

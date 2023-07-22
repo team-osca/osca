@@ -8,73 +8,133 @@ public class CafeVO {
 	private String cafeEndTime;
 	private String cafeRegistDate;
 	private String cafeUpdateDate;
+	private String cafeDeadlineDate;
+	private String status;
 	private Long ceoId;
 	
 	public CafeVO() {;}
+
+	
 
 	public Long getId() {
 		return Id;
 	}
 
+
+
 	public void setId(Long id) {
 		Id = id;
 	}
+
+
 
 	public String getCafeTitle() {
 		return cafeTitle;
 	}
 
+
+
 	public void setCafeTitle(String cafeTitle) {
 		this.cafeTitle = cafeTitle;
 	}
+
+
 
 	public String getCafeContents() {
 		return cafeContents;
 	}
 
+
+
 	public void setCafeContents(String cafeContents) {
 		this.cafeContents = cafeContents;
 	}
+
+
 
 	public String getCafeOpenTime() {
 		return cafeOpenTime;
 	}
 
+
+
 	public void setCafeOpenTime(String cafeOpenTime) {
 		this.cafeOpenTime = cafeOpenTime;
 	}
+
+
 
 	public String getCafeEndTime() {
 		return cafeEndTime;
 	}
 
+
+
 	public void setCafeEndTime(String cafeEndTime) {
 		this.cafeEndTime = cafeEndTime;
 	}
+
+
 
 	public String getCafeRegistDate() {
 		return cafeRegistDate;
 	}
 
+
+
 	public void setCafeRegistDate(String cafeRegistDate) {
 		this.cafeRegistDate = cafeRegistDate;
 	}
+
+
 
 	public String getCafeUpdateDate() {
 		return cafeUpdateDate;
 	}
 
+
+
 	public void setCafeUpdateDate(String cafeUpdateDate) {
 		this.cafeUpdateDate = cafeUpdateDate;
 	}
+
+
+
+	public String getCafeDeadlineDate() {
+		return cafeDeadlineDate;
+	}
+
+
+
+	public void setCafeDeadlineDate(String cafeDeadlineDate) {
+		this.cafeDeadlineDate = cafeDeadlineDate;
+	}
+
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+
 
 	public Long getCeoId() {
 		return ceoId;
 	}
 
+
+
 	public void setCeoId(Long ceoId) {
 		this.ceoId = ceoId;
 	}
+
+
 
 	@Override
 	public int hashCode() {
@@ -105,8 +165,12 @@ public class CafeVO {
 	public String toString() {
 		return "CafeVO [Id=" + Id + ", cafeTitle=" + cafeTitle + ", cafeContents=" + cafeContents + ", cafeOpenTime="
 				+ cafeOpenTime + ", cafeEndTime=" + cafeEndTime + ", cafeRegistDate=" + cafeRegistDate
-				+ ", cafeUpdateDate=" + cafeUpdateDate + ", ceoId=" + ceoId + "]";
+				+ ", cafeUpdateDate=" + cafeUpdateDate + ", cafeDeadlineDate=" + cafeDeadlineDate + ", status=" + status
+				+ ", ceoId=" + ceoId + "]";
 	}
 
+	
+
+	
 	
 }

@@ -35,9 +35,9 @@
 						<li class=""><a href="" class="">FAQ</a></li>
 						<li class="smMoreVisible"><a href="" class="">오늘의 스터디</a>
 						</li>
-						<li class="smMoreVisible"><a href="/community" class="">오늘의 카페</a>
+						<li class="smMoreVisible"><a href="${pageContext.request.contextPath}/list.cafe" class="">오늘의 카페</a>
 						</li>
-						<li class="smMoreVisible"><a href="/aiscore/resume" class="">내 카페</a></li>
+						<li class="smMoreVisible"><a href="#" class="">내 카페</a></li>
 					</ul>
 					<aside class="aside isLoggedIn">
 						<ul>
@@ -107,8 +107,8 @@
 						<header class="Offers-header">
 							<ul class="List-row">
 								<li class="col col-1">카페명</li>
-								<li class="col col-2">일자</li>
-								<li class="col col-3">상태</li>
+								<li class="col col-2">등록 일자</li>
+								<li class="col col-3">마감 일자</li>
 							</ul>
 						</header>
 						<div class="Offers-empty"></div>
@@ -162,4 +162,10 @@
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/cafe/mycafe.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		
+	})
+</script>
 </html>

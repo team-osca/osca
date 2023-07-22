@@ -9,6 +9,7 @@ function getCafeList(region_info) {
 	const success = success_func;
 	const error = error_func;
 	const ajax_request = { url, dataType, success, error };
+	
 	$.ajax(ajax_request);
 	button_color_change(region_info);
 }
