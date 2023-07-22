@@ -16,41 +16,41 @@ public class LoginOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		System.out.println("로그인 ok 콘트롤러");		
 		MemberDAO memberDAO = new MemberDAO();
+		final int KEY = 3;
 		HttpSession session = req.getSession();
 //		세션의 이멜 들고옴
 		 String memberEmail = (String) req.getSession().getAttribute("userEmail");
-		 System.out.println(memberEmail);
 //		화면에서 사용자가 직접 form태그의 input에 비밀번호를 작성했을 때
-		String memberPassword = req.getParameter("password");
+			String memberPassword = req.getParameter("password");
+			String encryptedPassword = "";
+			for (int i = 0; i < memberPassword.length(); i++) {
+				encryptedPassword += (char)(memberPassword.charAt(i) * KEY);
+			}
 		Long  id = 0L;
 		String memberRole = null;
 		String memberName =  null;
 		Result result = new Result();
 		result.setRedirect(true);
-		System.out.println(memberPassword);
+		 id = memberDAO.login(memberEmail, encryptedPassword);
 //		전달받은 아이디와 비밀번호로 회원 번호 조회
-		 id = memberDAO.login(memberEmail, memberPassword);
-		 memberRole = memberDAO.findMemberRoleById(id);
-		 memberName = memberDAO.findById(id).get().getMemberName();
 
 //		회원 번호가 없다면
 		if( id == null) {
 //			로그인 실패
-//			login.jsp로 이동하면서 실패했다는 login=false를 같이 전달해준다(안내 모달창을 출력하기 위해서)
-			result.setPath(req.getContextPath() + "/login.member?login=false");
+			result.setPath(req.getContextPath() + "/password.member?login=false");
+			req.setAttribute("loginFailed", true);
 		}else {
 //			로그인 성공
 //			세션에 로그인된 회원의 번호 저장
 			session.setAttribute("memberId",  id);
+			
+			 memberRole = memberDAO.findMemberRoleById(id);
+			 memberName = memberDAO.findById(id).get().getMemberName();
 			session.setAttribute("memberRole", memberRole);
 			session.setAttribute("memberName", memberName);
-			
-			
 			String rolerole = (String)session.getAttribute("memberRole");
-			System.out.println("세션에 넣은" +rolerole);
-//			메인페이지로으로 이동
+	//			메인페이지로으로 이동
 			result.setPath(req.getContextPath() + "loginSucess.member");
 
 	}

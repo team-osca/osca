@@ -91,6 +91,29 @@
                         </section>
                     </nav>
                 </div>
+                    <!-- 프로필 이미지 클릭 시  -->
+                    <div class="modal">
+                    <form action="${pageContext.request.contextPath}/logout.member">
+					 <div class="MenuPopover">
+					    <div class="MenuPopWrapper">
+					      <ul class="MenuPopover_list">
+					        <li class="">
+					          <a href="" class="">
+					          <span>마이 페이지</span>
+					          </a>
+					        </li>
+					        <li>
+					          <button type="submit" class="is-logout">
+					            <span>로그아웃</span>
+					          </button>
+					        </li>
+					      </ul>
+					    </div>
+					    <div class="MenuPopover_bubblePoint"></div>
+					  </div> 
+					  </form>
+					  </div>
+  <!-- 프로필 이미지 클릭 시 끝  -->
             </div>
             <div class="padding"></div>
         </header>
