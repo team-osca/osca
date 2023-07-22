@@ -19,14 +19,9 @@ public class CafeDAO {
 		return sqlSession.selectList("cafe.findAllByLocation", location);
 	}
 	
-<<<<<<< HEAD
+
 	public Optional<CafeVO> findById(Long id) {
 		return Optional.ofNullable(sqlSession.selectOne("cafe.findById", id));
 	}
-=======
-	public CafeVO findById(Long id) {
-		return sqlSession.selectOne("cafe.findById", id);
-	}
 	
->>>>>>> cafe/myCafe_list
 }

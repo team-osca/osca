@@ -14,7 +14,6 @@ import com.gitOsca.Action;
 import com.gitOsca.Result;
 import com.gitOsca.cafe.dao.CafeDAO;
 import com.gitOsca.cafe.domain.CafeDTO;
-import com.gitOsca.cafe.domain.CafeVO;
 import com.gitOsca.cafeImage.dao.CafeImageDAO;
 import com.gitOsca.ceo.dao.CeoDAO;
 
