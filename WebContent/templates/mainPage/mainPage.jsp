@@ -365,7 +365,7 @@
                 </article>
             </section>
             <footer class="footer">
-                <div class="footer-rowClass"> 
+             	   <div class="footer-rowClass wanted"> 
                     <div class="nav-links">
                         <a class="nav-links-logo" href="https://www.wanted.co.kr/">
                             <svg width="31.4%" height="100%" viewBox="0 0 79 32">
@@ -422,7 +422,7 @@
         </main>
         <div></div>
         <div></div>
-    </div>
+    </div>	
 </body>
 <script src="${pageContext.request.contextPath}/static/js/mainPage/mainPage_uheejoonVer.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/mainPage/mainPage_login_status.js"></script>

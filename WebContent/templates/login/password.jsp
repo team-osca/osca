@@ -38,7 +38,7 @@
                                 </span>
                             </button>
                                </form>
-                        </div>s
+                        </div>
                         <div class="email-login">
                             <p data-test-id="Typography" color="var(--theme-palette-colors-black-100)" class="login-title">이메일로 로그인</p>
                         </div>

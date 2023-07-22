@@ -13,6 +13,8 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css" as="style">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/signUp/signUp.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
+   
 </head>
 <body style="overflow: unset;">
     <div id="signup">
@@ -20,18 +22,28 @@
             <div class="area">
                 <div class="areabox">
                     <div class="title">
-                    <form  action="${pageContext.request.contextPath}/signOrLogin.member">
+                        <!--   뒤로가기 버튼   -->
+                    <form action="${pageContext.request.contextPath}/signOrLogin.member"  style="
+						    display: flex;
+						    /* flex: 1 1 0%; */
+						    -webkit-box-pack: center;
+						    justify-content: center;
+						    -webkit-box-align: center;
+						    align-items: center;
+						">
                         <div class="cancel">
                             <button type="sumbit" class="cancelbtn" id="cancelbtn">
                                 <p color="var(--theme-palette-colors-black-100)" class="cancellation">취소</p>
                             </button>
                         </div>
                         </form>
+<!--   회원가입   -->
                         <div class="signuptitle">
                             <p color="var(--theme-palette-colors-black-100)" class="signuppage">회원가입</p>
                         </div>
                         <div class="blank"></div>
                     </div>
+                    <!--   회원가입   입력창-->
                     <div class="formbox">
       				<form action="${pageContext.request.contextPath}/SignUpOk.member">
                             <div>
@@ -43,11 +55,13 @@
                             <div class="box">
                                 <label color="var(--theme-palette-colors-gray-600)" for="username" class="label">이름</label>
                             </div>
+                            <!--   이름   입력창-->
                             <input type="text" placeholder="이름을 입력해주세요." name="memberName" class="form-input" value>
                             <div class="phonenumber">
                                 <label color="var(--theme-palette-colors-gray-600)" for="mobile" class="label">휴대폰 번호</label>
                             </div>
                             <div>
+
                                 <div class="country">
                                     <select class="countrylist">
                                         <option value="KR">South Korea +82</option>
@@ -64,22 +78,40 @@
                                         </span>
                                     </div>
                                 </div>
+                                              
                                 <div class="number">
-                                    <input type="text" placeholder="(예시)01013245768" name="memberPhone" class="putnumber" value>
-                                    <button type="button" class="verificationbtn" disabled>
+                            <!--  번호   입력창-->
+                                         
+                                    <input type="text" placeholder="(예시)01013245768" name="memberPhone" class="putnumber" id="phoneNumber-input" value>
+            
+                            <!--  인증번호 받기 번호   버튼-->
+                                    <button type="button" class="verificationbtn" id= "AuthenticationNumberBtn" disabled>
                                         <span color="var(--theme-palette-colors-black-100)" class="getverification">인증번호 받기</span>
                                     </button>
                                 </div>
-                                <div class="verification">
-                                    <input type="text" placeholder="인증번호를 입력해주세요." name="authCode" readonly class="authenticationcode" value>
-                                </div>
+                                  <p color="var(--theme-palette-colors-red-400)" class="isnot-a-phonenumber">올바른 전화번호를 입력해주세요.</p>
+                         <!--  인증번호 입력-->
+                                <div class="verification check-phonenumber-wrapper">
+                                    <input type="text" placeholder="인증번호를 입력해주세요." id="input-authCode" name="authCode" readonly class="authenticationcode check-phonenumber" value>
+                             <button type="button" class="certification-Btn">
+      					<span
+        					color="var(--theme-palette-colors-black-100)"
+        					class="certification-Number-Btn-span"
+        					>인증하기
+        				</span>
+    				</button>
+    				    </div><p var(--theme-palette-colors-blue-400) class="Authentication-Number-Guide">인증번호가 요청되었습니다.</p>
                             </div>
                             <div>
                                 <label color="var(--theme-palette-colors-gray-600)" for="password" class="label">비밀번호</label>
                             </div>
-                            <input type="password" placeholder="비밀번호를 입력해주세요." name="memberPassword" class="passwordbox" value>
-                            <input type="password" placeholder="비밀번호를 다시 한번 입력해주세요." name="passwordConfirm" class="passwordbox" value>
+                               <!--  비밀번호 입력-->
+                            <input type="password" placeholder="비밀번호를 입력해주세요." name="memberPassword" class="passwordbox" id="pw-input" value>
+                                            <p id="check-pw-msg" color="var(--theme-palette-colors-red-400)" class="pw-error">올바르지 않은 비밀번호입니다.</p>
+                                            <input type="password" placeholder="비밀번호를 다시 한번 입력해주세요." name="passwordConfirm" class="passwordbox" id="pw-input-check" value>
+                                                                    <p id="not-eq-err" color="var(--theme-palette-colors-red-400)" class="pw-error">비밀번호가 서로 일치하지 않습니다.</p>
                             <p color="var(--theme-palette-colors-gray-600)" class="description">영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합해 8자 이상 16자 이하로 입력해주세요.</p>
+
                             <!-- 회원 유형  -->
                             <div>
                             <div class="box">
@@ -110,7 +142,7 @@
                                         </svg>
                                     </span>
                                 </div>
-
+   <!--  체크박스 -->
                                 <input type="checkbox" name="is_agree_all" class="checkbox">
                                 <div class="content">
                                     <p color="var(--theme-palette-colors-gray-900)" class="agree-all">전체 동의</p>
@@ -201,19 +233,45 @@
                                     <p color="var(--theme-palette-colors-gray-600)" class="mean">문자 메시지</p>
                                 </label>
                             </div>
+                               <!--  가입 버튼 -->
                             <div class="complete">
                                 <div class="completebox"></div>
                                 <div class="upper-padding"></div>
-                                <button type="submit" disabled class="submission" name="finishButton">
+                                <button  type="button" disabled class="submission" name="finishButton">
                                     <span color="var(--theme-palette-colors-black-100)" class="signupcomplete">가입하기</span>
                                 </button>
                             </div>
+                               <!--  모달창    --> 
+         <div class="modal_area1">
+      <div class="modal1">
+        <div class="modal_message1">
+          <div class="content11">
+            <p class="upper-text1">가입이 완료되었어요!</p>
+            <img class="firework1" src="https://cdn4.iconfinder.com/data/icons/carnival-and-amusement-flat-colors/64/confetti-64.png">
+          </div>
+          <div class="content21">
+            <p class="bottom-text1">오!스카의 멤버가 되신 것을 축하합니다.</p>
+          </div>
+        </div>
+        <div class="modal_button1">
+          <button type="submit" class="more1">
+            <span color="var(--theme-palette-colors-black-100)" class="button-text1">로그인하기</span>
+          </button>
+        </div>
+      </div>
+    </div>
+		
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+                          
+    
 </body>
+  <script>
+  	let contextPath = "${pageContext.request.contextPath}"
+  </script>
 <script src="${pageContext.request.contextPath}/static/js/signUp/signUp.js"></script>
 </html>
