@@ -28,7 +28,6 @@ public class SettingOkController implements Action {
 			result.setPath("templates/member/mypage/setting.jsp");			
 		}else {
 			result.setRedirect(true);
-			result.setPath(request.getContextPath() + "/login.member");
 		}
 		return result;
 	}

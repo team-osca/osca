@@ -117,4 +117,21 @@
     </div>
 </body>
 <script src="${pageContext.request.contextPath}/static/js/member/mypage/withdraw.js"></script>
+<script>
+$(".withdrawBtn").click(function(){
+	let id=1;
+	$.ajax({
+	    type : "POST", 
+	    url : "/deleteOk.general", 
+        data : {'id':id},
+		success:function(){
+			alert("회원탈퇴 완료됨")	;	
+		},
+		error:function(){
+			alert("다시시도")	;	
+		}
+	});
+});
+
+</script>
 </html>

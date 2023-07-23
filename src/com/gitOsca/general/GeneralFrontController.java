@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.gitOsca.Result;
-import com.gitOsca.general.controller.InsertOkController;
+	import com.gitOsca.general.controller.InsertOkController;
 import com.gitOsca.general.controller.MyPageOkController;
 import com.gitOsca.general.controller.UpdateOkController;
 
@@ -29,7 +29,7 @@ public class GeneralFrontController extends HttpServlet{
 //		기본 이력서 내용 업데이트 하기
 		} else if (target.equals("updateOk")) {
 			result = new UpdateOkController().execute(req, resp);
-		} 
+		}
 		
 		
 		if(result != null) {

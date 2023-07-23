@@ -53,7 +53,7 @@
             <div class="select-container selected">
                 <h6>경력</h6>
                 <div class="select_box">
-                    <select>
+                    <select name="career">
                         <option value="----default----" hidden="" disabled="">선택하기</option>
                         <option value="0">신입</option>
                         <option value="1">1 년</option>
@@ -93,9 +93,20 @@
         </div>
     </div>
     <footer class="formFooter footer_ isChild">
-        <button type="button" >확인</button>
+        <button id="check_bt" type="button" >확인</button>
     </footer>
 </div>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/member/mypage/edit/skillEdit.js"></script>
+<script>
+$("#check_bt").click(function(){
+	var $career=$("select[name='career']").val();
+	let memberId=1;
+$.ajax({
+	    type : "POST", 
+	    url : "/updateOk.general", 
+        data : {'memberId':memberId,'generalCareer':$career}
+	});
+});
+</script>
 </body>
 </html>

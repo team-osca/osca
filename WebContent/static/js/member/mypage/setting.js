@@ -9,22 +9,37 @@ $updateContent = $('.update_content');
 $settingContainer.on('click', showModal);
 
 $lastSettingContainer.on('click', function () {
-    window.location.href = 'http://localhost:8090/templates/member/mypage/withdraw.jsp';
+    window.location.href = 'http://localhost:8090/withdrawOk.member';
 });
 
 $inputFile.on('change', function(){
     
 })
 
+function nameChange(){
+	var $name=$('#name_change').val();
+	console.log("$name");
+	let id=1;
+	$.ajax({
+	    type : "get", // HTTP method type(GET, POST) 형식이다. --> 데이터 전송 타입
+	    url : "/updateOk.member",  // 컨트롤러에서 대기중인 URL 주소이다. --> 데이터를 주고받을 파일 주소 입력
+        data : {'id':id,'memberName':$name},
+        error:function(){
+	   	location.reload();}
+	});
+}
+
 function showModal() {
     modalData[this.id]();
+    $('#name_change').attr('value', nameeeee);
+    $('#change_bt').click(nameChange);
     $body.css('overflow', 'hidden');
-	
 	if(this.id != 'NAME_CHANGE'){
     	$('.submit_button').attr('disabled', true);
 	}
     $('.cansel_button, .exit_svg_box').on('click', hideModal);
 }
+
 function hideModal(){
     $('.modal_area').remove();
     $body.css('overflow', 'unset');
@@ -70,13 +85,13 @@ const NAME_MODAL = (
             <div class="modal_content_area">
                 <form>
                     <div class="modal_input_area">
-                        <input type="text" placeholder="이름을 입력해주세요." name="username" class="modal_input" value="유희준">
+                        <input type="text" placeholder="이름을 입력해주세요." class="modal_input" id="name_change" value="">
                     </div>
                     <div class="modal_button_area">
-                        <button type="button"  class="cansel_button">
+                        <button type="button" class="cansel_button">
                             <span color="var(--theme-palette-colors-black-100)" class="button_text">취소</span>
                         </button>
-                        <button type="submit"  class="submit_button">
+                        <button type="submit" class="submit_button" id="change_bt">
                             <span color="var(--theme-palette-colors-black-100)" class="button_text">저장</span>
                         </button>
                     </div>
@@ -130,7 +145,7 @@ const PHONE_MODAL = (
                             <span color="var(--theme-palette-colors-black-100)" class="button_text">취소</span>
                         </button>
                         <button type="submit" class="submit_button">
-                            <span color="var(--theme-palette-colors-black-100)" class="button_text">저장</span>
+                            <span color="var(--theme-palette-colors-black-100)" id="submit">저장</span>
                         </button>
                     </div>
                 </form>
