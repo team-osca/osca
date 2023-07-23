@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,6 +12,7 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" as="style">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findPassword/reset-password-base.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findPassword/reset-password.css" />
     <title>비밀번호 변경</title>
@@ -41,10 +44,10 @@
               <div class="padding"></div>
             </div>
             <div class="form-wrapper">
-              <form>
+              <form action="reset_passwordOk.member" method="post">
+              	<div><input type="hidden" name=e_mail value="${requestScope.e_mail}"/></div>
                 <div class="new-password-wrapper">
                   <label
-                    data-testid="Typography"
                     color="var(--theme-palette-colors-gray-600)"
                     class="new-password-label"
                     >새 비밀번호</label
@@ -53,8 +56,7 @@
                 <input
                   id="pw-input"
                   type="password"
-                  placeholder="새 비밀번호를 입력해주세요."
-                  name="password"
+                  placeholder="새 비밀번호를 입력해주세요."                  
                   class="new-password"
                   aria-autocomplete="list"
                 />
@@ -62,8 +64,8 @@
                 <input
                   id="pw-input-check"
                   type="password"
+                  name="password"
                   placeholder="새 비밀번호를 다시 한번 입력해주세요."
-                  name="passwordConfirm"
                   class="new-password"
                 />
                 <p id="not-eq-err" color="var(--theme-palette-colors-red-400)" class="pw-error">비밀번호가 서로 일치하지 않습니다.</p>
@@ -89,5 +91,8 @@
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="${pageContext.request.contextPath}/static/findPassword/js/reset-password.js"></script>
+  <script>	
+  	let contextPath = "${pageContext.request.contextPath}";
+  </script>
+  <script src="${pageContext.request.contextPath}/static/js/findPassword/reset-password.js"></script>
 </html>

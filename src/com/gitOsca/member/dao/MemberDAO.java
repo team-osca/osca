@@ -15,16 +15,28 @@ public class MemberDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
-	// ���� ã��
-	public String selectAccount(String phoneNumber) {
-	 return sqlSession.selectOne("member.selectAccount", phoneNumber);
-	}
+	 // ---------------------------- 김동엽 -------------------------------------
+		// 계정 찾기 (이메일을 반환)
+		public String selectAccount(String phoneNumber) {
+			return sqlSession.selectOne("member.selectAccount", phoneNumber);
+		}
+
+		// 사용자 이름 찾기
+		public String selectUserName(String eMail) {
+			return sqlSession.selectOne("member.selectUserName", eMail);
+		}
+
+		public void updatePassword(HashMap<String, String> map) {
+			sqlSession.update("member.updatePassword", map);
+		}
+		
+	// ---------------------------- 김동엽 -------------------------------------
 	
-//	����������
+//	아이디로 member 내용 찾기
 	public Optional<MemberVO> findById(Long id){
 		return Optional.ofNullable(sqlSession.selectOne("member.findById", id));
 	}
-	
+	// ---------------------------- 선희원 -------------------------------------
 //	이메일 중복검사
 	public String selectEmail(String memberEmail) {
 		return sqlSession.selectOne("member.selectEmail", memberEmail);
@@ -36,10 +48,15 @@ public class MemberDAO {
 		loginMap.put("memberPassword", memberPassword);
 		return sqlSession.selectOne("member.login", loginMap);
 	}
-	
+// 로그인시 회원 유형 확인
+	public String findMemberRoleById(Long memberId) {
+	    return sqlSession.selectOne("member.findMemberRoleById", memberId);
+	}
 //	회원가입
 	public void insert(MemberVO memberVO) {
 		sqlSession.insert("member.insert", memberVO);
 	}
+	
+	// ---------------------------- 선희원 -------------------------------------
 }
 

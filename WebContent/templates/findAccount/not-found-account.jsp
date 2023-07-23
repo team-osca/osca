@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,51 +15,51 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findAccount/notFoundAccountBase.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findAccount/notFoundAccount.css">
-    <title>계정을 찾지 못했습니다.</title>
+    <title>OSCA ACCOUNT</title>
   </head>
   <body>
     <div id="notFound">
-      <div class="notFound-User-container">
-        <div class="notFound-User-wrapper">
-          <div class="notFound-User">
-            <div class="header">
-              <div class="pre-btn-container">
+      <div class="container">
+        <div class="main-wrapper">
+          <div class="main">
+            <div class="header-wrapper">
+              <div class="header">
                 <button type="button" class="pre-btn">
                   <span class="pre-btn-span"
-                    ><svg viewBox="0 0 18 18" class="pre-btn-svg">
+                    ><svg viewBox="0 0 18 18" class="pre-btn-img">
                       <path
                         d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"
                       ></path></svg
                   ></span>
                 </button>
               </div>
-              <div class="title-wrapper">
+              <div class="header-text-wrapper">
                 <p
                   color="var(--theme-palette-colors-black-100)"
-                  class="title"
+                  class="header-text"
                 >
                   계정 찾기
                 </p>
               </div>
-              <div class="padding"></div>
+              <div class="right-padding"></div>
             </div>
-            <div class="body">
+            <div class="main-body">
               <h1
                 color="var(--theme-palette-colors-black-100)"
-                class="body-text"
+                class="msg1"
               >
                 가입된 계정이 없어요.
               </h1>
               <h2
                 color="var(--theme-palette-colors-gray-600)"
-                class="goude-msg"
+                class="msg2"
               >
                 다른 전화번호로 계속해보시거나 새로 가입해보세요.
               </h2>
-              <button type="button" class="goto-main">
+              <button type="button" class="go-to-login">
                 <span
                   color="var(--theme-palette-colors-black-100)"
-                  class="goto-main-text"
+                  class="go-to-login-content"
                   >메인으로 돌아가기</span
                 >
               </button>
@@ -68,9 +70,13 @@
       ;
     </div>
   </body>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
   	let contextPath = "${pageContext.request.contextPath}"
   </script>
-   <script src="${pageContext.request.contextPath}/static/js/findAccount/find-account-result.js"></script>
+  <script src="${pageContext.request.contextPath}/static/js/findAccount/find-account-result.js"></script>
 </html>
+
+
+
+

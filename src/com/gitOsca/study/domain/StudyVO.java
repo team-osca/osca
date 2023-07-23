@@ -11,98 +11,73 @@ public class StudyVO {
 	private String studyUpdateDate;
 	private String studyStatus;
 	private int studyTotal;
-	private Long generalId;
-	
-	public StudyVO() {;}
-
+	private Long memberId;
 	public Long getId() {
 		return Id;
 	}
-
 	public void setId(Long id) {
 		Id = id;
 	}
-
 	public String getStudyTitle() {
 		return studyTitle;
 	}
-
 	public void setStudyTitle(String studyTitle) {
 		this.studyTitle = studyTitle;
 	}
-
 	public String getStudyContents() {
 		return studyContents;
 	}
-
 	public void setStudyContents(String studyContents) {
 		this.studyContents = studyContents;
 	}
-
 	public String getStudyLocation() {
 		return studyLocation;
 	}
-
 	public void setStudyLocation(String studyLocation) {
 		this.studyLocation = studyLocation;
 	}
-
 	public String getStudyContactEmail() {
 		return studyContactEmail;
 	}
-
 	public void setStudyContactEmail(String studyContactEmail) {
 		this.studyContactEmail = studyContactEmail;
 	}
-
 	public String getStudyContactPhonenumber() {
 		return studyContactPhonenumber;
 	}
-
 	public void setStudyContactPhonenumber(String studyContactPhonenumber) {
 		this.studyContactPhonenumber = studyContactPhonenumber;
 	}
-
 	public String getStudyRegistDate() {
 		return studyRegistDate;
 	}
-
 	public void setStudyRegistDate(String studyRegistDate) {
 		this.studyRegistDate = studyRegistDate;
 	}
-
 	public String getStudyUpdateDate() {
 		return studyUpdateDate;
 	}
-
 	public void setStudyUpdateDate(String studyUpdateDate) {
 		this.studyUpdateDate = studyUpdateDate;
 	}
-
 	public String getStudyStatus() {
 		return studyStatus;
 	}
-
 	public void setStudyStatus(String studyStatus) {
 		this.studyStatus = studyStatus;
 	}
-
 	public int getStudyTotal() {
 		return studyTotal;
 	}
-
 	public void setStudyTotal(int studyTotal) {
 		this.studyTotal = studyTotal;
 	}
-
-	public Long getGeneralId() {
-		return generalId;
+	public Long getMemberId() {
+		return memberId;
 	}
-
-	public void setGeneralId(Long generalId) {
-		this.generalId = generalId;
+	public void setMemberId(Long memberId) {
+		this.memberId = memberId;
 	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -110,7 +85,6 @@ public class StudyVO {
 		result = prime * result + ((Id == null) ? 0 : Id.hashCode());
 		return result;
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -127,15 +101,15 @@ public class StudyVO {
 			return false;
 		return true;
 	}
-
 	@Override
 	public String toString() {
 		return "StudyVO [Id=" + Id + ", studyTitle=" + studyTitle + ", studyContents=" + studyContents
 				+ ", studyLocation=" + studyLocation + ", studyContactEmail=" + studyContactEmail
 				+ ", studyContactPhonenumber=" + studyContactPhonenumber + ", studyRegistDate=" + studyRegistDate
 				+ ", studyUpdateDate=" + studyUpdateDate + ", studyStatus=" + studyStatus + ", studyTotal=" + studyTotal
-				+ ", generalId=" + generalId + "]";
+				+ ", memberId=" + memberId + "]";
 	}
+	
 
 	
 	

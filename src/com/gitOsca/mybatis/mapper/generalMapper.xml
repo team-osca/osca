@@ -2,15 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="general">
-	<select id="findById" resultType="generalVO">
-		select id, general_university, general_company, general_work_date_begin, general_work_date_end, general_introduction from tbl_general
-		where id = #{id}
+<!-- 멤버의 role에 따라 카페 사장회원과 일반 회원이 나뉘기 때문에  -->
+	<select id="findById" resultType="generalDTO">
+		select g.id, general_university, general_company, general_work_date_begin, general_work_date_end, general_introduction, member_role 
+		from tbl_member m join tbl_general g
+		where on m.id = g.id
 	</select>
 	
 	<insert id="insert">
 		insert into tbl_general
-		(general_university, general_company, general_work_date_begin, general_work_date_end, general_introduction)
-		values(#{generalUniversity}, #{generalCompany}, #{generalWorkDateBegin}, #{generalWorkDateEnd}, #{generalIntroduction})
+		(member_id, general_university, general_company, general_work_date_begin, general_work_date_end, general_introduction)
+		values(4, #{generalUniversity}, #{generalCompany}, #{generalWorkDateBegin}, #{generalWorkDateEnd}, #{generalIntroduction})
 	</insert>
 
 	<update id="update">
@@ -18,6 +20,6 @@
 		set general_university = #{generalUniversity}, general_company = #{generalCompany}, 
 		general_work_date_begin = #{generalWorkDateBegin}, general_work_date_end = #{generalWorkDateEnd},
 		general_introduction = #{generalIntroduction}
-		where member_id = #{memberId}
+		where memberId = #{memberId}
 	</update>
 </mapper>

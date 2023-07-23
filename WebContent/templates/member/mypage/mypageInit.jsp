@@ -1,3 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <script async="" src="https://snap.licdn.com/li.lms-analytics/insight.old.min.js"></script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preload" as="style" crossorigin="anonymous"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/menuBar.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/menuBarDynamic.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/body.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/bodyDynamic.css">
+</head>
+<body>
     <div>
         <div class="matchUpForm form_main resume">
             <header class="form-header">
@@ -12,7 +34,7 @@
                             <div class="info-label">학교</div>
                             <div class="info-body">
                                 <div class="info_content">
-                                    <span class="resumeEntry-major">#{general.generalUniversity}</span>
+                                    <span class="resumeEntry-major">${general.generalUniversity}</span>
                                     <span class="resumeEntry-minor is-empty">전공 미입력</span>
                                 </div>
                             </div>
@@ -21,7 +43,7 @@
                             <div class="info-label">직장</div>
                             <div class="info-body">
                                 <div class="info_content">
-                                    <span class="resumeEntry-major is-empty">#{general.generalCompany}</span>
+                                    <span class="resumeEntry-major is-empty">${general.generalCompany}</span>
                                     <span class="resumeEntry-minor is-empty">직책 미입력</span>
                                 </div>
                             </div>
@@ -63,5 +85,6 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="/static/js/member/mypage/edit/init.js"></script>
-    <script></script>
+</body>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/member/mypage/edit/init.js"></script>
+</html>

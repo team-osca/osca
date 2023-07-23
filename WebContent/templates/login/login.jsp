@@ -25,16 +25,18 @@
                 <div class="box">
                     <div class="setting">
                         <div class="logo">
+                        <a href="${pageContext.request.contextPath}/home.member">
                             <span class="logobox">
                             	<img class="wanted" src="${pageContext.request.contextPath}/static/allimages/main-page/logo.jpg">
                             </span>
+                            </a>
                         </div>
                         <form action="${pageContext.request.contextPath}/emailCheck.member">
-                            <h1 data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="topphr">하나의 계정으로<br>더욱 편리하게</h1>
-                            <h2 data-testid="Typography" color="var(--theme-palette-colors-gray-600)" class="bottomphr">오스카가 제공하는 서비스를<br>하나의 계정으로 모두 이용할 수 있습니다.</h2>
+                            <h1 color="var(--theme-palette-colors-black-100)" class="topphr">하나의 계정으로<br>더욱 편리하게</h1>
+                            <h2 color="var(--theme-palette-colors-gray-600)" class="bottomphr">오스카가 제공하는 서비스를<br>하나의 계정으로 모두 이용할 수 있습니다.</h2>
                             <div>
                                 <div class="emailbox">
-                                    <label data-testid="Typography" color="var(--theme-palette-colors-gray-600)" for="email" class="subject">이메일</label>
+                                    <label  color="var(--theme-palette-colors-gray-600)" for="email" class="subject">이메일</label>
                                 </div>
                                 <input type="email" placeholder="이메일을 입력해주세요." name="email" class="emailCheck" value>
                             </div>
@@ -42,7 +44,7 @@
                                 <span data-testid="Typography" color="var(--theme-palette-colors-black-100)" class="keep">이메일로 계속하기</span>
                             </button>
                             <p data-testid="Typography" color="var(--theme-palette-colors-gray-500)" class="else">또는</p>
-                            <div class="icons">
+                        <%--  <div class="icons">
                                 <button type="button"  class="apple-login">
                                     <span class="apple-account">
                                         <svg viewBox="0 0 57 56" class="apple-link">
@@ -72,7 +74,7 @@
                                     </span>
                                     <p color="var(--theme-palette-colors-gray-600)" class="opt3">Kakao</p>
                                 </button>
-                            </div>
+                            </div>--%>   
                             <button class="forgot">
                                 <p  color="var(--theme-palette-colors-gray-700)" class="forgot-account">계정을 잊으셨나요?<span class="find">
                                     <svg viewBox="0 0 12 12" color="var(--theme-palette-colors-gray-600)" class="find-account">

@@ -14,15 +14,15 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/activation-1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/cos.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/javaSDK-2.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/json-simple-1.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/jstl.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/mail-1.4.7.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/mybatis-3.5.10.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/mysql-connector-j-8.0.32.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/org.json.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/team_osca/workspace/osca/WebContent/WEB-INF/lib/standard.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_shw/teamProject/ocsa/WebContent/WEB-INF/lib/activation-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_shw/teamProject/ocsa/WebContent/WEB-INF/lib/cos.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_shw/teamProject/ocsa/WebContent/WEB-INF/lib/javaSDK-2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_shw/teamProject/ocsa/WebContent/WEB-INF/lib/json-simple-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_shw/teamProject/ocsa/WebContent/WEB-INF/lib/jstl.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_shw/teamProject/ocsa/WebContent/WEB-INF/lib/mail-1.4.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_shw/teamProject/ocsa/WebContent/WEB-INF/lib/mybatis-3.5.10.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_shw/teamProject/ocsa/WebContent/WEB-INF/lib/mysql-connector-j-8.0.32.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_shw/teamProject/ocsa/WebContent/WEB-INF/lib/org.json.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_shw/teamProject/ocsa/WebContent/WEB-INF/lib/standard.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
