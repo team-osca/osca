@@ -19,7 +19,7 @@ public class ResetPasswordController extends Result implements Action {
 		
 		req.setAttribute("e_mail", userEmail);	
 		
-		result.setPath("/templates/findPassword/reset-password.jsp");
+		result.setPath(req.getContextPath() + "/templates/findPassword/reset-password.jsp");
 		return result;
 	}
 

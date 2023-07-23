@@ -56,7 +56,7 @@
               >
                 다른 전화번호로 계속해보시거나 새로 가입해보세요.
               </h2>
-              <button type="button" class="go-to-login">
+              <button id="go-to-main"type="button" class="go-to-login">
                 <span
                   color="var(--theme-palette-colors-black-100)"
                   class="go-to-login-content"

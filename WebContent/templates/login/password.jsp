@@ -68,7 +68,7 @@
                                 <span data-test-id="Typography" color="var(--theme-palette-colors-black-100)" class="next">다음</span>
                             </button>
                             <!-- 비밀번호 초기화 / 변경 -->
-                            <button type="button" data-test-id="Button" class="reset">
+                            <button id="reset-pw-btn" type="button" data-test-id="Button" class="reset">
                                 <span data-test-id="Typography" color="var(--theme-palette-colors-black-100)" class="reset-password">비밀번호 초기화/변경</span>
                             </button>
                         </form>
@@ -78,7 +78,9 @@
         </div>
     </div>
 </body>
+  <script>
+  	let contextPath = "${pageContext.request.contextPath}"
+  </script>
 <script src="${pageContext.request.contextPath}/static/js/login/password.js"> </script>
-
 </html>
 
