@@ -15,7 +15,7 @@
     padding: 50px 0 20px;
 }
 
-/* button »ðÀÔ ºÎ */
+/* button ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ */
 .cafe-post-button-container {
     font-size: 25px;
 }
@@ -118,7 +118,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
-/* button »ðÀÔ ºÎ */
+/* button ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ */
 
 
 .Nav_Nav_button__NSodo {
@@ -286,8 +286,8 @@
     position: relative;
 }
 
-/* °á°ú°¡ ¾øÀ» °æ¿ì¿¡¸¸ Àû¿ë + htmlµµ ÀÌ Å¬·¡½º°¡ Àû¿ëµÈ ºÎºÐµµ 
-"¿äÃ»ÇÏ½Å °á°ú°¡ ¾ø½À´Ï´Ù."·Î innertext ÀÔ·Â
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ + htmlï¿½ï¿½ ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ÎºÐµï¿½ 
+"ï¿½ï¿½Ã»ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½."ï¿½ï¿½ innertext ï¿½Ô·ï¿½
    */
 /* .List-wrapper .Offers-empty {
     margin: 100px 0;
@@ -405,7 +405,13 @@ img {
         margin: 0 auto;
     }
 }
-
+.cafe-empty{
+	display : none;
+	margin: 100px 0;
+	color: #ccc;
+  	font-size: 16px;
+  	text-align: center;
+}
 
 
 

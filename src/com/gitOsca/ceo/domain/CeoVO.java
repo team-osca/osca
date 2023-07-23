@@ -4,6 +4,10 @@ public class CeoVO {
 	private Long id;
 	private String ceoBusinessNumber;
 	private Long memberId;
+	private String cafeName;
+	private String cafeLocation;
+	private String cafeContactEmail;
+	private String cafeContactPhonenumber;
 
 	public CeoVO() {;}
 
@@ -31,9 +35,36 @@ public class CeoVO {
 		this.memberId = memberId;
 	}
 
-	@Override
-	public String toString() {
-		return "CeoVO [id=" + id + ", ceoBusinessNumber=" + ceoBusinessNumber + ", memberId=" + memberId + "]";
+	public String getCafeName() {
+		return cafeName;
+	}
+
+	public void setCafeName(String cafeName) {
+		this.cafeName = cafeName;
+	}
+
+	public String getCafeLocation() {
+		return cafeLocation;
+	}
+
+	public void setCafeLocation(String cafeLocation) {
+		this.cafeLocation = cafeLocation;
+	}
+
+	public String getCafeContactEmail() {
+		return cafeContactEmail;
+	}
+
+	public void setCafeContactEmail(String cafeContactEmail) {
+		this.cafeContactEmail = cafeContactEmail;
+	}
+
+	public String getCafeContactPhonenumber() {
+		return cafeContactPhonenumber;
+	}
+
+	public void setCafeContactPhonenumber(String cafeContactPhonenumber) {
+		this.cafeContactPhonenumber = cafeContactPhonenumber;
 	}
 
 	@Override
@@ -60,7 +91,12 @@ public class CeoVO {
 			return false;
 		return true;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "CeoVO [id=" + id + ", ceoBusinessNumber=" + ceoBusinessNumber + ", memberId=" + memberId + ", cafeName="
+				+ cafeName + ", cafeLocation=" + cafeLocation + ", cafeContactEmail=" + cafeContactEmail
+				+ ", cafeContactPhonenumber=" + cafeContactPhonenumber + "]";
+	}
 
 }

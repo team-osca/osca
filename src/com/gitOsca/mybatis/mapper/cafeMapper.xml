@@ -2,5 +2,57 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cafe">
+	<sql id="search_location">
+		<choose >
+			<when test="location != '전체'">
+				where (select cafe_location from tbl_ceo ceo where cafe.ceo_id = ceo.id) = #{location}
+			</when>
+		</choose>
+	</sql>
+
+	<select id="findAllByLocation" resultType="com.gitOsca.cafe.domain.CafeVO">
+		select 
+			id, ceo_id, cafe_title, cafe_contents, cafe_open_time, cafe_end_time, cafe_regist_date, cafe_update_date
+		from tbl_cafe cafe
+		<include refid="search_location"/>
+		order by id desc
+	</select>
+	
+
+	<select id="findById" resultType="com.gitOsca.cafe.domain.CafeVO">
+		select 
+			id, ceo_id, cafe_title, cafe_contents, cafe_open_time, cafe_end_time, cafe_regist_date, cafe_update_date
+		from tbl_cafe cafe
+		where id = #{id}
+	</select>
+	
+
+	<select id="findAllById" resultType="com.gitOsca.cafe.domain.CafeVO">
+		select 
+			id, ceo_id, cafe_title, cafe_contents, cafe_open_time, cafe_end_time, cafe_regist_date, cafe_update_date
+		from tbl_cafe cafe
+		where ceo_id = #{id}
+		order by id desc
+	</select>
+	
+	<select id="getNumberOfAllCafes" resultType="_int">
+		select 
+			count(id)
+		from tbl_cafe cafe
+	</select>
+	
+	<select id="getNumberOfAllCafesByStatus" resultType="_int">
+		select 
+			count(id)
+		from tbl_cafe cafe
+		where status = #{status}
+	</select>
+	
+	<select id="findAllByStatus" resultType="com.gitOsca.cafe.domain.CafeVO">
+		select 
+			id, ceo_id, cafe_title, cafe_contents, cafe_open_time, cafe_end_time, cafe_regist_date, cafe_update_date, cafe_deadline_date
+		from tbl_cafe cafe
+		where status = #{status} or 2 = #{status}
+	</select>
 
 </mapper>

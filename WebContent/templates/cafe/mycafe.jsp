@@ -35,9 +35,9 @@
 						<li class=""><a href="" class="">FAQ</a></li>
 						<li class="smMoreVisible"><a href="" class="">오늘의 스터디</a>
 						</li>
-						<li class="smMoreVisible"><a href="/community" class="">오늘의 카페</a>
+						<li class="smMoreVisible"><a href="${pageContext.request.contextPath}/list.cafe" class="">오늘의 카페</a>
 						</li>
-						<li class="smMoreVisible"><a href="/aiscore/resume" class="">내 카페</a></li>
+						<li class="smMoreVisible"><a href="#" class="">내 카페</a></li>
 					</ul>
 					<aside class="aside isLoggedIn">
 						<ul>
@@ -73,7 +73,7 @@
 					<p>내 카페</p>
 				</h2>
 				<div align="right" style="padding-right: 50px;">
-					<button
+					<button onclick="javascript:location.href='${pageContext.request.contextPath}/post.cafe'"
 						class="Posting-Button-root Posting-Button-outlined Posting-Button-outlinedPrimary Posting-Button-outlinedSizeMedium InterestCategoryItem-InterestCategoryItem"
 						style="background: #36f; color: #fff">
 						<span class="Button_Button__label__1Kk0v">등록하기</span><span
@@ -88,15 +88,15 @@
 						<dd>
 							<ul>
 								<li class="active"><a href="#" class="">전체 목록
-										<div class="label_">0</div>
+										<div class="label_">${numberOfAllCafe}</div>
 								</a></li>
 								<li ><a href="#" class="">현재
 										등록된 게시글
-										<div class="label_">0</div>
+										<div class="label_">${numberOfAllCafeByStatus[0]}</div>
 								</a></li>
 								<li class=""><a href="#" class="">기간
 										만료된 게시글
-										<div class="label_">0</div>
+										<div class="label_">${numberOfAllCafeByStatus[1]}</div>
 								</a></li>
 							</ul>
 						</dd>
@@ -107,13 +107,14 @@
 						<header class="Offers-header">
 							<ul class="List-row">
 								<li class="col col-1">카페명</li>
-								<li class="col col-2">일자</li>
-								<li class="col col-3">상태</li>
+								<li class="col col-2">등록 일자</li>
+								<li class="col col-3">마감 일자</li>
 							</ul>
 						</header>
 						<div class="Offers-empty"></div>
 						<ul class="Offers-content">
 							<!----------------------------- 내 카페 리스트 목록  ---------------------------------------------->
+							<%-- 
 							<li class="List-List-table-tr">
 								<div role="presentation">
 									<span class="List-List-table-td List-List-table-td-cafe-logo"><img
@@ -150,9 +151,11 @@
 										</span>
 								</div>
 							</li>
-							<li class="List-List-sensor"></li>
-							<!----------------------------- 내 카페 리스트 목록  ---------------------------------------------->
+							--%>
 						</ul>
+						<div class="cafe-empty">만료된 게시글이 없습니다.</div> 
+<!-- 							<li class="List-List-sensor"></li>
+							--------------------------- 내 카페 리스트 목록  -------------------------------------------- -->
 					</div>
 				</section>
 				<div class="MatchUpModal-modalContainer"></div>
@@ -161,5 +164,66 @@
 	</div>
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	const path = "${pageContext.request.contextPath}";
+	const $offersContent = $('.Offers-content');
+	$(document).ready(function(){
+		getDatas();
+	})
+	function getDatas(status = 2){
+		const url = path + "/myCafeOk.cafe?status=" + status;
+		const dataType = "json";
+		const success = success_func;
+		const error = error_func;
+		const ajax_request = {url, dataType, success, error};
+		$.ajax(ajax_request);
+	}
+	function success_func(datas){
+		let text = "";
+		if(datas.length == 0){
+			$('.cafe-empty').css('display', 'block');
+		}
+		else{
+			$('.cafe-empty').css('display', 'none');
+			datas.forEach(data => {
+				console.log(data)
+				text += li(data);
+			})
+		}
+		$offersContent.html(text);
+		
+		$('.List-List-table-tr').on('click', function(){
+			const cafe_id = $(this).attr('aria-dataId');
+			const post_url = path + "/detailOk.cafe?id=" + cafe_id;
+			location.href = post_url;
+		})
+	}
+	function error_func(a, b, c){
+		console.log(a, b, c);
+	}
+	
+	const li = (data)=>{
+		const date = data.cafeRegistDate.split(" ")[0];
+		const deadLineDate = data.cafeDeadlineDate.split(" ")[0];
+		return (`
+				<li class="List-List-table-tr" aria-dataId="`+ data.id +`">
+				<div role="presentation">
+					<span class="List-List-table-td List-List-table-td-cafe-logo"><img
+						src="https://static.wanted.co.kr/images/wdes/0_5.9f18933a.jpg"
+						alt="cafeLogo" /></span><span
+						class="List-List-table-td List-List-table-td-cafe-name">` + data.cafeTitle + `</span>
+						<span
+						class="List-List-table-td List-List-table-td-create-time">`+ date +`</span><span
+						class="List-List-table-td List-List-table-td-status">` + deadLineDate + `</span>
+						<span class="List-List-table-td List-List-table-td-reward">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+							  <path fill="currentColor" d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"></path>
+    					    </svg>	
+						</span>
+				</div>
+			</li>	
+		`)
+	}
+</script>
 <script src="${pageContext.request.contextPath}/static/js/cafe/mycafe.js"></script>
 </html>

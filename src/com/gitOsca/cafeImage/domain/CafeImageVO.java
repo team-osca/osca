@@ -2,8 +2,8 @@ package com.gitOsca.cafeImage.domain;
 
 public class CafeImageVO {
 	private Long id;
-	private String cafeImagefileName;
-	private String cafeImagefileOriginalName;
+	private String cafeFileName;
+	private String cafeFileOriginalName;
 	private Long cafeId;
 
 	public CafeImageVO() {;}
@@ -16,20 +16,20 @@ public class CafeImageVO {
 		this.id = id;
 	}
 
-	public String getCafeImagefileName() {
-		return cafeImagefileName;
+	public String getCafeFileName() {
+		return cafeFileName;
 	}
 
-	public void setCafeImagefileName(String cafeImagefileName) {
-		this.cafeImagefileName = cafeImagefileName;
+	public void setCafeFileName(String cafeFileName) {
+		this.cafeFileName = cafeFileName;
 	}
 
-	public String getCafeImagefileOriginalName() {
-		return cafeImagefileOriginalName;
+	public String getCafeFileOriginalName() {
+		return cafeFileOriginalName;
 	}
 
-	public void setCafeImagefileOriginalName(String cafeImagefileOriginalName) {
-		this.cafeImagefileOriginalName = cafeImagefileOriginalName;
+	public void setCafeFileOriginalName(String cafeFileOriginalName) {
+		this.cafeFileOriginalName = cafeFileOriginalName;
 	}
 
 	public Long getCafeId() {
@@ -38,12 +38,6 @@ public class CafeImageVO {
 
 	public void setCafeId(Long cafeId) {
 		this.cafeId = cafeId;
-	}
-
-	@Override
-	public String toString() {
-		return "CafeImageVO [id=" + id + ", cafeImagefileName=" + cafeImagefileName + ", cafeImagefileOriginalName="
-				+ cafeImagefileOriginalName + ", cafeId=" + cafeId + "]";
 	}
 
 	@Override
@@ -70,4 +64,12 @@ public class CafeImageVO {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "CafeImageVO [id=" + id + ", cafeFileName=" + cafeFileName + ", cafeFileOriginalName="
+				+ cafeFileOriginalName + ", cafeId=" + cafeId + "]";
+	}
+
+	
 }

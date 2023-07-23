@@ -11,7 +11,7 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/cafe/mycafe-post/mycafe-header.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/cafe/css/mycafe-post-main.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/cafe/mycafe-post-main.css" />
 <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg">
 <title>카페 등록</title>
 </head>
@@ -66,7 +66,7 @@
 		<div class="Padding_padding"></div>
 		<main class="main">
 			<!---------------------------------- from 태그 시작 ------------------------------------------------>
-			<form id="write" action="">
+			<form id="write" action="" method="post">
 				<div class="post-wrapper">
 					<div class="mycafeDetail-poastDetail-body">
 						<div class="mycafeDetail-poastDetail-body-basic">
@@ -110,6 +110,7 @@
 										class="mycafeDetail-poastDetail-input post-input about"
 										maxlength="4000" placeholder="내 카페를 홍보하세요! (최대 4000글자)"
 										field="about"
+										name="contents"
 										style="height: 594px; color: rgb(59, 61, 64); margin: 30px 0px 3px"></textarea>
 									<textarea class="DynamicTextarea-Textarea-clone" readonly=""
 										style="top: 0px; left: 0px; width: 1060px; padding: 0px; font-size: 16px; font-weight: 400; position: absolute; visibility: hidden; z-index: -9999; height: 0px; background: transparent;"></textarea>
