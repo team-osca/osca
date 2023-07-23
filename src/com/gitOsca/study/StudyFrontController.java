@@ -8,10 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.gitOsca.Result;
-import com.gitOsca.study.controller.AppliedStudyOkController;
-import com.gitOsca.study.controller.OpenedStudyOkController;
 import com.gitOsca.study.controller.StudyDetailOkController;
-import com.gitOsca.study.controller.WholeStudyOkController;
+import com.gitOsca.study.controller.StudyListOkController;
+import com.gitOsca.study.controller.StudyOkController;
 
 public class StudyFrontController extends HttpServlet{
 	@Override
@@ -21,19 +20,26 @@ public class StudyFrontController extends HttpServlet{
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
-		
-		
 		if(target.equals("detailOk")) {
 			result = new StudyDetailOkController().execute(req, resp);
 		}
-		else if(target.equals("appliedStudyOk")) {
-			result = new AppliedStudyOkController().execute(req, resp);
+		else if(target.equals("detail")) {
+			result = new Result();
+			result.setPath("templates/myStudy/studyDetailView.jsp");
 		}
-		else if(target.equals("openedStudyOk")) {
-			result = new OpenedStudyOkController().execute(req, resp);
+		else if(target.equals("myStudyOk")) {
+			result = new StudyOkController().execute(req, resp);
 		}
-		else if(target.equals("wholeStudyOk")) {
-			result = new WholeStudyOkController().execute(req, resp);
+		else if(target.equals("myStudy")) {
+			result = new Result();
+			result.setPath("templates/myStudy/myStudy.jsp");
+		}
+		else if(target.equals("studyListOk")) {
+			result = new StudyListOkController().execute(req, resp);
+		}
+		else if(target.equals("studyList")) {
+			result = new Result();
+			result.setPath("templates/study/study.jsp");
 		}
 		
 		
