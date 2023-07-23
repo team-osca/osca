@@ -1,4 +1,3 @@
-
     const $modal = $('.MenuPopup');
     const $menuButton = $('.PostContents__menu_button');
 

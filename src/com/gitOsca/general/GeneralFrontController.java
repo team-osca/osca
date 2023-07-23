@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.gitOsca.Result;
-	import com.gitOsca.general.controller.InsertOkController;
+import com.gitOsca.general.controller.InsertOkController;
 import com.gitOsca.general.controller.MyPageOkController;
 import com.gitOsca.general.controller.UpdateOkController;
 

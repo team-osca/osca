@@ -285,7 +285,6 @@
             <span class="Button_Button__label__fin">완료</span>
             <span class="Button_Button__interaction"></span>
           </button>
-
         </div>
       </div>
     </div>

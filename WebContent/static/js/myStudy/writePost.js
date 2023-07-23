@@ -1,7 +1,8 @@
 
 // 엔터키가 눌렸을 때 게시글의 창 길이 증가
 $(document).ready(function() {
-    const $contentTextarea = $('.Paper_PostWritePaper__content textarea');
+    $modal.hide();
+    /*const $contentTextarea = $('.Paper_PostWritePaper__content textarea');
     let height = parseInt($contentTextarea.css('height'), 10);
     
     $contentTextarea.on('keyup', function(event) {
@@ -9,7 +10,7 @@ $(document).ready(function() {
         height += 28;
         $contentTextarea.css('height', height + 'px');
       }
-    });
+    });*/
   });
 
 
@@ -33,9 +34,9 @@ $(document).ready(function() {
 // 클릭시 열림!!!!
     $openmodal.click(
         function () {  
-            $modal.css('z-index', '1400');
-            $blur.css('backdrop-filter', 'blur(4px)').css('-webkit-backdrop-filter', 'blur(4px)');
-            $backdrop.css('visibility','visible');
+            $modal.show();
+            /*$blur.css('backdrop-filter', 'blur(4px)').css('-webkit-backdrop-filter', 'blur(4px)');
+            $backdrop.css('visibility','visible');*/
 
     });
 // 클릭시 꺼짐
