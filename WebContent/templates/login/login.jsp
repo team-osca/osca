@@ -25,9 +25,11 @@
                 <div class="box">
                     <div class="setting">
                         <div class="logo">
+                        <a href="${pageContext.request.contextPath}/home.member">
                             <span class="logobox">
                             	<img class="wanted" src="${pageContext.request.contextPath}/static/allimages/main-page/logo.jpg">
                             </span>
+                            </a>
                         </div>
                         <form action="${pageContext.request.contextPath}/emailCheck.member">
                             <h1 color="var(--theme-palette-colors-black-100)" class="topphr">하나의 계정으로<br>더욱 편리하게</h1>

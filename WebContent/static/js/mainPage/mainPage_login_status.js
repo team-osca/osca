@@ -37,4 +37,13 @@ $(document).ready(function() {
       $signup.show();
       $profilePic.hide();
     }
+    
+    
+// 프로필 사진 메뉴 모달
+  const $MenuPopover = $('.MenuPopover');
+  
+$profilePic.click(function() {
+  $MenuPopover.toggle();
+});
+    
 });

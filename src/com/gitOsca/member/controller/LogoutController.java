@@ -19,7 +19,7 @@ public class LogoutController implements Action {
 		req.getSession().invalidate();
 
 		result.setRedirect(true);
-		result.setPath(req.getContextPath() + "/login.login");
+		result.setPath(req.getContextPath() + "/home.member");
 		return result;
 	}
 

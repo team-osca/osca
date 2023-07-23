@@ -91,6 +91,29 @@
                         </section>
                     </nav>
                 </div>
+                    <!-- 프로필 이미지 클릭 시  -->
+                    <div class="modal">
+                    <form action="${pageContext.request.contextPath}/logout.member">
+					 <div class="MenuPopover">
+					    <div class="MenuPopWrapper">
+					      <ul class="MenuPopover_list">
+					        <li class="">
+					          <a href="" class="">
+					          <span>마이 페이지</span>
+					          </a>
+					        </li>
+					        <li>
+					          <button type="submit" class="is-logout">
+					            <span>로그아웃</span>
+					          </button>
+					        </li>
+					      </ul>
+					    </div>
+					    <div class="MenuPopover_bubblePoint"></div>
+					  </div> 
+					  </form>
+					  </div>
+  <!-- 프로필 이미지 클릭 시 끝  -->
             </div>
             <div class="padding"></div>
         </header>
@@ -342,7 +365,7 @@
                 </article>
             </section>
             <footer class="footer">
-                <div class="footer-rowClass"> 
+             	   <div class="footer-rowClass wanted"> 
                     <div class="nav-links">
                         <a class="nav-links-logo" href="https://www.wanted.co.kr/">
                             <svg width="31.4%" height="100%" viewBox="0 0 79 32">
@@ -399,7 +422,7 @@
         </main>
         <div></div>
         <div></div>
-    </div>
+    </div>	
 </body>
 <script src="${pageContext.request.contextPath}/static/js/mainPage/mainPage_uheejoonVer.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/mainPage/mainPage_login_status.js"></script>
