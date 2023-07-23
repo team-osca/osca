@@ -94,7 +94,7 @@ $('.certification-Btn').click(function() {
 const $checkAuthCode = $('#input-authCode');
 $authenticationNumberBtn.on('click', function() {
 	$checkAuthCode.attr('readonly', false);
-})
+});
 // 인증번호 받으면 인증번호 전송 버튼 활성화
 
 //------------------- 계속 버튼 클릭 이벤트 (계정 찾기)-------------------

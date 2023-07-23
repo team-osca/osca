@@ -28,10 +28,10 @@ public class findAccountOkController extends Result implements Action {
 		
 		JSONObject accountJSON = new JSONObject();
 		if ( memberEmail == null ) {
-			path = req.getContextPath() + "templates/findAccount/not-found-account.jsp";
+			path = req.getContextPath() + "/templates/findAccount/not-found-account.jsp";
 			result.setPath(path);
 		} else {
-			path = req.getContextPath() + "templates/findAccount/find-account-ok.jsp";
+			path = req.getContextPath() + "/templates/findAccount/find-account-ok.jsp";
 			req.setAttribute("memberEmail", memberEmail);
 			result.setPath(path);
 		}

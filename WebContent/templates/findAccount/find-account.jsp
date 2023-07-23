@@ -248,7 +248,7 @@
                   </div>
                 </div>
                 <div class="check-phonenumber-wrapper">
-                <form action="find_account.member" method="post" name="phoneNumberFrom">
+                <form action="/find_account.member" method="post" name="phoneNumberFrom">
 	                  <input
 	                    type="text"
 	                    placeholder="(예시) 01012345768"

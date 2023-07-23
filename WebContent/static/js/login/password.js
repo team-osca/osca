@@ -50,3 +50,13 @@ $("div.modal").on("click", function(){
         $("div.modal").fadeOut(500);
     }
 });
+
+// 비밀번호 변경 버튼
+$('#reset-pw-btn').click(function (){
+	let link = contextPath + "/find_paassword.member";
+	location.href = link;
+});
+
+
+
+

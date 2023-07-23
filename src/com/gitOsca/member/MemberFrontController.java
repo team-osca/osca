@@ -26,15 +26,15 @@ public class MemberFrontController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 
-		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
+		String target = req.getRequestURI().replaceFirst(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		System.out.println("멤버 프론트 콘트롤러");
 //		System.out.println(target);
 //		------------------------------------------- 김동엽 ------------------------------------------
-		if (target.equals("sign_infind_account")) {
+		if (target.equals("sign_in/find_account")) {
 			// 계정 찾기 페이지로 이동
 			result = new Result();
-			result.setPath("templates/findAccount/find-account.jsp");
+			result.setPath(req.getContextPath() + "/templates/findAccount/find-account.jsp");
 		} else if (target.equals("get_authentication_number")) {  			// 문자로 인증번호 보내기 
 			result = new SendSMSController().execute(req, resp);		 
 		} else if (target.equals("find_account")) {							// 계정 찾기 + 분기 처리 
@@ -47,7 +47,7 @@ public class MemberFrontController extends HttpServlet {
 			result = new ResetPasswordOkController().execute(req, resp);
 		} else if (target.equals("reset_password_next")) {
 			result = new Result();
-			result.setPath("/templates/findPassword/finded-password.jsp");
+			result.setPath(req.getContextPath() + "/templates/findPassword/finded-password.jsp");
 		}
 //		------------------------------------------- 김동엽 ------------------------------------------
 		

@@ -29,18 +29,18 @@ public class SendEmailOkController extends Result implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		// 메일 보내기
 		resp.setCharacterEncoding("UTF-8");
-		String userEmail = (String) req.getSession().getAttribute("userEmail");
-		MemberDAO dao = new MemberDAO();
-		String userName = dao.selectUserName(userEmail);
 		Result result = new Result();
-		req.setAttribute("member_email", userEmail);
-
+		MemberDAO dao = new MemberDAO();
+		String userEmail = (String) req.getSession().getAttribute("userEmail");
 		// null 이거나 빈 문자열이면 비밀번호 입력 페이지로 이동
 		if (userEmail == null || userEmail == "") {
 			result.setRedirect(true);
-			result.setPath(req.getContextPath() + "password.member");
+			result.setPath(req.getContextPath() + "/password.member");
 			return result;
 		}
+		String userName = dao.selectUserName(userEmail);
+		req.setAttribute("member_email", userEmail);
+
 		// 파리미터가 잘 전달 되었다면
 		
 		// 메일 인코딩
