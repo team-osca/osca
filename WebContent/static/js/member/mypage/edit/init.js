@@ -5,6 +5,7 @@ function changeResumeEdit(){
     $.ajax({
         url : "http://localhost:8090/templates/member/mypage/resumeEdit.jsp",
         success : function(data){
+        $('#university').attr('value',$generalUniversity);
         $('.container>section').html(data);
         }
     })    

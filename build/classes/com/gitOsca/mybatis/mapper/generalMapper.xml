@@ -3,23 +3,23 @@
 
 <mapper namespace="general">
 <!-- 멤버의 role에 따라 카페 사장회원과 일반 회원이 나뉘기 때문에  -->
-	<select id="findById" resultType="generalDTO">
-		select g.id, general_university, general_company, general_work_date_begin, general_work_date_end, general_introduction, member_role 
-		from tbl_member m join tbl_general g
-		where on m.id = g.id
+	<select id="findById" resultType="generalVO">
+		select member_id, general_university, general_company, general_work_date_begin, general_work_date_end, general_introduction , general_career, general_salary
+		from tbl_general
+		where member_id= #{memberId}
 	</select>
 	
 	<insert id="insert">
 		insert into tbl_general
 		(member_id, general_university, general_company, general_work_date_begin, general_work_date_end, general_introduction)
-		values(4, #{generalUniversity}, #{generalCompany}, #{generalWorkDateBegin}, #{generalWorkDateEnd}, #{generalIntroduction})
+		values(#{memberId}, #{generalUniversity}, #{generalCompany}, #{generalWorkDateBegin}, #{generalWorkDateEnd}, #{generalIntroduction})
 	</insert>
 
 	<update id="update">
 		update tbl_general
 		set general_university = #{generalUniversity}, general_company = #{generalCompany}, 
 		general_work_date_begin = #{generalWorkDateBegin}, general_work_date_end = #{generalWorkDateEnd},
-		general_introduction = #{generalIntroduction}
-		where memberId = #{memberId}
+		general_introduction = #{generalIntroduction}, general_career = #{generalCareer}, general_salary = #{generalSalary}
+		where member_id = #{memberId}
 	</update>
 </mapper>

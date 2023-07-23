@@ -1,0 +1,531 @@
+@charset "utf-8";
+
+
+@media (min-width: 768px) and (max-width: 991px){
+    .padding{
+        height: 110px;
+    }
+}
+@media (max-width: 767px){
+    .myProfile{
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .studyPostList {
+        width: 100%;
+        overflow: hidden;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 54px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .studyPostList {
+        width: 100%;
+        overflow: hidden;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 54px;
+    }
+}
+@media (max-width: 767px){
+    .studyPostList {
+        width: 100%;
+        overflow: hidden;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 54px;
+    }
+}
+@media (min-width: 1200px){
+    .studyPostList_aside {
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+@media (min-width: 1200px){
+    .writeProfile {
+        padding: 0;
+    }
+}
+@media (min-width: 1200px){
+    .writeProfile button {
+        margin: 0;
+        padding: 0 18px;
+        background: no-repeat right 5px top 10px/77px url(https://static.wanted.co.kr/images/community/identify_people.png),-webkit-gradient(linear,right top,left top,color-stop(.24%,#01a9fe),to(#2f5fef));
+        background: no-repeat right 5px top 10px/77px url(https://static.wanted.co.kr/images/community/identify_people.png),linear-gradient(270deg,#01a9fe .24%,#2f5fef);
+    }
+}
+@media (min-width: 1200px){
+    .writeProfile .writeProfile_message{
+        font-size: 15px;
+        line-height: 1.6em;
+    } 
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .recommendProfile {
+        width: 100%;
+        padding: 28px 0 30px;
+        border: 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .recommendProfile {
+        width: 100%;
+        padding: 28px 0 30px;
+        border: 0;
+    }
+}
+@media (max-width: 767px){
+    .recommendProfile {
+        width: 100%;
+        padding: 28px 0 30px;
+        border: 0;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .recommendProfile  .recommendProfile_title {
+        font-size: 18px;
+        line-height: 21px;
+        margin-left: 15px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .recommendProfile  .recommendProfile_title {
+        font-size: 18px;
+        line-height: 21px;
+        margin-left: 15px;
+    }
+}
+@media (max-width: 767px){
+    .recommendProfile  .recommendProfile_title {
+        font-size: 18px;
+        line-height: 21px;
+        margin-left: 15px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .recommendProfile  .recommendProfile_subtitle {
+        margin-left: 15px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .recommendProfile  .recommendProfile_subtitle {
+        margin-left: 15px;
+    }
+}
+@media (max-width: 767px){
+    .recommendProfile  .recommendProfile_subtitle {
+        margin-left: 15px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .recommendProfile .recommendProfile_rows {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        grid-row-gap: 0;
+        row-gap: 0;
+        grid-column-gap: 14px;
+        -webkit-column-gap: 14px;
+        -moz-column-gap: 14px;
+        column-gap: 14px;
+        overflow-x: auto;
+        -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 0 15px;
+        margin-top: 30px;
+        padding: 0 15px 30px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .recommendProfile .recommendProfile_rows {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        grid-row-gap: 0;
+        row-gap: 0;
+        grid-column-gap: 14px;
+        -webkit-column-gap: 14px;
+        -moz-column-gap: 14px;
+        column-gap: 14px;
+        overflow-x: auto;
+        -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 0 15px;
+        margin-top: 30px;
+        padding: 0 15px 30px;
+    }
+}
+@media (max-width: 767px){
+    .recommendProfile .recommendProfile_rows {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        grid-row-gap: 0;
+        row-gap: 0;
+        grid-column-gap: 14px;
+        -webkit-column-gap: 14px;
+        -moz-column-gap: 14px;
+        column-gap: 14px;
+        overflow-x: auto;
+        -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 0 15px;
+        margin-top: 30px;
+        padding: 0 15px 30px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .recommendProfile .recommendProfile_rows .recommendProfile_item {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 90px;
+        height: 100px;
+        min-width: 90px;
+        scroll-snap-align: start;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .recommendProfile .recommendProfile_rows .recommendProfile_item {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 90px;
+        height: 100px;
+        min-width: 90px;
+        scroll-snap-align: start;
+    }
+}
+@media (max-width: 767px){
+    .recommendProfile .recommendProfile_rows .recommendProfile_item {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 90px;
+        height: 100px;
+        min-width: 90px;
+        scroll-snap-align: start;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .recommendProfile .recommendProfile_rows .recommendProfile_item .recommend_profile {
+        width: 72px;
+        height: 72px;
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .recommendProfile .recommendProfile_rows .recommendProfile_item .recommend_profile {
+        width: 72px;
+        height: 72px;
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+}
+@media (max-width: 767px){
+    .recommendProfile .recommendProfile_rows .recommendProfile_item .recommend_profile {
+        width: 72px;
+        height: 72px;
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .recommendProfile .recommendProfile_rows .recommendProfile_item .recommend_profile_username {
+        max-width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .recommendProfile .recommendProfile_rows .recommendProfile_item .recommend_profile_username {
+        max-width: 100%;
+    }
+}
+@media (max-width: 767px){
+    .recommendProfile .recommendProfile_rows .recommendProfile_item .recommend_profile_username {
+        max-width: 100%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .recommendProfile .recommendProfile_rows .recommendProfile_item .recommend_profile_rightIcon {
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .recommendProfile .recommendProfile_rows .recommendProfile_item .recommend_profile_rightIcon {
+        display: none;
+    }
+}
+@media (max-width: 767px){
+    .recommendProfile .recommendProfile_rows .recommendProfile_item .recommend_profile_rightIcon {
+        display: none;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .recommendProfile .recommend_profile_action {
+        padding: 0 15px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .recommendProfile .recommend_profile_action {
+        padding: 0 15px;
+    }
+}
+@media (max-width: 767px){
+    .recommendProfile .recommend_profile_action {
+        padding: 0 15px;
+    }
+}
+@media (min-width: 1200px){
+    .studyPostList_content .studyPostList_category{
+        background-color: #ffffff;
+        position: fixed;
+        top: 50px;
+        z-index: 1;
+        padding-top: 50px;
+    }
+}
+@media (min-width: 1200px){
+    .interest_category {
+        width: 790px;
+        position: relative;
+        top: auto;
+        border: 1px solid #e1e2e3;
+        border-radius: 5px 5px 0 0;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1200px){
+    .interestCategorySlide{
+        width: 100%;
+        padding: 19px 30px;
+    }
+}
+@media (max-width: 767px){
+    .interest_category_button{
+        padding: 7px 12px!important;
+        font-size: 14px!important;
+        line-height: 142.9%!important;
+        height: 34px!important;
+    }
+}
+@media (min-width: 1200px){
+    .tagSlide_arrow {
+        width: 80px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px){
+    .tagSlide_arrow {
+        width: 80px;
+    }
+}
+@media (max-width: 1200px) {
+    .interestSlide {
+        max-width: calc(100% - 8px);
+    }
+}
+@media (max-width: 767px) {
+    .tagSlide_arrow{
+        display: none;
+    }
+}
+@media (min-width: 1200px){   
+    .studyPostList_body {
+        margin-top: 129px;
+        width: 790px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .studyPostView {
+        margin-top: 10px;
+        border: 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .studyPostView {
+        margin-top: 10px;
+        border: 0;
+    }
+}
+@media (max-width: 767px){
+    .studyPostView {
+        margin-top: 10px;
+        border: 0;
+    }
+}
+@media (min-width: 1200px){
+    .studyPostItem {
+        padding: 29px 29px 30px;
+    }
+}
+@media (min-width: 1200px){
+    .studyPostItem:not(:last-of-type):after {
+        width: 730px;
+    }
+}
+@media (min-width: 1200px){
+    .postItem_top {
+        margin-bottom: 9px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .authorBox {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .authorBox {
+        width: 100%;
+    }
+}
+@media (max-width: 767px){
+    .authorBox {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .authorBox_imgWrapper {
+        margin-right: 8px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .authorBox_imgWrapper {
+        margin-right: 8px;
+    }
+}
+@media (max-width: 767px){
+    .authorBox_imgWrapper {
+        margin-right: 8px;
+    }
+}
+@media (max-width: 767px){
+    .authorBox_userInfo_area {
+        max-width: calc(100vw - 64px);
+    }
+}
+@media (min-width: 1200px){
+    .postItem_body{
+        width: 730px;
+        padding-left: 35px;
+    }
+}
+@media (min-width: 1200px){
+    .postItem_body.postItem_has_img {
+        width: 507px;
+    }
+}
+@media (min-width: 1200px){
+    .username{
+        max-width: 399px;
+    }
+}
+@media (max-width: 767px){
+    .padding{
+        height: 110px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .postItem_title{
+        font-size: 15px;
+        margin-bottom: 3px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .postItem_title{
+        font-size: 15px;
+        margin-bottom: 3px;
+    }
+}
+@media (max-width: 767px){
+    .postItem_title{
+        font-size: 15px;
+        margin-bottom: 3px;
+    }
+}
+
+@supports (-webkit-line-clamp:2) and (-webkit-box-orient:vertical){
+    .postItem_content {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        white-space: break-spaces;
+        word-break: break-all;
+        overflow: hidden;
+    }
+}
+@media (min-width: 1200px){
+    .postItem_content {
+        margin-bottom: 10px;
+        min-height: 40px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .postItem_img {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 168px;
+        border-radius: 10px;
+        margin-bottom: 11px;
+        border-radius: 6px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .postItem_img {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 168px;
+        border-radius: 10px;
+        margin-bottom: 11px;
+        border-radius: 6px;
+    }
+}
+@media (max-width: 767px){
+    .postItem_img {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 168px;
+        border-radius: 10px;
+        margin-bottom: 11px;
+        border-radius: 6px;
+    }
+}
+@media (min-width: 1200px){
+    .studyPostItem .postItem_tag_list {
+        margin-bottom: 21px;
+    }
+}
+@media (min-width: 1200px){
+    .studyPostItem .postItem_tag_list .postItem_tag {
+        padding: 0 8px;
+    }
+}
+@media (min-width: 1200px){
+    .studyPostItem .postItem_tag_list .postItem_tag+.postItem_tag {
+        margin-left: 10px;
+    }
+}
+@media (max-width: 1200px){
+    .interestTagSlide .interestTagSlide_more{
+        display: none;
+    }
+}
+@media (max-width: 1200px){
+    .interestTagSlide_more_smView>.interestTagSlide_more{
+        display: flex;
+    }
+}
+@media (max-width: 1200px){
+    .interestTagSlide_more_smView::before{
+        display: block;
+    }
+}

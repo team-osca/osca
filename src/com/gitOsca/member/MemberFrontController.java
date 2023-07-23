@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.gitOsca.Result;
 import com.gitOsca.member.controller.CheckEmailOkController;
+import com.gitOsca.member.controller.DeleteOkController;
 import com.gitOsca.member.controller.LoginOkController;
 import com.gitOsca.member.controller.LogoutController;
 import com.gitOsca.member.controller.MyPageOkController;
@@ -18,6 +19,7 @@ import com.gitOsca.member.controller.SendEmailOkController;
 import com.gitOsca.member.controller.SendSMSController;
 import com.gitOsca.member.controller.SettingOkController;
 import com.gitOsca.member.controller.SignUpOkController;
+import com.gitOsca.member.controller.UpdateOkController;
 import com.gitOsca.member.controller.WithdrawOkController;
 import com.gitOsca.member.controller.findAccountOkController;
 
@@ -58,7 +60,11 @@ public class MemberFrontController extends HttpServlet {
 			result = new SettingOkController().execute(req, resp);
 		} else if (target.equals("withdrawOk")) {
 			result = new WithdrawOkController().execute(req, resp);
-		} 	
+		} else if (target.equals("updateOk")) {
+		result = new UpdateOkController().execute(req, resp);
+		}else if (target.equals("deleteOk")) {
+			result = new DeleteOkController().execute(req, resp);
+		}
 		// -------------------------------- 정유진 ----------------------------
 		
 		// -------------------------------- 선희원 ----------------------------
@@ -118,5 +124,4 @@ public class MemberFrontController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doGet(req, resp);
 	}
-
 }

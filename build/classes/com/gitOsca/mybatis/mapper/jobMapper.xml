@@ -2,5 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="job">
-
+<!-- 멤버의 role에 따라 카페 사장회원과 일반 회원이 나뉘기 때문에  -->
+	<select id="findById" resultType="jobVO">
+		select id, general_university, general_company, general_work_date_begin, general_work_date_end, general_introduction , general_career, general_salary
+		from tbl_job
+		where id= #{id}
+	</select>
 </mapper>

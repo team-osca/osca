@@ -8,12 +8,16 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css"/>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css"/>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/menuBar.css"/>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/menuBarDynamic.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/body.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/bodyDynamic.css">>
+<link rel="preload" as="style" crossorigin="anonymous"
+     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/menuBar.css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/menuBarDynamic.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/body.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage/bodyDynamic.css">
 </head>
 <body>
 	<div class="resumeInfoSetting">
@@ -28,13 +32,13 @@
                 <div class="formButton button_ selected">
                     <h6 class="formButton-label">학교</h6>
                     <div class="input_box">
-                        <input id="university" type="text" placeholder="대학명 입력" value="" autocomplete="off">
+                        <input id="university" type="text" autocomplete="off" val="">
                     </div>
                 </div>		
                 <div class="formButton button_">
                     <h6 class="FormButton-label">직장</h6>
                     <div class="input_box">
-                        <input id="company" type="text" placeholder="직장명 입력" value="" autocomplete="off">
+                        <input id="company" type="text" autocomplete="off" val="">
                     </div>
                 </div>
                 <div class="careerPeriod">
@@ -107,15 +111,33 @@
                 <label for="name" class="textarea resumeBasicInfo">
                     <h6>간단 소개글</h6>
                     <p>직무 내용, 경험, 목표 등을 추가해서 더욱 멋진 소개글을 작성해보세요.</p>
-                    <textarea id="name" autocomplete="off">안녕하세요. 신입 웹 개발자입니다.</textarea>
+                    <textarea id="name" autocomplete="off">${general.generalIntroduction}</textarea>
                 </label>
             </div>
         </div>
         <footer class="formFooter footer_ isChild">
-            <button type="button" >확인</button>
+            <button id="update_bt" type="button" >확인</button>
         </footer>
     </div>
 </div>
 <script src="${pageContext.request.contextPath}/static/js/member/mypage/edit/resumeEdit.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/member/mypage/edit/init.js"></script>
+
+<script>
+$("#update_bt").click(function(){
+	var $university=$("#university").val();
+	var $company=$("#company").val();
+	var $introduction=$("#name").val();
+	let memberId=1;
+$.ajax({
+	    type : "post", // HTTP method type(GET, POST) 형식이다. --> 데이터 전송 타입
+	    url : "/updateOk.general",  // 컨트롤러에서 대기중인 URL 주소이다. --> 데이터를 주고받을 파일 주소 입력
+        data : {'memberId':memberId,'generalUniversity': $university, 'generalCompany':$company, 'generalIntroduction':$introduction},      
+        error:function(){
+       		location.reload();
+        }
+	});
+});
+</script>
 </body>
 </html>

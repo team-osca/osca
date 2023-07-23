@@ -4,70 +4,69 @@
 <mapper namespace="study">
 
 
-	<select id = "getStudyDetail" resultType="studyVO">
-		select id, member_id, study_title, study_contents, study_location, study_contact_email, study_contact_phonenumber from tbl_study
-		where id = #{id} 
-		
-	</select>
-	<select id="getAppliedStudies" resultType="studyVO">
-		select study_title, study_regist_date from tbl_study
-		where id in (
-			select study_id from tbl_study_applicant
-			where study_applicant_id = #{id}
-		)
-	</select>
-	
-	<select id="getOpenedStudies" resultType="studyVO">
-		select study_title, study_regist_date, study_status, study_total from tbl_study
-		where member_id = #{id}
-	</select>
-	
-	<select id="getMiniProfile" resultType="memberVO">
-			select member_name, member_email from tbl_member
-			where id = #{id}
-	</select>
-	
-	<select id="getWholeStudies" resultType="studyVO">
-		select study_title, study_regist_date, study_status, study_total from tbl_study
-		where id in (
-			select study_id from tbl_study_applicant
-			where study_applicant_id = #{id}
-		) or member_id = #{id}
-	</select>
-	
-	<insert id="postStudies">
-		insert into tbl_study(member_id, study_title, study_contents, study_location, study_contact_email, study_contact_phonenumber, study_regist_date, study_status, study_total)
-		values(#{memberId}, #{studyTitle}, #{studyContents}, #{studyLocation}, #{studyContactEmail}, #{studyContactPhonenumber}, current_timestamp(), #{studyStatus}, #{studyStatus})
-	</insert>
-	
-	<select id="getListInfoForStudyVO" resultType="studyVO">
-		select id, member_id, study_title, study_contents, study_location, study_regist_date, study_status, study_total from tbl_study
-	</select>
-	
-	<select id="getListInfoForJobVO" resultType="com.gitOsca.job.domain.JobVO">
-		select distinct job_field_category from tbl_job
-		where member_id = #{id}
-	</select>
-	
-	<select id="getListInfoForSkillVO" resultType="com.gitOsca.skill.domain.SkillVO">
-		select skill_list_skill from tbl_skill
-		where study_id = #{id}
-	</select>
-	
-	<select id="getListInfoForStudyImageVO" resultType="com.gitOsca.studyImage.domain.StudyImageVO">
-		select study_image_file_name from tbl_study_image
-		where study_id = #{id} limit 1
-	</select>
-	
-	<select id="getListInfoForGeneralVO" resultType="com.gitOsca.general.domain.GeneralVO">
-		select general_career from tbl_general
-		where member_id = #{id}
-	</select>
-	
-	<select id="countApplicants" resultType="_int">
-		select count(study_applicant_id) from tbl_study_applicant
-		where study_id = #{id}
-	</select>
+   <select id = "getStudyDetail" resultType="studyVO">
+      select id, member_id, study_title, study_contents, study_location, study_contact_email, study_contact_phonenumber from tbl_study
+      where id = #{id} 
+      
+   </select>
+   <select id="getAppliedStudies" resultType="studyVO">
+      select study_title, study_regist_date from tbl_study
+      where id in (
+         select study_id from tbl_study_applicant
+         where study_applicant_id = #{id}
+      )
+   </select>
+   
+   <select id="getOpenedStudies" resultType="studyVO">
+      select study_title, study_regist_date, study_status, study_total from tbl_study
+      where member_id = #{id}
+   </select>
+   
+   <select id="getMiniProfile" resultType="memberVO">
+         select member_name, member_email from tbl_member
+         where id = #{id}
+   </select>
+   
+   <select id="getWholeStudies" resultType="studyVO">
+      select study_title, study_regist_date, study_status, study_total from tbl_study
+      where id in (
+         select study_id from tbl_study_applicant
+         where study_applicant_id = #{id}
+      ) or member_id = #{id}
+   </select>
+   
+   <insert id="postStudies">
+      insert into tbl_study(member_id, study_title, study_contents, study_location, study_contact_email, study_contact_phonenumber, study_regist_date, study_status, study_total)
+      values(#{memberId}, #{studyTitle}, #{studyContents}, #{studyLocation}, #{studyContactEmail}, #{studyContactPhonenumber}, current_timestamp(), #{studyStatus}, #{studyStatus})
+   </insert>
+   
+   <select id="getListInfoForStudyVO" resultType="studyVO">
+      select id, member_id, study_title, study_contents, study_location, study_regist_date, study_status, study_total from tbl_study
+   </select>
+   
+   <select id="getListInfoForJobVO" resultType="com.gitOsca.job.domain.JobVO">
+      select distinct job_field_category from tbl_job
+      where member_id = #{id}
+   </select>
+   
+   <select id="getListInfoForSkillVO" resultType="com.gitOsca.skill.domain.SkillVO">
+      select skill_list_skill from tbl_skill
+      where study_id = #{id}
+   </select>
+   
+   <select id="getListInfoForStudyImageVO" resultType="com.gitOsca.studyImage.domain.StudyImageVO">
+      select study_image_file_name from tbl_study_image
+      where study_id = #{id} limit 1
+   </select>
+   
+   <select id="getListInfoForGeneralVO" resultType="com.gitOsca.general.domain.GeneralVO">
+      select general_career from tbl_general
+      where member_id = #{id}
+   </select>
+   
+   <select id="countApplicants" resultType="_int">
+      select count(study_applicant_id) from tbl_study_applicant
+      where study_id = #{id}
+   </select>
 
 </mapper>
-

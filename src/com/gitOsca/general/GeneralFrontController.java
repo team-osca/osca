@@ -29,7 +29,7 @@ public class GeneralFrontController extends HttpServlet{
 //		기본 이력서 내용 업데이트 하기
 		} else if (target.equals("updateOk")) {
 			result = new UpdateOkController().execute(req, resp);
-		} 
+		}
 		
 		
 		if(result != null) {

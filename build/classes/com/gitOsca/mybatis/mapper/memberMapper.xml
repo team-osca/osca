@@ -21,10 +21,25 @@
 	</update>
 	<!-- ================================ 계정/비밀번호 찾기 =========================================== -->
 		
+	<!-- 멤버 내용 찾기  -->
 	<select id="findById" resultType="memberVO">
 		select id, member_name, member_email, member_phonenumber from tbl_member
 		where id = #{id}
 	</select>
+	
+	<!-- 멤버 이름 업데이트 하기  -->
+	<update id="update">
+		update tbl_member
+		set member_name = #{memberName}
+		where id = #{id}
+	</update>
+
+	<!-- 멤버 삭제하기  -->
+	<delete id="delete">
+		delete from tbl_member 
+		where id = #{id}
+	</delete>
+
 	<!-- ================================ 로그인/가입  =========================================== -->
 	<select id="selectEmail" resultType="string">
 		select member_email from tbl_member where member_email = #{memberEmail}
@@ -45,7 +60,5 @@
 		select member_role from tbl_member
 		where id = #{id}
 	</select>
-	
-
 	
 </mapper>

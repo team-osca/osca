@@ -32,9 +32,20 @@ public class MemberDAO {
 		
 	// ---------------------------- 김동엽 -------------------------------------
 	
+	// ---------------------------- 정유진 -------------------------------------
 //	아이디로 member 내용 찾기
 	public Optional<MemberVO> findById(Long id){
 		return Optional.ofNullable(sqlSession.selectOne("member.findById", id));
+	}
+	
+//	이름 수정하기
+	public void update(MemberVO memberVO) {
+		sqlSession.update("member.update", memberVO);
+	}
+	
+//	회원 탈퇴하기
+	public void delete(MemberVO memberVO) {
+		sqlSession.delete("member.delete", memberVO);
 	}
 	// ---------------------------- 선희원 -------------------------------------
 //	이메일 중복검사
@@ -59,4 +70,3 @@ public class MemberDAO {
 	
 	// ---------------------------- 선희원 -------------------------------------
 }
-

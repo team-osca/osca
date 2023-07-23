@@ -9,28 +9,28 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.gitOsca.Action;
 import com.gitOsca.Result;
+import com.gitOsca.general.dao.GeneralDAO;
+import com.gitOsca.general.domain.GeneralVO;
 import com.gitOsca.member.dao.MemberDAO;
 import com.gitOsca.member.domain.MemberVO;
 
 public class MyPageOkController implements Action {
 
 	@Override
-	public Result execute(HttpServletRequest request, HttpServletResponse response)
+	public Result execute(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, ServletException {
 		
 		Result result = new Result();
 		MemberDAO memberDAO = new MemberDAO();
-		
+//		GeneralDAO generalDAO = new GeneralDAO();
+
 		Optional<MemberVO> foundMember = memberDAO.findById(1L);
 		
 		if(foundMember.isPresent()) {
-			request.setAttribute("member", foundMember.get());
-//			���۹���� forward�̱� ������
+			req.setAttribute("member", foundMember.get());
 			result.setPath("templates/member/mypage/MyPage.jsp");			
 		}else {
 			result.setRedirect(true);
-//			redirect�ϱ� ���̱�
-			result.setPath(request.getContextPath() + "/login.member");
 		}
 		return result;
 	}

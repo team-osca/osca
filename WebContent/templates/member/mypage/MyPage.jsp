@@ -103,7 +103,6 @@
                             </div>
                         </div>
                         <div class="aside-me">
-
                             <div class="aside-me_name">${member.memberName}</div>
                             <div class="aside-me_email">${member.memberEmail}</div> 
                             <div class="aside-me_tel">${member.memberPhonenumber}</div>

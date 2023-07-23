@@ -12,35 +12,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+   display: block;
 }
 body {
-	line-height: 1;
+   line-height: 1;
 }
 ol, ul {
-	list-style: none;
+   list-style: none;
 }
 blockquote, q {
-	quotes: none;
+   quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+   content: '';
+   content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+   border-collapse: collapse;
+   border-spacing: 0;
 }
 :root {
     --nav-height: 50px
@@ -61,7 +61,7 @@ body {
     margin: 0;
     font-size: 14px;
     color: #333;
-    background-color: #f8f8f8;
+    background-color: #fff;
     line-height: 1.42857143;
     font-family: Pretendard Variable,Pretendard JP Variable,
     -apple-system,system-ui,BlinkMacSystemFont,Roboto,Segoe UI,
@@ -97,7 +97,6 @@ a {
 .Header_PostWrite {
     position: fixed;
     top: 50px;
-    z-index: 10;
     width: 100%;
     height: 60px;
     background-color: rgb(255, 255, 255);
@@ -131,7 +130,6 @@ a {
 .Button__interaction {
     /* overflow: hidden; */
     position: absolute;
-    z-index: 0;
     top: 0;
     right: 0;
     bottom: 0;
@@ -433,7 +431,6 @@ input[type=file].PostWrite_PostPhotoFile  {
 /* 모달창이 보이게 하기 */
 .Modal_Modal__root {
     position: fixed;
-    z-index: -100;
     right: 0;
     bottom: 0;
     top: 0;
@@ -453,7 +450,6 @@ input[type=file].PostWrite_PostPhotoFile  {
 }
 
 .Modal_Modal__root__backdrop {
-    z-index: -100;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -468,6 +464,7 @@ input[type=file].PostWrite_PostPhotoFile  {
     width: 460px;
     padding: 0;
     max-height: 400px;
+    display: none;
 }
 
 /* 모달 몸통 색갈 */
@@ -708,7 +705,6 @@ input[type=file].PostWrite_PostPhotoFile  {
 .Button_Button__interaction {
     overflow: hidden;
     position: absolute;
-    z-index: 0;
     top: 0;
     right: 0;
     bottom: 0;
@@ -720,5 +716,4 @@ input[type=file].PostWrite_PostPhotoFile  {
     transition: opacity .2s ease;
     will-change: opacity;
 }
-
 

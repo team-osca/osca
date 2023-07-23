@@ -1,4 +1,4 @@
-package com.gitOsca.general.controller;
+package com.gitOsca.job.controller;
 
 import java.io.IOException;
 import java.util.Optional;

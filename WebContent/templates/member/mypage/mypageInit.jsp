@@ -73,7 +73,7 @@
                         </div>
                         <div class="info">
                             <div class="info-label">경력</div>
-                            <div class="info-body">신입</div>
+                            <div class="info-body">${general.generalCareer}</div>
                         </div>
                         <div class="info">
                             <div class="info-label">스킬</div>
@@ -87,4 +87,11 @@
     </div>
 </body>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/member/mypage/edit/init.js"></script>
+<script type="text/javascript">
+	let $generalUniversity = "${general.generalUniversity}";
+	let $generalCompany = "${general.generalCompany}";
+	let $generalIntroduction = "${general.generalIntroduction}";
+	
+	console.log($generalUniversity);
+</script>
 </html>
