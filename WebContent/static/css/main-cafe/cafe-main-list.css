@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .cafe-list-body{
     min-height: calc(100vh - 282px);
+    padding-top: 59px;
 }
 
 .header-title{
@@ -12,6 +13,7 @@
     color: #171717;
     max-width: 1060px;
     width: 90%;
+    margin: 0 auto;
 }
 
 .filter-box{
@@ -418,4 +420,12 @@ div.categoryList{
     font-style: normal;
     font-weight: 600;
     margin-right: 8px;
+}
+
+.cafe-empty{
+	display : none;
+	margin: 100px 0;
+	color: #ccc;
+  	font-size: 16px;
+  	text-align: center;
 }

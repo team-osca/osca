@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     
 <!DOCTYPE html>
 <html lang="ko">
@@ -54,6 +55,7 @@
                             <li><a href="">FAQ</a></li>
                             <li><a href="">오늘의 스터디</a></li>
                             <li><a href="">오늘의 카페</a></li>
+                            <li><a href="${pageContext.request.contextPath}/myCafe.cafe">내 카페</a></li>
                         </ul>
                     </section>
                     <section>
@@ -134,7 +136,7 @@
             <!-- cafe-list 뿌려지는 부분 section -->
             <section style="background-color: #ffffff;">
                 <div class="cafe-list-body" style="padding-top: 59px;">
-                    <h1 class="header-title" style="font-size: 22px; margin: 0 229.6px;">
+                    <h1 class="header-title" style="font-size: 22px; margin: 0 auto;">
                         다양한 지역에서 오늘의 카페를 만나보세요!
                     </h1>
                     <div class="header-title-edge" style="height:1px;width:1519.2px;color:white;"></div>
@@ -142,7 +144,8 @@
                         <div class="region-filter-container">
                             <div class="interestTagSlide categoryList">
                                 <div class="scrollsnap scrollsnap-hidden regionTagSlide_width">
-                                    <div class="scrollsnap-hidden scrollsnap2 scrollsnap3 scrollsnap4 tagSlide-content-interval">
+                                    <div id="region-button-box" class="scrollsnap-hidden scrollsnap2 scrollsnap3 scrollsnap4 tagSlide-content-interval">
+                                    <%-- 
                                         <button class="button-scroll button-shape button-outline-shape button-outline-primary button-outline-medium region-category-item button-content-color" id="all-content-color" style="color: #3366FF;  --button-color: #3366FF;">
                                             <span class="region-button-contentButton ">전체</span>
                                         </button>
@@ -194,6 +197,7 @@
                                         <button class="button-scroll button-shape button-outline-shape button-outline-primary button-outline-medium region-category-item button-content-color">
                                             <span class="region-button-contentButton">제주</span>
                                         </button>
+                                        --%>
                                     </div>
                                     <div class="tagslide-arrow tagslide-rightarrow tagslide-arrow-visible">
                                         <button type="button" class="rightarrow-button">
@@ -221,7 +225,7 @@
                         </div>
                         </div>
                     <ul class="all-cafe-list cafe-list-container">
-                        <li class="cafe-card-container cafe-card-interaction">
+                        <%-- <li class="cafe-card-container cafe-card-interaction">
                             <a href="" style="--base-font-size: 10;">
                                 <div class="cafe-thumbnail-image cafe-thumbnail-responsive">
                                     <img class="cafe-image cafe-image-cover" src="https://scontent-gmp1-1.xx.fbcdn.net/v/t1.18169-9/24909847_200121040547717_241202769586942938_n.png?_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_ohc=f-RhMTp8drgAX8WBSPM&_nc_ht=scontent-gmp1-1.xx&oh=00_AfCV5kA64O1S7PJ68WBnmPXAGlMZvuveS1ueCoLeOv_Ekw&oe=64CE7151" alt="바나프레소">
@@ -324,8 +328,9 @@
                                     </div>
                                 </div>
                             </a>
-                        </li>
-                    </ul>         
+                        </li> --%>
+                    </ul> 
+                    <div class="cafe-empty">요청하신 결과가 없습니다.</div>        
                 </div>
             </section>
 
@@ -377,6 +382,16 @@
     </main>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+	const path = "${pageContext.request.contextPath}";
+	const REGION = ["전체", "서울","경기","인천","대전","대구","부산","광주","울산","강원","전남","전북","경남","경북","충남","충북","제주"];
+	let $prev_click_button;
+	const $cafe_list_container = $('.cafe-list-container');
+</script>
 <script src="${pageContext.request.contextPath}/static/js/main-cafe/cafe-region.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/main-cafe/cafe-main-banner.js"></script>
-</html>>
+<script src="${pageContext.request.contextPath}/static/js/main-cafe/cafeRegionAjax.js">/* 각종 함수 정의 */</script>
+<script>
+	$(document).ready(init);
+</script>
+</html>
