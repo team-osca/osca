@@ -6,7 +6,7 @@
 const $authenticationNumberBtn = $('#AuthenticationNumberBtn');
 // 인증번호 변수
 let authenticationData;
-let flag;
+/*let flag;*/
 
 // ------------------ 이전 버튼 클릭 이벤트 ----------------
 
@@ -18,7 +18,7 @@ $('pre-bth').click(function() {
 
 // ------------------ 이전 버튼 클릭 이벤트 ----------------
 // -----------------휴대폰번호 정규식 체크------------------
-$('#phonenumber-input').keyup(function() {
+$('#phoneNumber-input').keyup(function() {
 	const phoneNumber = $(this).val();
 	checkphoneNumber(phoneNumber);
 });
@@ -40,7 +40,7 @@ const checkphoneNumber = (phoneNumber) => {
 
 $authenticationNumberBtn.click(function() {
 	$.ajax({
-		url: contextPath + "/get_authentication_number.member?phoneNumber=" + $('#phonenumner-input').val(),
+		url: contextPath + "/get_authentication_number.member?phoneNumber=" + $('#phoneNumber-input').val(),
 		async: "false",
 		success: function(result) {
 			authenticationData = result;
@@ -97,45 +97,11 @@ $authenticationNumberBtn.on('click', function() {
 //------------------- 계속 버튼 클릭 이벤트 (계정 찾기)-------------------
 
 $('.continue-btn').click(function() {
-	let phoneNumber =  $('#phonenumber-input').val();
-	let URL = contextPath + "/find_account.member";
-	$.ajax({
-		url: URL,
-		type : "POST",
-		data: {"phoneNumber": phoneNumber},
-		dataType: 'json',
-		success: function(result) {
-			let account = result.account;
-			if ( !(account === '계정이 없습니다.') ) {
-				link = "http://localhost:8090/sign_infind_account_next.member?flag=true&account=" + account;
-			} else {
-				link = "http://localhost:8090/sign_infind_account_next.member?flag=false";
-			}
-			location.href = link;
-		},
-		error: function(a, b, c) {
-			console.log(a, b, c);
-		}
-	});
-
+	let frm = document.phoneNumberFrom;
+	frm.submit();
 });
 
 //------------------- 계속 버튼 클릭 이벤트 (계정 찾기) -------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

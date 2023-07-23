@@ -1,0 +1,54 @@
+<<<<<<< HEAD
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+	
+	    <!-- ================================ 계정/비밀번호 찾기 =========================================== -->
+	<select id="selectAccount" parameterType="string" resultType="string">
+		select member_email from tbl_member
+		where #{phoneNumber} = member_phonenumber
+	</select>
+	
+	<select id="selectUserName" parameterType="string" resultType="string" >
+		select member_name from tbl_member
+		where #{memberEmail} = member_email
+	</select>
+	
+	<update id="updatePassword" parameterType="map" >
+		update tbl_member
+		set member_password = #{memberPassword}
+		where member_email = #{memberEmail}	
+	</update>
+	<!-- ================================ 계정/비밀번호 찾기 =========================================== -->
+		
+	<select id="findById" resultType="memberVO">
+		select id, member_name, member_email, member_phonenumber from tbl_member
+		where id = #{id}
+	</select>
+	<!-- ================================ 로그인/가입  =========================================== -->
+	<select id="selectEmail" resultType="string">
+		select member_email from tbl_member where member_email = #{memberEmail}
+	</select>
+	
+	<select id="login" resultType="long">
+		select id from tbl_member 
+		where member_email = #{memberEmail} and member_password = #{memberPassword}
+	</select>
+	<!-- ================================ 회원가입  =========================================== -->
+	<insert id="insert">
+		insert into tbl_member
+		(member_name, member_email, member_password, member_phonenumber, member_role, member_regist_date)
+		values( #{memberName}, #{memberEmail}, #{memberPassword}, #{memberPhonenumber}, #{memberRole}, current_timestamp)
+	</insert>
+		<!-- ================================ 로그인시 멤버 롤 찾기=========================================== -->
+	<select id="findMemberRoleById" resultType="String">
+		select member_role from tbl_member
+		where id = #{id}
+	</select>
+	
+
+	
+</mapper>
+>>>>>>> ba2112326d8816efd6363bbbec4b0cf334c74e91

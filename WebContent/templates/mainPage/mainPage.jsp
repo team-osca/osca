@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std-dynamic-subset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/mainPage/mainPage.css">
+    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/allimages/all-image/favicon.jpg">
 </head>
 <body>
     <div id="mainpage">
@@ -25,16 +26,20 @@
                         <section>
                             <div class="main-bar-nav-top">
                                 <div class="main-bar-nav-top-logo">
+                                 <!-- 슬릭 트랙리스트
                                     <button type="button" class="main-bar-hamberger">
                                         <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=17&q=75" alt="hamberger menu" height="14" style="width:17px; height:14px; object-fit:contain">
                                     </button>
-                                    <a href="" class="main-bar-nav-top-logo-a">
+                                   -->
+                                    <a href=" " class="main-bar-nav-top-logo-a">
                                         <img class="osca" src="${pageContext.request.contextPath}/static/allimages/main-page/logo.jpg">
                                     </a>
                                 </div>
                             </div>
                         </section>
                         <section>
+                        <div id="memberRoleValue" data-member-role="<%= session.getAttribute("memberRole") %>"></div>
+						<div id="memberIdValue" data-member-id="<%= session.getAttribute("memberId") %>"></div>
                             <ul class="menu">
                                 <li>
                                     <a href="">Oh!스카 소개</a>
@@ -48,38 +53,71 @@
                                 <li>
                                     <a href="">오늘의 카페</a>
                                 </li>
+                                <li id="nav-my-cafe" style="display: none;">
+                                    <a href="">내 카페</a>
+                                </li>
+                                <li id="nav-my-study" style="display: none;">
+                                    <a href="">내 스터디</a>
+                                </li>                                                                                                
                             </ul>
                         </section>
                         <section>
-                            <aside class="aside isLoggedIn">
+                         <form action="${pageContext.request.contextPath}/signOrLogin.member">
+                            <aside class="aside">
                                 <ul>
-                                    <li>
-                                        <button type="button" class="searchButton">
-                                            <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
-                                                <defs>
-                                                    <path id="qt2dnsql4a" d="M15.727 17.273a.563.563 0 10.796-.796l-4.875-4.875-.19-.165a.563.563 0 00-.764.028 5.063 5.063 0 111.261-2.068.562.562 0 101.073.338 6.188 6.188 0 10-1.943 2.894l4.642 4.644z"></path>
-                                                </defs>
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <use fill="#333" fill-rule="nonzero" stroke="#333" stroke-width=".3" xlink:href="#qt2dnsql4a"></use>
-                                                </g>
-                                            </svg>
-                                        </button>
+                                    <li class="signUp" id="nav-signup-login" style="display:block;" >
+                                        <a href="${pageContext.request.contextPath}/signOrLogin.member" class="signUpBtn" >회원가입/로그인</a>
                                     </li>
-                                    <li class="signUp">
-                                        <button class="signUpBtn" type="button">회원가입/로그인</button>
-                                    </li>
-                                    <li class="leftDivision mdMoreVisible"::before>
-                                        <a class="dashboardBtn" href="">기업 서비스</a>
-                                    </li>
+                                    <li class="profile"  id="profile-pic" style="display:none;" >
+                    <button
+                      type="button"
+                      class="profileButton"
+                    >
+                      <div class="avatarBorder">
+                        <div
+                          class="avatarImage"
+                          style="
+                            background-image: url(https://static.wanted.co.kr/oneid-user/profile_default.png),
+                              url(https://static.wanted.co.kr/images/profile_default.png);
+                          "
+                        ></div>
+                      </div>
+                    </button>
+                  </li>
+               
                                 </ul>
                             </aside>
+                           </form>
                         </section>
                     </nav>
                 </div>
+                    <!-- 프로필 이미지 클릭 시  -->
+                    <div class="modal">
+                    <form action="${pageContext.request.contextPath}/logout.member">
+					 <div class="MenuPopover">
+					    <div class="MenuPopWrapper">
+					      <ul class="MenuPopover_list">
+					        <li class="">
+					          <a href="" class="">
+					          <span>마이 페이지</span>
+					          </a>
+					        </li>
+					        <li>
+					          <button type="submit" class="is-logout">
+					            <span>로그아웃</span>
+					          </button>
+					        </li>
+					      </ul>
+					    </div>
+					    <div class="MenuPopover_bubblePoint"></div>
+					  </div> 
+					  </form>
+					  </div>
+  <!-- 프로필 이미지 클릭 시 끝  -->
             </div>
             <div class="padding"></div>
         </header>
-        <main>
+        <main>	
             <section class="section">
                 <div class="topBanner">
                     <div class="slick-slider slick-initialized">
@@ -179,7 +217,7 @@
                         <header class="study-list-header">
                             <div class="study-list-wrapper">
                                 <h2 class="study-title">
-                                    <p>#인기있는 스터디</p>
+                                    <p>#최신 스터디</p>
                                     <img src="https://cdn3.iconfinder.com/data/icons/baby-154/512/book_kid_school_educate_fairy_tale_learning-64.png">
                                     <span>소개합니다</span>
                                 </h2>
@@ -252,7 +290,7 @@
                         <header class="cafe-list-header">
                             <div class="cafe-list-wrapper">
                                 <h2 class="cafe-title">
-                                    <p>#인기있는 카페</p>
+                                    <p>#새로운 카페</p>
                                     <img src="https://cdn0.iconfinder.com/data/icons/set-02-coffee-colors-doodle/91/Coffee_Doodle_Colors_97-64.png">
                                     <span>소개합니다</span>
                                 </h2>
@@ -327,7 +365,7 @@
                 </article>
             </section>
             <footer class="footer">
-                <div class="footer-rowClass"> 
+             	   <div class="footer-rowClass wanted"> 
                     <div class="nav-links">
                         <a class="nav-links-logo" href="https://www.wanted.co.kr/">
                             <svg width="31.4%" height="100%" viewBox="0 0 79 32">
@@ -384,7 +422,9 @@
         </main>
         <div></div>
         <div></div>
-    </div>
+    </div>	
 </body>
 <script src="${pageContext.request.contextPath}/static/js/mainPage/mainPage_uheejoonVer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mainPage/mainPage_login_status.js"></script>
+
 </html>

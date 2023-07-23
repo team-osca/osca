@@ -18,23 +18,24 @@ public class findAccountOkController extends Result implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		resp.setContentType("UTF-8");
-		resp.setContentType("text/html;charset=utf-8");
+		Result result = new Result();
 		MemberDAO dao = new MemberDAO();
-		String account = dao.selectAccount(req.getParameter("phoneNumber"));
+		resp.setContentType("UTF-8");
+		resp.setContentType("text/html; charset=UTF-8");
+		String phoneNumber = req.getParameter("phoneNumber");
+		String path = "";
+		String memberEmail = dao.selectAccount(phoneNumber);
+		
 		JSONObject accountJSON = new JSONObject();
-		if( account == null ) {
-			account = "계정이 없습니다.";
+		if ( memberEmail == null ) {
+			path = req.getContextPath() + "templates/findAccount/not-found-account.jsp";
+			result.setPath(path);
+		} else {
+			path = req.getContextPath() + "templates/findAccount/find-account-ok.jsp";
+			req.setAttribute("memberEmail", memberEmail);
+			result.setPath(path);
 		}
-		try {
-			accountJSON.put("account", account);
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		PrintWriter out = resp.getWriter();
-		out.print(accountJSON.toString());
-		out.close();
-		return null;
+		return result;
 	}
 
 }

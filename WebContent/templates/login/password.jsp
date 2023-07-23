@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +16,11 @@
   	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login/password.css">
 </head>
 <body>
+        <div class="modal" style="display: none;">
+            <div class="warn-modal" style="animation: 0.5s ease 0s 1 normal none running popUp;">
+                <div id="content-wrap">비밀번호를<br>확인해주세요</div>
+            </div>
+        </div>
     <div id="login">
         <!-- 전체 페이지 영역 -->
         <div class="area">
@@ -24,13 +29,15 @@
                 <div class="box">
                     <div class="title">
                         <div class="back">
-                            <button type="button" class="go-back">
+                         <form  action="${pageContext.request.contextPath}/signOrLogin.member">
+                            <button type="submit" class="go-back">
                                 <span class="back-container">
                                     <svg viewBox="0 0 18 18" class="back-arrow">
                                         <path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path>
                                     </svg>
                                 </span>
                             </button>
+                               </form>
                         </div>
                         <div class="email-login">
                             <p data-test-id="Typography" color="var(--theme-palette-colors-black-100)" class="login-title">이메일로 로그인</p>
@@ -71,5 +78,7 @@
         </div>
     </div>
 </body>
-<script src="${pageContext.request.contextPath}/static/js/login/password.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/login/password.js"> </script>
+
 </html>
+
