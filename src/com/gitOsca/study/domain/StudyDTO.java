@@ -1,6 +1,8 @@
 package com.gitOsca.study.domain;
 
-public class StudyVO {
+import com.gitOsca.member.domain.MemberVO;
+
+public class StudyDTO {
 	private Long Id;
 	private String studyTitle;
 	private String studyContents;
@@ -11,7 +13,25 @@ public class StudyVO {
 	private String studyUpdateDate;
 	private String studyStatus;
 	private int studyTotal;
-	private Long memberId;
+	private Long generalId;
+	private MemberVO memberVO;
+	
+	
+	public StudyDTO() {;}
+	
+	public StudyDTO(StudyVO studyVO) {
+		Id = studyVO.getId();
+		this.studyTitle = studyVO.getStudyTitle();
+		this.studyContents = studyVO.getStudyContents();
+		this.studyLocation = studyVO.getStudyLocation();
+		this.studyContactEmail = studyVO.getStudyContactEmail();
+		this.studyContactPhonenumber = studyVO.getStudyContactPhonenumber();
+		this.studyRegistDate = studyVO.getStudyRegistDate();
+		this.studyUpdateDate = studyVO.getStudyUpdateDate();
+		this.studyStatus = studyVO.getStudyStatus();
+		this.studyTotal = studyVO.getStudyTotal();
+		this.generalId = studyVO.getMemberId();
+	}
 	public Long getId() {
 		return Id;
 	}
@@ -72,11 +92,25 @@ public class StudyVO {
 	public void setStudyTotal(int studyTotal) {
 		this.studyTotal = studyTotal;
 	}
-	public Long getMemberId() {
-		return memberId;
+	public Long getGeneralId() {
+		return generalId;
 	}
-	public void setMemberId(Long memberId) {
-		this.memberId = memberId;
+	public void setGeneralId(Long generalId) {
+		this.generalId = generalId;
+	}
+	public MemberVO getMemberVO() {
+		return memberVO;
+	}
+	public void setMemberVO(MemberVO memberVO) {
+		this.memberVO = memberVO;
+	}
+	@Override
+	public String toString() {
+		return "StudyDTO [Id=" + Id + ", studyTitle=" + studyTitle + ", studyContents=" + studyContents
+				+ ", studyLocation=" + studyLocation + ", studyContactEmail=" + studyContactEmail
+				+ ", studyContactPhonenumber=" + studyContactPhonenumber + ", studyRegistDate=" + studyRegistDate
+				+ ", studyUpdateDate=" + studyUpdateDate + ", studyStatus=" + studyStatus + ", studyTotal=" + studyTotal
+				+ ", generalId=" + generalId + ", memberVO=" + memberVO + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -93,7 +127,7 @@ public class StudyVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		StudyVO other = (StudyVO) obj;
+		StudyDTO other = (StudyDTO) obj;
 		if (Id == null) {
 			if (other.Id != null)
 				return false;
@@ -101,16 +135,6 @@ public class StudyVO {
 			return false;
 		return true;
 	}
-	@Override
-	public String toString() {
-		return "StudyVO [Id=" + Id + ", studyTitle=" + studyTitle + ", studyContents=" + studyContents
-				+ ", studyLocation=" + studyLocation + ", studyContactEmail=" + studyContactEmail
-				+ ", studyContactPhonenumber=" + studyContactPhonenumber + ", studyRegistDate=" + studyRegistDate
-				+ ", studyUpdateDate=" + studyUpdateDate + ", studyStatus=" + studyStatus + ", studyTotal=" + studyTotal
-				+ ", memberId=" + memberId + "]";
-	}
-	
-
 	
 	
 }

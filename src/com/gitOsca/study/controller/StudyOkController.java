@@ -15,22 +15,37 @@ import com.gitOsca.Result;
 import com.gitOsca.study.dao.StudyDAO;
 
 
-public class WholeStudyOkController implements Action{
+public class StudyOkController implements Action{
+	private final int WHOLE_STUDY = 1;
+	private final int OPENED_STUDY = 2;
+	private final int APPLIED_STUDY = 3;
 	
 	public Result execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
 		response.setContentType("text/html; charset=UTF-8");
 		Long id = Long.parseLong(request.getParameter("id"));
+		Integer type = Integer.parseInt(request.getParameter("type"));
 		StudyDAO studyDAO = new StudyDAO();
 		PrintWriter out = response.getWriter();
 		JSONArray jsonArray = new JSONArray();
 		
-//		dao에서 id로 전체 조회 한 후 각각을 JSON객체로 만든 뒤 JSONArray객체에 삽입
-		studyDAO.getWholeStudies(id).stream().map(JSONObject::new).forEach(jsonArray::put);
+		System.out.println(" ��기도  ��무거 ��");
+		
+		if (type == WHOLE_STUDY) {
+			studyDAO.getWholeStudies(id).stream().map(JSONObject::new).forEach(jsonArray::put);
+		}
+		else if (type == OPENED_STUDY) {
+			studyDAO.getOpenedStudies(id).stream().map(JSONObject::new).forEach(jsonArray::put);
+		}
+		else if (type == APPLIED_STUDY) {
+			studyDAO.getAppliedStudies(id).stream().map(JSONObject::new).forEach(jsonArray::put);
+		}
+		
 		
 		out.print(jsonArray.toString());
 		out.close();
 		return null;
+	
 	
 }
 	

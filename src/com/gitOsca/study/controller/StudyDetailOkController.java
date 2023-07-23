@@ -13,6 +13,8 @@ import org.json.JSONObject;
 import com.gitOsca.Action;
 import com.gitOsca.Result;
 import com.gitOsca.study.dao.StudyDAO;
+import com.gitOsca.study.domain.StudyDTO;
+import com.gitOsca.study.domain.StudyVO;
 
 
 public class StudyDetailOkController implements Action{
@@ -21,12 +23,21 @@ public class StudyDetailOkController implements Action{
 		
 		response.setContentType("text/html; charset=UTF-8");
 		
+		System.out.println(" “¤ –´ ™” š°");
 		StudyDAO studyDAO = new StudyDAO();
+		
 		PrintWriter out = response.getWriter();
-		out.print(new JSONObject(studyDAO.getStudyDetail(Long.parseLong(request.getParameter("id")))).toString());
+		Long id = Long.parseLong(request.getParameter("id"));
+		StudyVO studyVO = studyDAO.getStudyDetail(id);
+		StudyDTO studyDTO = new StudyDTO(studyVO);
+		studyDTO.setMemberVO(studyDAO.getMiniProfile(studyVO.getMemberId()));
+		
+        JSONObject jsonObject = new JSONObject(studyDTO);
+        
+        out.print(jsonObject.toString());
 		out.close();
 		return null;
-	
+		
 }
 	
 }
