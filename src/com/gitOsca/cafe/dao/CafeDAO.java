@@ -19,9 +19,22 @@ public class CafeDAO {
 		return sqlSession.selectList("cafe.findAllByLocation", location);
 	}
 	
+	public List<CafeVO> findAllByStatus(String status){
+		return sqlSession.selectList("cafe.findAllByStatus", status);
+	}
+	
+	public int getNumberOfAllCafes(){
+		return sqlSession.selectOne("cafe.getNumberOfAllCafes");
+	}
+
+	public int getNumberOfAllCafesByStatus(String status){
+		return sqlSession.selectOne("cafe.getNumberOfAllCafesByStatus", status);
+	}
+	
 
 	public Optional<CafeVO> findById(Long id) {
 		return Optional.ofNullable(sqlSession.selectOne("cafe.findById", id));
 	}
+	
 	
 }

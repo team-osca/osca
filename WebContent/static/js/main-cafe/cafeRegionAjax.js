@@ -38,6 +38,12 @@ function error_func(a, b, c) {
 };
 
 function list_data(data) {
+	let cafe_time = "시간 X";
+	if(data.cafeOpenTime && data.cafeEndTime){
+		cafe_time = data.cafeOpenTime + ' ~ ' + data.cafeEndTime;
+	}
+	
+	console.log(cafe_time);
 	const DAY = ['일', '월', '화', '수', '목', '금', '토'];
 	/*console.log(DAY[new Date(data.cafeRegistDate).getDay()]);*/
 	return (`
@@ -58,7 +64,7 @@ function list_data(data) {
 	            </div>
 	            <div class="additional-section additional-section-column">
 	                <span class="period period-responsive">
-	                    ${data.cafeOpenTime}(목)~${data.cafeEndTime}(일)
+	                    ` + cafe_time + `
 	                </span>
 	                <div class="tag tag-responsive">
 	                    <span>#카공</span>

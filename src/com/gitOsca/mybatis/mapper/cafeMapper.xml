@@ -34,5 +34,25 @@
 		where ceo_id = #{id}
 		order by id desc
 	</select>
+	
+	<select id="getNumberOfAllCafes" resultType="_int">
+		select 
+			count(id)
+		from tbl_cafe cafe
+	</select>
+	
+	<select id="getNumberOfAllCafesByStatus" resultType="_int">
+		select 
+			count(id)
+		from tbl_cafe cafe
+		where status = #{status}
+	</select>
+	
+	<select id="findAllByStatus" resultType="com.gitOsca.cafe.domain.CafeVO">
+		select 
+			id, ceo_id, cafe_title, cafe_contents, cafe_open_time, cafe_end_time, cafe_regist_date, cafe_update_date, cafe_deadline_date
+		from tbl_cafe cafe
+		where status = #{status} or 2 = #{status}
+	</select>
 
 </mapper>

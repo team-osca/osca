@@ -22,8 +22,7 @@ public class CafeFrontController extends HttpServlet{
 			result = new Result();
 			result.setPath(req.getContextPath() + "/templates/main-cafe/main-cafe-list.jsp");
 		}else if(target.equals("myCafe")) {
-			result = new Result();
-			result.setPath(req.getContextPath() + "/templates/cafe/mycafe.jsp");
+			result = new MyCafeController().execute(req, resp);
 		}else if(target.equals("post")) {
 			result = new Result();
 			result.setPath(req.getContextPath() + "/templates/cafe/mycafe-post.jsp");
@@ -33,6 +32,8 @@ public class CafeFrontController extends HttpServlet{
 			result = new DetailOkController().execute(req, resp);
 		}else if(target.equals("writeOk")) {
 			result = new DetailOkController().execute(req, resp);
+		}else if(target.equals("myCafeOk")) {
+			result = new MyCafeOkController().execute(req, resp);
 		}
 		
 		if(result != null) {
