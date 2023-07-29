@@ -44,7 +44,7 @@
                             <h3>일반회원 자주 묻는 질문</h3>
                             <ul class="question-list">
                                 <li class="prmoted-questions-item" >
-                                <a href="">
+                                <a href="${pageContext.request.contextPath}/templates/faq/faq-detail.jsp">
                                     기업에서 면접 요청메일이 왔어요.
                                 </a>
                                 </li> 
@@ -94,7 +94,7 @@
                                     </a>                               
                                 </li> 
                             </ul>
-                            <a href="" class="see-all-questions" style="font-size:1.1em;">+ 자세히 보기</a>
+                            <a href="${pageContext.request.contextPath}/templates/faq/faq-detail.jsps" class="see-all-questions" style="font-size:1.1em;">+ 자세히 보기</a>
                         </section>
                     </div>
                     <div class="col-sm-6">

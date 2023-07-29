@@ -15,16 +15,16 @@ import com.gitOsca.member.domain.MemberVO;
 public class SettingOkController implements Action {
 
 	@Override
-	public Result execute(HttpServletRequest request, HttpServletResponse response)
+	public Result execute(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, ServletException {
-		
 		Result result = new Result();
-		MemberDAO memberDAO = new MemberDAO();
-		
-		Optional<MemberVO> foundMember = memberDAO.findById(1L);
+		MemberDAO memberDAO = new MemberDAO();		
+		Long memberId = (Long)req.getSession().getAttribute("memberId");
+
+		Optional<MemberVO> foundMember = memberDAO.findById(memberId);
 		
 		if(foundMember.isPresent()) {
-			request.setAttribute("member", foundMember.get());
+			req.setAttribute("member", foundMember.get());
 			result.setPath("templates/member/mypage/setting.jsp");			
 		}else {
 			result.setRedirect(true);

@@ -154,14 +154,12 @@ $pwCheck.keyup(function() {
 	}
 
 	// 휴대폰번호 인증 부분
-	console.log("자스에 들어옴");
 	// 인증번호 받기 버튼
 	const $authenticationNumberBtn = $('#AuthenticationNumberBtn');
 	// 인증번호 변수
 	let authenticationData;
 
 	$authenticationNumberBtn.click(function() {
-		console.log("클릭버튼");
 		$.ajax({
 			url: contextPath + "/get_authentication_number.member?phoneNumber=" + $('#phoneNumber-input').val(),
 			async: false,

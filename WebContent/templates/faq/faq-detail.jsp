@@ -161,7 +161,7 @@
                         유료직업소개사업등록번호 : (국내) 제2020-3230259-14-5-00018호 | 사업자등록번호 : 299-86-00021 |  02-539-7118
                     </p>
                     <p class="footer_info" style="color:#666666 !important; font-size: 13px;">           
-                        © Wantedlab, Inc
+                        © Oh!스카, Inc
                     </p>
                 </div>
             </aside>

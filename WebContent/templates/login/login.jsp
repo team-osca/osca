@@ -33,7 +33,7 @@
                         </div>
                         <form action="${pageContext.request.contextPath}/emailCheck.member">
                             <h1 color="var(--theme-palette-colors-black-100)" class="topphr">하나의 계정으로<br>더욱 편리하게</h1>
-                            <h2 color="var(--theme-palette-colors-gray-600)" class="bottomphr">오스카가 제공하는 서비스를<br>하나의 계정으로 모두 이용할 수 있습니다.</h2>
+                            <h2 color="var(--theme-palette-colors-gray-600)" class="bottomphr">오스카가 제공하는 서비스를<br>편리하게 이용해보세요.</h2>
                             <div>
                                 <div class="emailbox">
                                     <label  color="var(--theme-palette-colors-gray-600)" for="email" class="subject">이메일</label>

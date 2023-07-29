@@ -22,9 +22,9 @@ public class MyPageOkController implements Action {
 		
 		Result result = new Result();
 		MemberDAO memberDAO = new MemberDAO();
-//		GeneralDAO generalDAO = new GeneralDAO();
+		Long memberId = (Long)req.getSession().getAttribute("memberId");
 
-		Optional<MemberVO> foundMember = memberDAO.findById(1L);
+		Optional<MemberVO> foundMember = memberDAO.findById(memberId);
 		
 		if(foundMember.isPresent()) {
 			req.setAttribute("member", foundMember.get());

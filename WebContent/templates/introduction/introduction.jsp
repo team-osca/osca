@@ -29,7 +29,7 @@
                     </div>
                     <nav class="header_nav_wrapper common_wrapper" style="width: 978px;"> 
                         <!-- 메인 화면으로 페이지 추가하면 됨 -->
-                        <a class="header_nav_box" href="">Oh!스카 홈</a>
+                        <a class="header_nav_box" href="http://localhost:8090/home.member">Oh!스카 홈</a>
                         <div class="header_nav_line"></div>
                         <ul class="header_nav_items">
                             <!-- 오늘의 스터디 페이지로 이동 -->
@@ -38,7 +38,7 @@
                             <li><a href="">카페</a></li>
                             <li><a href="">내 카페</a></li>
                              <!-- FAQ 페이지로 이동 -->
-                             <li><a href="http://127.0.0.1:5500/team-project/FAQ/FAQ.html">FAQ</a></li>
+                             <li><a href="${pageContext.request.contextPath}/templates/faq/faq-main.jsp">FAQ</a></li>
                             <li><a href="#introduction">Oh!스카 소개</a></li>
                         </ul>
                     </nav>
