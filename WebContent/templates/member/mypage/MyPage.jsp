@@ -37,7 +37,7 @@
                                 <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&amp;w=17&amp;q=75"
                                     alt="hamberger menu" height="14" style="width:17px;height:14px;object-fit:contain">
                             </button>
-                            <a href="" class="main-bar-nav-top-logo-a" >
+                            <a href="http://localhost:8090/home.member" class="main-bar-nav-top-logo-a" >
                             	<img src="${pageContext.request.contextPath}/static/allimages/all-image/logo.jpg" height="18px" width="82px" alt="Oh!스카 로고">
                             </a>
                         </div>
@@ -46,8 +46,8 @@
                     <ul class="menu">
                         <li ><a href="">오늘의 스터디</a></li>
                         <li ><a href="">오늘의 카페</a></li>
-                        <li class="smMoreVisible"><a href="">FAQ</a></li>
-                        <li class="smMoreVisible"><a href="">오!스카 소개</a></li>
+                        <li class="smMoreVisible"><a href="${pageContext.request.contextPath}/templates/introduction/introduction.jsp">FAQ</a></li>
+                        <li class="smMoreVisible"><a href="${pageContext.request.contextPath}/templates/faq/faq-main.jsp">오!스카 소개</a></li>
                     </ul>
                     <aside class="aside isLoggedIn">
                         <ul>

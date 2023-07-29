@@ -42,10 +42,10 @@
 						<div id="memberIdValue" data-member-id="<%= session.getAttribute("memberId") %>"></div>
                             <ul class="menu">
                                 <li>
-                                    <a href="">Oh!스카 소개</a>
+									<a href="${pageContext.request.contextPath}/templates/introduction/introduction.jsp">Oh!스카 소개</a>
                                 </li>
                                 <li>
-                                    <a href="">FAQ</a>
+                                    <a href="${pageContext.request.contextPath}/templates/faq/faq-main.jsp">FAQ</a>
                                 </li>
                                 <li>
                                     <a href="">오늘의 스터디</a>
@@ -98,7 +98,7 @@
 					    <div class="MenuPopWrapper">
 					      <ul class="MenuPopover_list">
 					        <li class="">
-					          <a href="" class="">
+					          <a href="http://localhost:8090/mypageOk.member" class="">
 					          <span>마이 페이지</span>
 					          </a>
 					        </li>

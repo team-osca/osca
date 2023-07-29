@@ -32,13 +32,13 @@
                 <div class="formButton button_ selected">
                     <h6 class="formButton-label">학교</h6>
                     <div class="input_box">
-                        <input id="university" type="text" autocomplete="off" val="">
+                        <input id="university" type="text" placeholder="대학명을 입력하세요" autocomplete="off" val="">
                     </div>
                 </div>		
                 <div class="formButton button_">
                     <h6 class="FormButton-label">직장</h6>
                     <div class="input_box">
-                        <input id="company" type="text" autocomplete="off" val="">
+                        <input id="company" type="text" placeholder="직장명을 입력하세요" autocomplete="off" val="">
                     </div>
                 </div>
                 <div class="careerPeriod">
@@ -111,7 +111,7 @@
                 <label for="name" class="textarea resumeBasicInfo">
                     <h6>간단 소개글</h6>
                     <p>직무 내용, 경험, 목표 등을 추가해서 더욱 멋진 소개글을 작성해보세요.</p>
-                    <textarea id="name" autocomplete="off">${general.generalIntroduction}</textarea>
+                    <textarea id="name" autocomplete="off">안녕하세요. 신입 웹 개발자입니다.</textarea>
                 </label>
             </div>
         </div>

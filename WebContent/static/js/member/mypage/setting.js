@@ -123,32 +123,21 @@ const PHONE_MODAL = (
                 </div>
             </div>
             <div class="modal_content_area">
+              <div class="modal_content_area">
                 <form>
                     <div class="modal_input_area">
-                        <div>
-                            <div class="auth_area">
-                                <input type="text" placeholder="(예시) 01013245768" name="mobile" class="input_mobile" value="" readonly>
-                                <button type="button" class="auth_button">
-                                    <span color="var(--theme-palette-colors-black-100)" class="button_text">번호 변경</span>
-                                </button>
-                            </div>
-                            <div class="auth_area">
-                                <input type="text" placeholder="인증번호를 입력해주세요." name="authCode" readonly="" class="input_authCode" value="">
-                            </div>
-                            <p color="var(--theme-palette-colors-green-400)" class="auth_info">인증되었습니다.</p>
-                            <!-- <p color="var(--theme-palette-colors-blue-400)" class="auth_request_info">인증번호가 요청되었습니다.</p> -->
-                            <!-- <p color="var(--theme-palette-colors-blue-400)" class="auth_time">유효시간 02:52</p> -->
-                        </div>
+                        <input type="text" placeholder="번호를 입력해주세요." class="modal_input" id="phone_number_change" value="">
                     </div>
                     <div class="modal_button_area">
                         <button type="button" class="cansel_button">
                             <span color="var(--theme-palette-colors-black-100)" class="button_text">취소</span>
                         </button>
-                        <button type="submit" class="submit_button">
-                            <span color="var(--theme-palette-colors-black-100)" id="submit">저장</span>
+                        <button type="submit" class="submit_button" id="change_number_bt">
+                            <span color="var(--theme-palette-colors-black-100)" class="button_text">저장</span>
                         </button>
                     </div>
                 </form>
+            </div>
             </div>
         </div>
     </div>

@@ -1,6 +1,7 @@
 package com.gitOsca.member.controller;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -18,9 +19,10 @@ public class UpdateOkController implements Action {
 		MemberDAO memberDAO = new MemberDAO();
 		MemberVO memberVO = new MemberVO();
 		Result result = new Result();
-//		Optional<GeneralVO> foundGeneral = generalDAO.findById(1L);
 
-		memberVO.setId(1L);
+		Long memberId = (Long)req.getSession().getAttribute("memberId");
+
+		memberVO.setId(memberId);
 		memberVO.setMemberName(req.getParameter("memberName"));
 		
 		memberDAO.update(memberVO);
